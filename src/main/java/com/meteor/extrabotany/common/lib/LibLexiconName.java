@@ -29,6 +29,8 @@ public class LibLexiconName {
 	public static final String FFLOWER_ARTIFACONIA = "artifaconia";
 	public static final String FFLOWER_INFERNOIDISY = "infernoidisy";
 	public static final String FFLOWER_LAUNCHISH = "launchish";
+	public static final String FFLOWER_ANNOYOBLOOM = "annoyobloom";
+	public static final String FFLOWER_MANALINKUIM = "manalinkuim";
 	//Fun
 	public static final String D_INFINITYMANA = "infinitymana";
 	//Relics

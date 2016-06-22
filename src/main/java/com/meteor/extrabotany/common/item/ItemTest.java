@@ -15,6 +15,7 @@ import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 
 import com.meteor.extrabotany.common.entity.EntityElven;
+import com.meteor.extrabotany.common.entity.EntityGaiaQuickened;
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
 
 import cpw.mods.fml.relauncher.Side;
@@ -62,7 +63,9 @@ public class ItemTest extends ItemMods{
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 		if(!world.isRemote){
-			EntityElven.spawn(player, player.posX, player.posY, player.posZ);
+			EntityGaiaQuickened g = new EntityGaiaQuickened(player, true, 10F);
+			g.setPosition(player.posX, player.posY, player.posZ);
+			world.spawnEntityInWorld(g);
 		}
 		return stack;	
 	}

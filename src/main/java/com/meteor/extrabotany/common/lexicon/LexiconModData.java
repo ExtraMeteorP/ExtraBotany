@@ -19,6 +19,7 @@ import vazkii.botania.common.lexicon.page.PageText;
 
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.ModMultiBlocks;
+import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lexicon.page.PageDisplay;
 import com.meteor.extrabotany.common.lib.LibBlockName;
@@ -31,7 +32,6 @@ import com.meteor.extrabotany.common.recipe.ModRecipe;
 public class LexiconModData {
 	//Other
 	public static LexiconEntry pickup;
-	public static LexiconEntry command;
 	public static LexiconEntry shield;
 	//Generating 
 	public static LexiconEntry candyflower;
@@ -55,6 +55,8 @@ public class LexiconModData {
 	public static LexiconEntry artifaconia;
 	public static LexiconEntry infernoidisy;
 	public static LexiconEntry launchish;
+	public static LexiconEntry annoyobloom;
+	public static LexiconEntry manalinkuim;
 	//Fun
 	public static LexiconEntry infinitymana;
 	//Relics
@@ -111,10 +113,6 @@ public class LexiconModData {
 		pickup = new ELexiconEntry(LibLexiconName.O_PICKUP, categoryExtra);
 		pickup.setLexiconPages(new PageText("0"));
 		pickup.setIcon(new ItemStack(ModItems.material, 1, 15));
-		
-		command = new ELexiconEntry(LibLexiconName.O_COMMAND, categoryExtra);
-		command.setLexiconPages(new PageText("0"));
-		command.setIcon(new ItemStack(vazkii.botania.common.item.ModItems.cosmetic, 1, 31));
 		
 		shield = new ELexiconEntry(LibLexiconName.O_SHIELD, categoryExtra);
 		shield.setLexiconPages(new PageText("0"), new PageText("1"), new PageImage("2", ""));
@@ -253,14 +251,16 @@ public class LexiconModData {
 				new PagePetalRecipe("1", ModPetalRecipe.numeronbalsamRecipe));
 		numeronbalsam.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.NUMERON_BALSAM));
 		
-		diplopbamboo = new ELexiconEntry(LibLexiconName.FFLOWER_DIPLOPBAMBOO, BotaniaAPI.categoryFunctionalFlowers);
-		diplopbamboo.setLexiconPages(new PageText("0"),
-				new PagePetalRecipe("1", ModPetalRecipe.numeronbalsamRecipe));
-		diplopbamboo.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.DIPLOPBAMBOO));
+		if(ConfigHandler.enableDiplopbamboo){
+			diplopbamboo = new ELexiconEntry(LibLexiconName.FFLOWER_DIPLOPBAMBOO, BotaniaAPI.categoryFunctionalFlowers);
+			diplopbamboo.setLexiconPages(new PageText("0"),
+					new PagePetalRecipe("1", ModPetalRecipe.diplopbambooRecipe));
+			diplopbamboo.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.DIPLOPBAMBOO));
+		}
 		
 		voiduim = new ELexiconEntry(LibLexiconName.FFLOWER_VOIDUIM, BotaniaAPI.categoryFunctionalFlowers);
 		voiduim.setLexiconPages(new PageText("0"),
-				new PagePetalRecipe("1", ModPetalRecipe.numeronbalsamRecipe));
+				new PagePetalRecipe("1", ModPetalRecipe.voiduimRecipe));
 		voiduim.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.VOIDUIM));
 		
 		woodienia = new ELexiconEntry(LibLexiconName.FFLOWER_WOODIENIA, BotaniaAPI.categoryFunctionalFlowers);
@@ -275,13 +275,23 @@ public class LexiconModData {
 		
 		infernoidisy = new ELexiconEntry(LibLexiconName.FFLOWER_INFERNOIDISY, BotaniaAPI.categoryFunctionalFlowers);
 		infernoidisy.setLexiconPages(new PageText("0"),
-				new PagePetalRecipe("1", ModPetalRecipe.artifaconiaRecipe));
+				new PagePetalRecipe("1", ModPetalRecipe.infernoidisyRecipe));
 		infernoidisy.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.INFERNOIDISY));
 		
 		launchish = new ELexiconEntry(LibLexiconName.FFLOWER_LAUNCHISH, BotaniaAPI.categoryFunctionalFlowers);
 		launchish.setLexiconPages(new PageText("0"),
-				new PagePetalRecipe("1", ModPetalRecipe.artifaconiaRecipe));
+				new PagePetalRecipe("1", ModPetalRecipe.launchishRecipe));
 		launchish.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.LAUNCHISH));
+		
+		annoyobloom = new ELexiconEntry(LibLexiconName.FFLOWER_ANNOYOBLOOM, BotaniaAPI.categoryFunctionalFlowers);
+		annoyobloom.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.annoyobloomRecipe));
+		annoyobloom.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.ANNOYOBLOOM));
+		
+		manalinkuim = new ELexiconEntry(LibLexiconName.FFLOWER_MANALINKUIM, BotaniaAPI.categoryFunctionalFlowers);
+		manalinkuim.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.manalinkuim));
+		manalinkuim.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.MANALINKUIM));
 		//For Fun
 		infinitymana = new DLexiconEntry(LibLexiconName.D_INFINITYMANA, categoryExtra);
 		infinitymana.setIcon(new ItemStack(vazkii.botania.common.block.ModBlocks.pool));

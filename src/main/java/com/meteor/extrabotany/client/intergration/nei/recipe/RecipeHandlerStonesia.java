@@ -117,12 +117,7 @@ public class RecipeHandlerStonesia extends TemplateRecipeHandler {
 
 	@Override
 	public void loadCraftingRecipes(ItemStack result) {
-		for(RecipeStonesia recipe : ExtraBotanyAPI.stonesiaRecipes) {
-			if(recipe == null)
-				continue;
-			if(NEIServerUtils.areStacksSameTypeCrafting(ItemBlockSpecialFlower.ofType(LibBlockName.STONESIA), result))
-				arecipes.add(new CachedStonesiaRecipe(recipe));
-		}
+		
 	}
 
 	@Override

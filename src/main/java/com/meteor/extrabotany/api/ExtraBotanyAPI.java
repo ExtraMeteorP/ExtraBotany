@@ -25,6 +25,7 @@ public class ExtraBotanyAPI {
 	public static ClientProxy proxy = new ClientProxy();
 	
 	public static Set<Item> diplopbambooBlacklist = new LinkedHashSet<Item>();
+	public static Set<Item> artifaconiaWhitelist = new LinkedHashSet<Item>();
 	
 	public static List<RecipeInfernoidisy> infernoidisyRecipes = new ArrayList<RecipeInfernoidisy>();
 	public static List<RecipeStonesia> stonesiaRecipes = new ArrayList<RecipeStonesia>();
@@ -70,6 +71,14 @@ public class ExtraBotanyAPI {
 	
 	public static boolean isItemBlacklistedFromDiplopBamboo(Item item){
 		return diplopbambooBlacklist.contains(item);
+	}
+	
+	public static void whitelistItemFromArtifaconia(Item item){
+		artifaconiaWhitelist.add(item);
+	}
+	
+	public static boolean isItemWhitelistedFromArtifaconia(Item item){
+		return artifaconiaWhitelist.contains(item);
 	}
 	
 	public static RecipeInfernoidisy registerInfernoidisyRecipe(Object input, Block output, int outputMeta) {

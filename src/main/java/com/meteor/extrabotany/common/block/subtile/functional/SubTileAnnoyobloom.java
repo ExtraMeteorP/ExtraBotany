@@ -2,6 +2,8 @@ package com.meteor.extrabotany.common.block.subtile.functional;
 
 import java.util.Random;
 
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
+
 import net.minecraft.entity.item.EntityFireworkRocket;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemDye;
@@ -9,6 +11,7 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.nbt.NBTTagList;
 import net.minecraft.world.World;
+import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileFunctional;
 
@@ -22,6 +25,11 @@ public class SubTileAnnoyobloom extends SubTileFunctional{
 	@Override
 	public int getColor() {
 		return 0xEEE31B;
+	}
+	
+	@Override
+	public LexiconEntry getEntry() {
+		return LexiconModData.annoyobloom;
 	}
 	
 	@Override

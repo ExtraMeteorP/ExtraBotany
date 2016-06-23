@@ -78,7 +78,7 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic,ISpe
 
 	@Override
 	public String getArmorTextureAfterInk(ItemStack stack, int slot) {
-		return ConfigHandler.enableArmorModels ? LibReference.MODEL_HESTIACHASTITY : slot == 2 ? LibReference.MODEL_RELIC : LibReference.MODEL_RELIC;
+		return LibReference.MODEL_HESTIACHASTITY;
 	}
 
 	@Override

@@ -7,6 +7,7 @@ public class LibItemName {
 	public static final String LYCORISPLACER = "lycorisradiataplacer";
 	public static final String MATERIAL = "material";
 	public static final String BULLET = "bullet";
+	public static final String NIGHTMAREFUEL = "nightmarefuel";
 	
 	public static final String BOX = "box";
 	public static final String DUNGEONBOX = "dungeonbox";
@@ -34,6 +35,7 @@ public class LibItemName {
 	public static final String SCISSORBLADERED = "scissorbladered";
 	public static final String SCISSORBLADEPURPLE = "scissorbladepurple";
 	public static final String HELIACALCLAYMORE = "coronaclaymore";
+	public static final String DARKSWORD = "darksword";
 	//Relic
 	public static final String EXCALIBER = "excaliber";
 	public static final String EXCALIBERFAKE = "excaliberfake";
@@ -83,10 +85,9 @@ public class LibItemName {
 		"goldstring",//9
 		"emptydice",//10
 		"resonancefragment",//11
-		"key",//12
-		"heart",//13
-		"shield",//14
-		"mana",//15
+		"heart",//12
+		"shield",//13
+		"mana",//14
 	};
 	
 	public static final String[] BULLET_NAMES = new String[] {

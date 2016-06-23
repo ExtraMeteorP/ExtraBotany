@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.UUID;
 
 import net.minecraft.client.gui.GuiScreen;
+import net.minecraft.client.model.ModelBiped;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -18,7 +19,6 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraft.stats.Achievement;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,14 +30,17 @@ import vazkii.botania.common.item.relic.ItemRelic;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import com.meteor.extrabotany.api.ExtraBotanyAPI;
 import com.meteor.extrabotany.api.thaumcraft.IRunicArmor;
+import com.meteor.extrabotany.client.model.ModelRelicArmor;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.handler.PropertyHandler;
+import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemValkyrieCombatUniform extends ItemManasteelArmor implements IRelic, IRunicArmor{
 	
@@ -49,6 +52,18 @@ public class ItemValkyrieCombatUniform extends ItemManasteelArmor implements IRe
 		super(1, name, BotaniaAPI.elementiumArmorMaterial);
 		MinecraftForge.EVENT_BUS.register(this);
 	    FMLCommonHandler.instance().bus().register(this);
+	}
+	
+	@Override
+	public String getArmorTextureAfterInk(ItemStack stack, int slot) {
+		return LibReference.MODEL_VCU;
+	}
+	
+	@Override
+	@SideOnly(Side.CLIENT)
+	public ModelBiped provideArmorModelForSlot(ItemStack stack, int slot) {
+		models[slot] = new ModelRelicArmor(slot);
+		return models[slot];
 	}
 	
 	@Override
@@ -199,13 +214,18 @@ public class ItemValkyrieCombatUniform extends ItemManasteelArmor implements IRe
 		return bool;
 	}
 	
+	int count = 0;
+	
 	@SubscribeEvent
     public void TickEvent(TickEvent.PlayerTickEvent event) {
     	EntityPlayer player = (EntityPlayer) event.player;
     	if(hasVCU(player)){
     		List<IMob> mobs = player.worldObj.getEntitiesWithinAABB(IMob.class, AxisAlignedBB.getBoundingBox(player.posX - 4, player.posY - 4, player.posZ - 4, player.posX + 5, player.posY + 5, player.posZ + 5));
-    		if(mobs.isEmpty())
-    			PropertyHandler.addShieldAmount(1F, player);
+    		if(mobs.isEmpty()){
+    			count++;
+    			if(count % 30 == 0)
+    				PropertyHandler.addShieldAmount(4F, player);
+    		}
     		else if(mobs.size() > 2)
     			player.addPotionEffect(new PotionEffect(Potion.moveSpeed.id, 15, 1));
     	}

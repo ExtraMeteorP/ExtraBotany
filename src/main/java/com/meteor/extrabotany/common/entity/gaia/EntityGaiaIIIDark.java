@@ -672,8 +672,8 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 			spawnCyclone();
 		}
 		
-		if(onGround && ticksExisted % 140 == 0 && Math.random() > 0.55){
-			EntityGaiaQuickened g = new EntityGaiaQuickened(this, true, 24F);
+		if(onGround && ticksExisted % 140 == 0 && Math.random() > 0.75){
+			EntityGaiaQuickened g = new EntityGaiaQuickened(this, true, 11F);
 			g.setPosition(posX, posY, posZ);
 			worldObj.spawnEntityInWorld(g);
 		}

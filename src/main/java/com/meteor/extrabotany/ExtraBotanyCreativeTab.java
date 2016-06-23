@@ -40,7 +40,6 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.gaiatablet);
 		addItem(ModItems.teleportpearl);
 		addItem(ModItems.angelwand);
-		addItem(ModItems.heliacalclaymore);
 		addBlock(ModBlocks.pylon);
 		//Relics
 		addItem(ModItems.dice20);
@@ -66,9 +65,11 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.itemtest);
 		//Basic
 		addItem(ModItems.material);
+		addItem(ModItems.key);
 		addItem(ModItems.boxs);
 		addItem(ModItems.dungeonbox);
 		addItem(ModItems.pill);
+		addItem(ModItems.nightmarefuel);
 		//Spawn Card
 		addItem(ModItems.lycorisgreen);
 		addItem(ModItems.lycorispurple);
@@ -97,6 +98,8 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.gunshotgun);
 		addItem(ModItems.scissorpurple);
 		addItem(ModItems.scissorred);
+		addItem(ModItems.darksword);
+		addItem(ModItems.heliacalclaymore);
 		//Others
 		addItem(ModItems.recordA);
 		addItem(ModItems.recordB);

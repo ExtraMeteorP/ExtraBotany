@@ -8,6 +8,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import com.meteor.extrabotany.common.item.basic.ItemBox;
 import com.meteor.extrabotany.common.item.basic.ItemBullet;
 import com.meteor.extrabotany.common.item.basic.ItemMaterial;
+import com.meteor.extrabotany.common.item.basic.ItemNightmarefuel;
 import com.meteor.extrabotany.common.item.basic.ItemRecordA;
 import com.meteor.extrabotany.common.item.basic.ItemRecordB;
 import com.meteor.extrabotany.common.item.basic.ItemRecordC;
@@ -44,6 +45,9 @@ import com.meteor.extrabotany.common.item.weapon.ItemScissorBladeRed;
 import com.meteor.extrabotany.common.lib.LibEntityName;
 import com.meteor.extrabotany.common.lib.LibItemName;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
+
+import cpw.mods.fml.common.IFuelHandler;
+import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ModItems {
 	public static Item pill;
@@ -101,10 +105,19 @@ public class ModItems {
 	public static Item recordA;
 	public static Item recordC;
 	
+	public static Item nightmarefuel;
+	public static Item darksword;
+	
+	public static Item key;
+	
 	public static void init() {
+		registerFuel();
 		recordA = new ItemRecordA("A", LibItemName.RECORD_A);
 		recordB = new ItemRecordB("B", LibItemName.RECORD_B);
 		recordC = new ItemRecordC("C", LibItemName.RECORD_C);
+		
+		nightmarefuel = new ItemNightmarefuel();
+		darksword = new ItemDarksword();
 		
 		itemtest = new ItemTest("test");
 		
@@ -159,6 +172,8 @@ public class ModItems {
 		lycorispurple = new ItemSpawnCardLycorisPurple(LibEntityName.LYCORISPURPLE);
 		lycorisrandom = new ItemSpawnCardLycorisRandom("lycorisrandom");
 		
+		key = new ItemMods("key");
+		
 		//OreDict
 		OreDictionary.registerOre(LibOreDictName.DOG, new ItemStack(dog, 1, 0));
 		OreDictionary.registerOre(LibOreDictName.DOG, new ItemStack(dog, 1, 1));
@@ -175,6 +190,18 @@ public class ModItems {
 		OreDictionary.registerOre(LibOreDictName.QUARTZ_ELEMENTIUM, new ItemStack(material, 1, 8));
 		OreDictionary.registerOre(LibOreDictName.STRING_GOLD, new ItemStack(material, 1, 9));
 		OreDictionary.registerOre(LibOreDictName.DICE_EMPTY, new ItemStack(material, 1, 10));
+	}
+	
+	private static void registerFuel()
+	{
+	    GameRegistry.registerFuelHandler(new IFuelHandler()
+	    {
+	        @Override
+	        public int getBurnTime(ItemStack fuel)
+	        {
+	            return nightmarefuel != fuel.getItem() ? 0 : 40000;
+	        }
+	    });
 	}
 
 }

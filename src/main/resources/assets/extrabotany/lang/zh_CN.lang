@@ -110,6 +110,8 @@ item.ExtraBotany.SpawnCardLycorisdiataRandom.name=随机彼岸花之卡
 item.ExtraBotany.SpawnLycorisRandom.desc=随机生成一朵彼岸花
 
 # -ADVANCED
+item.darksword.name=暗影刀
+item.nightmarefuel=梦魇燃料
 item.coronaclaymore.name=日冕重剑
 item.angelwand.name=天使魔杖
 item.manapotato.name=魔力土豆

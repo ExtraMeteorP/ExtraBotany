@@ -15,12 +15,15 @@ public class EventMobDrop {
 		if(event.entity instanceof IMob){
 			if(!event.entity.worldObj.isRemote){
 				Random r = event.entity.worldObj.rand;
-				if(Math.random() > 0.7)
+				if(Math.random() > 0.7F)
 					event.entity.entityDropItem(new ItemStack(ModItems.material, 1 + r.nextInt(3), 13), 1F);
-				if(Math.random() > 0.92)
+				if(Math.random() > 0.92F)
 					event.entity.entityDropItem(new ItemStack(ModItems.material, 1 + r.nextInt(3), 14), 1F);
-				if(Math.random() < 0.14)
+				if(Math.random() < 0.14F)
 					event.entity.entityDropItem(new ItemStack(ModItems.material, 1 + r.nextInt(3), 15), 1F);
+				if(!event.entity.worldObj.isDaytime())
+					if(Math.random() < 0.015F)
+						event.entity.entityDropItem(new ItemStack(ModItems.nightmarefuel, 1), 1F);
 			}
 		}
     }

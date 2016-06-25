@@ -1,5 +1,6 @@
 package com.meteor.extrabotany.common.recipe;
 
+import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 import com.meteor.extrabotany.common.item.ModItems;
@@ -27,6 +28,7 @@ public class ModRuneRecipe {
 	public static RecipeRuneAltar r10Recipe;
 	public static RecipeRuneAltar r11Recipe;
 	public static RecipeRuneAltar r12Recipe;
+	public static RecipeRuneAltar darksword;
 	
 	public static void init() {
 		
@@ -58,6 +60,8 @@ public class ModRuneRecipe {
 		r10Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.aphroditegrace), costTier3, shard, shard, shard, shard, shard, shard, runeEnvy);
 		r11Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.maxwelldemon), costTier3, shard, shard, shard, shard, shard, shard, runeGluttony);
 		r12Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.athenabless), costTier3, shard, shard, shard, shard, shard, shard, runeAutumn);
+	
+		darksword = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.darksword), costTier1, new ItemStack(ModItems.nightmarefuel), new ItemStack(ModItems.nightmarefuel), new ItemStack(ModItems.nightmarefuel), new ItemStack(ModItems.nightmarefuel), new ItemStack(Items.bone), runePride);
 	}
 	
 }

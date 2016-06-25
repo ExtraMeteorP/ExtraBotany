@@ -66,6 +66,7 @@ public class EventShield{
 		
 	}
 	
+	@SideOnly(Side.CLIENT)
 	@SubscribeEvent
 	public void onPlayerRender(RenderPlayerEvent.Specials.Post event) {
 		EntityPlayer player = event.entityPlayer;

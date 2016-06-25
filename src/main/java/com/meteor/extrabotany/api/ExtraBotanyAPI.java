@@ -13,7 +13,6 @@ import net.minecraft.util.DamageSource;
 import com.meteor.extrabotany.api.extrabotany.recipe.RecipeBlueenchantress;
 import com.meteor.extrabotany.api.extrabotany.recipe.RecipeInfernoidisy;
 import com.meteor.extrabotany.api.extrabotany.recipe.RecipeStonesia;
-import com.meteor.extrabotany.client.ClientProxy;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.handler.PropertyHandler;
 import com.meteor.extrabotany.common.item.ModItems;
@@ -22,7 +21,6 @@ public class ExtraBotanyAPI {
 	
 	public static ModItems ModItems = new ModItems();
 	public static ModBlocks ModBlocks = new ModBlocks();
-	public static ClientProxy proxy = new ClientProxy();
 	
 	public static Set<Item> diplopbambooBlacklist = new LinkedHashSet<Item>();
 	public static Set<Item> artifaconiaWhitelist = new LinkedHashSet<Item>();

@@ -22,7 +22,6 @@ public class PotionResidualPain extends PotionMods{
 	public PotionResidualPain() {
 		super(ConfigHandler.idPotionRP, LibPotionEffectName.RESIDUALPAIN, true, 0x8B7F7E, 2);
 		MinecraftForge.EVENT_BUS.register(this);
-	    FMLCommonHandler.instance().bus().register(this);
 	}
 	
 	@Override

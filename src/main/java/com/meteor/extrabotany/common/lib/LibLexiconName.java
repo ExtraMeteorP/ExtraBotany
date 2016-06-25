@@ -69,10 +69,16 @@ public class LibLexiconName {
 	public static final String BA_QUARTZ = "quartz";
 	public static final String BA_GOLDSTRING = "goldstring";
 	public static final String BA_TELEPORTPEARL = "teleportpearl";
+	public static final String BA_NIGHTMAREFUEL = "nightmarefuel";
 	//Gun
 	public static final String G_GUNBASE = "gunbase";
 	public static final String G_GUNTACTICALSHOTGUN = "tacticalshotgun";
 	public static final String G_GUNPHOENIXBLASTER = "phoenixblaster";
 	public static final String G_GUNSNOWBALLCANNON = "snowballcannon";
 	public static final String G_GUNBULLET = "bullet";
+	//Weapon
+	public static final String W_ANGELWAND = "angelwand";
+	public static final String W_CLAYMORE = "coronaclaymore";
+	public static final String W_BLADE = "scissorblade";
+	public static final String W_SWORD = "darksword";
 }

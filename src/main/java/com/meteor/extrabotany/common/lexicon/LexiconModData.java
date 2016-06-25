@@ -1,6 +1,5 @@
 package com.meteor.extrabotany.common.lexicon;
 
-import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
@@ -15,19 +14,20 @@ import vazkii.botania.common.lexicon.page.PageImage;
 import vazkii.botania.common.lexicon.page.PageManaInfusionRecipe;
 import vazkii.botania.common.lexicon.page.PageMultiblock;
 import vazkii.botania.common.lexicon.page.PagePetalRecipe;
+import vazkii.botania.common.lexicon.page.PageRuneRecipe;
 import vazkii.botania.common.lexicon.page.PageText;
 
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.ModMultiBlocks;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.item.ModItems;
-import com.meteor.extrabotany.common.lexicon.page.PageDisplay;
 import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibLexiconName;
 import com.meteor.extrabotany.common.lib.LibReference;
 import com.meteor.extrabotany.common.recipe.ModManaInfusionRecipe;
 import com.meteor.extrabotany.common.recipe.ModPetalRecipe;
 import com.meteor.extrabotany.common.recipe.ModRecipe;
+import com.meteor.extrabotany.common.recipe.ModRuneRecipe;
 
 public class LexiconModData {
 	//Other
@@ -95,12 +95,18 @@ public class LexiconModData {
 	public static LexiconEntry astralforce;
 	public static LexiconEntry quartz;
 	public static LexiconEntry teleportpearl;
+	public static LexiconEntry nightmarefuel;
 	//Gun
 	public static LexiconEntry gunbase;
 	public static LexiconEntry gunphoenixblaster;
 	public static LexiconEntry gunsnowballcannon;
 	public static LexiconEntry guntacticalshotgun;
 	public static LexiconEntry gunbullet;
+	//Weapon
+	public static LexiconEntry darksword;
+	public static LexiconEntry coronaclaymore;
+	public static LexiconEntry scissorblade;
+	public static LexiconEntry angelwand;
 	//Category
 	public static LexiconCategory categoryExtra;
 	
@@ -127,6 +133,10 @@ public class LexiconModData {
 		shard.setLexiconPages(new PageText("0"));
 		shard.setIcon(new ItemStack(ModItems.material));
 		
+		nightmarefuel = new BLexiconEntry(LibLexiconName.BA_NIGHTMAREFUEL, categoryExtra);
+		nightmarefuel.setLexiconPages(new PageText("0"));
+		nightmarefuel.setIcon(new ItemStack(ModItems.nightmarefuel));
+		
 		petal = new BLexiconEntry(LibLexiconName.BA_PETAL, categoryExtra);
 		petal.setLexiconPages(new PageText("0"));
 		petal.setIcon(new ItemStack(ModItems.lycorisrandom));
@@ -146,6 +156,26 @@ public class LexiconModData {
 		teleportpearl.setLexiconPages(new PageText("0"), new PageCraftingRecipe("1", ModRecipe.teleportpearl));
 		teleportpearl.setIcon(new ItemStack(ModItems.teleportpearl));
 		
+		//weapon
+		angelwand = new ELexiconEntry(LibLexiconName.W_ANGELWAND, categoryExtra);
+		angelwand.setLexiconPages(new PageText("0"),
+				new PageCraftingRecipe("1", ModRecipe.angelwand));
+		angelwand.setIcon(new ItemStack(ModItems.angelwand));
+	
+		darksword = new ELexiconEntry(LibLexiconName.W_SWORD, categoryExtra);
+		darksword.setLexiconPages(new PageText("0"),
+				new PageRuneRecipe("1", ModRuneRecipe.darksword));
+		darksword.setIcon(new ItemStack(ModItems.darksword));
+		
+		coronaclaymore = new ELexiconEntry(LibLexiconName.W_CLAYMORE, categoryExtra);
+		coronaclaymore.setLexiconPages(new PageText("0"));
+		coronaclaymore.setIcon(new ItemStack(ModItems.heliacalclaymore));
+		
+		scissorblade = new ELexiconEntry(LibLexiconName.W_BLADE, categoryExtra);
+		scissorblade.setLexiconPages(new PageText("0"),
+				new PageCraftingRecipe("1", ModRecipe.bladered), new PageCraftingRecipe("2", ModRecipe.bladepurple));
+		scissorblade.setIcon(new ItemStack(ModItems.scissorred));
+		
 		//Gun
 		gunbase = new BLexiconEntry(LibLexiconName.G_GUNBASE, categoryExtra);
 		gunbase.setLexiconPages(new PageText("0"),
@@ -153,15 +183,15 @@ public class LexiconModData {
 		gunbase.setIcon(new ItemStack(ModItems.gunboomstick));
 		
 		gunphoenixblaster = new LLexiconEntry(LibLexiconName.G_GUNPHOENIXBLASTER, categoryExtra);
-		gunphoenixblaster.setLexiconPages(new PageText("0"), new PageDisplay("1", new ItemStack(ModItems.gunphoenixblaster)));
+		gunphoenixblaster.setLexiconPages(new PageText("0"));
 		gunphoenixblaster.setIcon(new ItemStack(ModItems.gunphoenixblaster));
 		
 		gunsnowballcannon = new LLexiconEntry(LibLexiconName.G_GUNSNOWBALLCANNON, categoryExtra);
-		gunsnowballcannon.setLexiconPages(new PageText("0"), new PageDisplay("1", new ItemStack(ModItems.snowballlauncher)));
+		gunsnowballcannon.setLexiconPages(new PageText("0"));
 		gunsnowballcannon.setIcon(new ItemStack(ModItems.snowballlauncher));
 		
 		guntacticalshotgun = new LLexiconEntry(LibLexiconName.G_GUNTACTICALSHOTGUN, categoryExtra);
-		guntacticalshotgun.setLexiconPages(new PageText("0"), new PageDisplay("1", new ItemStack(ModItems.guntacticalshotgun)));
+		guntacticalshotgun.setLexiconPages(new PageText("0"));
 		guntacticalshotgun.setIcon(new ItemStack(ModItems.guntacticalshotgun));
 		
 		gunbullet = new BLexiconEntry(LibLexiconName.G_GUNBULLET, categoryExtra);

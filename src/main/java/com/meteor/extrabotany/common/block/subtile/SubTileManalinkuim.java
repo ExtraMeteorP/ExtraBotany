@@ -2,6 +2,8 @@ package com.meteor.extrabotany.common.block.subtile;
 
 import java.awt.Color;
 
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
+
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.player.EntityPlayer;
@@ -13,6 +15,7 @@ import net.minecraft.util.StatCollector;
 import net.minecraftforge.common.util.ForgeDirection;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.internal.IManaNetwork;
+import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.mana.IManaCollector;
 import vazkii.botania.api.mana.IManaPool;
 import vazkii.botania.api.subtile.SubTileEntity;
@@ -42,6 +45,11 @@ public class SubTileManalinkuim extends SubTileEntity{
 	
 	ChunkCoordinates cachedCollectorCoordinates = null;
 	ChunkCoordinates cachedPoolCoordinates = null;
+	
+	@Override
+	public LexiconEntry getEntry() {
+		return LexiconModData.manalinkuim;
+	}
 	
 	@Override
 	public void onUpdate() {

@@ -29,7 +29,6 @@ public class ItemLokiGhostrick extends ItemRelicBauble{
 	public ItemLokiGhostrick(String name) {
 		super(name);
 		MinecraftForge.EVENT_BUS.register(this);
-		FMLCommonHandler.instance().bus().register(this);
 		damageNegations.add(ItemRelic.damageSource().getDamageType());
 		damageNegations.add(DamageSource.anvil.getDamageType());
 		damageNegations.add(DamageSource.cactus.getDamageType());

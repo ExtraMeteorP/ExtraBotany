@@ -1,20 +1,19 @@
 package com.meteor.extrabotany.common.recipe;
 
-import org.apache.logging.log4j.Level;
-
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.util.StatCollector;
 import net.minecraftforge.oredict.ShapedOreRecipe;
+
+import org.apache.logging.log4j.Level;
+
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.common.lib.LibOreDict;
 
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.handler.CraftingHandler;
-import com.meteor.extrabotany.common.item.ItemManaPotato;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
 import com.meteor.extrabotany.common.recipe.subtile.ModBlueenchantressRecipe;
@@ -56,6 +55,7 @@ public class ModRecipe {
 		remove();
 		ModManaInfusionRecipe.init();
 		ModPetalRecipe.init();
+		ModRuneRecipe.init();
 		initSubtile();
 		int recipeListSize = CraftingManager.getInstance().getRecipeList().size();
 		

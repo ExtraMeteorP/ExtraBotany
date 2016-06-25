@@ -41,35 +41,37 @@ public class SubTileNumeronbalsam extends SubTileFunctional{
 		super.onUpdate();		
 		if(redstoneSignal > 0)
 			return;
-			
-		List<EntityLivingBase> livings = supertile.getWorldObj().getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(supertile.xCoord - RANGE, supertile.yCoord - RANGE, supertile.zCoord - RANGE, supertile.xCoord + RANGE + 1, supertile.yCoord + RANGE + 1, supertile.zCoord + RANGE + 1));
-		for(EntityLivingBase living : livings) {
-			if(ticksExisted % DELAY == 0){
-				if(living instanceof EntityPlayer){
-					EntityPlayer player = (EntityPlayer) living;
-					player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 100, 0));
-					if(player.isBurning() == false){
-						player.setFire(5);	
-					}	
-					mana--;
-					Collection<PotionEffect> potions = player.getActivePotionEffects();
-					boolean flag = false;
-					for (PotionEffect potion : potions) {
-						int id = potion.getPotionID();
-						if (ReflectionHelper.getPrivateValue(Potion.class, Potion.potionTypes[id], new String[]{"isBadEffect", "field_76418_K", "J"})) {
-							player.removePotionEffect(id);
-							mana--;
-							flag = true;
-							}
-							break;
-	        			}
-					}
+		
+		if(mana > 0){
+			List<EntityLivingBase> livings = supertile.getWorldObj().getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(supertile.xCoord - RANGE, supertile.yCoord - RANGE, supertile.zCoord - RANGE, supertile.xCoord + RANGE + 1, supertile.yCoord + RANGE + 1, supertile.zCoord + RANGE + 1));
+			for(EntityLivingBase living : livings) {
+				if(ticksExisted % DELAY == 0){
+					if(living instanceof EntityPlayer){
+						EntityPlayer player = (EntityPlayer) living;
+						player.addPotionEffect(new PotionEffect(Potion.fireResistance.id, 100, 0));
+						if(player.isBurning() == false){
+							player.setFire(5);	
+						}	
+						mana--;
+						Collection<PotionEffect> potions = player.getActivePotionEffects();
+						boolean flag = false;
+						for (PotionEffect potion : potions) {
+							int id = potion.getPotionID();
+							if (ReflectionHelper.getPrivateValue(Potion.class, Potion.potionTypes[id], new String[]{"isBadEffect", "field_76418_K", "J"})) {
+								player.removePotionEffect(id);
+								mana--;
+								flag = true;
+								}
+								break;
+		        			}
+						}
+							
+						living.setFire(5);			
+						living.attackEntityFrom(DamageSource.lava, 1);
 						
-					living.setFire(5);			
-					living.attackEntityFrom(DamageSource.lava, 1);
-					
-				}
-			}	
+					}
+				}	
+		}
 		
 		ChunkCoordinates chunk = toChunkCoordinates();
 		World world = supertile.getWorldObj();

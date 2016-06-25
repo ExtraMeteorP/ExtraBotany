@@ -9,7 +9,6 @@ import org.lwjgl.opengl.GL11;
 
 import com.meteor.extrabotany.client.lib.LibRenderID;
 import com.meteor.extrabotany.common.block.tile.TileGaiaChest;
-import com.meteor.extrabotany.common.block.tile.TileManaTinyPotato;
 
 import cpw.mods.fml.client.registry.ISimpleBlockRenderingHandler;
 

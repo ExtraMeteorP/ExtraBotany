@@ -23,7 +23,7 @@ public class SubTileCandyflower extends SubTileGenerating{
 	private static final int FUEL_CAP = 32000;
 	private static final int RANGE = 3;
 	
-	int burnTime = 0;
+int burnTime = 0;
 	
 	@Override
 	public void onUpdate() {

@@ -2,8 +2,11 @@ package com.meteor.extrabotany.common.block.subtile.functional;
 
 import java.util.List;
 
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
+
 import net.minecraft.entity.Entity;
 import net.minecraft.util.AxisAlignedBB;
+import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.SubTileFunctional;
 
 public class SubTileLaunchish extends SubTileFunctional{
@@ -13,6 +16,11 @@ public class SubTileLaunchish extends SubTileFunctional{
 	@Override
 	public int getColor() {
 		return 0x22BF27;
+	}
+	
+	@Override
+	public LexiconEntry getEntry() {
+		return LexiconModData.launchish;
 	}
 	
 	@Override

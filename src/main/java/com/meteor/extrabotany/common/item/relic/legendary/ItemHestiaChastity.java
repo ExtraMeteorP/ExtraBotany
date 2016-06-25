@@ -60,7 +60,6 @@ public class ItemHestiaChastity extends ItemRelicArmorSet implements IManaDiscou
 	public ItemHestiaChastity(int type, String name) {
 		super(0, LibItemName.HESTIACHASTITY);
 		MinecraftForge.EVENT_BUS.register(this);
-	    FMLCommonHandler.instance().bus().register(this);
 	}
 	
 	@Override

@@ -23,7 +23,6 @@ public class ItemAphroditeGrace extends ItemRelicArmorSet{
 	public ItemAphroditeGrace(int type, String name) {
 		super(2, LibItemName.APHRODITEGRACE);
 		MinecraftForge.EVENT_BUS.register(this);
-	    FMLCommonHandler.instance().bus().register(this);
 	}
 	
 	@SubscribeEvent

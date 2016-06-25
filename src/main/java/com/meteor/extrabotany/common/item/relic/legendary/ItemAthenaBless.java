@@ -26,7 +26,6 @@ public class ItemAthenaBless extends ItemRelicBauble{
 	public ItemAthenaBless(){
 		super(LibItemName.ATHENABLESS);
 		MinecraftForge.EVENT_BUS.register(this);
-		FMLCommonHandler.instance().bus().register(this);
 	}
 	
 	@Override

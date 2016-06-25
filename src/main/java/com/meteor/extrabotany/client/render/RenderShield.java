@@ -169,6 +169,7 @@ public class RenderShield{
 		if(player != null)
 		translateToFootLevel(player);
 		GL11.glTranslatef(0, -0.5F, 0);
+		GL11.glScalef(1.3F, 1.3F, 1.3F);
 
 		Tessellator tes = Tessellator.instance;
 		ShaderHelper.useShader(ShaderHelper.halo);

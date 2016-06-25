@@ -786,7 +786,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 		}
 		
 		if(getTPDelay() > 0 && onGround && ticksExisted % 100 == 0 && rankIII && Math.random() > 0.55){
-			EntityGaiaQuickened g = new EntityGaiaQuickened(this, true, 16F);
+			EntityGaiaQuickened g = new EntityGaiaQuickened(this, true, 9F);
 			g.setPosition(posX, posY, posZ);
 			worldObj.spawnEntityInWorld(g);
 		}

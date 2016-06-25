@@ -109,6 +109,8 @@ item.ExtraBotany.SpawnCardLycorisdiataRandom.name=Cards of Random Lycorisdiata
 item.ExtraBotany.SpawnLycorisRandom.desc=Spawn a Random Lycorisdiata
 
 # -ADVANCED
+item.darksword.name=Dark Sword
+item.nightmarefuel.name=Nightmare Fuel
 item.coronaclaymore.name=Corona Claymore
 item.angelwand.name=Angel Wand
 item.manapotato.name=Mana Potato
@@ -172,10 +174,16 @@ item.test.desc=ONLY FOR DEVELOPER
 
 # LEXICON ENTRIES
 # -BASIC
+# --NIGHTMAREFUEL
+botania.entry.nightmarefuel=Nightmare Fuel
+botania.tagline.nightmarefuel=The fear in your mind.
+botania.page.nightmarefuel=Some mobs will carry &1Nightmare Fuel&0 which is rare but dreadful. Its calorific value is very high, however, there is a rumor that anyone who has had &1Nightmare Fuel&0 all died of misfortune.
+
 # --TELEPORTPEARL
 botania.entry.teleportpearl=Teleport Pearl
-botania.page.teleportpearl0=
-botania.page.teleportpearl1=
+botania.tagline.teleportpearl=Oops.
+botania.page.teleportpearl0=The &1Teleport Pearl&0 is similar to the &4Ender Pearl&0. However, it won't hurt you when you are teleported.
+botania.page.teleportpearl1=Watch your six.
 
 # --BLANKCARD
 botania.entry.blankcard=Blank Card
@@ -185,17 +193,17 @@ botania.page.blankcard1=It's a secret.
 
 # --COSMETIC
 botania.entry.cosmetic=Cosmetic Baubles
-botania.tagline.cosmetic=
-botania.page.cosmetic0=
-botania.page.cosmetic1=
-botania.page.cosmetic2=
-botania.page.cosmetic3=
-botania.page.cosmetic4=
+botania.tagline.cosmetic=A Bunny Can Go Savage
+botania.page.cosmetic0=Just for fun and decorating, perhaps there are some other uses for them.
+botania.page.cosmetic1=So scare
+botania.page.cosmetic2=Concern
+botania.page.cosmetic3=What r you doing
+botania.page.cosmetic4=Wow
 
 # --PRISMATICSHARD
 botania.entry.prismaticshard=Prismatic Shard
-botania.tagline.prismaticshard=
-botania.page.prismaticshard0=
+botania.tagline.prismaticshard=Universal love.
+botania.page.prismaticshard0=Very rare, and there are just a few ways to get it. And it is widely used, therefore, it's a valuable material.
 
 # --GOLDSTRING
 botania.entry.goldstring=Golden Infused String
@@ -216,6 +224,30 @@ botania.page.quartz1=
 botania.page.quartz2=
 
 # -WEAPON
+# --ANGELWAND
+botania.entry.angelwand=
+botania.tagline.angelwand=
+botania.page.angelwand0=
+botania.page.angelwand1=
+
+# --CORONACLAYMORE
+botania.entry.coronaclaymore=
+botania.tagline.coronaclaymore=
+botania.page.coronaclaymore0=
+
+# --DARKSWORD
+botania.entry.darksword=
+botania.tagline.darksword=
+botania.page.darksword0=
+botania.page.darksword1=
+
+# --SCISSORBLADE
+botania.entry.scissorblade=
+botania.tagline.scissorblade=
+botania.page.scissorblade0=
+botania.page.scissorblade1=
+botania.page.scissorblade2=
+
 # --BULLET
 botania.entry.bullet=Various Bullets
 botania.tagline.bullet=
@@ -349,30 +381,27 @@ botania.page.annoyobloom1=Move or die!
 
 # --VOIDUIM
 botania.entry.voiduim=Voiduim
-botania.page.voiduim0=
+botania.page.voiduim0=&1Voiduim&0 can use the strength of the void to turn mana into ores. But it has very strict growth conditions: it must be planted above the bedrock within 2 blocks, and it can see the sunlight.
 botania.page.voiduim1=Re:Life in a different world from zero
 
 # --ARTIFACONIA
 botania.entry.artifaconia=Artifaconia
-botania.page.artifaconia0=
+botania.page.artifaconia0=&1Artifaconia&0 has the power of the old gods. It can use mana to rebind a relic to another player nearby. If you give it a 15 redstone signal, it will deconstruct a relic which can be deconstructed.
 botania.page.artifaconia1=こんなの绝対おかしいよ
 
 # --MANALINKUIM
 botania.entry.manalinkuim=Manalinkuim
-botania.page.manalinkuim0=
+botania.page.manalinkuim0=A &1Manalinkuim&0 is a master of controlling mana currents. It can extract mana from a mana pool and then send it to a mana spreader. According to this, it can be used to transfer mana for a long distance.
 botania.page.manalinkuim1=集う光.
 
 # -OTHERS
 # --INFINITYMANA
 botania.entry.infinitymana=Infinite Mana
 
-# --COMMANDS
-botania.entry.command=Commands
-botania.page.command0=
-
 # --PICKUP
 botania.entry.pickup=Drops
-botania.page.pickup0=
+botania.tagline.pickup=It's magic!
+botania.page.pickup0=You will find that when mobs are killed, they will drop something strange. Pick up these different kinds of strange crystal will have different results. A shield point will give you a few shields, a heart crystal will heal you a little and a mana crystal will give you a little mana.
 
 # --SHIELD
 botania.entry.shield=Shield
@@ -507,15 +536,15 @@ botania.tagline.ominiviolet=Eye of Providence
 
 tile.botania:flower.geminiorchid.name=Gemini Orchid
 tile.botania:flower.geminiorchid.reference=Another...?
-botania.tagline.geminiorchid=
+botania.tagline.geminiorchid=I love you, I hate you.
 
 tile.botania:flower.pyschobloom.name=Pysch-O-Bloom
-tile.botania:flower.pyschobloom.reference=
-botania.tagline.pyschobloom=
+tile.botania:flower.pyschobloom.reference=It was just too unwieldy.
+botania.tagline.pyschobloom=Whispers of the Old Gods.
 
 tile.botania:flower.stonesia.name=Stonesia
-tile.botania:flower.stonesia.reference=
-botania.tagline.stonesia=
+tile.botania:flower.stonesia.reference=Made by stone.
+botania.tagline.stonesia=Is this the sword in the stone?
 
 # -FUNCTIONAL
 tile.botania:flower.numerondandelife.name=Numeron Dandelife
@@ -551,28 +580,28 @@ tile.botania:flower.judasvow.reference=My pleasure
 botania.tagline.judasvow=For justice
 
 tile.botania:flower.voiduim.name=Voiduim
-tile.botania:flower.voiduim.reference=
-botania.tagline.voiduim=
+tile.botania:flower.voiduim.reference=I come from the void.
+botania.tagline.voiduim=Void Expansion.
 
 tile.botania:flower.diplopbamboo.name=Diplop Bamboo
-tile.botania:flower.diplopbamboo.reference=
-botania.tagline.diplopbamboo=
+tile.botania:flower.diplopbamboo.reference=Infinity
+botania.tagline.diplopbamboo=The same.
 
 tile.botania:flower.infernoidisy.name=Infernoidisy
 tile.botania:flower.infernoidisy.reference=I want to be Red.
-botania.tagline.infernoidisy=
+botania.tagline.infernoidisy=Void Vanishment.
 
 tile.botania:flower.launchish.name=Launchish
-tile.botania:flower.launchish.reference=
-botania.tagline.launchish=
+tile.botania:flower.launchish.reference=Launch Control
+botania.tagline.launchish=No man's sky.
 
 tile.botania:flower.annoyobloom.name=Annoy-O-Bloom
-tile.botania:flower.annoyobloom.reference=
-botania.tagline.annoyobloom=
+tile.botania:flower.annoyobloom.reference=Hello! Hello! Hello!
+botania.tagline.annoyobloom=HELLOOOO!!
 
 tile.botania:flower.manalinkuim.name=Manalinkuim
-tile.botania:flower.manalinkuim.reference=
-botania.tagline.manalinkuim=
+tile.botania:flower.manalinkuim.reference=Manalicious.
+botania.tagline.manalinkuim=Bigger and Bigger
 
 #ACHIEVEMENTS
 # -RELICS
@@ -586,105 +615,105 @@ achievement.extrabotany:excaliber=The Light does not Discriminate
 achievement.extrabotany:excaliber.desc=Get the Excaliber!
 achievement.extrabotany:excaliberfake=Put Your Faith in the Light
 achievement.extrabotany:excaliberfake.desc=Be rewarded Excaliber for a heroic feat
-achievement.extrabotany:hestiachastity=Light of Ruin
+achievement.extrabotany:hestiachastity=Ooo! Shiny!
 achievement.extrabotany:hestiachastity.desc=Be rewarded Chastity of Hestia for a heroic feat
-achievement.extrabotany:maxwelldemon=Perpetual Motion Machine of the Second Category!?
+achievement.extrabotany:maxwelldemon=Heart Breaker
 achievement.extrabotany:maxwelldemon.desc=Be rewarded Maxwell's Demon for a heroic feat
-achievement.extrabotany:vpowerbattleaxe=Tell Your World
-achievement.extrabotany:vpowerbattleaxe.desc=Be rewarded Valkyrie Powered Battleaxe for a heroic feat
-achievement.extrabotany:vrangerboots=悪ノ召使
+achievement.extrabotany:vpowerbattleaxe=You Can Do It!
+achievement.extrabotany:vpowerbattleaxe.desc=Get Valkyrie Powered
+achievement.extrabotany:vrangerboots=Lucky Break
 achievement.extrabotany:vrangerboots.desc=Be rewarded Valkyrie Ranger Boots for a heroic feat
-achievement.extrabotany:vhandgun=悪ノ娘
-achievement.extrabotany:vhandgun.desc=Be rewarded Valkyrie Handguns for a heroic feat
-achievement.extrabotany:cronusphantom=
+achievement.extrabotany:vhandgun=Matching Attire
+achievement.extrabotany:vhandgun.desc=Get Valkyrie Handguns
+achievement.extrabotany:cronusphantom=Star Power
 achievement.extrabotany:cronusphantom.desc=Be rewarded Phantom of Cronus for a heroic feat
-achievement.extrabotany:hermestravelclothing=
+achievement.extrabotany:hermestravelclothing=Mastermind
 achievement.extrabotany:hermestravelclothing.desc=Be rewarded Hermes Travel Clothing for a heroic feat
-achievement.extrabotany:phoenixblaster=
+achievement.extrabotany:phoenixblaster=Smashing, Poppet!
 achievement.extrabotany:phoenixblaster.desc=Get Phoenix Blaster
-achievement.extrabotany:snowballlauncher=
+achievement.extrabotany:snowballlauncher=Sting Operation
 achievement.extrabotany:snowballlauncher.desc=Get Snowball Cannon
-achievement.extrabotany:tacticalshotgun=
+achievement.extrabotany:tacticalshotgun=Hold on Tight!
 achievement.extrabotany:tacticalshotgun.desc=Get Tactical Shotgun
-achievement.extrabotany:olympusguard=
+achievement.extrabotany:olympusguard=Dungeon Heist
 achievement.extrabotany:olympusguard.desc=Get Guard of Olympus
-achievement.extrabotany:cthulhueye=
+achievement.extrabotany:cthulhueye=Eye on You
 achievement.extrabotany:cthulhueye.desc=Be rewarded Eye of Cthulhu for a heroic feat
-achievement.extrabotany:hermeswand=
-achievement.extrabotany:hermeswand.desc=
-achievement.extrabotany:theseusship=
-achievement.extrabotany:theseusship.desc=
-achievement.extrabotany:valkyriecombatuniform=
-achievement.extrabotany:valkyriecombatuniform.desc=
-achievement.extrabotany:coronaclaymore=
-achievement.extrabotany:coronaclaymore.desc=
-achievement.extrabotany:eternalslience=
-achievement.extrabotany:eternalslience.desc=
-achievement.extrabotany:lokighostrick=
-achievement.extrabotany:lokighostrick.desc=
-achievement.extrabotany:angelwand=
-achievement.extrabotany:angelwand.desc=
+achievement.extrabotany:hermeswand=Worm Fodder
+achievement.extrabotany:hermeswand.desc=Be rewarded Hermes Travel Wand for a heroic feat
+achievement.extrabotany:theseusship=Miner for Fire
+achievement.extrabotany:theseusship.desc=Be rewarded Ship of Theseus for a heroic feat
+achievement.extrabotany:valkyriecombatuniform=Head in the Clouds
+achievement.extrabotany:valkyriecombatuniform.desc=Get Valkyrie Combat Uniform
+achievement.extrabotany:coronaclaymore=Still Hungry
+achievement.extrabotany:coronaclaymore.desc=Get Corona Claymore
+achievement.extrabotany:eternalslience=Photosynthesis
+achievement.extrabotany:eternalslience.desc=Get Eternal Slience
+achievement.extrabotany:lokighostrick=The Great Southern Plantkill
+achievement.extrabotany:lokighostrick.desc=Be rewarded Loki's Ghostrick for a heroic feat
+achievement.extrabotany:angelwand=Extra Shiny!
+achievement.extrabotany:angelwand.desc=Get Angel Wand
 
 
 # -GAIA
-achievement.extrabotany:gaia_kill=
+achievement.extrabotany:gaia_kill=Dead by daylight
 achievement.extrabotany:gaia_kill.desc=Defeat Gaia Guardian III!
-achievement.extrabotany:gaia_noarmor=
+achievement.extrabotany:gaia_noarmor=Heroes never die!
 achievement.extrabotany:gaia_noarmor.desc=Slay Gaia Guardian III without wearing any armor at any point during the fight
-achievement.extrabotany:gaia_dark=
+achievement.extrabotany:gaia_dark=Oh, let's break it
 achievement.extrabotany:gaia_dark.desc=Defeat Dark Gaia Guardian III!
-achievement.extrabotany:gaia_darknoarmor=
+achievement.extrabotany:gaia_darknoarmor=Justice rains from above
 achievement.extrabotany:gaia_darknoarmor.desc=Slay Dark Gaia Guardian III without wearing any armor at any point during the fight
 
 # -FLOWERS
-achievement.extrabotany:annoybloom=
-achievement.extrabotany:annoybloom.desc=
-achievement.extrabotany:artifaconia=
-achievement.extrabotany:artifaconia.desc=
-achievement.extrabotany:diplopbamboo=
-achievement.extrabotany:diplopbamboo.desc=
-achievement.extrabotany:icebirdium=
-achievement.extrabotany:icebirdium.desc=
-achievement.extrabotany:launchish=
-achievement.extrabotany:launchish.desc=
-achievement.extrabotany:necrofleur=
-achievement.extrabotany:necrofleur.desc=
-achievement.extrabotany:numeronbalsam=
-achievement.extrabotany:numeronbalsam.desc=
-achievement.extrabotany:numerondandelife=
-achievement.extrabotany:numerondandelife.desc=
-achievement.extrabotany:voiduim=
-achievement.extrabotany:voiduim.desc=
-achievement.extrabotany:volatilily=
-achievement.extrabotany:volatilily.desc=
-achievement.extrabotany:woodienia=
-achievement.extrabotany:woodienia.desc=
-achievement.extrabotany:blueenchantress=
-achievement.extrabotany:blueenchantress.desc=
-achievement.extrabotany:candyflower=
-achievement.extrabotany:candyflower.desc=
-achievement.extrabotany:geminiorchid=
-achievement.extrabotany:geminiorchid.desc=
-achievement.extrabotany:moonlightlily=
-achievement.extrabotany:moonlightlily.desc=
-achievement.extrabotany:omniviolet=
-achievement.extrabotany:ominiviolet.desc=
-achievement.extrabotany:pyschobloom=
-achievement.extrabotany:pyschobloom.desc=
-achievement.extrabotany:stonesia=
-achievement.extrabotany:stonesia.desc=
-achievement.extrabotany:sunshinelily=
-achievement.extrabotany:sunshinelily.desc=
-achievement.extrabotany:infernoidisy=
-achievement.extrabotany:infernoidisy.desc=
-achievement.extrabotany:judasvow=
-achievement.extrabotany:judasvow.desc=
-achievement.extrabotany:manalinkuim=
-achievement.extrabotany:manalinkuim.desc=
+achievement.extrabotany:annoybloom=脳浆炸裂ガール
+achievement.extrabotany:annoybloom.desc=Make a Annoy-O-Bloom in a Petal Apothecary
+achievement.extrabotany:artifaconia=Undead enemy
+achievement.extrabotany:artifaconia.desc=Make a Artifaconia in a Petal Apothecary
+achievement.extrabotany:diplopbamboo=Weekender Girl
+achievement.extrabotany:diplopbamboo.desc=Make a Diplop Bamboo in a Petal Apothecary
+achievement.extrabotany:icebirdium=Nyan Cat
+achievement.extrabotany:icebirdium.desc=Make a Ice Birdium in a Petal Apothecary
+achievement.extrabotany:launchish=紙飛行機
+achievement.extrabotany:launchish.desc=Make a Launchish in a Petal Apothecary
+achievement.extrabotany:necrofleur=Die, Die, Die.
+achievement.extrabotany:necrofleur.desc=Make a Necrofleur in a Petal Apothecary
+achievement.extrabotany:numeronbalsam=二律背反
+achievement.extrabotany:numeronbalsam.desc=Make a Numeron Balsam in a Petal Apothecary
+achievement.extrabotany:numerondandelife=Bacterial Contamination
+achievement.extrabotany:numerondandelife.desc=Make a Numeron Dandelife in a Petal Apothecary
+achievement.extrabotany:voiduim=Ticket To Write
+achievement.extrabotany:voiduim.desc=Make a Voiduim in a Petal Apothecary
+achievement.extrabotany:volatilily=Twinkle World
+achievement.extrabotany:volatilily.desc=Make a Volatilily in a Petal Apothecary
+achievement.extrabotany:woodienia=The Naturalist
+achievement.extrabotany:woodienia.desc=Make a Woodienia in a Petal Apothecary
+achievement.extrabotany:blueenchantress=白い雪のプリンセスは
+achievement.extrabotany:blueenchantress.desc=Make a Blue Enchantress in a Petal Apothecary
+achievement.extrabotany:candyflower=とても痛い痛がりたい
+achievement.extrabotany:candyflower.desc=Make a Candy Flower in a Petal Apothecary
+achievement.extrabotany:geminiorchid=幸せになれる隠しコマンドがあるらしい
+achievement.extrabotany:geminiorchid.desc=Make a Gemini Orchid in a Petal Apothecary
+achievement.extrabotany:moonlightlily=Blessing
+achievement.extrabotany:moonlightlily.desc=Make a Moonlight Lily in a Petal Apothecary
+achievement.extrabotany:omniviolet=RIP=RELEASE
+achievement.extrabotany:ominiviolet.desc=Make a Omini Violet in a Petal Apothecary
+achievement.extrabotany:pyschobloom=Sweet Devil
+achievement.extrabotany:pyschobloom.desc=Make a Pysch-O-Bloom in a Petal Apothecary
+achievement.extrabotany:stonesia=ネトゲ廃人シュプレヒコール
+achievement.extrabotany:stonesia.desc=Make a Stonesia in a Petal Apothecary
+achievement.extrabotany:sunshinelily=右肩の蝶
+achievement.extrabotany:sunshinelily.desc=Make a Sunshine Lily in a Petal Apothecary
+achievement.extrabotany:infernoidisy=悪食娘コンチータ
+achievement.extrabotany:infernoidisy.desc=Make a Infernoidisy in a Petal Apothecary
+achievement.extrabotany:judasvow=erase or zero
+achievement.extrabotany:judasvow.desc=Make a Judas' Vow in a Petal Apothecary
+achievement.extrabotany:manalinkuim=Last Night,Good Night
+achievement.extrabotany:manalinkuim.desc=Make a Manalinkuim in a Petal Apothecary
 
 # -OTHERS
-achievement.extrabotany:blankcard=
-achievement.extrabotany:blankcard.desc=
+achievement.extrabotany:blankcard=WHITE ALBUM
+achievement.extrabotany:blankcard.desc=Find out the secret of Blank Card!
 
 #ENCHANTMENT
 enchantment.gaiablessing=Gaia's Blessing

@@ -13,7 +13,6 @@ import net.minecraft.util.DamageSource;
 import com.meteor.extrabotany.api.extrabotany.recipe.RecipeBlueenchantress;
 import com.meteor.extrabotany.api.extrabotany.recipe.RecipeInfernoidisy;
 import com.meteor.extrabotany.api.extrabotany.recipe.RecipeStonesia;
-import com.meteor.extrabotany.client.ClientProxy;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.handler.PropertyHandler;
 import com.meteor.extrabotany.common.item.ModItems;
@@ -22,9 +21,9 @@ public class ExtraBotanyAPI {
 	
 	public static ModItems ModItems = new ModItems();
 	public static ModBlocks ModBlocks = new ModBlocks();
-	public static ClientProxy proxy = new ClientProxy();
 	
 	public static Set<Item> diplopbambooBlacklist = new LinkedHashSet<Item>();
+	public static Set<Item> artifaconiaWhitelist = new LinkedHashSet<Item>();
 	
 	public static List<RecipeInfernoidisy> infernoidisyRecipes = new ArrayList<RecipeInfernoidisy>();
 	public static List<RecipeStonesia> stonesiaRecipes = new ArrayList<RecipeStonesia>();
@@ -70,6 +69,14 @@ public class ExtraBotanyAPI {
 	
 	public static boolean isItemBlacklistedFromDiplopBamboo(Item item){
 		return diplopbambooBlacklist.contains(item);
+	}
+	
+	public static void whitelistItemFromArtifaconia(Item item){
+		artifaconiaWhitelist.add(item);
+	}
+	
+	public static boolean isItemWhitelistedFromArtifaconia(Item item){
+		return artifaconiaWhitelist.contains(item);
 	}
 	
 	public static RecipeInfernoidisy registerInfernoidisyRecipe(Object input, Block output, int outputMeta) {

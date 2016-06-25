@@ -8,7 +8,6 @@ public class LibReference {
 	public static final String PREFIX_MOD = "extrabotany:";
 	public static final String BUILD = "6";
 	public static final String VERSION = "r1.0-" + BUILD;
-	public static final int VER = 6;
 	public static final String DEPENDENCIES = "required-after:Botania;after:Baubles";
 	
 	public static final String PROXY_COMMON = "com.meteor.extrabotany.common.CommonProxy";
@@ -21,6 +20,7 @@ public class LibReference {
 	
 	public static final String MODEL_HESTIACHASTITY = "extrabotany:textures/models/armor/armorrelic.png";
 	public static final String MODEL_RELIC = "extrabotany:textures/models/armor/armorrelic0.png";
+	public static final String MODEL_VCU = "extrabotany:textures/models/armor/vcu.png";
 	
 	public static final String PYLON = "extrabotany:textures/models/pylon.png";
 	public static final String PYLON_GREEN = "extrabotany:textures/models/pylon1.png";
@@ -42,6 +42,7 @@ public class LibReference {
 	public static final ResourceLocation BAR_BOSSB = new ResourceLocation("extrabotany","textures/gui/bossBarB.png");
 	public static final ResourceLocation BAR_BOSS = new ResourceLocation("extrabotany","textures/gui/bossBar.png");
 	public static final ResourceLocation SHIELD = new ResourceLocation("extrabotany","textures/icons/shield.png");
+	public static final ResourceLocation HALO = new ResourceLocation("extrabotany","textures/icons/halo.png");
 	public static final ResourceLocation DURANCE = new ResourceLocation("extrabotany","textures/icons/durance.png");
 	public static final ResourceLocation ATHENA = new ResourceLocation("extrabotany","textures/icons/athena.png");
 	public static final ResourceLocation EXTRA = new ResourceLocation("extrabotany","textures/icons/extra.png");

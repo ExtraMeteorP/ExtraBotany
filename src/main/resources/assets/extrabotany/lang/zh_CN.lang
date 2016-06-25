@@ -110,6 +110,8 @@ item.ExtraBotany.SpawnCardLycorisdiataRandom.name=随机彼岸花之卡
 item.ExtraBotany.SpawnLycorisRandom.desc=随机生成一朵彼岸花
 
 # -ADVANCED
+item.darksword.name=暗影刀
+item.nightmarefuel.name=梦魇燃料
 item.coronaclaymore.name=日冕重剑
 item.angelwand.name=天使魔杖
 item.manapotato.name=魔力土豆
@@ -173,10 +175,16 @@ item.test.desc=仅作测试
 
 # LEXICON ENTRIES
 # -BASIC
+# --NIGHTMAREFUEL
+botania.entry.nightmarefuel=梦魇燃料
+botania.tagline.nightmarefuel=你内心深处的恐惧.
+botania.page.nightmarefuel=一些怪物的身上可能携带着 &1梦魇燃料&0,这是一种非常稀 有而又令人畏惧的材料.它 的热值很高,但有传言凡是携 带过&1梦魇燃料&0的人都因厄运 降临而死了.
+
 # --TELEPORTPEARL
 botania.entry.teleportpearl=传送珍珠
-botania.page.teleportpearl0=
-botania.page.teleportpearl1=
+botania.tagline.teleportpearl=Oops.
+botania.page.teleportpearl0=&1传送珍珠&0与&4末影珍珠&0非常相 似.但是,它并不会对使用 者造成伤害.
+botania.page.teleportpearl1=注意六点钟方向.
 
 # --BLANKCARD
 botania.entry.blankcard=白卡
@@ -186,17 +194,17 @@ botania.page.blankcard1=这是一个秘密.
 
 # --COSMETIC
 botania.entry.cosmetic=装饰饰品
-botania.tagline.cosmetic=
-botania.page.cosmetic0=
-botania.page.cosmetic1=
-botania.page.cosmetic2=
-botania.page.cosmetic3=
-botania.page.cosmetic4=
+botania.tagline.cosmetic=A Bunny Can Go Savage
+botania.page.cosmetic0=仅仅只是为了好玩与装饰的 饰品,或许它们可能也有着 其他用途?
+botania.page.cosmetic1=So scare
+botania.page.cosmetic2=Concern
+botania.page.cosmetic3=What r you doing
+botania.page.cosmetic4=Wow
 
 # --PRISMATICSHARD
 botania.entry.prismaticshard=彩虹碎片
-botania.tagline.prismaticshard=
-botania.page.prismaticshard0=
+botania.tagline.prismaticshard=全宇宙都爱.
+botania.page.prismaticshard0=非常稀有的一种碎片,其获 得途径非常少.而且由于其 用途广泛,所以是一种十分 罕贵的材料.
 
 # --GOLDSTRING
 botania.entry.goldstring=注魔金线
@@ -217,6 +225,30 @@ botania.page.quartz1=
 botania.page.quartz2=
 
 # -WEAPON
+# --ANGELWAND
+botania.entry.angelwand=
+botania.tagline.angelwand=
+botania.page.angelwand0=
+botania.page.angelwand1=
+
+# --CORONACLAYMORE
+botania.entry.coronaclaymore=
+botania.tagline.coronaclaymore=
+botania.page.coronaclaymore0=
+
+# --DARKSWORD
+botania.entry.darksword=
+botania.tagline.darksword=
+botania.page.darksword0=
+botania.page.darksword1=
+
+# --SCISSORBLADE
+botania.entry.scissorblade=
+botania.tagline.scissorblade=
+botania.page.scissorblade0=
+botania.page.scissorblade1=
+botania.page.scissorblade2=
+
 # --BULLET
 botania.entry.bullet=多种弹药
 botania.tagline.bullet=
@@ -350,30 +382,27 @@ botania.page.annoyobloom1=移动或死亡!
 
 # --VOIDUIM
 botania.entry.voiduim=虚空花
-botania.page.voiduim0=
+botania.page.voiduim0=&1虚空花&0可以使用虚空的力量 将魔力变为矿石,但它也有 着苛刻的生长环境要求: 它必须种在基岩上方2格内并 且能见到阳光.
 botania.page.voiduim1=Re:从零开始的异世界生活.
 
 # --ARTIFACONIA
 botania.entry.artifaconia=古遗莲
-botania.page.artifaconia0=
+botania.page.artifaconia0=&1古遗莲&0掌握着上古之神的力 量,它可以利用魔力把一件遗物 进行二次绑定给附近的一个 玩家.如果给它一个15格的 红石信号,那么它将会去拆 解能够拆解的遗物.
 botania.page.artifaconia1=这种事绝对很奇怪啊.
 
 # --MANALINKUIM
 botania.entry.manalinkuim=魔链花
-botania.page.manalinkuim0=
+botania.page.manalinkuim0=&1魔链花&0是操纵魔力流的大师 .它可以从一个魔力池中抽 取魔力并将它们传输到一个 魔力发射器里.因此它可以 用来进行远距离的魔力传输 .
 botania.page.manalinkuim1=汇集的光芒.
 
 # -OTHERS
 # --INFINITYMANA
 botania.entry.infinitymana=无限魔力
 
-# --COMMANDS
-botania.entry.command=指令
-botania.page.command0=
-
 # --PICKUP
 botania.entry.pickup=掉落物
-botania.page.pickup0=
+botania.tagline.pickup=这是魔法!
+botania.page.pickup0=你会发现当你杀死怪物时它们会掉落些奇怪的结晶,捡起这些不同的结晶会有不同的效果.捡起护盾会提供你少许护盾值,生命结晶会恢复少许生命值,而魔力结晶则会使你获得少许魔力.
 
 # --SHIELD
 botania.entry.shield=护盾
@@ -508,15 +537,15 @@ botania.tagline.ominiviolet=普罗维登斯之眼
 
 tile.botania:flower.geminiorchid.name=双子兰
 tile.botania:flower.geminiorchid.reference=Another
-botania.tagline.geminiorchid=
+botania.tagline.geminiorchid=我爱着你,我恨着你.
 
 tile.botania:flower.pyschobloom.name=闹闹花
-tile.botania:flower.pyschobloom.reference=
-botania.tagline.pyschobloom=
+tile.botania:flower.pyschobloom.reference=它只是太笨重了.
+botania.tagline.pyschobloom=上古之神的低语.
 
 tile.botania:flower.stonesia.name=石中姬
-tile.botania:flower.stonesia.reference=
-botania.tagline.stonesia=
+tile.botania:flower.stonesia.reference=石头炼成
+botania.tagline.stonesia=这是石中剑吗?
 
 # -FUNCTIONAL
 tile.botania:flower.numerondandelife.name=源命英
@@ -552,28 +581,28 @@ tile.botania:flower.judasvow.reference=我的荣幸
 botania.tagline.judasvow=为了正义
 
 tile.botania:flower.voiduim.name=虚空花
-tile.botania:flower.voiduim.reference=
-botania.tagline.voiduim=
+tile.botania:flower.voiduim.reference=我来自虚空
+botania.tagline.voiduim=炼狱的泛滥.
 
 tile.botania:flower.diplopbamboo.name=复视笋
-tile.botania:flower.diplopbamboo.reference=
-botania.tagline.diplopbamboo=
+tile.botania:flower.diplopbamboo.reference=无限
+botania.tagline.diplopbamboo=完全一样.
 
 tile.botania:flower.infernoidisy.name=狱火菊
 tile.botania:flower.infernoidisy.reference=我想变成红色
-botania.tagline.infernoidisy=
+botania.tagline.infernoidisy=炼狱的消华.
 
 tile.botania:flower.launchish.name=弹射草
-tile.botania:flower.launchish.reference=
-botania.tagline.launchish=
+tile.botania:flower.launchish.reference=弹射起步
+botania.tagline.launchish=无人深空.
 
 tile.botania:flower.annoyobloom.name=吵吵花
-tile.botania:flower.annoyobloom.reference=
-botania.tagline.annoyobloom=
+tile.botania:flower.annoyobloom.reference=你好,你好,你好
+botania.tagline.annoyobloom=你好——!!
 
 tile.botania:flower.manalinkuim.name=魔链花
-tile.botania:flower.manalinkuim.reference=
-botania.tagline.manalinkuim=
+tile.botania:flower.manalinkuim.reference=美味的魔力
+botania.tagline.manalinkuim=Bigger and Bigger.
 
 #ACHIEVEMENTS
 # -RELICS
@@ -587,104 +616,104 @@ achievement.extrabotany:excaliber=圣光照耀众生
 achievement.extrabotany:excaliber.desc=获得王者圣剑!
 achievement.extrabotany:excaliberfake=信仰圣光吧
 achievement.extrabotany:excaliberfake.desc=获得战利品:王者之剑
-achievement.extrabotany:hestiachastity=破灭之光
+achievement.extrabotany:hestiachastity=Ooo! Shiny!
 achievement.extrabotany:hestiachastity.desc=获得战利品:赫斯提亚的贞洁
-achievement.extrabotany:maxwelldemon=第二类永动机!?
+achievement.extrabotany:maxwelldemon=Heart Breaker
 achievement.extrabotany:maxwelldemon.desc=获得战利品:麦克斯韦的妖精
-achievement.extrabotany:vpowerbattleaxe=Tell Your World
-achievement.extrabotany:vpowerbattleaxe.desc=获得战利品:V制式动力战斧
-achievement.extrabotany:vrangerboots=悪ノ召使
+achievement.extrabotany:vpowerbattleaxe=You Can Do It!
+achievement.extrabotany:vpowerbattleaxe.desc=获得V制式动力战斧
+achievement.extrabotany:vrangerboots=Lucky Break
 achievement.extrabotany:vrangerboots.desc=获得战利品:V制式游侠靴
-achievement.extrabotany:vhandgun_double=悪ノ娘
-achievement.extrabotany:vhandgun_double.desc=获得战利品:V制式手炮
-achievement.extrabotany:cronusphantom=
+achievement.extrabotany:vhandgun_double=Matching Attire
+achievement.extrabotany:vhandgun_double.desc=获得V制式手炮
+achievement.extrabotany:cronusphantom=Star Power
 achievement.extrabotany:cronusphantom.desc=获得战利品:柯罗诺斯的幻影
-achievement.extrabotany:hermestravelclothing=
+achievement.extrabotany:hermestravelclothing=Mastermind
 achievement.extrabotany:hermestravelclothing.desc=获得战利品:赫尔墨斯的旅行衣
-achievement.extrabotany:phoenixblaster=
+achievement.extrabotany:phoenixblaster=Smashing, Poppet!
 achievement.extrabotany:phoenixblaster.desc=获得凤凰冲击波
-achievement.extrabotany:snowballlauncher=
+achievement.extrabotany:snowballlauncher=Sting Operation
 achievement.extrabotany:snowballlauncher.desc=获得雪球发射器
-achievement.extrabotany:tacticalshotgun=
+achievement.extrabotany:tacticalshotgun=Hold on Tight!
 achievement.extrabotany:tacticalshotgun.desc=获得战术猎枪
-achievement.extrabotany:olympusguard=
+achievement.extrabotany:olympusguard=Dungeon Heist
 achievement.extrabotany:olympusguard.desc=获得奥斯匹林的戍卫
-achievement.extrabotany:cthulhueye=
+achievement.extrabotany:cthulhueye=Eye on You
 achievement.extrabotany:cthulhueye.desc=获得战利品:克苏鲁之眼
-achievement.extrabotany:hermeswand=
-achievement.extrabotany:hermeswand.desc=
-achievement.extrabotany:theseusship=
-achievement.extrabotany:theseusship.desc=
-achievement.extrabotany:valkyriecombatuniform=
-achievement.extrabotany:valkyriecombatuniform.desc=
-achievement.extrabotany:coronaclaymore=
-achievement.extrabotany:coronaclaymore.desc=
-achievement.extrabotany:eternalslience=
-achievement.extrabotany:eternalslience.desc=
-achievement.extrabotany:lokighostrick=
-achievement.extrabotany:lokighostrick.desc=
-achievement.extrabotany:angelwand=
-achievement.extrabotany:angelwand.desc=
+achievement.extrabotany:hermeswand=Worm Fodder
+achievement.extrabotany:hermeswand.desc=获得战利品:赫尔墨斯的旅行手杖
+achievement.extrabotany:theseusship=Miner for Fire
+achievement.extrabotany:theseusship.desc=获得战利品:特修斯之船
+achievement.extrabotany:valkyriecombatuniform=Head in the Clouds
+achievement.extrabotany:valkyriecombatuniform.desc=获得女武神作战服
+achievement.extrabotany:coronaclaymore=Still Hungry
+achievement.extrabotany:coronaclaymore.desc=获得日冕重剑
+achievement.extrabotany:eternalslience=Photosynthesis
+achievement.extrabotany:eternalslience.desc=获得静籁永恒
+achievement.extrabotany:lokighostrick=The Great Southern Plantkill
+achievement.extrabotany:lokighostrick.desc=获得战利品:洛基的鬼计
+achievement.extrabotany:angelwand=Extra Shiny!
+achievement.extrabotany:angelwand.desc=获得天使魔杖
 
 # -GAIA
-achievement.extrabotany:gaia_kill=
+achievement.extrabotany:gaia_kill=黎明杀机
 achievement.extrabotany:gaia_kill.desc=击败盖亚守护者III!
-achievement.extrabotany:gaia_noarmor=
+achievement.extrabotany:gaia_noarmor=英雄不朽!
 achievement.extrabotany:gaia_noarmor.desc=战斗从头至尾不穿任何护甲击杀盖亚守护者III
-achievement.extrabotany:gaia_dark=
+achievement.extrabotany:gaia_dark=在这停顿
 achievement.extrabotany:gaia_dark.desc=击败黑暗盖亚守护者III!
-achievement.extrabotany:gaia_darknoarmor=
+achievement.extrabotany:gaia_darknoarmor=天降正义
 achievement.extrabotany:gaia_darknoarmor.desc=战斗从头至尾不穿任何护甲击杀黑暗盖亚守护者III
 
 # -FLOWERS
-achievement.extrabotany:annoybloom=
-achievement.extrabotany:annoybloom.desc=
-achievement.extrabotany:artifaconia=
-achievement.extrabotany:artifaconia.desc=
-achievement.extrabotany:diplopbamboo=
-achievement.extrabotany:diplopbamboo.desc=
-achievement.extrabotany:icebirdium=
-achievement.extrabotany:icebirdium.desc=
-achievement.extrabotany:launchish=
-achievement.extrabotany:launchish.desc=
-achievement.extrabotany:necrofleur=
-achievement.extrabotany:necrofleur.desc=
-achievement.extrabotany:numeronbalsam=
-achievement.extrabotany:numeronbalsam.desc=
-achievement.extrabotany:numerondandelife=
-achievement.extrabotany:numerondandelife.desc=
-achievement.extrabotany:voiduim=
-achievement.extrabotany:voiduim.desc=
-achievement.extrabotany:volatilily=
-achievement.extrabotany:volatilily.desc=
-achievement.extrabotany:woodienia=
-achievement.extrabotany:woodienia.desc=
-achievement.extrabotany:blueenchantress=
-achievement.extrabotany:blueenchantress.desc=
-achievement.extrabotany:candyflower=
-achievement.extrabotany:candyflower.desc=
-achievement.extrabotany:geminiorchid=
-achievement.extrabotany:geminiorchid.desc=
-achievement.extrabotany:moonlightlily=
-achievement.extrabotany:moonlightlily.desc=
-achievement.extrabotany:omniviolet=
-achievement.extrabotany:ominiviolet.desc=
-achievement.extrabotany:pyschobloom=
-achievement.extrabotany:pyschobloom.desc=
-achievement.extrabotany:stonesia=
-achievement.extrabotany:stonesia.desc=
-achievement.extrabotany:sunshinelily=
-achievement.extrabotany:sunshinelily.desc=
-achievement.extrabotany:infernoidisy=
-achievement.extrabotany:infernoidisy.desc=
-achievement.extrabotany:judasvow=
-achievement.extrabotany:judasvow.desc=
-achievement.extrabotany:manalinkuim=
-achievement.extrabotany:manalinkuim.desc=
+achievement.extrabotany:annoybloom=脳浆炸裂ガール
+achievement.extrabotany:annoybloom.desc=在花药台制作一朵吵吵花
+achievement.extrabotany:artifaconia=Undead enemy
+achievement.extrabotany:artifaconia.desc=在花药台制作一朵古遗莲
+achievement.extrabotany:diplopbamboo=Weekender Girl
+achievement.extrabotany:diplopbamboo.desc=在花药台制作一朵复视笋
+achievement.extrabotany:icebirdium=Nyan Cat
+achievement.extrabotany:icebirdium.desc=在花药台制作一朵零鸟姬
+achievement.extrabotany:launchish=紙飛行機
+achievement.extrabotany:launchish.desc=在花药台制作一朵弹射草
+achievement.extrabotany:necrofleur=死吧,死吧,死吧.
+achievement.extrabotany:necrofleur.desc=在花药台制作一朵死之花
+achievement.extrabotany:numeronbalsam=二律背反
+achievement.extrabotany:numeronbalsam.desc=在花药台制作一朵源凤仙
+achievement.extrabotany:numerondandelife=Bacterial Contamination
+achievement.extrabotany:numerondandelife.desc=在花药台制作一朵源命英
+achievement.extrabotany:voiduim=Ticket To Write
+achievement.extrabotany:voiduim.desc=在花药台制作一朵虚空花
+achievement.extrabotany:volatilily=Twinkle World
+achievement.extrabotany:volatilily.desc=在花药台制作一朵波动百合
+achievement.extrabotany:woodienia=The Naturalist
+achievement.extrabotany:woodienia.desc=在花药台制作一朵伐木花
+achievement.extrabotany:blueenchantress=白い雪のプリンセスは
+achievement.extrabotany:blueenchantress.desc=在花药台制作一朵蓝色妖姬
+achievement.extrabotany:candyflower=とても痛い痛がりたい
+achievement.extrabotany:candyflower.desc=在花药台制作一朵糖果花
+achievement.extrabotany:geminiorchid=幸せになれる隠しコマンドがあるらしい
+achievement.extrabotany:geminiorchid.desc=在花药台制作一朵双子兰
+achievement.extrabotany:moonlightlily=Blessing
+achievement.extrabotany:moonlightlily.desc=在花药台制作一朵月光百合
+achievement.extrabotany:omniviolet=RIP=RELEASE
+achievement.extrabotany:ominiviolet.desc=在花药台制作一朵全知槿
+achievement.extrabotany:pyschobloom=Sweet Devil
+achievement.extrabotany:pyschobloom.desc=在花药台制作一朵闹闹花
+achievement.extrabotany:stonesia=ネトゲ廃人シュプレヒコール
+achievement.extrabotany:stonesia.desc=在花药台制作一朵石中姬
+achievement.extrabotany:sunshinelily=右肩の蝶
+achievement.extrabotany:sunshinelily.desc=在花药台制作一朵日耀百合
+achievement.extrabotany:infernoidisy=悪食娘コンチータ
+achievement.extrabotany:infernoidisy.desc=在花药台制作一朵狱火菊
+achievement.extrabotany:judasvow=erase or zero
+achievement.extrabotany:judasvow.desc=在花药台制作一朵犹大的誓约
+achievement.extrabotany:manalinkuim=Last Night,Good Night
+achievement.extrabotany:manalinkuim.desc=在花药台制作一朵魔链花
 
 # -OTHERS
-achievement.extrabotany:blankcard=
-achievement.extrabotany:blankcard.desc=
+achievement.extrabotany:blankcard=白色相簿
+achievement.extrabotany:blankcard.desc=解开白卡的秘密!
 
 #ENCHANTMENT
 enchantment.gaiablessing=盖亚祝福

@@ -33,7 +33,6 @@ public class ItemHermesTravelClothing extends ItemRelicArmorSet implements IMana
 	public ItemHermesTravelClothing(int type, String name) {
 		super(1, LibItemName.HERMESTRAVELCLOTHING);
 		MinecraftForge.EVENT_BUS.register(this);
-	    FMLCommonHandler.instance().bus().register(this);
 	}
 	
 	public static boolean hasHermesTravelClothing(EntityPlayer player){
@@ -64,43 +63,6 @@ public class ItemHermesTravelClothing extends ItemRelicArmorSet implements IMana
 	            	}
 	            }
 	        }
-	 }
-
-    @SubscribeEvent
-    public void preRenderPlayer(RenderPlayerEvent.Pre event) {
-    	 EntityPlayer player = (EntityPlayer) event.entity;
-	        for(ItemStack stack : player.inventory.armorInventory) {
-	            if(stack != null && stack.getItem() instanceof ItemHermesTravelClothing) {
-	            	if(ItemRelic.isRightPlayer(player, stack))
-	            	if (Keyboard.isKeyDown(Keyboard.KEY_M)) {
-	            		event.setCanceled(true);
-	            	}
-	            }
-	        }
-    }
-    
-    @SubscribeEvent
-    public void TickEvent(TickEvent.PlayerTickEvent event) {
-    	 EntityPlayer player = (EntityPlayer) event.player;
-	        if(hasHermesTravelClothing(player)){
-	            if (Keyboard.isKeyDown(Keyboard.KEY_M)) {
-	            	player.addPotionEffect(new PotionEffect(Potion.invisibility.getId(), 10, 0));
-	            }
-	       }
-    }
-    
-	@SubscribeEvent
-	 public void PlayerAttackEvent(LivingAttackEvent event) { 
-		if(event.source.getSourceOfDamage() instanceof EntityPlayer){
-	        EntityPlayer player = (EntityPlayer) event.source.getSourceOfDamage();
-	        for(ItemStack stack : player.inventory.armorInventory) {
-	            if(stack != null && stack.getItem() instanceof ItemHermesTravelClothing) {
-	            	if(player.isPotionActive(Potion.invisibility.getId()))
-	            		if(ItemRelic.isRightPlayer(player, stack))
-	            		event.setCanceled(true);
-	            }
-	        }
-	    }
 	 }
 	
 	@Override

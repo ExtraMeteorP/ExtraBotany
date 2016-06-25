@@ -11,6 +11,7 @@ import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileFunctional;
 
+import com.meteor.extrabotany.api.ExtraBotanyAPI;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
@@ -25,6 +26,21 @@ public class SubTileArtifaconia extends SubTileFunctional{
   		return LexiconModData.artifaconia;
   	}
  	
+ 	static{
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.aphroditegrace);
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.cthulhueye);
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.lokighostrick);
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.hermestravelclothing);
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.hermeswand);
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.cronusphantom);
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.excaliberfake);
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.vrangerboots);
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.theseusship);
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.maxwelldemon);
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.athenabless);
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.hestiachastity);
+ 	}
+ 	
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
@@ -37,7 +53,7 @@ public class SubTileArtifaconia extends SubTileFunctional{
 					List<EntityPlayer> players = supertile.getWorldObj().getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(supertile.xCoord - RANGE, supertile.yCoord - RANGE, supertile.zCoord - RANGE, supertile.xCoord + RANGE + 1, supertile.yCoord + RANGE + 1, supertile.zCoord + RANGE + 1));
 					for(EntityPlayer player : players) {
 						IRelic r = (IRelic)item.getEntityItem().getItem();
-							if(redstoneSignal == 15 && r.getSoulbindUsername(item.getEntityItem()) == player.getDisplayName()){
+							if(redstoneSignal == 15 && r.getSoulbindUsername(item.getEntityItem()).equals(player.getDisplayName()) && ExtraBotanyAPI.isItemWhitelistedFromArtifaconia(item.getEntityItem().getItem())){
 								EntityItem f = new EntityItemUnbreakable(supertile.getWorldObj(), supertile.xCoord, supertile.yCoord, supertile.zCoord, new ItemStack(ModItems.material, 1, 11));
 								f.delayBeforeCanPickup = 40;
 								if(!supertile.getWorldObj().isRemote){

@@ -21,7 +21,6 @@ public class PotionCure extends PotionMods{
 	public PotionCure() {
 		super(ConfigHandler.idPotionC, LibPotionEffectName.CURE, false, 0xF39716, 4);
 		MinecraftForge.EVENT_BUS.register(this);
-	    FMLCommonHandler.instance().bus().register(this);
 	}
 	
 	@SubscribeEvent

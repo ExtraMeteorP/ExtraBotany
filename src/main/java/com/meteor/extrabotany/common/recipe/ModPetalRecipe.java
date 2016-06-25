@@ -49,6 +49,7 @@ public class ModPetalRecipe {
     public static RecipePetals infernoidisyRecipe;
     public static RecipePetals launchishRecipe;
     public static RecipePetals annoyobloomRecipe;
+    public static RecipePetals manalinkuim;
 	
 	public static void init() {
 		blueenchantressRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.BLUE_ENCHANTRESS), blue, blue, blue, blue, cyan, gaiaEssence, manaPowder, runeWater);
@@ -74,5 +75,6 @@ public class ModPetalRecipe {
 		infernoidisyRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.INFERNOIDISY), red, red, red, red, red, manaPowder);
 		launchishRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.LAUNCHISH), green, green, green, green, green, manaPowder);
 		annoyobloomRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.ANNOYOBLOOM), yellow, yellow, yellow, yellow, orange, manaPowder);
+		manalinkuim = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.MANALINKUIM), blue, blue, lightBlue, cyan, cyan, runeMana, runeLust, manaPowder);
 	}
 }

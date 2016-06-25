@@ -23,7 +23,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 
 public class ItemMaterial extends ItemMods{
 	
-	final int types = 16;
+	final int types = 15;
 	IIcon[] icons;
 	
 	public ItemMaterial(String name) {
@@ -35,15 +35,15 @@ public class ItemMaterial extends ItemMods{
 	public void onUpdate(ItemStack stack, World world, Entity entity, int i, boolean b) {
 		if(entity instanceof EntityPlayer){
 			EntityPlayer player = (EntityPlayer) entity;
-			if(stack.getItemDamage() == 13)
+			if(stack.getItemDamage() == 12)
 				player.setHealth(Math.min(player.getHealth() + 1F * stack.stackSize, player.getMaxHealth()));
+				player.inventory.clearInventory(ModItems.material, 12);
+			if(stack.getItemDamage() == 13)
+				PropertyHandler.addShieldAmount(1F * stack.stackSize, player);
 				player.inventory.clearInventory(ModItems.material, 13);
 			if(stack.getItemDamage() == 14)
-				PropertyHandler.addShieldAmount(1F * stack.stackSize, player);
-				player.inventory.clearInventory(ModItems.material, 14);
-			if(stack.getItemDamage() == 15)
 				ManaItemHandler.dispatchMana(stack, player, 100 * stack.stackSize, true);
-				player.inventory.clearInventory(ModItems.material, 15);
+				player.inventory.clearInventory(ModItems.material, 14);
 		}
 	}
 	

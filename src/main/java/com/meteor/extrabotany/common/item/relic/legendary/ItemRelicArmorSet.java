@@ -22,7 +22,6 @@ import net.minecraftforge.common.ISpecialArmor;
 import net.minecraftforge.common.MinecraftForge;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.item.IRelic;
-import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 import vazkii.botania.common.item.ModItems;
 import vazkii.botania.common.item.equipment.armor.manasteel.ItemManasteelArmor;
@@ -34,9 +33,8 @@ import com.meteor.extrabotany.client.model.ModelRelicArmor;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.lib.LibReference;
 
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
-import cpw.mods.fml.common.gameevent.TickEvent;
+import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
@@ -66,7 +64,6 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic,ISpe
 	public ItemRelicArmorSet(int type, String name) {
 		super(type, name, BotaniaAPI.terrasteelArmorMaterial);
 		MinecraftForge.EVENT_BUS.register(this);
-	    FMLCommonHandler.instance().bus().register(this);
 	}
 
 	@Override
@@ -78,7 +75,7 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic,ISpe
 
 	@Override
 	public String getArmorTextureAfterInk(ItemStack stack, int slot) {
-		return ConfigHandler.enableArmorModels ? LibReference.MODEL_HESTIACHASTITY : slot == 2 ? LibReference.MODEL_RELIC : LibReference.MODEL_RELIC;
+		return LibReference.MODEL_HESTIACHASTITY;
 	}
 
 	@Override
@@ -187,7 +184,7 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic,ISpe
 	}
 	
     @SubscribeEvent
-    public void TickEvent(TickEvent.PlayerTickEvent event) {
+    public void TickEvent(PlayerTickEvent event) {
     	 EntityPlayer player = (EntityPlayer) event.player;
 	        for(ItemStack stack : player.inventory.armorInventory) {
 	            if(stack != null && stack.getItem() instanceof IRelic) {

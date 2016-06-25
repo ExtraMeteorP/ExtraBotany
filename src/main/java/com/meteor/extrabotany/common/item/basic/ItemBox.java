@@ -25,7 +25,7 @@ public class ItemBox extends ItemMods{
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
 		if(!player.worldObj.isRemote) {
-			if(player.inventory.hasItemStack(new ItemStack(ModItems.material,1,12))){
+			if(player.inventory.hasItemStack(new ItemStack(ModItems.key))){
 			stacks = new ItemStack[] {
 					new ItemStack(ModItems.material),
 					new ItemStack(ModItems.material,1,1),
@@ -40,9 +40,9 @@ public class ItemBox extends ItemMods{
 			};
 					int i = world.rand.nextInt(10);
 					world.playSoundAtEntity(player, "random.bow", 0.5F, 0.4F / (world.rand.nextFloat() * 0.4F + 0.8F));
-					player.inventory.consumeInventoryItem(new ItemStack(ModItems.material,1,12).getItem());
+					player.inventory.consumeInventoryItem(ModItems.key);
 					return stacks[i].copy();
-			}else if(!player.inventory.hasItemStack(new ItemStack(ModItems.material,1,12))){
+			}else if(!player.inventory.hasItemStack(new ItemStack(ModItems.key))){
 				player.addChatMessage(new ChatComponentTranslation("botaniamisc.openChest").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
 			}
 		}

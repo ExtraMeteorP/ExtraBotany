@@ -4,6 +4,7 @@ import net.minecraft.block.Block;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
+import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileEntity;
 import vazkii.botania.common.Botania;
@@ -11,6 +12,7 @@ import vazkii.botania.common.core.handler.ConfigHandler;
 
 import com.meteor.extrabotany.api.ExtraBotanyAPI;
 import com.meteor.extrabotany.api.extrabotany.recipe.RecipeInfernoidisy;
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 public class SubTileInfernoidisy extends SubTileEntity {
 
@@ -33,6 +35,11 @@ public class SubTileInfernoidisy extends SubTileEntity {
 
 	int positionAt = 0;
 	int[] ticksRemaining = new int[] { TIME_PER, TIME_PER, TIME_PER, TIME_PER, TIME_PER, TIME_PER, TIME_PER, TIME_PER };
+	
+	@Override
+	public LexiconEntry getEntry() {
+		return LexiconModData.infernoidisy;
+	}
 
 	@Override
 	public void onUpdate() {

@@ -23,7 +23,6 @@ public class ItemVRangerBoots extends ItemRelicArmorSet{
 	public ItemVRangerBoots(int type, String name) {
 		super(3, LibItemName.VRANGERBOOTS);
 		MinecraftForge.EVENT_BUS.register(this);
-	    FMLCommonHandler.instance().bus().register(this);
 	}
 	
 	@Override

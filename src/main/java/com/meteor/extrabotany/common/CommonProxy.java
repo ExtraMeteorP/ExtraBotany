@@ -5,7 +5,6 @@ import java.util.Map;
 
 import net.minecraft.nbt.NBTTagCompound;
 
-import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.ModMultiBlocks;
@@ -15,7 +14,6 @@ import com.meteor.extrabotany.common.entity.FakePlayer;
 import com.meteor.extrabotany.common.entity.ModEntities;
 import com.meteor.extrabotany.common.event.ModEvents;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
-import com.meteor.extrabotany.common.handler.GuiHandler;
 import com.meteor.extrabotany.common.integration.Intergration;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
@@ -27,7 +25,6 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
-import cpw.mods.fml.common.network.NetworkRegistry;
 
 public class CommonProxy {
 	
@@ -50,7 +47,6 @@ public class CommonProxy {
 		ModEvents.init();
 		new FakePlayer();
 		Intergration.init(event);
-		NetworkRegistry.INSTANCE.registerGuiHandler(ExtraBotany.instance, new GuiHandler());
 	}
 	
 	public void postInit(FMLPostInitializationEvent event) {

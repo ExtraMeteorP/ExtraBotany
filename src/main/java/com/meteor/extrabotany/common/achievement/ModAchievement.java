@@ -108,35 +108,33 @@ public class ModAchievement {
 		Gaia_gaia3Kill = new AchievementMod(LibAchievementName.GAIA_KILL, -8, 8, vazkii.botania.common.item.ModItems.gaiaHead, null);
 		Gaia_gaia3NoArmor = new AchievementMod(LibAchievementName.GAIA_NOARMOR, -6, 8, ModItems.dungeonbox, null);
 		Gaia_gaia3DarkKill = new AchievementMod(LibAchievementName.GAIA_DARK, -8, 10, ModItems.dog, Gaia_gaia3Kill);
-		Gaia_gaia3DarkNoArmor = new AchievementMod(LibAchievementName.GAIA_DARKNOARMOR, -6, 10, ModItems.boxs, Gaia_gaia3DarkNoArmor);
-		
-		if(ConfigHandler.relicsEnabled) {
-			Relic_aphroditegrace = new AchievementMod(LibItemName.APHRODITEGRACE, -9, 12, ModItems.aphroditegrace, Gaia_gaia3Kill);
-			Relic_dice20 = new AchievementMod(LibItemName.DICE20, -7, 12, ModItems.dice20, Gaia_gaia3Kill);
-			Relic_athenabless = new AchievementMod(LibItemName.ATHENABLESS, -5, 12, ModItems.athenabless, Gaia_gaia3Kill);
-			Relic_excaliberfake = new AchievementMod(LibItemName.EXCALIBERFAKE, -9, 13, ModItems.excaliberfake, Gaia_gaia3Kill);
-			Relic_excaliber = new AchievementMod(LibItemName.EXCALIBER, -7, 13, ModItems.excaliber, Gaia_gaia3Kill);
-			Relic_hestiachastity = new AchievementMod(LibItemName.HESTIACHASTITY, -5, 13, ModItems.hestiachastity, Gaia_gaia3Kill);
-			Relic_maxwelldemon = new AchievementMod(LibItemName.MAXWELLDEMON, -9, 14, ModItems.maxwelldemon, Gaia_gaia3Kill);
-			Relic_vhandgun = new AchievementMod(LibItemName.VHANDGUN, -7, 14, ModItems.vhandgun, Gaia_gaia3Kill);
-			Relic_vpowerbattleaxe = new AchievementMod(LibItemName.VPOWERBATTLEAXE, -5, 14, ModItems.vpowerbattleaxe, Gaia_gaia3Kill);
-			Relic_vrangerboots = new AchievementMod(LibItemName.VRANGERBOOTS, -9, 15, ModItems.vrangerboots, Gaia_gaia3Kill);
-			Relic_cronusphantom = new AchievementMod(LibItemName.CRONUSPHANTOM, -7, 15, ModItems.cronusphantom, Gaia_gaia3Kill);
-			Relic_hermestravelclothing = new AchievementMod(LibItemName.HERMESTRAVELCLOTHING, -5, 15, ModItems.hermestravelclothing, Gaia_gaia3Kill);
-			Relic_phoenixblaster = new AchievementMod(LibItemName.PHOENIXBLASTER, -9, 16, ModItems.gunphoenixblaster, Gaia_gaia3Kill);
-			Relic_snowballcannon = new AchievementMod(LibItemName.SNOWBALLLAUNCHER, -7, 16, ModItems.snowballlauncher, Gaia_gaia3Kill);
-			Relic_tacticalshotgun = new AchievementMod(LibItemName.TACTICALSHOTGUN, -5, 16, ModItems.guntacticalshotgun, Gaia_gaia3Kill);
-			Relic_olympusguard = new AchievementMod(LibItemName.OLYMPUSGUARD, -5, 17, ModItems.olympusguard, Gaia_gaia3Kill);
-			Relic_cthulhueye = new AchievementMod(LibItemName.CTHULHUEYE, -7, 17, ModItems.cthulhueye, Gaia_gaia3Kill);	
-			Relic_hermes = new AchievementMod(LibItemName.HERMESWAND, -9, 17, ModItems.hermeswand, Gaia_gaia3Kill);		
-			Relic_claymore = new AchievementMod(LibItemName.HELIACALCLAYMORE, -5, 18, ModItems.heliacalclaymore, Gaia_gaia3Kill);		
-			Relic_combat = new AchievementMod(LibItemName.VALKYRIECOMBATUNIFORM, -7, 18, ModItems.valkyriecombatuniform, Gaia_gaia3Kill);		
-			Relic_ship = new AchievementMod(LibItemName.THESEUSSHIP, -9, 18, ModItems.theseusship, Gaia_gaia3Kill);		
-			Relic_angel = new AchievementMod(LibItemName.ANGELWAND, -5, 19, ModItems.angelwand, Gaia_gaia3Kill);		
-			Relic_loki = new AchievementMod(LibItemName.LOKIGHOSTRICK, -7, 19, ModItems.lokighostrick, Gaia_gaia3Kill);		
-			Relic_slience = new AchievementMod(LibItemName.ETERNALSLIENCE, -9, 19, ModItems.eternalslience, Gaia_gaia3Kill);			
-		}
-		
+		Gaia_gaia3DarkNoArmor = new AchievementMod(LibAchievementName.GAIA_DARKNOARMOR, -6, 10, ModItems.boxs, Gaia_gaia3Kill);
+
+		Relic_aphroditegrace = new AchievementMod(LibItemName.APHRODITEGRACE, -9, 12, ModItems.aphroditegrace, Gaia_gaia3Kill);
+		Relic_dice20 = new AchievementMod(LibItemName.DICE20, -7, 12, ModItems.dice20, Gaia_gaia3Kill);
+		Relic_athenabless = new AchievementMod(LibItemName.ATHENABLESS, -5, 12, ModItems.athenabless, Gaia_gaia3Kill);
+		Relic_excaliberfake = new AchievementMod(LibItemName.EXCALIBERFAKE, -9, 13, ModItems.excaliberfake, Gaia_gaia3Kill);
+		Relic_excaliber = new AchievementMod(LibItemName.EXCALIBER, -7, 13, ModItems.excaliber, Gaia_gaia3Kill);
+		Relic_hestiachastity = new AchievementMod(LibItemName.HESTIACHASTITY, -5, 13, ModItems.hestiachastity, Gaia_gaia3Kill);
+		Relic_maxwelldemon = new AchievementMod(LibItemName.MAXWELLDEMON, -9, 14, ModItems.maxwelldemon, Gaia_gaia3Kill);
+		Relic_vhandgun = new AchievementMod(LibItemName.VHANDGUN, -7, 14, ModItems.vhandgun, Gaia_gaia3Kill);
+		Relic_vpowerbattleaxe = new AchievementMod(LibItemName.VPOWERBATTLEAXE, -5, 14, ModItems.vpowerbattleaxe, Gaia_gaia3Kill);
+		Relic_vrangerboots = new AchievementMod(LibItemName.VRANGERBOOTS, -9, 15, ModItems.vrangerboots, Gaia_gaia3Kill);
+		Relic_cronusphantom = new AchievementMod(LibItemName.CRONUSPHANTOM, -7, 15, ModItems.cronusphantom, Gaia_gaia3Kill);
+		Relic_hermestravelclothing = new AchievementMod(LibItemName.HERMESTRAVELCLOTHING, -5, 15, ModItems.hermestravelclothing, Gaia_gaia3Kill);
+		Relic_phoenixblaster = new AchievementMod(LibItemName.PHOENIXBLASTER, -9, 16, ModItems.gunphoenixblaster, Gaia_gaia3Kill);
+		Relic_snowballcannon = new AchievementMod(LibItemName.SNOWBALLLAUNCHER, -7, 16, ModItems.snowballlauncher, Gaia_gaia3Kill);
+		Relic_tacticalshotgun = new AchievementMod(LibItemName.TACTICALSHOTGUN, -5, 16, ModItems.guntacticalshotgun, Gaia_gaia3Kill);
+		Relic_olympusguard = new AchievementMod(LibItemName.OLYMPUSGUARD, -5, 17, ModItems.olympusguard, Gaia_gaia3Kill);
+		Relic_cthulhueye = new AchievementMod(LibItemName.CTHULHUEYE, -7, 17, ModItems.cthulhueye, Gaia_gaia3Kill);	
+		Relic_hermes = new AchievementMod(LibItemName.HERMESWAND, -9, 17, ModItems.hermeswand, Gaia_gaia3Kill);		
+		Relic_claymore = new AchievementMod(LibItemName.HELIACALCLAYMORE, -5, 18, ModItems.heliacalclaymore, Gaia_gaia3Kill);		
+		Relic_combat = new AchievementMod(LibItemName.VALKYRIECOMBATUNIFORM, -7, 18, ModItems.valkyriecombatuniform, Gaia_gaia3Kill);		
+		Relic_ship = new AchievementMod(LibItemName.THESEUSSHIP, -9, 18, ModItems.theseusship, Gaia_gaia3Kill);		
+		Relic_angel = new AchievementMod(LibItemName.ANGELWAND, -5, 19, ModItems.angelwand, Gaia_gaia3Kill);		
+		Relic_loki = new AchievementMod(LibItemName.LOKIGHOSTRICK, -7, 19, ModItems.lokighostrick, Gaia_gaia3Kill);		
+		Relic_slience = new AchievementMod(LibItemName.ETERNALSLIENCE, -9, 19, ModItems.eternalslience, Gaia_gaia3Kill);			
+
 		int pageIndex = AchievementPage.getAchievementPages().size();
 		AchievementPage extrabotanyPage = new AchievementPage(LibReference.MOD_NAME, AchievementMod.achievements.toArray(new Achievement[AchievementMod.achievements.size()]));
 		AchievementPage.registerAchievementPage(extrabotanyPage);

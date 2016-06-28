@@ -10,6 +10,7 @@ import net.minecraft.item.ItemStack;
 
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.enchantment.ModEnchantment;
+import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibReference;
 
@@ -18,6 +19,8 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 	
 	public ExtraBotanyCreativeTab() {
 		super(LibReference.MOD_ID);
+		setNoTitle();
+		setBackgroundImageName(LibReference.GUI_CREATIVE);
 	}
 	
 	@Override
@@ -28,6 +31,11 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 	@Override
 	public Item getTabIconItem() {
 		return getIconItemStack().getItem();
+	}
+	
+	@Override
+	public boolean hasSearchBar() {
+		return true;
 	}
 	
 	@Override
@@ -87,15 +95,17 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.dog);
 		addItem(ModItems.gaiawise);
 		//Bullets
-		addItem(ModItems.bullet);
-		//Weapons
-		addItem(ModItems.gunphoenixblaster);
-		addItem(ModItems.guntacticalshotgun);
-		addItem(ModItems.snowballlauncher);
-		addItem(ModItems.gunboomstick);
-		addItem(ModItems.gunflintlock);
-		addItem(ModItems.gunpistol);
-		addItem(ModItems.gunshotgun);
+		if(ConfigHandler.enableGuns){
+			addItem(ModItems.bullet);
+			//Weapons
+			addItem(ModItems.gunphoenixblaster);
+			addItem(ModItems.guntacticalshotgun);
+			addItem(ModItems.snowballlauncher);
+			addItem(ModItems.gunboomstick);
+			addItem(ModItems.gunflintlock);
+			addItem(ModItems.gunpistol);
+			addItem(ModItems.gunshotgun);
+		}
 		addItem(ModItems.scissorpurple);
 		addItem(ModItems.scissorred);
 		addItem(ModItems.darksword);

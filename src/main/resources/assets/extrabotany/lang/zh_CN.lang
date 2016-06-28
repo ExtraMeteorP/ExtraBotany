@@ -178,7 +178,7 @@ item.test.desc=仅作测试
 # --NIGHTMAREFUEL
 botania.entry.nightmarefuel=梦魇燃料
 botania.tagline.nightmarefuel=你内心深处的恐惧.
-botania.page.nightmarefuel=一些怪物的身上可能携带着 &1梦魇燃料&0,这是一种非常稀 有而又令人畏惧的材料.它 的热值很高,但有传言凡是携 带过&1梦魇燃料&0的人都因厄运 降临而死了.
+botania.page.nightmarefuel0=一些怪物的身上可能携带着 &1梦魇燃料&0,这是一种非常稀 有而又令人畏惧的材料.它 的热值很高,但有传言凡是携 带过&1梦魇燃料&0的人都因厄运 降临而死了.
 
 # --TELEPORTPEARL
 botania.entry.teleportpearl=传送珍珠
@@ -206,46 +206,33 @@ botania.entry.prismaticshard=彩虹碎片
 botania.tagline.prismaticshard=全宇宙都爱.
 botania.page.prismaticshard0=非常稀有的一种碎片,其获 得途径非常少.而且由于其 用途广泛,所以是一种十分 罕贵的材料.
 
-# --GOLDSTRING
-botania.entry.goldstring=注魔金线
-botania.tagline.goldstring=
-botania.page.goldstring0=
-botania.page.goldstring1=
-
 # --PETAL
 botania.entry.petal=彼岸花
 botania.tagline.petal=炽灼的心!
 botania.page.petal0=也许&1彼岸花&0是世界上最稀有 的花,它只会出现在晚上, 并且太阳升起的瞬间就会凋 零,昙花一现的生命.一共 有3种&1彼岸花&0,分别是红色, 绿色和紫色.不言而喻,它 的花瓣非常有价值.如果你 想试着去找到一朵,我只能 祝你好运.
 
-# --QUARTZ
-botania.entry.quartz=源质石英&盖亚石英
-botania.tagline.quartz=
-botania.page.quartz0=
-botania.page.quartz1=
-botania.page.quartz2=
-
 # -WEAPON
 # --ANGELWAND
-botania.entry.angelwand=
-botania.tagline.angelwand=
-botania.page.angelwand0=
-botania.page.angelwand1=
+botania.entry.angelwand=天使魔杖
+botania.tagline.angelwand=洁白无瑕.
+botania.page.angelwand0=对准实体使用&1天使魔杖&0可以 通过魔力快速地拉近你与其 的距离,可以用来追赶队友 及补刀敌人.
+botania.page.angelwand1=堕落天使.
 
 # --CORONACLAYMORE
-botania.entry.coronaclaymore=
-botania.tagline.coronaclaymore=
-botania.page.coronaclaymore0=
+botania.entry.coronaclaymore=日冕重剑
+botania.tagline.coronaclaymore=赞美太阳.
+botania.page.coronaclaymore0=&1日冕重剑&0在攻击敌人时有概 率释放出&4盖亚胎动&0,对大范围 内敌人造成巨量伤害.
 
 # --DARKSWORD
-botania.entry.darksword=
-botania.tagline.darksword=
-botania.page.darksword0=
-botania.page.darksword1=
+botania.entry.darksword=暗影刀
+botania.tagline.darksword=阴影之力
+botania.page.darksword0=使用&4梦魇燃料&0所制成的独特 的刀,在夜晚时将爆发出额 外的力量,可以造成更高的 伤害.
+botania.page.darksword1=夜幕降临.
 
 # --SCISSORBLADE
-botania.entry.scissorblade=
-botania.tagline.scissorblade=
-botania.page.scissorblade0=
+botania.entry.scissorblade=太刀剪
+botania.tagline.scissorblade=巨大的剪刀.
+botania.page.scissorblade0=&1红太刀&0可以给敌人添加缓慢 状态,清除虚弱状态来造成 更高伤害.而&1紫太刀&0则刚好 相反,给敌人添加虚弱状态 ,清除缓慢状态来造成更高伤 害.
 botania.page.scissorblade1=
 botania.page.scissorblade2=
 
@@ -402,116 +389,115 @@ botania.entry.infinitymana=无限魔力
 # --PICKUP
 botania.entry.pickup=掉落物
 botania.tagline.pickup=这是魔法!
-botania.page.pickup0=你会发现当你杀死怪物时它们会掉落些奇怪的结晶,捡起这些不同的结晶会有不同的效果.捡起护盾会提供你少许护盾值,生命结晶会恢复少许生命值,而魔力结晶则会使你获得少许魔力.
+botania.page.pickup0=你会发现当你杀死怪物时它 们会掉落些奇怪的结晶,捡 起这些不同的结晶会有不同 的效果.捡起护盾会提供你 少许护盾值,生命结晶会恢 复少许生命值,而魔力结晶 则会使你获得少许魔力.
 
 # --SHIELD
 botania.entry.shield=护盾
-botania.page.shield0=
-botania.page.shield1=
-botania.page.shield2=
+botania.tagline.shield=无駄无駄无駄无駄无駄无駄无駄
+botania.page.shield0=&1护盾值&0优先于生命值,它可 以用来吸收伤害.&1护盾值&0的 上限等同于你的生命值上限 .当&1护盾值&0被削减时,它将会 击退周围的怪物并清除弹射 物.
 
 # -RELICS
 # --HESTIACHASTITY
 botania.entry.hestiachastity=赫斯提亚的贞洁
-botania.tagline.hestiachastity=
-botania.page.hestiachastity0=
+botania.tagline.hestiachastity=盖亚的遗物
+botania.page.hestiachastity0=当玩家装备有&1赫斯提亚的贞 洁&0,受伤时会召唤出一道白色 的魔力风暴自动攻击周围的 敌人.
 
 # --MAXWELLDEMON
 botania.entry.maxwelldemon=麦克斯韦的妖精
-botania.tagline.maxwelldemon=
-botania.page.maxwelldemon0=
+botania.tagline.maxwelldemon=盖亚的遗物
+botania.page.maxwelldemon0=消耗魔力饮下&1麦克斯韦的妖 精&0后可以获得短暂时间的高 伤抗性,并且可以提高一定 的攻击力.同时在没有伤害吸 收的情况下获得5格伤害吸收.
 
 # --ATHENABLESS
 botania.entry.athenabless=雅典娜的庇佑
-botania.tagline.athenabless=
-botania.page.athenabless0=
+botania.tagline.athenabless=盖亚的遗物
+botania.page.athenabless0=佩戴&1雅典娜的庇佑&0后,攻击敌人 的同时可以将伤害部分转化 为&4护盾值&0.如果还装备着&1赫尔 墨斯的旅行衣&0,转化比率也会 提高.
 
 # --APHRODITEGRACE
 botania.entry.aphroditegrace=阿佛洛狄忒的恩宠
-botania.tagline.aphroditegrace=
-botania.page.aphroditegrace0=
+botania.tagline.aphroditegrace=盖亚的遗物
+botania.page.aphroditegrace0=装备&1阿佛洛狄忒的恩宠后&0, 玩家受到一定量伤害时可以 将该伤害部分转化为护盾值 ,并且清除身上的一个负面状 态.
 
 # --DICE20
 botania.entry.dice20=D20
 botania.tagline.dice20=命运一掷.
-botania.page.dice200=
+botania.page.dice200=击败&4盖亚守护者III&0的战利品 ,使用后可以获得随机一件遗物 .这个骰子一共有20个面,因此 推测可能有20件遗物.
 
 # --EXCALIBER
 botania.entry.excaliber=王者圣剑
 botania.tagline.excaliber=胜利与誓约.
-botania.page.excaliber0=
+botania.page.excaliber0=&1王者之剑&0激活后的完全态, 拥有着不俗的攻击力.同时在 挥舞时能够发射出金色的魔 力光束自动追踪攻击敌人.持 有时还能大幅提高移动速度.
 
 # --EXCALIBERFAKE
 botania.entry.excaliberfake=王者之剑
 botania.tagline.excaliberfake=消失的光芒.
-botania.page.excaliberfake0=
+botania.page.excaliberfake0=黯淡的&1王者之剑&0,持有时能 够提高移动速度.但这并非 其全部的力量,隐藏的力量 还有待玩家去激活.
 
 # --VPOWERBATTLEAXE
 botania.entry.vpowerbattleaxe=V制式动力战斧
 botania.tagline.vpowerbattleaxe=The 300!
-botania.page.vpowerbattleaxe0=
+botania.page.vpowerbattleaxe0=有着极高的伤害但显得十分 笨重,持有时行动会变得缓 慢.
 
 # --VRANGERBOOTS
 botania.entry.vrangerboots=V制式游侠靴
-botania.tagline.vrangerboots=
-botania.page.vrangerboots0=
+botania.tagline.vrangerboots=盖亚的遗物
+botania.page.vrangerboots0=装备&1V制式游侠靴&0后,玩家的跳 跃能力将得到提升,并且免 疫摔落伤害.同时在下落时 下蹲可以进行滑行.
 
 # --VHANDGUN
 botania.entry.vhandgun=V制式手炮
-botania.tagline.vhandgun=
-botania.page.vhandgun0=
+botania.tagline.vhandgun=魔力,魔力,魔力
+botania.page.vhandgun0=使用时能高频率发射出魔力 光束并自动追踪攻击周围的敌 人,但伤害并不高.
 
 # --CRONUSPHANTOM
 botania.entry.cronusphantom=柯罗诺斯的幻影
-botania.tagline.cronusphantom=
-botania.page.cronusphantom0=
+botania.tagline.cronusphantom=盖亚的遗物
+botania.page.cronusphantom0=佩戴&1柯罗诺斯的幻影&0后,玩家 每次攻击都将附带一层&4痛觉 残留&0状态,该状态将层层叠 加,每层都会提高被影响者所 受到的伤害.
 
 # --CTHULHUEYE
 botania.entry.cthulhueye=克苏鲁之眼
-botania.tagline.cthulhueye=
-botania.page.cthulhueye0=
+botania.tagline.cthulhueye=盖亚的遗物
+botania.page.cthulhueye0=可以用来标记坐标点,消耗 大量魔力可以将使用者传送 至标记点,至多可以标记4个 .每次使用后都会有一小段冷 却时间,如果强行使用将会受 到来自遗物的惩罚.
 
 # --ETERNALSLIENCE
 botania.entry.eternalslience=静籁永恒
-botania.tagline.eternalslience=
-botania.page.eternalslience0=
+botania.tagline.eternalslience=盖亚的遗物
+botania.page.eternalslience0=&1静籁永恒&0一共有着2种模式 ,可以通过蹲下使用来切换.在 &4永恒模式&0下,它将会以极快的 速度产出魔力,但这份魔力 并不能导出.在&4静籁模式&0下 ,它会使玩家脚底下的水结 冰,岩浆变黑曜石,还会清 除火焰和雪堆.
 
 # --HERMESTRAVELCLOTHING
 botania.entry.hermestravelclothing=赫尔墨斯的旅行衣
-botania.tagline.hermestravelclothing=
-botania.page.hermestravelclothing0=
+botania.tagline.hermestravelclothing=盖亚的遗物
+botania.page.hermestravelclothing0=&1赫尔墨斯的旅行衣&0本身并没 有什么特殊的能力,装备者 有小概率闪避攻击.但它能 够与其他的遗物产生共鸣,迸 发出更强的力量.
 
 # --HERMESWAND
 botania.entry.hermestravelwand=赫尔墨斯的旅行手杖
-botania.tagline.hermestravelwand=
-botania.page.hermestravelwand0=
+botania.tagline.hermestravelwand=盖亚的遗物
+botania.page.hermestravelwand0=使用&1赫尔墨斯的旅行手杖&0可以 消耗魔力发射出一个传送珍 珠,如果使用者还装备着&1赫 尔墨斯的旅行衣&0,那么可以 不消耗魔力.
 
 # --LOKIGHOSTRICK
 botania.entry.lokighostrick=洛基的鬼计
-botania.tagline.lokighostrick=
-botania.page.lokighostrick0=
+botania.tagline.lokighostrick=盖亚的遗物
+botania.page.lokighostrick0=佩带&1洛基的鬼计&0后,玩家可 以免疫绝大多数奇怪的伤害 来源,例如仙人掌和遗物. 同时佩戴者在攻击时有概率 伤害翻倍.
 
 # --OLYMPUSGUARD
 botania.entry.olympusguard=奥林匹斯的戍卫
-botania.tagline.olympusguard=
-botania.page.olympusguard0=
+botania.tagline.olympusguard=盖亚的遗物
+botania.page.olympusguard0=集合了3种戒指的神力,&1奥林 匹斯的戍卫&0拥有着3种戒指 的能力.与诸神之戒不同,它 显得更加稳定.
 
 # --THESEUSSHIP
 botania.entry.theseusship=特修斯之船
-botania.tagline.theseusship=
-botania.page.theseusship0=
+botania.tagline.theseusship=盖亚的遗物
+botania.page.theseusship0=永恒不灭的&1特修斯之船&0一共 有着4种模式,可以通过蹲 下使用来切换.特修斯之船 使用时能够射出短距离的魔 力光束,不同模式下有着不同 效果.
 
 # --VALKYRIECOMBATUNIFORM
 botania.entry.valkyriecombatsuit=女武神作战服
-botania.tagline.valkyriecombatsuit=
-botania.page.valkyriecombatsuit0=
+botania.tagline.valkyriecombatsuit=盖亚的遗物
+botania.page.valkyriecombatsuit0=装备&1女武神作战服&0后,当装备 者周围没有敌人时,将会非 常快速地获得&4护盾值&0.而当装 备者周围敌人超过2个时,装 备者将会获得速度II效果.
 
 # --GAIA
 botania.entry.gaia3=盖亚守护者III
-botania.page.gaia30=
-botania.page.gaia31=
-botania.page.gaia32=
-botania.page.gaia33=
+botania.page.gaia30=通过全新的材料,将唤醒更为 强大的&1盖亚守护者III&0. 其战 斗力与机动性都比原来要增 强许多,并且由于凝聚着大 量魔力的神智的关系,&1盖亚 守护者III&0掌握着许多不同 种能力,因此要格外小心.
+botania.page.gaia31=作为一个全新的敌人,&1盖亚守 护者III&0的奖励也极为丰富. 如果你想召唤它,你需要用到 &4盖亚的神智&0来引导盖亚仪式 .
+botania.page.gaia33=盖亚仪式
+botania.page.gaia32=同时还值得注意的是,&1盖亚 守护者III&0的能力并不仅仅 如此,它似乎还隐藏着真实 力量.
 
 #FLOWER NAMES
 # -GENERATING

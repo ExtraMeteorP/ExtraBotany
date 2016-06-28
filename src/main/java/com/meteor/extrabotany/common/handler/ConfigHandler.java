@@ -38,6 +38,7 @@ public class ConfigHandler {
 	public static boolean disableShieldRender;
 	public static boolean disableEasterEgg;
 	public static boolean enableDiplopbamboo;
+	public static boolean enableGuns;
 
 	public ConfigHandler(FMLPreInitializationEvent event)
 	{
@@ -76,5 +77,6 @@ public class ConfigHandler {
 		disableShieldRender = config.get(LibReference.CATEGORY_CLIENT, "disableShieldRender", false, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "disableShieldRender.desc")).getBoolean();
 		disableEasterEgg = config.get(LibReference.CATEGORY_CLIENT, "disableShieldRender", false, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "disableEasterEgg.desc")).getBoolean();
 		enableDiplopbamboo = config.get(LibReference.CATEGORY_COMMON, "enableDiplopbamboo", false, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "enableDiplopbamboo.desc")).getBoolean();
+		enableGuns = config.get(LibReference.CATEGORY_COMMON, "enableGuns", false, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "enableGuns.desc")).getBoolean();
 	}
 }

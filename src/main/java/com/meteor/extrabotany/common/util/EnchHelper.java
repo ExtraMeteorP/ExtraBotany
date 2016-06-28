@@ -16,11 +16,11 @@ public class EnchHelper {
 		stack.addEnchantment(e, l);
 	}
 	
-	public static float getDivineFavorBuff(ItemStack stack){
+	public static float getDFBuff(ItemStack stack){
 		return (1 + getEnchLevel(ModEnchantment.divineFavor, stack)*0.2F);
 	}
 	
-	public static float getDivineMarkBuff(ItemStack stack){
+	public static float getDMBuff(ItemStack stack){
 		return (1 - getEnchLevel(ModEnchantment.divineMark, stack)*0.233F);
 	}
 	

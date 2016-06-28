@@ -33,6 +33,7 @@ public class ItemHermesTravelClothing extends ItemRelicArmorSet implements IMana
 	public ItemHermesTravelClothing(int type, String name) {
 		super(1, LibItemName.HERMESTRAVELCLOTHING);
 		MinecraftForge.EVENT_BUS.register(this);
+		FMLCommonHandler.instance().bus().register(this);
 	}
 	
 	public static boolean hasHermesTravelClothing(EntityPlayer player){

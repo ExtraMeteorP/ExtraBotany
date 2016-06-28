@@ -33,6 +33,7 @@ import com.meteor.extrabotany.client.model.ModelRelicArmor;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.lib.LibReference;
 
+import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 import cpw.mods.fml.common.gameevent.TickEvent.PlayerTickEvent;
 import cpw.mods.fml.relauncher.Side;
@@ -64,6 +65,7 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic,ISpe
 	public ItemRelicArmorSet(int type, String name) {
 		super(type, name, BotaniaAPI.terrasteelArmorMaterial);
 		MinecraftForge.EVENT_BUS.register(this);
+		FMLCommonHandler.instance().bus().register(this);
 	}
 
 	@Override

@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.item;
+package com.meteor.extrabotany.common.item.weapon;
 
 import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.entity.EntityGaiaQuickened;

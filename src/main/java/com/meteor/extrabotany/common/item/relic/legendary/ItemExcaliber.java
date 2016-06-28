@@ -37,10 +37,7 @@ import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.lib.LibItemName;
-import com.meteor.extrabotany.common.lib.LibReference;
 import com.meteor.extrabotany.common.util.EnchHelper;
-
-import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ItemExcaliber extends ItemManasteelSword implements IRelic, ILensEffect, IManaUsingItem {
 	//copied
@@ -187,7 +184,7 @@ public class ItemExcaliber extends ItemManasteelSword implements IRelic, ILensEf
 				int mana = burst.getMana();
 				if(mana >= cost) {
 					burst.setMana(mana - cost);
-					float damage = 6F * EnchHelper.getDivineFavorBuff(stack) * (1/EnchHelper.getDivineMarkBuff(stack)) + toolMaterial.getDamageVsEntity();
+					float damage = 6F * EnchHelper.getDFBuff(stack) * (1/EnchHelper.getDMBuff(stack)) + toolMaterial.getDamageVsEntity();
 					if(!burst.isFake() && !entity.worldObj.isRemote) {
 						EntityPlayer player = living.worldObj.getPlayerEntityByName(attacker);
 						living.attackEntityFrom(player == null ? DamageSource.magic : DamageSource.causePlayerDamage(player), damage);

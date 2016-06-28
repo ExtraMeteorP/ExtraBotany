@@ -91,9 +91,7 @@ public class LexiconModData {
 	public static LexiconEntry blankcard;
 	public static LexiconEntry shard;
 	public static LexiconEntry petal;
-	public static LexiconEntry goldstring;
 	public static LexiconEntry astralforce;
-	public static LexiconEntry quartz;
 	public static LexiconEntry teleportpearl;
 	public static LexiconEntry nightmarefuel;
 	//Gun
@@ -118,11 +116,11 @@ public class LexiconModData {
 		//Other
 		pickup = new ELexiconEntry(LibLexiconName.O_PICKUP, categoryExtra);
 		pickup.setLexiconPages(new PageText("0"));
-		pickup.setIcon(new ItemStack(ModItems.material, 1, 15));
+		pickup.setIcon(new ItemStack(ModItems.material, 1, 14));
 		
 		shield = new ELexiconEntry(LibLexiconName.O_SHIELD, categoryExtra);
-		shield.setLexiconPages(new PageText("0"), new PageText("1"), new PageImage("2", ""));
-		shield.setIcon(new ItemStack(ModItems.material, 1, 14));
+		shield.setLexiconPages(new PageText("0"));
+		shield.setIcon(new ItemStack(ModItems.material, 1, 13));
 		//Basic
 		blankcard = new BLexiconEntry(LibLexiconName.BA_BLANKCARD, categoryExtra);
 		blankcard.setLexiconPages(new PageText("0"), 
@@ -140,17 +138,6 @@ public class LexiconModData {
 		petal = new BLexiconEntry(LibLexiconName.BA_PETAL, categoryExtra);
 		petal.setLexiconPages(new PageText("0"));
 		petal.setIcon(new ItemStack(ModItems.lycorisrandom));
-		
-		goldstring = new ELexiconEntry(LibLexiconName.BA_GOLDSTRING, categoryExtra);
-		goldstring.setLexiconPages(new PageText("0"), 
-				new PageCraftingRecipe("1", ModRecipe.goldString));
-		goldstring.setIcon(new ItemStack(ModItems.material,1,9));
-		
-		quartz = new ELexiconEntry(LibLexiconName.BA_QUARTZ, categoryExtra);
-		quartz.setLexiconPages(new PageText("0"), 
-				new PageCraftingRecipe("1", ModRecipe.elvenQuartz), 
-				new PageCraftingRecipe("2", ModRecipe.gaiaQuartz));
-		quartz.setIcon(new ItemStack(ModItems.material,1,7));
 		
 		teleportpearl = new ELexiconEntry(LibLexiconName.BA_TELEPORTPEARL, categoryExtra);
 		teleportpearl.setLexiconPages(new PageText("0"), new PageCraftingRecipe("1", ModRecipe.teleportpearl));
@@ -177,31 +164,33 @@ public class LexiconModData {
 		scissorblade.setIcon(new ItemStack(ModItems.scissorred));
 		
 		//Gun
-		gunbase = new BLexiconEntry(LibLexiconName.G_GUNBASE, categoryExtra);
-		gunbase.setLexiconPages(new PageText("0"),
-				new PageText("1"));
-		gunbase.setIcon(new ItemStack(ModItems.gunboomstick));
-		
-		gunphoenixblaster = new LLexiconEntry(LibLexiconName.G_GUNPHOENIXBLASTER, categoryExtra);
-		gunphoenixblaster.setLexiconPages(new PageText("0"));
-		gunphoenixblaster.setIcon(new ItemStack(ModItems.gunphoenixblaster));
-		
-		gunsnowballcannon = new LLexiconEntry(LibLexiconName.G_GUNSNOWBALLCANNON, categoryExtra);
-		gunsnowballcannon.setLexiconPages(new PageText("0"));
-		gunsnowballcannon.setIcon(new ItemStack(ModItems.snowballlauncher));
-		
-		guntacticalshotgun = new LLexiconEntry(LibLexiconName.G_GUNTACTICALSHOTGUN, categoryExtra);
-		guntacticalshotgun.setLexiconPages(new PageText("0"));
-		guntacticalshotgun.setIcon(new ItemStack(ModItems.guntacticalshotgun));
-		
-		gunbullet = new BLexiconEntry(LibLexiconName.G_GUNBULLET, categoryExtra);
-		gunbullet.setLexiconPages(new PageText("0"),
-				new PageCraftingRecipe("1", ModRecipe.bullet0),
-				new PageCraftingRecipe("2", ModRecipe.bullet1),
-				new PageCraftingRecipe("3", ModRecipe.bullet2),
-				new PageCraftingRecipe("4", ModRecipe.bullet3),
-				new PageCraftingRecipe("5", ModRecipe.bullet4));
-		gunbullet.setIcon(new ItemStack(ModItems.bullet,1,4));
+		if(ConfigHandler.enableGuns){
+			gunbase = new BLexiconEntry(LibLexiconName.G_GUNBASE, categoryExtra);
+			gunbase.setLexiconPages(new PageText("0"),
+					new PageText("1"));
+			gunbase.setIcon(new ItemStack(ModItems.gunboomstick));
+			
+			gunphoenixblaster = new LLexiconEntry(LibLexiconName.G_GUNPHOENIXBLASTER, categoryExtra);
+			gunphoenixblaster.setLexiconPages(new PageText("0"));
+			gunphoenixblaster.setIcon(new ItemStack(ModItems.gunphoenixblaster));
+			
+			gunsnowballcannon = new LLexiconEntry(LibLexiconName.G_GUNSNOWBALLCANNON, categoryExtra);
+			gunsnowballcannon.setLexiconPages(new PageText("0"));
+			gunsnowballcannon.setIcon(new ItemStack(ModItems.snowballlauncher));
+			
+			guntacticalshotgun = new LLexiconEntry(LibLexiconName.G_GUNTACTICALSHOTGUN, categoryExtra);
+			guntacticalshotgun.setLexiconPages(new PageText("0"));
+			guntacticalshotgun.setIcon(new ItemStack(ModItems.guntacticalshotgun));
+			
+			gunbullet = new BLexiconEntry(LibLexiconName.G_GUNBULLET, categoryExtra);
+			gunbullet.setLexiconPages(new PageText("0"),
+					new PageCraftingRecipe("1", ModRecipe.bullet0),
+					new PageCraftingRecipe("2", ModRecipe.bullet1),
+					new PageCraftingRecipe("3", ModRecipe.bullet2),
+					new PageCraftingRecipe("4", ModRecipe.bullet3),
+					new PageCraftingRecipe("5", ModRecipe.bullet4));
+			gunbullet.setIcon(new ItemStack(ModItems.bullet,1,4));
+		}
 		//Bauble
 		cosmetic = new ELexiconEntry(LibLexiconName.B_COSMETIC, categoryExtra);
 		cosmetic.setLexiconPages(new PageText("0"), 

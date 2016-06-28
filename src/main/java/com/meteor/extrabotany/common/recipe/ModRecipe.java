@@ -16,7 +16,6 @@ import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.handler.CraftingHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
-import com.meteor.extrabotany.common.recipe.subtile.ModBlueenchantressRecipe;
 import com.meteor.extrabotany.common.recipe.subtile.ModInfernoidisyRecipe;
 import com.meteor.extrabotany.common.recipe.subtile.ModStonesiaRecipe;
 
@@ -48,7 +47,6 @@ public class ModRecipe {
 	public static void initSubtile(){
 		ModStonesiaRecipe.init();
 		ModInfernoidisyRecipe.init();
-		ModBlueenchantressRecipe.init();
 	}
 	
 	public static void init(){

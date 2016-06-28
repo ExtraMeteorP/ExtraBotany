@@ -10,7 +10,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.util.DamageSource;
 
-import com.meteor.extrabotany.api.extrabotany.recipe.RecipeBlueenchantress;
 import com.meteor.extrabotany.api.extrabotany.recipe.RecipeInfernoidisy;
 import com.meteor.extrabotany.api.extrabotany.recipe.RecipeStonesia;
 import com.meteor.extrabotany.common.block.ModBlocks;
@@ -27,7 +26,6 @@ public class ExtraBotanyAPI {
 	
 	public static List<RecipeInfernoidisy> infernoidisyRecipes = new ArrayList<RecipeInfernoidisy>();
 	public static List<RecipeStonesia> stonesiaRecipes = new ArrayList<RecipeStonesia>();
-	public static List<RecipeBlueenchantress> blueenchantressRecipes = new ArrayList<RecipeBlueenchantress>();
 	
 	public static DamageSource[] damageSource = {
 		new DamageSource("realDamage"),
@@ -91,12 +89,6 @@ public class ExtraBotanyAPI {
 		return recipe;
 	}
 	
-	public static RecipeBlueenchantress registerBlueenchantressRecipe(Object input, int mana, int outputMeta) {
-		RecipeBlueenchantress recipe = new RecipeBlueenchantress(input, mana, outputMeta);
-		blueenchantressRecipes.add(recipe);
-		return recipe;
-	}
-	
 	public static RecipeInfernoidisy removeInfernoidisyRecipe(Object input, Block output, int outputMeta) {
 		RecipeInfernoidisy recipe = new RecipeInfernoidisy(input, output, outputMeta);
 		infernoidisyRecipes.remove(recipe);
@@ -106,12 +98,6 @@ public class ExtraBotanyAPI {
 	public static RecipeStonesia removeStonesiaRecipe(Object input, int mana, int outputMeta) {
 		RecipeStonesia recipe = new RecipeStonesia(input, mana, outputMeta);
 		stonesiaRecipes.remove(recipe);
-		return recipe;
-	}
-	
-	public static RecipeBlueenchantress removeBlueenchantressRecipe(Object input, int mana, int outputMeta) {
-		RecipeBlueenchantress recipe = new RecipeBlueenchantress(input, mana, outputMeta);
-		blueenchantressRecipes.remove(recipe);
 		return recipe;
 	}
 

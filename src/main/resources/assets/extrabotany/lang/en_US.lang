@@ -205,79 +205,66 @@ botania.entry.prismaticshard=Prismatic Shard
 botania.tagline.prismaticshard=Universal love.
 botania.page.prismaticshard0=Very rare, and there are just a few ways to get it. And it is widely used, therefore, it's a valuable material.
 
-# --GOLDSTRING
-botania.entry.goldstring=Golden Infused String
-botania.tagline.goldstring=
-botania.page.goldstring0=
-botania.page.goldstring1=
-
 # --PETAL
 botania.entry.petal=Lycorisdiata
 botania.tagline.petal=HEART BURNING!
 botania.page.petal0=Probably the Lycorisradiata is the most rare flower in minecraft. It will only appear at night and die when the sun rises. There are 3 kinds of Lycorisradiata: red, green and purple. It goes without saying that its petals are very valuable. If you try to discover one, I wish you good luck.
 
-# --QUARTZ
-botania.entry.quartz=Elementium Quartz & Gaia Quartz
-botania.tagline.quartz=
-botania.page.quartz0=
-botania.page.quartz1=
-botania.page.quartz2=
-
 # -WEAPON
 # --ANGELWAND
-botania.entry.angelwand=
-botania.tagline.angelwand=
-botania.page.angelwand0=
-botania.page.angelwand1=
+botania.entry.angelwand=Angel Wand
+botania.tagline.angelwand=Spotless White.
+botania.page.angelwand0
+botania.page.angelwand1=Fallen Angels.
 
 # --CORONACLAYMORE
-botania.entry.coronaclaymore=
-botania.tagline.coronaclaymore=
-botania.page.coronaclaymore0=
+botania.entry.coronaclaymore=Corona Claymore
+botania.tagline.coronaclaymore=Praise the sun.
+botania.page.coronaclaymore0
 
 # --DARKSWORD
-botania.entry.darksword=
-botania.tagline.darksword=
-botania.page.darksword0=
-botania.page.darksword1=
+botania.entry.darksword=Dark Sword
+botania.tagline.darksword=The power of the dark side
+botania.page.darksword0
+botania.page.darksword1=Night falls.
 
 # --SCISSORBLADE
-botania.entry.scissorblade=
-botania.tagline.scissorblade=
-botania.page.scissorblade0=
-botania.page.scissorblade1=
-botania.page.scissorblade2=
+botania.entry.scissorblade=Scissor Blade
+botania.tagline.scissorblade=Bigger scissors.
+botania.page.scissorblade0
+botania.page.scissorblade1
+botania.page.scissorblade2
 
 # --BULLET
 botania.entry.bullet=Various Bullets
-botania.tagline.bullet=
-botania.page.bullet0=
-botania.page.bullet1=
-botania.page.bullet2=
-botania.page.bullet3=
-botania.page.bullet4=
-botania.page.bullet5=
+botania.tagline.bullet
+botania.page.bullet0
+botania.page.bullet1
+botania.page.bullet2
+botania.page.bullet3
+botania.page.bullet4
+botania.page.bullet5
 
 # --BASICGUN
 botania.entry.gunbase=Basic Guns
-botania.tagline.gunbase=
-botania.page.gunbase0=
-botania.page.gunbase1=
+botania.tagline.gunbase
+botania.page.gunbase0
+botania.page.gunbase1
 
 # --PHOENIXBLASTER
 botania.entry.phoenixblaster=Phoenix Blaster
-botania.tagline.phoenixblaster=
-botania.page.phoenixblaster0=
+botania.tagline.phoenixblaster
+botania.page.phoenixblaster0
 
 # --TACTICALSHOTGUN
 botania.entry.tacticalshotgun=Tactical Shotgun
-botania.tagline.tacticalshotgun=
-botania.page.tacticalshotgun0=
+botania.tagline.tacticalshotgun
+botania.page.tacticalshotgun0
 
 # --SNOWBALLCANNON
 botania.entry.snowballcannon=Snowball Cannon
-botania.tagline.snowballcannon=
-botania.page.snowballcannon0=
+botania.tagline.snowballcannon
+botania.page.snowballcannon0
 
 # -GENERATING
 # --CANDYFLOWER
@@ -405,112 +392,111 @@ botania.page.pickup0=You will find that when mobs are killed, they will drop som
 
 # --SHIELD
 botania.entry.shield=Shield
-botania.page.shield0=
-botania.page.shield1=
-botania.page.shield2=
+botania.tagline.shield=无駄无駄无駄无駄无駄无駄无駄
+botania.page.shield0
 
 # -RELICS
 # --HESTIACHASTITY
 botania.entry.hestiachastity=Chastity of Hestia
-botania.tagline.hestiachastity=
-botania.page.hestiachastity0=
+botania.tagline.hestiachastity=Relic of Gaia
+botania.page.hestiachastity0
 
 # --MAXWELLDEMON
 botania.entry.maxwelldemon=Maxwell's Demon
-botania.tagline.maxwelldemon=
-botania.page.maxwelldemon0=
+botania.tagline.maxwelldemon=Relic of Gaia
+botania.page.maxwelldemon0
 
 # --ATHENABLESS
 botania.entry.athenabless=Athena's Bless
-botania.tagline.athenabless=
-botania.page.athenabless0=
+botania.tagline.athenabless=Relic of Gaia
+botania.page.athenabless0
 
 # --APHRODITEGRACE
 botania.entry.aphroditegrace=Aphrodite's Grace
-botania.tagline.aphroditegrace=
-botania.page.aphroditegrace0=
+botania.tagline.aphroditegrace=Relic of Gaia
+botania.page.aphroditegrace0
 
 # --DICE20
 botania.entry.dice20=D20
 botania.tagline.dice20=Reroll your Destiny.
-botania.page.dice200=
+botania.page.dice200
 
 # --EXCALIBER
 botania.entry.excaliber=Excaliber
 botania.tagline.excaliber=Victory and Vow.
-botania.page.excaliber0=
+botania.page.excaliber0
 
 # --EXCALIBERFAKE
 botania.entry.excaliberfake=Excaliber
 botania.tagline.excaliberfake=Dying Light.
-botania.page.excaliberfake0=
+botania.page.excaliberfake0
 
 # --VPOWERBATTLEAXE
 botania.entry.vpowerbattleaxe=Valkyrie Powered Battleaxe
 botania.tagline.vpowerbattleaxe=The 300!
-botania.page.vpowerbattleaxe0=
+botania.page.vpowerbattleaxe0
 
 # --VRANGERBOOTS
 botania.entry.vrangerboots=Valkyrie Ranger Boots
-botania.tagline.vrangerboots=
-botania.page.vrangerboots0=
+botania.tagline.vrangerboots=Relic of Gaia
+botania.page.vrangerboots0
 
 # --VHANDGUN
 botania.entry.vhandgun=Valkyrie Handguns
-botania.tagline.vhandgun=
-botania.page.vhandgun0=
+botania.tagline.vhandgun=Mana, mana, mana
+botania.page.vhandgun0
 
 # --CRONUSPHANTOM
 botania.entry.cronusphantom=Phantom of Cronus
-botania.tagline.cronusphantom=
-botania.page.cronusphantom0=
+botania.tagline.cronusphantom=Relic of Gaia
+botania.page.cronusphantom0
 
 # --CTHULHUEYE
 botania.entry.cthulhueye=Eye of Cthulhu
-botania.tagline.cthulhueye=
-botania.page.cthulhueye0=
+botania.tagline.cthulhueye=Relic of Gaia
+botania.page.cthulhueye0
 
 # --ETERNALSLIENCE
 botania.entry.eternalslience=Eternal Slience
-botania.tagline.eternalslience=
-botania.page.eternalslience0=
+botania.tagline.eternalslience=Relic of Gaia
+botania.page.eternalslience0
 
 # --HERMESTRAVELCLOTHING
 botania.entry.hermestravelclothing=Hermes' Travel Clothing
-botania.tagline.hermestravelclothing=
-botania.page.hermestravelclothing0=
+botania.tagline.hermestravelclothing=Relic of Gaia
+botania.page.hermestravelclothing0
 
 # --HERMESWAND
 botania.entry.hermestravelwand=Hermes' Travel Wand
-botania.tagline.hermestravelwand=
-botania.page.hermestravelwand0=
+botania.tagline.hermestravelwand=Relic of Gaia
+botania.page.hermestravelwand0
 
 # --LOKIGHOSTRICK
 botania.entry.lokighostrick=Loki's Ghostrick
-botania.tagline.lokighostrick=
-botania.page.lokighostrick0=
+botania.tagline.lokighostrick=Relic of Gaia
+botania.page.lokighostrick0
 
 # --OLYMPUSGUARD
 botania.entry.olympusguard=Guard of Olympus
-botania.tagline.olympusguard=
-botania.page.olympusguard0=
+botania.tagline.olympusguard
+botania.page.olympusguard0
 
 # --THESEUSSHIP
 botania.entry.theseusship=Ship of Theseus
-botania.tagline.theseusship=
-botania.page.theseusship0=
+botania.tagline.theseusship=Relic of Gaia
+botania.page.theseusship0
 
 # --VALKYRIECOMBATUNIFORM
 botania.entry.valkyriecombatsuit=Valkyrie Combat Uniform
-botania.tagline.valkyriecombatsuit=
-botania.page.valkyriecombatsuit0=
+botania.tagline.valkyriecombatsuit=Relic of Gaia
+botania.page.valkyriecombatsuit0
 
 # --GAIA
 botania.entry.gaia3=Gaia Guardian III
-botania.page.gaia30=
-botania.page.gaia31=
-botania.page.gaia32=
-botania.page.gaia33=
+botania.page.gaia30
+botania.page.gaia31
+botania.page.gaia32=Ritual of Gaia
+botania.page.gaia33
 
 #FLOWER NAMES
 # -GENERATING

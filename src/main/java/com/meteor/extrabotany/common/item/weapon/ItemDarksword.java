@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.item;
+package com.meteor.extrabotany.common.item.weapon;
 
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.item.ItemStack;

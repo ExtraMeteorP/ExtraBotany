@@ -23,6 +23,7 @@ public class ItemVRangerBoots extends ItemRelicArmorSet{
 	public ItemVRangerBoots(int type, String name) {
 		super(3, LibItemName.VRANGERBOOTS);
 		MinecraftForge.EVENT_BUS.register(this);
+		FMLCommonHandler.instance().bus().register(this);
 	}
 	
 	@Override
@@ -42,7 +43,7 @@ public class ItemVRangerBoots extends ItemRelicArmorSet{
 		            if(stack != null && stack.getItem() instanceof ItemVRangerBoots) {
 		            	if(ItemRelic.isRightPlayer(player, stack))
 		            	if((int)event.distance >=10)
-		            		stack.damageItem((int)event.distance, player);
+		            		stack.damageItem((int)event.distance/4, player);
 		                
 		                event.distance = 0F; 
 		            }
@@ -55,12 +56,9 @@ public class ItemVRangerBoots extends ItemRelicArmorSet{
 			        EntityPlayer player = (EntityPlayer) event.entity;
 			        for(ItemStack stack : player.inventory.armorInventory) {
 			            if(stack != null && stack.getItem() instanceof ItemVRangerBoots) {
-			            	if(ItemRelic.isRightPlayer(player, stack))
-			            	if(player.isUsingItem())
-			            		event.entity.motionY *=2;
-			            	
-			            	event.entity.motionY *=1.2;
-			     
+			            	if(ItemRelic.isRightPlayer(player, stack)){
+			            		event.entity.motionY *=1.2;
+			            	}
 			            }
 			        }
 			    }

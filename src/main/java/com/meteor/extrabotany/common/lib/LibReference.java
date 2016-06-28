@@ -22,6 +22,8 @@ public class LibReference {
 	public static final String MODEL_RELIC = "extrabotany:textures/models/armor/armorrelic0.png";
 	public static final String MODEL_VCU = "extrabotany:textures/models/armor/vcu.png";
 	
+	public static final String GUI_CREATIVE = "extrabotany.png";
+	
 	public static final String PYLON = "extrabotany:textures/models/pylon.png";
 	public static final String PYLON_GREEN = "extrabotany:textures/models/pylon1.png";
 	public static final String PYLON_PINK = "extrabotany:textures/models/pylon2.png";

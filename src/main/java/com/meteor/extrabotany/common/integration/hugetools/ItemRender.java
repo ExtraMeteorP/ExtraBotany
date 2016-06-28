@@ -17,6 +17,7 @@ public class ItemRender {
 		
 		MinecraftForgeClient.registerItemRenderer(ModItems.excaliber, new HugeItemRenderer(mc.gameSettings, mc.getTextureManager(), 3.5F));
 		MinecraftForgeClient.registerItemRenderer(ModItems.heliacalclaymore, new HugeItemRenderer(mc.gameSettings, mc.getTextureManager(), 2.0F));
+		MinecraftForgeClient.registerItemRenderer(ModItems.darksword, new HugeItemRenderer(mc.gameSettings, mc.getTextureManager(), 1.6F));
 		
 		MinecraftForgeClient.registerItemRenderer(ModItems.gunphoenixblaster, gunRenderer);
 		MinecraftForgeClient.registerItemRenderer(ModItems.gunboomstick, gunRenderer);

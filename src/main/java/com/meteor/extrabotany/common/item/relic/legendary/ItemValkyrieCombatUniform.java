@@ -51,6 +51,7 @@ public class ItemValkyrieCombatUniform extends ItemManasteelArmor implements IRe
 	public ItemValkyrieCombatUniform(String name) {
 		super(1, name, BotaniaAPI.elementiumArmorMaterial);
 		MinecraftForge.EVENT_BUS.register(this);
+		FMLCommonHandler.instance().bus().register(this);
 	}
 	
 	@Override

@@ -25,6 +25,7 @@ import baubles.common.container.InventoryBaubles;
 import baubles.common.lib.PlayerHandler;
 
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
+import com.meteor.extrabotany.common.event.EventMobDrop;
 import com.meteor.extrabotany.common.handler.EntityHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 
@@ -37,6 +38,7 @@ public class ItemGaiaWise extends ItemBauble implements ICosmeticBauble{
 	public ItemGaiaWise(String name) {
 		super(name);
 		MinecraftForge.EVENT_BUS.register(this);
+		FMLCommonHandler.instance().bus().register(this);
 		this.setMaxStackSize(1);
 	}
 	

@@ -83,10 +83,11 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 					setMode(stack, mode);
 					setDelay(stack, 20);
 					player.addChatMessage(new ChatComponentTranslation("botaniamisc.theseussetMode" + getMode(stack)).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
+					player.stopUsingItem();
 				}
-			}else if(count % 3 == 0 && !player.isSneaking()){
+			}else if(count % 3 == 0 && !player.isSneaking() && count <= this.getMaxItemUseDuration(stack) - 10){
 					if(ItemRelic.isRightPlayer(player, stack)){
-						int cost = (int) ((m == 3 ? 1 : m == 2 ? 2 : m == 1 ? 5 : 2) * EnchHelper.getDivineFavorBuff(stack) * EnchHelper.getDivineMarkBuff(stack));
+						int cost = (int) ((m == 3 ? 1 : m == 2 ? 2 : m == 1 ? 5 : 2) * EnchHelper.getDFBuff(stack) * EnchHelper.getDMBuff(stack));
 						if(ManaItemHandler.requestManaExact(stack, player, cost, true)){
 							player.worldObj.spawnEntityInWorld(getBurst(player, stack));
 						}
@@ -152,7 +153,7 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 					int mana = burst.getMana();
 					if(mana >= cost) {
 						burst.setMana(mana - cost);
-						float damage = 3F * EnchHelper.getDivineFavorBuff(stack);
+						float damage = 3F * EnchHelper.getDFBuff(stack);
 						if(!burst.isFake() && !entity.worldObj.isRemote) {
 							EntityPlayer player = m.worldObj.getPlayerEntityByName(attacker);
 							m.attackEntityFrom(player == null ? DamageSource.magic : DamageSource.causePlayerDamage(player), damage);
@@ -171,7 +172,7 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 					ItemStack s = item.getEntityItem();
 					if(s.getItemDamage() > 0){
 						if(!burst.isFake() && !entity.worldObj.isRemote){
-							s.setItemDamage(Math.max(0, (int) (s.getItemDamage() - 1 * EnchHelper.getDivineFavorBuff(stack))));
+							s.setItemDamage(Math.max(0, (int) (s.getItemDamage() - 1 * EnchHelper.getDFBuff(stack))));
 							entity.setDead();
 							break;
 						}
@@ -184,7 +185,7 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 			List<EntityLiving> livings = entity.worldObj.getEntitiesWithinAABB(EntityLiving.class, axis);
 			for(EntityLiving l : livings){
 				if(!(l instanceof IMob)){
-					l.heal(3F * EnchHelper.getDivineFavorBuff(stack));
+					l.heal(3F * EnchHelper.getDFBuff(stack));
 				}
 			}
 		}
@@ -196,7 +197,7 @@ public class ItemTheseusShip extends ItemRelicAdv implements ILensEffect, IManaU
 					l.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 1, 50));
 					l.addPotionEffect(new PotionEffect(Potion.damageBoost.getId(), 1, 50));
 					if(l instanceof EntityPlayer)
-						PropertyHandler.addShieldAmount(0.2F * EnchHelper.getDivineFavorBuff(stack), ((EntityPlayer)l));
+						PropertyHandler.addShieldAmount(0.2F * EnchHelper.getDFBuff(stack), ((EntityPlayer)l));
 				}
 			}
 		}

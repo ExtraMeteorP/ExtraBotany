@@ -26,6 +26,7 @@ public class ItemAthenaBless extends ItemRelicBauble{
 	public ItemAthenaBless(){
 		super(LibItemName.ATHENABLESS);
 		MinecraftForge.EVENT_BUS.register(this);
+		FMLCommonHandler.instance().bus().register(this);
 	}
 	
 	@Override
@@ -52,7 +53,7 @@ public class ItemAthenaBless extends ItemRelicBauble{
 			if(getAthenaBless(player) != null)
 				if(ItemRelic.isRightPlayer(player, getAthenaBless(player)))
 					if(ItemHermesTravelClothing.hasHermesTravelClothing(player))
-					PropertyHandler.addShieldAmount(event.ammount/5, player);
+						PropertyHandler.addShieldAmount(event.ammount/5, player);
 					else PropertyHandler.addShieldAmount(event.ammount/7, player);
 				}
 	}

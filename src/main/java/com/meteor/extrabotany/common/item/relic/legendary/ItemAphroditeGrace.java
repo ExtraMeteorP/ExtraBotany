@@ -14,6 +14,7 @@ import vazkii.botania.common.item.relic.ItemRelic;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.PropertyHandler;
 import com.meteor.extrabotany.common.lib.LibItemName;
+import com.meteor.extrabotany.common.util.EnchHelper;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
@@ -23,6 +24,7 @@ public class ItemAphroditeGrace extends ItemRelicArmorSet{
 	public ItemAphroditeGrace(int type, String name) {
 		super(2, LibItemName.APHRODITEGRACE);
 		MinecraftForge.EVENT_BUS.register(this);
+		FMLCommonHandler.instance().bus().register(this);
 	}
 	
 	@SubscribeEvent
@@ -34,10 +36,12 @@ public class ItemAphroditeGrace extends ItemRelicArmorSet{
 			EntityPlayer player = (EntityPlayer) event.entityLiving;
 			for(ItemStack stack : player.inventory.armorInventory) {
 	            if(stack != null && stack.getItem() instanceof ItemAphroditeGrace) {
+	            	float dm = EnchHelper.getDMBuff(stack);
+	            	float df = EnchHelper.getDFBuff(stack);
 	            	if(ItemRelic.isRightPlayer(player, stack))
-	            	if(event.ammount >= 6.0F){
+	            	if(event.ammount >= 6.0F * dm){
 	            		
-	            		PropertyHandler.addShieldAmount(event.ammount/2, player);
+	            		PropertyHandler.addShieldAmount(event.ammount/2 * df, player);
 
 	            		Collection<PotionEffect> potions = player.getActivePotionEffects();
 	            		

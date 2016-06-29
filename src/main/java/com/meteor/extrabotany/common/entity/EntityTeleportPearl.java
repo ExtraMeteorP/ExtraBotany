@@ -14,19 +14,16 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class EntityTeleportPearl extends EntityThrowable
 {
 
-    public EntityTeleportPearl(World world)
-    {
+    public EntityTeleportPearl(World world){
         super(world);
     }
 
-    public EntityTeleportPearl(World world, EntityLivingBase entity)
-    {
+    public EntityTeleportPearl(World world, EntityLivingBase entity){
         super(world, entity);
     }
 
     @SideOnly(Side.CLIENT)
-    public EntityTeleportPearl(World world, double posX, double posY, double posZ)
-    {
+    public EntityTeleportPearl(World world, double posX, double posY, double posZ){
         super(world, posX, posY, posZ);
     }
     
@@ -35,22 +32,17 @@ public class EntityTeleportPearl extends EntityThrowable
         return 0.0015F;
     }
     
-    protected void onImpact(MovingObjectPosition object)
-    {
-        if (object.entityHit != null)
-        {
+    protected void onImpact(MovingObjectPosition object){
+        if (object.entityHit != null){
 
         }
 
-        for (int i = 0; i < 32; ++i)
-        {
+        for (int i = 0; i < 32; ++i){
             this.worldObj.spawnParticle("portal", this.posX, this.posY + this.rand.nextDouble() * 2.0D, this.posZ, this.rand.nextGaussian(), 0.0D, this.rand.nextGaussian());
         }
 
-        if (!this.worldObj.isRemote)
-        {
-            if (this.getThrower() != null && this.getThrower() instanceof EntityPlayerMP)
-            {
+        if (!this.worldObj.isRemote){
+            if (this.getThrower() != null && this.getThrower() instanceof EntityPlayerMP){
                 EntityPlayerMP entityplayermp = (EntityPlayerMP)this.getThrower();
 
                 if (entityplayermp.playerNetServerHandler.func_147362_b().isChannelOpen() && entityplayermp.worldObj == this.worldObj)

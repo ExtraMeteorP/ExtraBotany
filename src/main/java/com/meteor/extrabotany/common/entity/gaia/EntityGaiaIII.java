@@ -8,7 +8,6 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.BlockAir;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.entity.RenderItem;
@@ -73,6 +72,7 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithShader {
+	
 	private static com.meteor.extrabotany.common.item.ModItems instance = new com.meteor.extrabotany.common.item.ModItems();
 	public static final int SPAWN_TICKS = 160;
 	private static final float RANGE = 12F;

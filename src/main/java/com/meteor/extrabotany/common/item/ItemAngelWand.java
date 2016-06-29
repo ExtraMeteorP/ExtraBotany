@@ -3,11 +3,6 @@ package com.meteor.extrabotany.common.item;
 import java.util.ArrayList;
 import java.util.List;
 
-import vazkii.botania.api.BotaniaAPI;
-import vazkii.botania.api.mana.IManaUsingItem;
-import vazkii.botania.api.mana.ManaItemHandler;
-import vazkii.botania.common.core.helper.ItemNBTHelper;
-import vazkii.botania.common.core.helper.Vector3;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
@@ -15,6 +10,11 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
+import vazkii.botania.api.BotaniaAPI;
+import vazkii.botania.api.mana.IManaUsingItem;
+import vazkii.botania.api.mana.ManaItemHandler;
+import vazkii.botania.common.core.helper.ItemNBTHelper;
+import vazkii.botania.common.core.helper.Vector3;
 
 public class ItemAngelWand extends ItemMods implements IManaUsingItem{
 	

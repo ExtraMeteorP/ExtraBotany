@@ -4,7 +4,6 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.ResourceLocation;
-import vazkii.botania.common.brew.potion.PotionMod;
 
 import com.meteor.extrabotany.common.lib.LibReference;
 

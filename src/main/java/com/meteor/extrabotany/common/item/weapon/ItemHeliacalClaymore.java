@@ -1,20 +1,20 @@
 package com.meteor.extrabotany.common.item.weapon;
 
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import net.minecraft.util.DamageSource;
+import net.minecraft.world.World;
+import net.minecraftforge.common.util.EnumHelper;
+import vazkii.botania.common.core.helper.ItemNBTHelper;
+
 import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.entity.EntityGaiaQuickened;
 import com.meteor.extrabotany.common.lib.LibItemName;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import vazkii.botania.common.core.helper.ItemNBTHelper;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
-import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.util.DamageSource;
-import net.minecraft.world.World;
-import net.minecraftforge.common.util.EnumHelper;
 
 public class ItemHeliacalClaymore extends ItemSword{
 	

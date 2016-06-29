@@ -1,11 +1,10 @@
 package com.meteor.extrabotany.common.world;
 
-import com.meteor.extrabotany.common.item.ModItems;
-
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.WeightedRandomChestContent;
 import net.minecraftforge.common.ChestGenHooks;
+
+import com.meteor.extrabotany.common.item.ModItems;
 
 public class ModChestGen {
 	public static void init(){

@@ -1,16 +1,9 @@
 package com.meteor.extrabotany.common.item.relic;
 
-import com.meteor.extrabotany.common.entity.bullet.EntityBulletSnowball;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemHermesTravelClothing;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
-import net.minecraft.item.EnumAction;
-import net.minecraft.item.ItemStack;
-import net.minecraft.world.World;
-import vazkii.botania.common.item.relic.ItemRelic;
+
+import com.meteor.extrabotany.common.entity.bullet.EntityBulletSnowball;
 
 public class ItemGunSnowballCannon extends ItemGunRelic{
 

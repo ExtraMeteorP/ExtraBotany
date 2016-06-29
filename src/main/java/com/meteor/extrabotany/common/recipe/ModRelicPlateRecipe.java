@@ -3,14 +3,7 @@ package com.meteor.extrabotany.common.recipe;
 import java.util.List;
 
 import net.minecraft.entity.item.EntityItem;
-import net.minecraft.inventory.InventoryCrafting;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.crafting.CraftingManager;
-import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.nbt.NBTTagCompound;
-import net.minecraft.world.World;
-
-import com.meteor.extrabotany.common.item.ModItems;
 
 public class ModRelicPlateRecipe{
 	public static ItemStack itemA;

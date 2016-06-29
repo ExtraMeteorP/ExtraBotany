@@ -13,6 +13,7 @@ import vazkii.botania.common.core.helper.Vector3;
 import vazkii.botania.common.entity.EntityMagicMissile;
 
 public class EntityMagicMissileII extends EntityMagicMissile{
+	
 	int time = 0;
 	double lockX, lockY = -1, lockZ;
 	private static final String TAG_ATK = "ATK";

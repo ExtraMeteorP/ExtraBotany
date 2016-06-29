@@ -41,6 +41,7 @@ import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIDark;
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIPhantom;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.handler.UpdateChecker;
 import com.meteor.extrabotany.common.integration.Intergration;
 import com.meteor.extrabotany.common.item.ModItems;
 
@@ -64,6 +65,7 @@ public class ClientProxy extends CommonProxy{
 		super.init(event);
 		initRenderers();
 		initEntities();
+		new UpdateChecker().init();;
 		Intergration.initClient(event);
 	}
 	

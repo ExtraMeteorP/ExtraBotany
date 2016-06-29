@@ -2,12 +2,12 @@ package com.meteor.extrabotany.common.block.subtile.functional;
 
 import java.util.List;
 
-import com.meteor.extrabotany.common.lexicon.LexiconModData;
-
 import net.minecraft.entity.Entity;
 import net.minecraft.util.AxisAlignedBB;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.SubTileFunctional;
+
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 public class SubTileLaunchish extends SubTileFunctional{
 	

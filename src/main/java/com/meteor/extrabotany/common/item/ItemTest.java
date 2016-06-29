@@ -2,21 +2,18 @@ package com.meteor.extrabotany.common.item;
 
 import java.util.List;
 
-import vazkii.botania.client.core.helper.IconHelper;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import vazkii.botania.client.core.helper.IconHelper;
 
-import com.meteor.extrabotany.common.entity.EntityElven;
 import com.meteor.extrabotany.common.entity.EntityGaiaQuickened;
-import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

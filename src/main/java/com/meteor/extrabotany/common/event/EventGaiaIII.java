@@ -2,43 +2,22 @@ package com.meteor.extrabotany.common.event;
 
 import java.util.List;
 
-import vazkii.botania.api.internal.IManaBurst;
-import vazkii.botania.api.item.IRelic;
-import vazkii.botania.api.mana.BurstProperties;
-import vazkii.botania.api.mana.ILensEffect;
-import vazkii.botania.common.Botania;
-import vazkii.botania.common.core.helper.ItemNBTHelper;
-import vazkii.botania.common.core.helper.Vector3;
-import vazkii.botania.common.entity.EntityManaBurst;
-import vazkii.botania.common.item.relic.ItemRelic;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.effect.EntityLightningBolt;
-import net.minecraft.entity.item.EntityItem;
-import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.entity.projectile.EntityThrowable;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.MathHelper;
-import net.minecraft.util.MovingObjectPosition;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import vazkii.botania.api.item.IRelic;
+import vazkii.botania.common.item.relic.ItemRelic;
 
-import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
-import com.meteor.extrabotany.common.entity.EntitySpear;
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIDark;
-import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIPhantom;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemHestiaChastity;
 
-import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class EventGaiaIII{
+	
 	private static float rankI = 0.75F;
 	private static float rankII = 0.5F;
 	private static float rankIII = 0.25F;

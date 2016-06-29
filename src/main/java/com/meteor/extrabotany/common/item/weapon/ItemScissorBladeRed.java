@@ -1,17 +1,16 @@
 package com.meteor.extrabotany.common.item.weapon;
 
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemSword;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
 import vazkii.botania.common.item.relic.ItemRelic;
 
 import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.registry.GameRegistry;
-import net.minecraft.entity.EntityLivingBase;
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.ItemSword;
-import net.minecraft.item.Item.ToolMaterial;
-import net.minecraft.potion.Potion;
-import net.minecraft.potion.PotionEffect;
 
 public class ItemScissorBladeRed extends ItemSword{
 

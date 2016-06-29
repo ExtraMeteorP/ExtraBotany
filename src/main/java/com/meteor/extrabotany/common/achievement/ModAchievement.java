@@ -4,7 +4,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.stats.Achievement;
 import net.minecraftforge.common.AchievementPage;
 import vazkii.botania.common.achievement.AchievementTriggerer;
-import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
 
 import com.meteor.extrabotany.common.item.ModItems;

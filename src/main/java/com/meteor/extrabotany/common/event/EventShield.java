@@ -2,37 +2,24 @@ package com.meteor.extrabotany.common.event;
 
 import java.util.List;
 
-import net.minecraft.client.Minecraft;
-import net.minecraft.client.renderer.ItemRenderer;
-import net.minecraft.client.renderer.OpenGlHelper;
-import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.IProjectile;
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.IIcon;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.event.RenderPlayerEvent;
 import net.minecraftforge.event.entity.EntityEvent.EntityConstructing;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 
 import org.lwjgl.opengl.GL11;
 
-import vazkii.botania.api.item.IBaubleRender.Helper;
 import vazkii.botania.api.item.IBaubleRender.RenderType;
-import vazkii.botania.client.core.helper.ShaderHelper;
-import vazkii.botania.common.Botania;
-import vazkii.botania.common.item.equipment.bauble.ItemFlightTiara;
 
 import com.meteor.extrabotany.client.render.RenderShield;
 import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.handler.EntityHandler;
 import com.meteor.extrabotany.common.handler.PropertyHandler;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemValkyrieCombatUniform;
-import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

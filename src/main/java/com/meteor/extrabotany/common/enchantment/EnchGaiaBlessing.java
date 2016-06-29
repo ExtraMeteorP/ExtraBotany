@@ -17,8 +17,8 @@ import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class EnchGaiaBlessing extends Enchantment implements IManaDiscountArmor{
-    public EnchGaiaBlessing()
-    {
+    
+	public EnchGaiaBlessing(){
         super(ConfigHandler.enchGaiaBlessing, 2,
                 EnumEnchantmentType.armor);
         this.setName("gaiablessing");
@@ -27,28 +27,24 @@ public class EnchGaiaBlessing extends Enchantment implements IManaDiscountArmor{
     }
 
     @Override
-    public int getMinEnchantability(int enchantmentLevel)
-    {
+    public int getMinEnchantability(int enchantmentLevel){
         return 5;
     }
 
     @Override
-    public int getMaxEnchantability(int enchantmentLevel)
-    {
+    public int getMaxEnchantability(int enchantmentLevel){
         return super.getMinEnchantability(enchantmentLevel) + 20;
     }
 
     @Override
-    public int getMaxLevel()
-    {
+    public int getMaxLevel(){
         return 5;
     }
     
     ItemStack itemstack;
     
     @SubscribeEvent
-    public void PlayerHurt(LivingHurtEvent event)
-    {
+    public void PlayerHurt(LivingHurtEvent event){
     	if(!(event.entity instanceof EntityPlayerMP)) {
             return;
         }

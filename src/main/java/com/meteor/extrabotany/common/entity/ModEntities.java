@@ -1,7 +1,5 @@
 package com.meteor.extrabotany.common.entity;
 
-
-
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.world.biome.BiomeGenBase;
 

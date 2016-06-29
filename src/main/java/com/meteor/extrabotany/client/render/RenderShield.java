@@ -52,37 +52,7 @@ public class RenderShield{
 		}
 		GameSettings gs = Minecraft.getMinecraft().gameSettings;
 	}
-	
-	/*
-	Old code
-	private void renderShieldInvBar(ScaledResolution res, boolean hasCreative, int shield, int maxShield) {
-		Minecraft mc = Minecraft.getMinecraft();
-		int width = 182;
-		int x = res.getScaledWidth() / 2 - width / 2;
-		int y = res.getScaledHeight() - ConfigHandler.shieldBarHeight + 2;
 
-		if(!hasCreative) {
-			if(maxShield == 0)
-				width = 0;
-			else width *= (double) shield / (double) maxShield;
-		}
-
-		if(width == 0) {
-			if(shield > 0)
-				width = 1;
-			else return;
-		}
-
-		Color color = new Color(Color.HSBtoRGB(1.64F, (float) Math.min(1F, Math.sin(System.currentTimeMillis() / 200D) * 0.5 + 1.64F), 1.64F));
-		GL11.glColor4ub((byte) color.getRed(), (byte) color.getGreen(), (byte) color.getBlue(), (byte) (255 - color.getRed()));
-		mc.renderEngine.bindTexture(shieldBar);
-
-		GL11.glEnable(GL11.GL_BLEND);
-		GL11.glBlendFunc(GL11.GL_SRC_ALPHA, GL11.GL_ONE_MINUS_SRC_ALPHA);
-		RenderHelper.drawTexturedModalRect(x, y, 0, 0, 251, width, 5);
-		GL11.glDisable(GL11.GL_BLEND);
-	}
-	*/
 	private void renderShield(ScaledResolution res, boolean hasCreative) {
 		Minecraft mc = Minecraft.getMinecraft();
 		ScaledResolution scaledresolution = new ScaledResolution(mc, mc.displayWidth, mc.displayHeight);
@@ -114,26 +84,6 @@ public class RenderShield{
     	        }
             }
         }  
-        
-        /*
-        Ugly code
-        if(s1 > 0){
-            for(int i = 0; i < Math.min(ss1, 10); i++){
-	        	if(s1 > 1)
-	        		this.drawTexturedModalRect(xBasePos + 8 * Math.min(ss1 % 1 == 0 ? i : ss1 > 10 ? i : Math.max(i-1, 0), 9), yBasePos, 0, 0, 9, 9);
-	        	if(ss1 % 1 != 0 && ss1 <= 10)
-	        		this.drawTexturedModalRect(xBasePos + 8 * Math.min(i , 9), yBasePos, 9, 0, 9, 9);
-	        }
-        }
-        if(s1 > 20){
-	        for(int i = 0; i < Math.min(ss1 - 10, 10); i++){
-	        	if(s1 > 21)
-	        		this.drawTexturedModalRect(xBasePos + 8 * Math.min(ss1 % 1 == 0 ? i : ss1 > 20 ? i : Math.max(i-1, 0), 9), yBasePos - 10, 0, 0, 9, 9);
-	        	if(ss1 % 1 != 0 && ss1 <= 20)
-	        		this.drawTexturedModalRect(xBasePos + 8 * Math.min(i , 9), yBasePos - 10, 9, 0, 9, 9);
-	        }
-        }
-        */
 	}
 	
 	double zLevel = 0;

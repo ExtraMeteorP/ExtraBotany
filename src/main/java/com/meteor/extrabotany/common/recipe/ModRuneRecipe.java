@@ -2,13 +2,12 @@ package com.meteor.extrabotany.common.recipe;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
-
-import com.meteor.extrabotany.common.item.ModItems;
-import com.meteor.extrabotany.common.lib.LibOreDictName;
-
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.recipe.RecipeRuneAltar;
 import vazkii.botania.common.lib.LibOreDict;
+
+import com.meteor.extrabotany.common.item.ModItems;
+import com.meteor.extrabotany.common.lib.LibOreDictName;
 
 public class ModRuneRecipe {
 	public static RecipeRuneAltar eternalSlienceRecipe;

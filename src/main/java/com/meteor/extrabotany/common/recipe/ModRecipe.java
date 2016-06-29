@@ -43,6 +43,9 @@ public class ModRecipe {
 	public static IRecipe bladepurple;
 	public static IRecipe angelwand;
 	public static IRecipe manapotato;
+	public static IRecipe pylon1;
+	public static IRecipe pylon2;
+	public static IRecipe pylon3;
 	
 	public static void initSubtile(){
 		ModStonesiaRecipe.init();
@@ -56,6 +59,36 @@ public class ModRecipe {
 		ModRuneRecipe.init();
 		initSubtile();
 		int recipeListSize = CraftingManager.getInstance().getRecipeList().size();
+		
+		//pylon1
+		addOreDictRecipe(new ItemStack(ModBlocks.pylon),
+				"ABA", "ACA", "DED",
+				'A', LibOreDictName.STRING_GOLD,
+				'B', new ItemStack(ModItems.manapotato),
+				'C', new ItemStack(vazkii.botania.common.block.ModBlocks.pylon),
+				'D', LibOreDictName.BLANK_CARD,
+				'E', LibOreDictName.QUARTZ_ELEMENTIUM);
+		pylon1 = BotaniaAPI.getLatestAddedRecipe();
+		
+		//pylon2
+		addOreDictRecipe(new ItemStack(ModBlocks.pylon, 1, 1),
+				"ABA", "ACA", "DED",
+				'A', LibOreDictName.STRING_GOLD,
+				'B', new ItemStack(ModItems.manapotato),
+				'C', new ItemStack(vazkii.botania.common.block.ModBlocks.pylon, 1, 1),
+				'D', LibOreDictName.BLANK_CARD,
+				'E', LibOreDictName.QUARTZ_ELEMENTIUM);
+		pylon2 = BotaniaAPI.getLatestAddedRecipe();
+		
+		//pylon3
+		addOreDictRecipe(new ItemStack(ModBlocks.pylon, 1, 2),
+				"ABA", "ACA", "DED",
+				'A', LibOreDictName.STRING_GOLD,
+				'B', new ItemStack(ModItems.manapotato),
+				'C', new ItemStack(vazkii.botania.common.block.ModBlocks.pylon, 1, 2),
+				'D', LibOreDictName.BLANK_CARD,
+				'E', LibOreDictName.QUARTZ_ELEMENTIUM);
+		pylon3 = BotaniaAPI.getLatestAddedRecipe();
 		
 		//mana potato
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.manapotato), new Object[] {

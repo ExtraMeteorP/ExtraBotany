@@ -3,7 +3,6 @@ package com.meteor.extrabotany.common.potion;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.potion.PotionEffect;
-import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import vazkii.botania.common.item.relic.ItemRelic;
@@ -22,6 +21,7 @@ public class PotionResidualPain extends PotionMods{
 	public PotionResidualPain() {
 		super(ConfigHandler.idPotionRP, LibPotionEffectName.RESIDUALPAIN, true, 0x8B7F7E, 2);
 		MinecraftForge.EVENT_BUS.register(this);
+		FMLCommonHandler.instance().bus().register(this);
 	}
 	
 	@Override

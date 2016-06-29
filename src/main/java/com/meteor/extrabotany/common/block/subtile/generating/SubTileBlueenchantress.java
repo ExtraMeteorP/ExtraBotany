@@ -5,6 +5,8 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.ForgeDirection;
+import thaumcraft.common.blocks.BlockFluidDeath;
+import thaumcraft.common.blocks.BlockFluidPure;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.block.subtile.generating.SubTilePassiveGenerating;
@@ -58,19 +60,21 @@ public class SubTileBlueenchantress extends SubTilePassiveGenerating{
 					}
 					
 				}
-			}else {
-				if(supertile.getWorldObj().rand.nextInt(8) == 0){
-					doBurnParticles();
-					}
-				burnTime--;
 			}
+		}else {
+			if(supertile.getWorldObj().rand.nextInt(8) == 0){
+				doBurnParticles();
+				}
+			burnTime--;
 		}
 	}
 	
 	public int getBurnTime(Block block){
-		if(block == BuildCraftEnergy.blockOil) return 120;
-		if(block == BuildCraftEnergy.blockFuel) return 200;
-		if(block == CandyCraft.GrenadineStatic) return 80;
+		if(block == BuildCraftEnergy.blockOil) return 140;
+		if(block == BuildCraftEnergy.blockFuel) return 240;
+		if(block == CandyCraft.GrenadineStatic) return 100;
+		if(block instanceof BlockFluidDeath) return 100;
+		if(block instanceof BlockFluidPure) return 100;
 		else return 0;
 	}
 	

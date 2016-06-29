@@ -66,7 +66,7 @@ public class ConfigHandler {
 		efficiencySunshinelily = config.get(LibReference.CATEGORY_COMMON, "efficiencySunshinelily", 3, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencySunshinelily.desc")).getInt();
 		efficiencyMoonlightlily = config.get(LibReference.CATEGORY_COMMON, "efficiencyMoonlightlily", 3, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyMoonlightlily.desc")).getInt();
 		efficiencyBlueenchantress = config.get(LibReference.CATEGORY_COMMON, "efficiencyBlueenchantress", 100, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyBlueenchantress.desc")).getInt();
-		efficiencyCandyflower = config.get(LibReference.CATEGORY_COMMON, "efficiencyCandyflower", 5, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyCandyflower.desc")).getInt();
+		efficiencyCandyflower = config.get(LibReference.CATEGORY_COMMON, "efficiencyCandyflower", 8, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyCandyflower.desc")).getInt();
 		efficiencyGeminiorchid = config.get(LibReference.CATEGORY_COMMON, "efficiencyGeminiorchid", 2, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyGeminiorchid.desc")).getInt();
 		efficiencyOminiviolet = config.get(LibReference.CATEGORY_COMMON, "efficiencyOminiviolet", 20, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyOminiviolet.desc")).getInt();
 		efficiencyStonesia = config.get(LibReference.CATEGORY_COMMON, "efficiencyStonesia", 8, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyStonesia.desc")).getInt();

@@ -22,6 +22,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
 @Mod(modid = LibReference.MOD_ID, name = LibReference.MOD_NAME, version = LibReference.VERSION, dependencies = LibReference.DEPENDENCIES)
 public class ExtraBotany {
+	
 	@Instance(LibReference.MOD_ID)
 	public static ExtraBotany instance;
 

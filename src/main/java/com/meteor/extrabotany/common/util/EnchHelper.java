@@ -1,10 +1,10 @@
 package com.meteor.extrabotany.common.util;
 
-import com.meteor.extrabotany.common.enchantment.ModEnchantment;
-
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.item.ItemStack;
+
+import com.meteor.extrabotany.common.enchantment.ModEnchantment;
 
 public class EnchHelper {
 	

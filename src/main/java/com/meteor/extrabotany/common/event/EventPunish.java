@@ -1,12 +1,7 @@
 package com.meteor.extrabotany.common.event;
 
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.ChatStyle;
-import net.minecraft.util.EnumChatFormatting;
-import vazkii.botania.api.item.IRelic;
 import vazkii.botania.common.item.relic.ItemRelic;
 
 import com.meteor.extrabotany.common.item.ModItems;

@@ -64,7 +64,6 @@ public class ModBlocks {
 	public static void init() {
 		pylon = new BlockAncientPylon(Material.iron);
 		relicplate = new BlockRelicPlate();
-		resonancehouse = new BlockResonanceHouse(Material.rock);
 		specialFlower = new BlockSpecial();
 		//Gaia Quartz
 		gaiaquartz = new BlockMods(Material.iron, LibBlockName.GAIAQUARTZ);

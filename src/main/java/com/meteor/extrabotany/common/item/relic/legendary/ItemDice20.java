@@ -1,7 +1,5 @@
 package com.meteor.extrabotany.common.item.relic.legendary;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Random;
 
 import net.minecraft.entity.player.EntityPlayer;

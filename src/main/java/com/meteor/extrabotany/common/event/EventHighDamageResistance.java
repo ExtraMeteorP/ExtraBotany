@@ -8,7 +8,6 @@ import com.meteor.extrabotany.common.potion.ModPotions;
 
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
-
 public class EventHighDamageResistance {
 	@SubscribeEvent
 	 public void HurtEvent(LivingHurtEvent event) { 

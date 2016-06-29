@@ -2,11 +2,12 @@ package com.meteor.extrabotany.common.event;
 
 import java.util.Random;
 
-import com.meteor.extrabotany.common.item.ModItems;
-
 import net.minecraft.entity.monster.IMob;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.event.entity.living.LivingDeathEvent;
+
+import com.meteor.extrabotany.common.item.ModItems;
+
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;
 
 public class EventMobDrop {

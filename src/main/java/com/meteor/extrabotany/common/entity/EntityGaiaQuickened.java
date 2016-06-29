@@ -2,9 +2,6 @@ package com.meteor.extrabotany.common.entity;
 
 import java.util.List;
 
-import com.meteor.extrabotany.common.handler.EntityHandler;
-
-import vazkii.botania.common.Botania;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
@@ -13,6 +10,7 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
+import vazkii.botania.common.Botania;
 
 public class EntityGaiaQuickened extends Entity{
 	

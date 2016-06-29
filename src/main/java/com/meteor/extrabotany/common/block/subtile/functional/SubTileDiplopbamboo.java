@@ -32,8 +32,8 @@ public class SubTileDiplopbamboo extends SubTileFunctional{
 									EntityItem i = new EntityItem(supertile.getWorldObj(), supertile.xCoord, supertile.yCoord, supertile.zCoord, item.getEntityItem().copy());
 									supertile.getWorldObj().spawnEntityInWorld(i);
 							}
-						}	
-					}
+					}	
+				}
 	}
 	
 	@Override

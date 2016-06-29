@@ -2,8 +2,6 @@ package com.meteor.extrabotany.common.block.subtile;
 
 import java.awt.Color;
 
-import com.meteor.extrabotany.common.lexicon.LexiconModData;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,6 +17,8 @@ import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.mana.IManaCollector;
 import vazkii.botania.api.mana.IManaPool;
 import vazkii.botania.api.subtile.SubTileEntity;
+
+import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 public class SubTileManalinkuim extends SubTileEntity{
 	

@@ -18,23 +18,23 @@ public class PropertyHandler implements IExtendedEntityProperties{
 
 	public static void setShieldAmount(float shield, EntityPlayer p) {
 		setPlayer(p);
-		player.getDataWatcher().updateObject(26, (int)(Math.min(shield, getMaxShieldAmount(player)))); 
+		player.getDataWatcher().updateObject(30, (int)(Math.min(shield, getMaxShieldAmount(player)))); 
 	}
 
 	public static float getShieldAmount(EntityPlayer p) {
 		setPlayer(p);
-		return player.getDataWatcher().getWatchableObjectInt(26);
+		return player.getDataWatcher().getWatchableObjectInt(30);
 	}
 
 	public static void addShieldAmount(float shield, EntityPlayer p) {
 		setPlayer(p);
-		player.getDataWatcher().updateObject(26, (int)(Math.min(getShieldAmount(player) + shield, getMaxShieldAmount(player))));
+		player.getDataWatcher().updateObject(30, (int)(Math.min(getShieldAmount(player) + shield, getMaxShieldAmount(player))));
 	}
 
 	public static float getMaxShieldAmount(EntityPlayer p) {
 		setPlayer(p);
-		player.getDataWatcher().updateObject(27, (int)(player.getMaxHealth() + ConfigHandler.extraShieldAmount));
-		return player.getDataWatcher().getWatchableObjectInt(27);
+		player.getDataWatcher().updateObject(29, (int)(player.getMaxHealth() + ConfigHandler.extraShieldAmount));
+		return player.getDataWatcher().getWatchableObjectInt(29);
 	}
 
 	public final static String EXT_PROP_NAME = "Shield";
@@ -46,8 +46,8 @@ public class PropertyHandler implements IExtendedEntityProperties{
 	public PropertyHandler(EntityPlayer player)
 	{	
 		this.player = player;
-		player.getDataWatcher().addObject(26, 0);
-		player.getDataWatcher().addObject(27, 0);
+		player.getDataWatcher().addObject(29, 0);
+		player.getDataWatcher().addObject(30, 0);
 		this.currentShield = 0;
 		this.maxShield = 20;
 	}
@@ -75,8 +75,8 @@ public class PropertyHandler implements IExtendedEntityProperties{
 	public void loadNBTData(NBTTagCompound compound)
 	{
 		NBTTagCompound properties = (NBTTagCompound) compound.getTag(EXT_PROP_NAME);
-		this.player.getDataWatcher().updateObject(26, properties.getInteger(this.TAG_CURRENT_SHIELD));
-		this.player.getDataWatcher().updateObject(27, properties.getInteger(this.TAG_MAX_SHIELD));
+		this.player.getDataWatcher().updateObject(30, properties.getInteger(this.TAG_CURRENT_SHIELD));
+		this.player.getDataWatcher().updateObject(29, properties.getInteger(this.TAG_MAX_SHIELD));
 	}
 
 	@Override

@@ -16,6 +16,7 @@ import com.meteor.extrabotany.common.util.Sound;
 import com.meteor.extrabotany.common.util.SoundHelper;
 
 public class EntityMagicCycloneAqua extends Entity{
+	
 	private static float X = 1F;
 	private static float Z = 1F;
 	

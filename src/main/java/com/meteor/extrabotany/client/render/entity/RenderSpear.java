@@ -1,13 +1,10 @@
 package com.meteor.extrabotany.client.render.entity;
 
-import java.util.Random;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.ItemRenderer;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.entity.Render;
-import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.IIcon;
@@ -17,15 +14,6 @@ import org.lwjgl.opengl.GL11;
 
 import com.meteor.extrabotany.common.entity.EntitySpear;
 import com.meteor.extrabotany.common.item.ItemTest;
-import com.meteor.extrabotany.common.item.ModItems;
-
-import cpw.mods.fml.relauncher.Side;
-import cpw.mods.fml.relauncher.SideOnly;
-import vazkii.botania.client.core.helper.IconHelper;
-import vazkii.botania.client.core.helper.ShaderHelper;
-import vazkii.botania.client.lib.LibResources;
-import vazkii.botania.common.entity.EntityBabylonWeapon;
-import vazkii.botania.common.item.relic.ItemKingKey;
 
 public class RenderSpear extends Render {
 	

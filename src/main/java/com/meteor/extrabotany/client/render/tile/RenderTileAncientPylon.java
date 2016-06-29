@@ -16,20 +16,14 @@ import vazkii.botania.client.core.handler.MultiblockRenderHandler;
 import vazkii.botania.client.core.helper.ShaderHelper;
 import vazkii.botania.client.model.IPylonModel;
 import vazkii.botania.client.model.ModelPylon;
-import vazkii.botania.client.model.ModelPylonOld;
 import vazkii.botania.common.core.handler.ConfigHandler;
 
 import com.meteor.extrabotany.common.lib.LibReference;
 
 public class RenderTileAncientPylon extends TileEntitySpecialRenderer {
 
-	private static final ResourceLocation textureOld = new ResourceLocation(LibReference.OLD_PYLON);
 	private static final ResourceLocation texture = new ResourceLocation(LibReference.PYLON);
-
-	private static final ResourceLocation textureGreenOld = new ResourceLocation(LibReference.OLD_PYLON_GREEN);
 	private static final ResourceLocation textureGreen = new ResourceLocation(LibReference.PYLON_GREEN);
-
-	private static final ResourceLocation texturePinkOld = new ResourceLocation(LibReference.OLD_PYLON_PINK);
 	private static final ResourceLocation texturePink = new ResourceLocation(LibReference.PYLON_PINK);
 
 	IPylonModel model;
@@ -39,7 +33,7 @@ public class RenderTileAncientPylon extends TileEntitySpecialRenderer {
 	@Override
 	public void renderTileEntityAt(TileEntity tileentity, double d0, double d1, double d2, float pticks) {
 		if(model == null)
-			model = ConfigHandler.oldPylonModel ? new ModelPylonOld() : new ModelPylon();
+			model = new ModelPylon();
 
 			GL11.glPushMatrix();
 			GL11.glEnable(GL12.GL_RESCALE_NORMAL);
@@ -52,9 +46,8 @@ public class RenderTileAncientPylon extends TileEntitySpecialRenderer {
 				pink = tileentity.getBlockMetadata() == 2;
 			}
 
-			if(ConfigHandler.oldPylonModel)
-				Minecraft.getMinecraft().renderEngine.bindTexture(pink ? texturePinkOld : green ? textureGreenOld : textureOld);
-			else Minecraft.getMinecraft().renderEngine.bindTexture(pink ? texturePink : green ? textureGreen : texture);
+			
+			Minecraft.getMinecraft().renderEngine.bindTexture(pink ? texturePink : green ? textureGreen : texture);
 
 			double worldTime = tileentity.getWorldObj() == null ? 0 : (double) (ClientTickHandler.ticksInGame + pticks);
 

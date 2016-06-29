@@ -2,16 +2,15 @@ package com.meteor.extrabotany.common.item.weapon;
 
 import java.util.List;
 
-import vazkii.botania.common.core.helper.ItemNBTHelper;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumAction;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ChatComponentTranslation;
 import net.minecraft.util.ChatStyle;
 import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
+import vazkii.botania.common.core.helper.ItemNBTHelper;
 
 import com.meteor.extrabotany.api.extrabotany.item.IGun;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletExploding;

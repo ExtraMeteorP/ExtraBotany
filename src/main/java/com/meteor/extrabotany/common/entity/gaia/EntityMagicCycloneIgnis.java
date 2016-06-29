@@ -12,6 +12,7 @@ import vazkii.botania.common.Botania;
 import vazkii.botania.common.item.relic.ItemRelic;
 
 public class EntityMagicCycloneIgnis extends Entity{
+	
 	private static float X = 1F;
 	private static float Z = 1F;
 	

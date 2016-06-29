@@ -13,30 +13,19 @@ public class ItemTeleportPearl extends ItemMods{
 		super(name);
 	}
 	
-	  public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player)
-	    {
-	        if (player.capabilities.isCreativeMode)
-	        {
-	            return stack;
-	        }
-	        else
-	        {
-	        	--stack.stackSize;
-	        	for(ItemStack stack1 : player.inventory.armorInventory) {
-		            if(stack1 != null && stack1.getItem() instanceof ItemHermesTravelClothing) {
-		            	++stack.stackSize;
-		            }
-		    
-		          }
-            	world.playSoundAtEntity(player, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
+	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player){
+		if (player.capabilities.isCreativeMode){
+			return stack;
+	    }else{
+	    	if(ItemHermesTravelClothing.hasHermesTravelClothing(player))
+	    		--stack.stackSize;
+	        
+            world.playSoundAtEntity(player, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
 
-            	if (!world.isRemote)
-            	{
-            		world.spawnEntityInWorld(new EntityTeleportPearl(world, player));
-            	}
-
-	            return stack;
-	        }
+            if (!world.isRemote)
+            	world.spawnEntityInWorld(new EntityTeleportPearl(world, player));
+            return stack;
 	    }
+	}
 
 }

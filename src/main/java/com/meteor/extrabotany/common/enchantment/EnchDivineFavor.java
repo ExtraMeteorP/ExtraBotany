@@ -13,8 +13,7 @@ public class EnchDivineFavor extends Enchantment{
 	}
 	
 	@Override
-    public int getMaxLevel()
-    {
+    public int getMaxLevel(){
         return 5;
     }
 

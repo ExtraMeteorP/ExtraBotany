@@ -13,8 +13,7 @@ public class EnchDivineMark extends Enchantment{
 	}
 	
 	@Override
-    public int getMaxLevel()
-    {
+    public int getMaxLevel(){
         return 3;
     }
 }

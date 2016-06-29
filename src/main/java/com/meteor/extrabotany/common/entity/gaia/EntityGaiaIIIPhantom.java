@@ -28,6 +28,7 @@ import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
 public class EntityGaiaIIIPhantom extends EntityMob{
+	
 	EntityGaiaIII summoner;
 	public EntityGaiaIIIPhantom(World world) {
 		super(world);

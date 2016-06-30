@@ -17,9 +17,9 @@ import org.lwjgl.opengl.GL11;
 import vazkii.botania.api.item.IBaubleRender.RenderType;
 
 import com.meteor.extrabotany.client.render.RenderShield;
-import com.meteor.extrabotany.common.handler.ConfigHandler;
-import com.meteor.extrabotany.common.handler.EntityHandler;
-import com.meteor.extrabotany.common.handler.PropertyHandler;
+import com.meteor.extrabotany.common.core.handler.ConfigHandler;
+import com.meteor.extrabotany.common.core.handler.EntityHandler;
+import com.meteor.extrabotany.common.core.handler.PropertyHandler;
 
 import cpw.mods.fml.common.eventhandler.EventPriority;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

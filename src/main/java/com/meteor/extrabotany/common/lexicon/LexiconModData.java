@@ -18,7 +18,7 @@ import vazkii.botania.common.lexicon.page.PageText;
 
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.ModMultiBlocks;
-import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.core.handler.ConfigHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibBlockName;
 import com.meteor.extrabotany.common.lib.LibLexiconName;

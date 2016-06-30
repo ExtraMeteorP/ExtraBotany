@@ -14,7 +14,7 @@ import vazkii.botania.api.subtile.SubTileGenerating;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.block.ModBlocks;
 
-import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.core.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 import com.meteor.extrabotany.common.lib.LibData;
 

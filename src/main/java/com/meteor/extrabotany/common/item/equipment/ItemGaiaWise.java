@@ -25,8 +25,8 @@ import baubles.api.BaubleType;
 import baubles.common.container.InventoryBaubles;
 import baubles.common.lib.PlayerHandler;
 
+import com.meteor.extrabotany.common.core.handler.EntityHandler;
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
-import com.meteor.extrabotany.common.handler.EntityHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 
 import cpw.mods.fml.common.FMLCommonHandler;

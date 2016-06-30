@@ -35,9 +35,9 @@ import vazkii.botania.common.item.relic.ItemRelic;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+import com.meteor.extrabotany.common.core.util.EnchHelper;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.lib.LibItemName;
-import com.meteor.extrabotany.common.util.EnchHelper;
 
 public class ItemExcaliber extends ItemManasteelSword implements IRelic, ILensEffect, IManaUsingItem {
 	//copied

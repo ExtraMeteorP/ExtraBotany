@@ -7,8 +7,8 @@ import net.minecraft.potion.PotionEffect;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingEvent;
 
+import com.meteor.extrabotany.common.core.handler.ConfigHandler;
 import com.meteor.extrabotany.common.event.EventMobDrop;
-import com.meteor.extrabotany.common.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lib.LibPotionEffectName;
 
 import cpw.mods.fml.common.FMLCommonHandler;

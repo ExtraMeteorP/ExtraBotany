@@ -2,9 +2,9 @@ package com.meteor.extrabotany.common.entity;
 
 import java.util.List;
 
+import com.meteor.extrabotany.common.core.handler.ElvenHandler;
 import com.meteor.extrabotany.common.entity.gaia.EntityMagicCycloneIgnis;
 import com.meteor.extrabotany.common.entity.gaia.EntityMagicMissileII;
-import com.meteor.extrabotany.common.handler.ElvenHandler;
 
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.core.helper.MathHelper;

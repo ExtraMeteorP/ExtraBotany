@@ -8,7 +8,7 @@ import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.api.subtile.RadiusDescriptor;
 import vazkii.botania.api.subtile.SubTileGenerating;
 
-import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.core.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 public class SubTilePyschobloom extends SubTileGenerating{

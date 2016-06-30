@@ -11,7 +11,7 @@ import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import vazkii.botania.api.mana.IManaDiscountArmor;
 import vazkii.botania.common.entity.EntityDoppleganger;
 
-import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.core.handler.ConfigHandler;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

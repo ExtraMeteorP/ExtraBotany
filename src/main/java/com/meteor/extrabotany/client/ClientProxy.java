@@ -24,6 +24,8 @@ import com.meteor.extrabotany.common.CommonProxy;
 import com.meteor.extrabotany.common.block.tile.TileAncientPylon;
 import com.meteor.extrabotany.common.block.tile.TileGaiaChest;
 import com.meteor.extrabotany.common.block.tile.TileRelicPlate;
+import com.meteor.extrabotany.common.core.handler.ConfigHandler;
+import com.meteor.extrabotany.common.core.version.UpdateChecker;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataGreen;
 import com.meteor.extrabotany.common.entity.EntityLycorisradiataPurple;
@@ -40,8 +42,6 @@ import com.meteor.extrabotany.common.entity.bullet.EntityBulletSnowball;
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIDark;
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIIIPhantom;
-import com.meteor.extrabotany.common.handler.ConfigHandler;
-import com.meteor.extrabotany.common.handler.UpdateChecker;
 import com.meteor.extrabotany.common.integration.Intergration;
 import com.meteor.extrabotany.common.item.ModItems;
 

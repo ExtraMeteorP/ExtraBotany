@@ -13,7 +13,7 @@ import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.common.lib.LibOreDict;
 
 import com.meteor.extrabotany.common.block.ModBlocks;
-import com.meteor.extrabotany.common.handler.CraftingHandler;
+import com.meteor.extrabotany.common.core.handler.CraftingHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
 import com.meteor.extrabotany.common.recipe.subtile.ModInfernoidisyRecipe;

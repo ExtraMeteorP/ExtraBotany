@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.handler;
+package com.meteor.extrabotany.common.core.handler;
 
 import java.util.Iterator;
 import java.util.List;

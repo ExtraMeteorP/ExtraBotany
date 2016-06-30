@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.handler;
+package com.meteor.extrabotany.common.core.handler;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.nbt.NBTTagCompound;

@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.util;
+package com.meteor.extrabotany.common.core;
 
 public class Sound {
 	public String name;

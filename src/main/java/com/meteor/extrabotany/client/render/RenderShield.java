@@ -15,7 +15,7 @@ import org.lwjgl.opengl.GL11;
 
 import vazkii.botania.client.core.helper.ShaderHelper;
 
-import com.meteor.extrabotany.common.handler.PropertyHandler;
+import com.meteor.extrabotany.common.core.handler.PropertyHandler;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.eventhandler.EventPriority;

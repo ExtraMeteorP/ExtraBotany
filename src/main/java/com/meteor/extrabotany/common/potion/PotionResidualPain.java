@@ -7,7 +7,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.core.handler.ConfigHandler;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemCronusPhantom;
 import com.meteor.extrabotany.common.lib.LibPotionEffectName;
 

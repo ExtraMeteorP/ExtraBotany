@@ -11,9 +11,9 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-import com.meteor.extrabotany.common.handler.PropertyHandler;
+import com.meteor.extrabotany.common.core.handler.PropertyHandler;
+import com.meteor.extrabotany.common.core.util.EnchHelper;
 import com.meteor.extrabotany.common.lib.LibItemName;
-import com.meteor.extrabotany.common.util.EnchHelper;
 
 import cpw.mods.fml.common.FMLCommonHandler;
 import cpw.mods.fml.common.eventhandler.SubscribeEvent;

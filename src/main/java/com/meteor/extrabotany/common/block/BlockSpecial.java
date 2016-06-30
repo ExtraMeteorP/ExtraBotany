@@ -24,6 +24,7 @@ public class BlockSpecial extends BlockSpecialFlower{
 			LibBlockName.GEMINIORCHID,
 			LibBlockName.STONESIA,
 			LibBlockName.PYSCHOBLOOM,
+			LibBlockName.BELLFLOWER,
 			//Functional
 			LibBlockName.NUMERON_DANDELIFE,
 			LibBlockName.NECRO_FLUER,

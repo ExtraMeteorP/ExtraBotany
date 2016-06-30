@@ -25,6 +25,7 @@ import com.meteor.extrabotany.common.block.subtile.functional.SubTileNumerondand
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileVoiduim;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileVolatilily;
 import com.meteor.extrabotany.common.block.subtile.functional.SubTileWoodienia;
+import com.meteor.extrabotany.common.block.subtile.generating.SubTileBellflower;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileBlueenchantress;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileCandyflower;
 import com.meteor.extrabotany.common.block.subtile.generating.SubTileGeminiorchid;
@@ -93,6 +94,7 @@ public class ModBlocks {
 	}
 	
 	private static void initTileEntities() {
+		registerSubTile(LibBlockName.BELLFLOWER, SubTileBellflower.class);
 		registerSubTile(LibBlockName.MANALINKUIM, SubTileManalinkuim.class);
 		registerSubTile(LibBlockName.ANNOYOBLOOM, SubTileAnnoyobloom.class);
 		registerSubTile(LibBlockName.LAUNCHISH, SubTileLaunchish.class);

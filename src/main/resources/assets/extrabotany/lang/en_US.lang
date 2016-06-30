@@ -29,6 +29,9 @@ extrabotany.versioning.outdated=You are now running ExtraBotany build %s, howeve
 extrabotany.versioning.message0=Do not play overwatch, or you will notice that there is a ExtraBotany Update.
 extrabotany.versioning.message1=Everything is fine, except that you haven't updated ExtraBotany.
 extrabotany.versioning.message2=どうしてこうなるんだろう......Updating ExtraBotany ought to be wonderful.
+extrabotany.versioning.message3=ExtraBotany has updated, もう何も怖くない.
+extrabotany.versioning.message4=You finally discover a ExtraBotany Update, we're gonna be rich!
+extrabotany.versioning.message5=The earth is round, I want to wander around. Let's update ExtraBotany first before setting out.
 
 #ITEMGROUP
 itemGroup.ExtraBotany=ExtraBotany

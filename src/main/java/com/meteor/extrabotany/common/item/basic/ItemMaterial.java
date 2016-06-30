@@ -6,11 +6,13 @@ import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.World;
 import vazkii.botania.api.mana.ManaItemHandler;
+import vazkii.botania.api.recipe.IFlowerComponent;
 import vazkii.botania.client.core.helper.IconHelper;
 
 import com.meteor.extrabotany.common.core.handler.PropertyHandler;
@@ -21,7 +23,7 @@ import com.meteor.extrabotany.common.lib.LibItemName;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class ItemMaterial extends ItemMods{
+public class ItemMaterial extends ItemMods implements IFlowerComponent{
 	
 	final int types = 15;
 	IIcon[] icons;
@@ -71,6 +73,16 @@ public class ItemMaterial extends ItemMods{
 	@SideOnly(Side.CLIENT)
 	public IIcon getIconFromDamage(int par1) {
 		return icons[Math.min(icons.length - 1, par1)];
+	}
+
+	@Override
+	public boolean canFit(ItemStack arg0, IInventory arg1) {
+		return true;
+	}
+
+	@Override
+	public int getParticleColor(ItemStack arg0) {
+		return 0;
 	}
 
 }

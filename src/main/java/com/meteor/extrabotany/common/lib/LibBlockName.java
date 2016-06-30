@@ -10,6 +10,7 @@ public class LibBlockName {
 	public static final String GEMINIORCHID = "geminiorchid";
 	public static final String STONESIA = "stonesia";
 	public static final String PYSCHOBLOOM = "pyschobloom";
+	public static final String BELLFLOWER = "bellflower";
 	
 	public static final String ANNOYOBLOOM = "annoyobloom";
 	public static final String NUMERON_DANDELIFE =  "numerondandelife";

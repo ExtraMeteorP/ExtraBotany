@@ -29,6 +29,9 @@ extrabotany.versioning.outdated=你现在使用的额外植物学版本为%s,最
 extrabotany.versioning.message0=不要玩守望先锋,否则你会发现一份额外植物学的更新.
 extrabotany.versioning.message1=一切都很美好,除了你还未更新额外植物学.
 extrabotany.versioning.message2=为什么会变成这样呢.....更新额外植物学本该是件美好的事情.
+extrabotany.versioning.message3=额外植物学更新了,已经没什么好害怕的了.
+extrabotany.versioning.message4=你终于找到了额外植物学的更新,我们要发财啦.
+extrabotany.versioning.message5=世界那么大,我想去看看.出发前先让我们更新一下额外植物学.
 
 #ITEMGROUP
 itemGroup.ExtraBotany=额外植物学

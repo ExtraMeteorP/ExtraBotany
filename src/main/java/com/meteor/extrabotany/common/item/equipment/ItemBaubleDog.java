@@ -8,6 +8,7 @@ import net.minecraft.client.renderer.Tessellator;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.inventory.IInventory;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
@@ -16,13 +17,14 @@ import net.minecraftforge.client.event.RenderPlayerEvent;
 import org.lwjgl.opengl.GL11;
 
 import vazkii.botania.api.item.ICosmeticBauble;
+import vazkii.botania.api.recipe.IFlowerComponent;
 import vazkii.botania.client.core.helper.IconHelper;
 import vazkii.botania.common.item.equipment.bauble.ItemBauble;
 import baubles.api.BaubleType;
 
 import com.meteor.extrabotany.common.lib.LibItemName;
 
-public class ItemBaubleDog extends ItemBauble implements ICosmeticBauble{
+public class ItemBaubleDog extends ItemBauble implements ICosmeticBauble, IFlowerComponent{
 	private static final int SUBTYPES = 4;
 	IIcon[] icons;
 	public ItemBaubleDog() {
@@ -94,5 +96,15 @@ public class ItemBaubleDog extends ItemBauble implements ICosmeticBauble{
 		float f2 = icon.getMinV();
 		float f3 = icon.getMaxV();
 		ItemRenderer.renderItemIn2D(Tessellator.instance, f1, f2, f, f3, icon.getIconWidth(), icon.getIconHeight(), 1F / 4F);
+	}
+
+	@Override
+	public boolean canFit(ItemStack arg0, IInventory arg1) {
+		return true;
+	}
+
+	@Override
+	public int getParticleColor(ItemStack arg0) {
+		return 0;
 	}
 }

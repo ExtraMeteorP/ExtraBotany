@@ -13,7 +13,7 @@ import net.minecraft.world.World;
 import vazkii.botania.api.mana.ManaItemHandler;
 import vazkii.botania.client.core.helper.IconHelper;
 
-import com.meteor.extrabotany.common.handler.PropertyHandler;
+import com.meteor.extrabotany.common.core.handler.PropertyHandler;
 import com.meteor.extrabotany.common.item.ItemMods;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibItemName;

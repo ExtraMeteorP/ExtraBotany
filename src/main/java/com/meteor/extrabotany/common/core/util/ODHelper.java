@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.util;
+package com.meteor.extrabotany.common.core.util;
 
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;

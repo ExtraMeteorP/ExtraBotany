@@ -3,7 +3,7 @@ package com.meteor.extrabotany.common.block.subtile.generating;
 import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.common.block.subtile.generating.SubTileDaybloom;
 
-import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.core.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 public class SubTileSunshinelily extends SubTileDaybloom{

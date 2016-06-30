@@ -14,10 +14,11 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 
+import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.api.extrabotany.recipe.RecipeInfernoidisy;
 import com.meteor.extrabotany.api.extrabotany.recipe.RecipeStonesia;
 import com.meteor.extrabotany.common.block.ModBlocks;
-import com.meteor.extrabotany.common.handler.PropertyHandler;
+import com.meteor.extrabotany.common.core.handler.PropertyHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.pam.harvestcraft.ItemPamSeedFood;
 import com.pam.harvestcraft.ItemRegistry;
@@ -44,31 +45,34 @@ public class ExtraBotanyAPI {
 	
 	static{
 		
-		sT1(CandyCraft.WaffleNugget);
-		sT1(CandyCraft.SugarCrystal);
+		if(ExtraBotany.candycraftLoaded){
+			sT1(CandyCraft.WaffleNugget);
+			sT1(CandyCraft.SugarCrystal);
+			
+			sT2(CandyCraft.ChewingGum);
+			sT2(CandyCraft.Lollipop);
+			sT2(CandyCraft.CranberryFish);
+			sT2(CandyCraft.Dragibus);
+			sT2(CandyCraft.Gummy);
+			sT2(CandyCraft.GummyBall);
+			sT2(CandyCraft.PEZDust);
+			sT2(CandyCraft.CandiedCherry);
+			sT2(CandyCraft.ChocolateCoins);
+			sT2(CandyCraft.Licorice);
+			sT2(CandyCraft.CranberryScale);
+			sT2(CandyCraft.HoneyShard);
+			sT2(CandyCraft.CottonCandy);
+			sT2(CandyCraft.MarshmallowFlower);
+			sT2(CandyCraft.NougatPowder);
+
+			sT3(CandyCraft.CranberryFishCooked);
+			sT3(CandyCraft.HoneyComb);
+			sT3(CandyCraft.Waffle);
+			sT3(CandyCraft.PEZ);
+		}
 		
 		sT2(Items.cookie);
 		sT2(Items.sugar);
-		sT2(CandyCraft.ChewingGum);
-		sT2(CandyCraft.Lollipop);
-		sT2(CandyCraft.CranberryFish);
-		sT2(CandyCraft.Dragibus);
-		sT2(CandyCraft.Gummy);
-		sT2(CandyCraft.GummyBall);
-		sT2(CandyCraft.PEZDust);
-		sT2(CandyCraft.CandiedCherry);
-		sT2(CandyCraft.ChocolateCoins);
-		sT2(CandyCraft.Licorice);
-		sT2(CandyCraft.CranberryScale);
-		sT2(CandyCraft.HoneyShard);
-		sT2(CandyCraft.CottonCandy);
-		sT2(CandyCraft.MarshmallowFlower);
-		sT2(CandyCraft.NougatPowder);
-
-		sT3(CandyCraft.CranberryFishCooked);
-		sT3(CandyCraft.HoneyComb);
-		sT3(CandyCraft.Waffle);
-		sT3(CandyCraft.PEZ);
 		
 		sT6(Items.cake);
 	}

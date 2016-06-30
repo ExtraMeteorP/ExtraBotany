@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.handler;
+package com.meteor.extrabotany.common.core.handler;
 
 public class MathHandler {
 	public static int max(int a, int b ,int c){

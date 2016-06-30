@@ -1,4 +1,6 @@
-package com.meteor.extrabotany.common.util;
+package com.meteor.extrabotany.common.core.util;
+
+import com.meteor.extrabotany.common.core.Sound;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.world.World;

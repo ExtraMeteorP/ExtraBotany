@@ -11,7 +11,7 @@ import vazkii.botania.common.Botania;
 
 import com.meteor.extrabotany.api.ExtraBotanyAPI;
 import com.meteor.extrabotany.api.extrabotany.recipe.RecipeStonesia;
-import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.core.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
 public class SubTileStonesia extends SubTileGenerating{

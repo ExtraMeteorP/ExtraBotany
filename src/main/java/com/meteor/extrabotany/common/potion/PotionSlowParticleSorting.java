@@ -1,6 +1,6 @@
 package com.meteor.extrabotany.common.potion;
 
-import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.common.core.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lib.LibPotionEffectName;
 
 public class PotionSlowParticleSorting extends PotionMods{

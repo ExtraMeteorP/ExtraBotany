@@ -13,7 +13,7 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.world.World;
 
-import com.meteor.extrabotany.common.handler.WorldHandler;
+import com.meteor.extrabotany.common.core.handler.WorldHandler;
 
 public class EntitySpear extends EntityThrowable {
 	

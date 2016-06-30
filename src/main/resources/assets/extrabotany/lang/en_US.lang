@@ -22,8 +22,13 @@ botaniamisc.theseussetMode0=You switched it to Attack Mode.
 botaniamisc.theseussetMode1=You switched it to Repair Mode.
 botaniamisc.theseussetMode2=You switched it to Heal Mode.
 botaniamisc.theseussetMode3=You switched it to Assist Mode.
+
+# VERSION
 extrabotany.versioning.updateMessage=["Click this [",{"text":"Download","color":"green","hoverEvent":{"action":"show_text","value":{"text":"Click this to download the latest version","color":"green"}},"clickEvent":{"action":"open_url","value":"http://adf.ly/1beRz1"}},"]"]
 extrabotany.versioning.outdated=You are now running ExtraBotany build %s, however, the latest is build %s.
+extrabotany.versioning.message0=Do not play overwatch, or you will notice that there is a ExtraBotany Update.
+extrabotany.versioning.message1=Everything is fine, except that you haven't updated ExtraBotany.
+extrabotany.versioning.message2=どうしてこうなるんだろう......Updating ExtraBotany ought to be wonderful.
 
 #ITEMGROUP
 itemGroup.ExtraBotany=ExtraBotany

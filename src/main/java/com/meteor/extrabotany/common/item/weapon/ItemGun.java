@@ -13,13 +13,13 @@ import net.minecraft.world.World;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 
 import com.meteor.extrabotany.api.extrabotany.item.IGun;
+import com.meteor.extrabotany.common.core.handler.MathHandler;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletExploding;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletGold;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletHighVelocity;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletMeteor;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletMusket;
 import com.meteor.extrabotany.common.entity.bullet.EntityBulletSilver;
-import com.meteor.extrabotany.common.handler.MathHandler;
 import com.meteor.extrabotany.common.item.ItemMods;
 import com.meteor.extrabotany.common.item.ModItems;
 

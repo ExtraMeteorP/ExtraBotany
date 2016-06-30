@@ -6,7 +6,7 @@ import com.google.common.collect.Lists;
 import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.api.ExtraBotanyAPI;
 import com.meteor.extrabotany.api.extrabotany.handler.IDataHandler;
-import com.meteor.extrabotany.common.util.ODHelper;
+import com.meteor.extrabotany.common.core.util.ODHelper;
 import com.valentin4311.candycraftmod.CandyCraft;
 
 import net.minecraft.block.Block;

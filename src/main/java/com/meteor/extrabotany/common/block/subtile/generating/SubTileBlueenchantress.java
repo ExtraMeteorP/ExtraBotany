@@ -11,10 +11,13 @@ import vazkii.botania.api.lexicon.LexiconEntry;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.block.subtile.generating.SubTilePassiveGenerating;
 import vazkii.botania.common.lib.LibMisc;
+import am2.AMCore;
 import buildcraft.BuildCraftEnergy;
 
-import com.meteor.extrabotany.common.handler.ConfigHandler;
+import com.meteor.extrabotany.ExtraBotany;
+import com.meteor.extrabotany.common.core.handler.ConfigHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
+import com.pam.harvestcraft.harvestcraft;
 import com.valentin4311.candycraftmod.CandyCraft;
 
 public class SubTileBlueenchantress extends SubTilePassiveGenerating{
@@ -70,12 +73,21 @@ public class SubTileBlueenchantress extends SubTilePassiveGenerating{
 	}
 	
 	public int getBurnTime(Block block){
-		if(block == BuildCraftEnergy.blockOil) return 140;
-		if(block == BuildCraftEnergy.blockFuel) return 240;
-		if(block == CandyCraft.GrenadineStatic) return 100;
-		if(block instanceof BlockFluidDeath) return 100;
-		if(block instanceof BlockFluidPure) return 100;
-		else return 0;
+		if(ExtraBotany.buildcraftLoaded){
+			if(block == BuildCraftEnergy.blockOil) return 140;
+			if(block == BuildCraftEnergy.blockFuel) return 220;
+		}
+		if(ExtraBotany.candycraftLoaded){
+			if(block == CandyCraft.GrenadineStatic) return 100;
+		}
+		if(ExtraBotany.thaumcraftLoaded){
+			if(block instanceof BlockFluidDeath) return 100;
+			if(block instanceof BlockFluidPure) return 100;
+		}
+		if(ExtraBotany.arsmagicaLoaded){
+			if(block == AMCore.proxy.blocks.liquidEssence) return 260;
+		}
+		return 0;
 	}
 	
 	public Block getBlock(Block block){

@@ -11,9 +11,9 @@ import net.minecraft.world.World;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-import com.meteor.extrabotany.common.handler.EntityHandler;
-import com.meteor.extrabotany.common.util.Sound;
-import com.meteor.extrabotany.common.util.SoundHelper;
+import com.meteor.extrabotany.common.core.Sound;
+import com.meteor.extrabotany.common.core.handler.EntityHandler;
+import com.meteor.extrabotany.common.core.util.SoundHelper;
 
 public class EntityMagicCycloneAqua extends Entity{
 	

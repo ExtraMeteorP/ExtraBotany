@@ -1,4 +1,4 @@
-package com.meteor.extrabotany.common.util;
+package com.meteor.extrabotany.common.core.util;
 
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;

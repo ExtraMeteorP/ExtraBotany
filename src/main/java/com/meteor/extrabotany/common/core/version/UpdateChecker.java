@@ -16,7 +16,7 @@ import cpw.mods.fml.common.gameevent.TickEvent.Phase;
 
 public class UpdateChecker {
 	
-	public static int MESSAGE = 3;
+	public static int MESSAGE = 6;
 
 	public static boolean doneChecking = false;
 	public static String onlineVersion = "";
@@ -38,7 +38,7 @@ public class UpdateChecker {
 				int onlineBuild = Integer.parseInt(onlineVersion.split("-")[1]);
 				int clientBuild = LibReference.VER;
 				if(onlineBuild > clientBuild) {
-					player.addChatComponentMessage(new ChatComponentTranslation("extrabotany.versioning.message" + player.worldObj.rand.nextInt(MESSAGE)));
+					player.addChatComponentMessage(new ChatComponentTranslation("extrabotany.versioning.message" + player.worldObj.rand.nextInt(MESSAGE)).setChatStyle(new ChatStyle().setColor(EnumChatFormatting.AQUA)));
 					player.addChatComponentMessage(new ChatComponentTranslation("extrabotany.versioning.outdated", clientBuild, onlineBuild));
 
 					IChatComponent component = IChatComponent.Serializer.func_150699_a(StatCollector.translateToLocal("extrabotany.versioning.updateMessage").replaceAll("%version%", onlineVersion));

@@ -9,6 +9,7 @@ import vazkii.botania.api.lexicon.KnowledgeType;
 
 import com.meteor.extrabotany.common.CommonProxy;
 import com.meteor.extrabotany.common.lib.LibReference;
+import com.pam.harvestcraft.harvestcraft;
 
 import cpw.mods.fml.common.Loader;
 import cpw.mods.fml.common.Mod;
@@ -31,6 +32,9 @@ public class ExtraBotany {
 	
 	public static boolean arsmagicaLoaded = false;
 	public static boolean candycraftLoaded = false;
+	public static boolean pamLoaded = false;
+	public static boolean buildcraftLoaded = false;
+	public static boolean thaumcraftLoaded = false;
 	
 	public static KnowledgeType extraKnowledge;
 	public static KnowledgeType legendaryKnowledge;
@@ -45,8 +49,11 @@ public class ExtraBotany {
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event)
 	{
-		arsmagicaLoaded = Loader.isModLoaded("Ars Magica 2");
-		candycraftLoaded = Loader.isModLoaded("CandyCraft");
+		arsmagicaLoaded = Loader.isModLoaded("arsmagica2");
+		candycraftLoaded = Loader.isModLoaded("candycraftmod");
+		pamLoaded = Loader.isModLoaded("harvestcraft");
+		buildcraftLoaded = Loader.isModLoaded("BuildCraft|Energy");
+		thaumcraftLoaded = Loader.isModLoaded("Thaumcraft");
 		extraKnowledge = BotaniaAPI.registerKnowledgeType("extra", EnumChatFormatting.DARK_AQUA, false);
 		legendaryKnowledge = BotaniaAPI.registerKnowledgeType("legendary", EnumChatFormatting.GOLD, false);
 		proxy.preInit(event);

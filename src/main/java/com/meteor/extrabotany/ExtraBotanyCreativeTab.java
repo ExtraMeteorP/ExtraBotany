@@ -46,6 +46,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.gaiatablet);
 		addItem(ModItems.teleportpearl);
 		addItem(ModItems.angelwand);
+		addItem(ModItems.reader);
 		addBlock(ModBlocks.pylon);
 		//Relics
 		addItem(ModItems.dice20);

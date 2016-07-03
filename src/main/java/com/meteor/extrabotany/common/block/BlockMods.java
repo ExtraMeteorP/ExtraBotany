@@ -14,8 +14,9 @@ public class BlockMods extends Block{
 	public BlockMods(Material material, String name) {
 		super(material);
 		this.name = name;
-		this.setBlockTextureName(LibReference.MOD_ID + ":" + name)
-		.setBlockName(name);
+		setBlockTextureName(LibReference.MOD_ID + ":" + name);
+		setBlockName(name);
+		setHardness(2.0F);
 		GameRegistry.registerBlock(this, name);
 	}
 	

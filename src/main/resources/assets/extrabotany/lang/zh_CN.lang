@@ -22,6 +22,7 @@ botaniamisc.theseussetMode0=你已将其设置为攻击模式.
 botaniamisc.theseussetMode1=你已将其设置为修复模式.
 botaniamisc.theseussetMode2=你已将其设置为治疗模式.
 botaniamisc.theseussetMode3=你已将其设置为激励模式.
+botaniamisc.manaDisplay=魔力值
 
 # VERSION
 extrabotany.versioning.updateMessage=["点击这里 [",{"text":"下载","color":"green","hoverEvent":{"action":"show_text","value":{"text":"点此下载最新版本","color":"green"}},"clickEvent":{"action":"open_url","value":"http://adf.ly/1beRz1"}},"]"]
@@ -135,6 +136,7 @@ item.botania:gaiawise.name=盖亚的神智
 item.box.name=神秘箱子
 item.dungeonbox.name=地牢箱子
 item.pill.name=SCP-500
+item.manareader.name=魔力读取器
 
 # -DICE
 item.botania:dice20.name=D20
@@ -320,6 +322,11 @@ botania.page.stonesia1=不是石中剑.
 botania.entry.pyschobloom=闹闹花
 botania.page.pyschobloom0=噪音是&1闹闹花&0所最喜欢的, 它可以将噪音转化为魔力. 因此它周围的生物越多,它 所产出的魔力也会越多.但 太多的噪音会使它癫狂.
 botania.page.pyschobloom1=没人可以通过这里.
+
+# --BELLFLOWER
+botania.entry.bellflower=风铃草
+botania.page.bellflower0=
+botania.page.bellflower1=
 
 # -FUNCTIONAL
 # --NECROFLEUR
@@ -543,6 +550,10 @@ tile.botania:flower.stonesia.name=石中姬
 tile.botania:flower.stonesia.reference=石头炼成
 botania.tagline.stonesia=这是石中剑吗?
 
+tile.botania:flower.bellflower.name=风铃草
+tile.botania:flower.bellflower.reference=
+botania.tagline.bellflower=
+
 # -FUNCTIONAL
 tile.botania:flower.numerondandelife.name=源命英
 tile.botania:flower.numerondandelife.reference=Too young, Too simple
@@ -662,8 +673,8 @@ achievement.extrabotany:gaia_darknoarmor=天降正义
 achievement.extrabotany:gaia_darknoarmor.desc=战斗从头至尾不穿任何护甲击杀黑暗盖亚守护者III
 
 # -FLOWERS
-achievement.extrabotany:annoybloom=脳浆炸裂ガール
-achievement.extrabotany:annoybloom.desc=在花药台制作一朵吵吵花
+achievement.extrabotany:annoyobloom=脳浆炸裂ガール
+achievement.extrabotany:annoyobloom.desc=在花药台制作一朵吵吵花
 achievement.extrabotany:artifaconia=Undead enemy
 achievement.extrabotany:artifaconia.desc=在花药台制作一朵古遗莲
 achievement.extrabotany:diplopbamboo=Weekender Girl
@@ -710,6 +721,8 @@ achievement.extrabotany:manalinkuim.desc=在花药台制作一朵魔链花
 # -OTHERS
 achievement.extrabotany:blankcard=白色相簿
 achievement.extrabotany:blankcard.desc=解开白卡的秘密!
+achievement.extrabotany:manareader=千本樱
+achievement.extrabotany:manareader.desc=使用魔力读取器超过1000次!
 
 #ENCHANTMENT
 enchantment.gaiablessing=盖亚祝福

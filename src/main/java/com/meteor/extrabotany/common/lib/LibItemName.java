@@ -32,6 +32,8 @@ public class LibItemName {
 	public static final String TELEPORTPEARL = "teleportpearl";
 	public static final String GAIANECKLACEBROKEN = "gaianecklacebroken";
 	
+	public static final String MANAREADER = "manareader";
+	
 	public static final String SCISSORBLADERED = "scissorbladered";
 	public static final String SCISSORBLADEPURPLE = "scissorbladepurple";
 	public static final String HELIACALCLAYMORE = "coronaclaymore";

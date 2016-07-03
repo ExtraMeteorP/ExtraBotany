@@ -65,7 +65,7 @@ public class SubTileAnnoyobloom extends SubTileFunctional{
 		return new RadiusDescriptor.Square(toChunkCoordinates(), RANGE);
 	}
 	
-	public EntityFireworkRocket getRandomFirework(World world, float x, float y, float z)
+	public static EntityFireworkRocket getRandomFirework(World world, float x, float y, float z)
     {
         ItemStack firework = new ItemStack(Items.fireworks);
         firework.stackTagCompound = new NBTTagCompound();

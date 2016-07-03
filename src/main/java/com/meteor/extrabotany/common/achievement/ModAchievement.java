@@ -76,10 +76,12 @@ public class ModAchievement {
 	
 	//others
 	public static Achievement O_blank;
+	public static Achievement thousandUse;
 	
 	public static void init(){
 		
 		O_blank = new AchievementMod("blankcard", 1, 0, new ItemStack(ModItems.material, 1, 1), null);
+		thousandUse = new AchievementMod("manareader", -2 , -2, new ItemStack(ModItems.reader), O_blank);
 		
 		F_annoy = new AchievementMod(LibBlockName.ANNOYOBLOOM, 0, 1, ItemBlockSpecialFlower.ofType(LibBlockName.ANNOYOBLOOM), O_blank);
 		F_artifa = new AchievementMod(LibBlockName.ARTIFACONIA, 2, 1, ItemBlockSpecialFlower.ofType(LibBlockName.ARTIFACONIA), O_blank);

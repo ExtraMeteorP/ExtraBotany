@@ -47,6 +47,7 @@ public class ModRecipe {
 	public static IRecipe pylon2;
 	public static IRecipe pylon3;
 	public static IRecipe gaiatablet;
+	public static IRecipe manareader;
 	
 	public static void initSubtile(){
 		ModStonesiaRecipe.init();
@@ -60,6 +61,13 @@ public class ModRecipe {
 		ModRuneRecipe.init();
 		initSubtile();
 		int recipeListSize = CraftingManager.getInstance().getRecipeList().size();
+		
+		//mana reader
+		addOreDictRecipe(new ItemStack(ModItems.reader),
+				" AB", " BA", "A  ",
+				'A', LibOreDict.LIVINGWOOD_TWIG,
+				'B', LibOreDict.MANA_STEEL);
+		manareader = BotaniaAPI.getLatestAddedRecipe();
 		
 		//gaia tablet
 		addOreDictRecipe(new ItemStack(ModItems.gaiatablet),

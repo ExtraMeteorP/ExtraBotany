@@ -112,8 +112,13 @@ public class ModItems {
 	
 	public static Item key;
 	
+	public static Item reader;
+	
 	public static void init() {
 		registerFuel();
+		
+		reader = new ItemManaReader(LibItemName.MANAREADER);
+		
 		recordA = new ItemRecordA("A", LibItemName.RECORD_A);
 		recordB = new ItemRecordB("B", LibItemName.RECORD_B);
 		recordC = new ItemRecordC("C", LibItemName.RECORD_C);
@@ -125,7 +130,7 @@ public class ModItems {
 		
 		dungeonbox = new ItemDungeonBox(LibItemName.DUNGEONBOX);
 		boxs = new ItemBox(LibItemName.BOX);
-		pill = new ItemPill(0,0,false,LibItemName.PILL);
+		pill = new ItemPill(LibItemName.PILL);
 		
 		scissorred = new ItemScissorBladeRed(ToolMaterial.WOOD, LibItemName.SCISSORBLADERED);
 		scissorpurple = new ItemScissorBladePurple(ToolMaterial.WOOD, LibItemName.SCISSORBLADEPURPLE);

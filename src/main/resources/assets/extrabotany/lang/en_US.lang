@@ -22,6 +22,7 @@ botaniamisc.theseussetMode0=You switched it to Attack Mode.
 botaniamisc.theseussetMode1=You switched it to Repair Mode.
 botaniamisc.theseussetMode2=You switched it to Heal Mode.
 botaniamisc.theseussetMode3=You switched it to Assist Mode.
+botaniamisc.manaDisplay=Mana
 
 # VERSION
 extrabotany.versioning.updateMessage=["Click this [",{"text":"Download","color":"green","hoverEvent":{"action":"show_text","value":{"text":"Click this to download the latest version","color":"green"}},"clickEvent":{"action":"open_url","value":"http://adf.ly/1beRz1"}},"]"]
@@ -134,6 +135,7 @@ item.botania:gaiawise.name=Gaia's Wisdom
 item.box.name=Mystery Box
 item.dungeonbox.name=Dungeon Box
 item.pill.name=SCP-500
+item.manareader.name=Mana Reader
 
 # -DICE
 item.botania:dice20.name=D20
@@ -319,6 +321,11 @@ botania.page.stonesia1=Not the Sword in the stone.
 botania.entry.pyschobloom=Pysch-O-Bloom
 botania.page.pyschobloom0=Noise is &1Pysch-O-Bloom&0's favourite. It will transfer noise into mana. So the more close-by living things, the more mana it produces. However, too much noise will make it crazy.
 botania.page.pyschobloom1=None shall pass.
+
+# --BELLFLOWER
+botania.entry.bellflower=Bellflower
+botania.page.bellflower0=
+botania.page.bellflower1=
 
 # -FUNCTIONAL
 # --NECROFLEUR
@@ -542,6 +549,10 @@ tile.botania:flower.stonesia.name=Stonesia
 tile.botania:flower.stonesia.reference=Made by stone.
 botania.tagline.stonesia=Is this the sword in the stone?
 
+tile.botania:flower.bellflower.name=Bellflower
+tile.botania:flower.bellflower.reference=
+botania.tagline.bellflower=
+
 # -FUNCTIONAL
 tile.botania:flower.numerondandelife.name=Numeron Dandelife
 tile.botania:flower.numerondandelife.reference=Too young, Too simple
@@ -662,8 +673,8 @@ achievement.extrabotany:gaia_darknoarmor=Justice rains from above
 achievement.extrabotany:gaia_darknoarmor.desc=Slay Dark Gaia Guardian III without wearing any armor at any point during the fight
 
 # -FLOWERS
-achievement.extrabotany:annoybloom=脳浆炸裂ガール
-achievement.extrabotany:annoybloom.desc=Make a Annoy-O-Bloom in a Petal Apothecary
+achievement.extrabotany:annoyobloom=脳浆炸裂ガール
+achievement.extrabotany:annoyobloom.desc=Make a Annoy-O-Bloom in a Petal Apothecary
 achievement.extrabotany:artifaconia=Undead enemy
 achievement.extrabotany:artifaconia.desc=Make a Artifaconia in a Petal Apothecary
 achievement.extrabotany:diplopbamboo=Weekender Girl
@@ -710,6 +721,8 @@ achievement.extrabotany:manalinkuim.desc=Make a Manalinkuim in a Petal Apothecar
 # -OTHERS
 achievement.extrabotany:blankcard=WHITE ALBUM
 achievement.extrabotany:blankcard.desc=Find out the secret of Blank Card!
+achievement.extrabotany:manareader=せんぼんざくら
+achievement.extrabotany:manareader.desc=Use mana reader over 1000 times!
 
 #ENCHANTMENT
 enchantment.gaiablessing=Gaia's Blessing

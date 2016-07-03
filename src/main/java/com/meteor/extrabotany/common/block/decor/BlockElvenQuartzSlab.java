@@ -13,7 +13,7 @@ import com.meteor.extrabotany.common.block.ModBlocks;
 public class BlockElvenQuartzSlab extends BlockLivingSlab{
 	public BlockElvenQuartzSlab(boolean par2) {
 		super(par2, ModBlocks.elvenquartz, 0);
-		setHardness(0.8F);
+		setHardness(2.0F);
 		setResistance(10F);
 		setStepSound(soundTypeWood);
 	}

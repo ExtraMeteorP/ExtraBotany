@@ -10,9 +10,12 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
+import vazkii.botania.api.boss.IBotaniaBossWithShader;
 import vazkii.botania.common.Botania;
 
-public class EntityGaiaQuickened extends Entity{
+import com.meteor.extrabotany.common.entity.gaia.IMinion;
+
+public class EntityGaiaQuickened extends Entity implements IMinion{
 	
 	private static String TAG_ATK = "atk";
 	private static String TAG_EVIL = "evil";
@@ -41,13 +44,13 @@ public class EntityGaiaQuickened extends Entity{
 		motionZ = 0;
 		super.onUpdate();
 		
+		if(ticksExisted > 160)
+			setDead();
+		
 		for(int i = 0; i < 24; i++)
 			Botania.proxy.wispFX(worldObj, posX - range + Math.random() * range * 2 * (1 + i/30), posY - range + Math.random() * range * 2 * (1 + i/30), posZ - range + Math.random() * range * 2 * (1 + i/30), 1.8F, 1.4F, 0.6F, 0.4F, -0.015F, 2);
 		
 		if(!worldObj.isRemote) {
-			
-			if(ticksExisted > 160)
-				setDead();
 			
 			AxisAlignedBB area = AxisAlignedBB.getBoundingBox(posX - range, posY - range, posZ - range, posX + range, posY + range, posZ + range);
 			List<EntityPlayer> players = worldObj.getEntitiesWithinAABB(EntityPlayer.class, area);
@@ -105,6 +108,11 @@ public class EntityGaiaQuickened extends Entity{
 	protected void writeEntityToNBT(NBTTagCompound cmp) {
 		cmp.setBoolean(TAG_EVIL, isEvil());
 		cmp.setFloat(TAG_ATK, getATK());
+	}
+
+	@Override
+	public boolean canDestroy() {
+		return this.thrower instanceof IBotaniaBossWithShader;
 	}
 
 }

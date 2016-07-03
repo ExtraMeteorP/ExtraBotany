@@ -64,8 +64,6 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic,ISpe
 	
 	public ItemRelicArmorSet(int type, String name) {
 		super(type, name, BotaniaAPI.terrasteelArmorMaterial);
-		MinecraftForge.EVENT_BUS.register(this);
-		FMLCommonHandler.instance().bus().register(this);
 	}
 
 	@Override
@@ -185,15 +183,12 @@ public class ItemRelicArmorSet extends ItemManasteelArmor implements IRelic,ISpe
 		return ItemNBTHelper.getString(stack, TAG_SOULBIND, "");
 	}
 	
-    @SubscribeEvent
-    public void TickEvent(PlayerTickEvent event) {
-    	 EntityPlayer player = (EntityPlayer) event.player;
-	        for(ItemStack stack : player.inventory.armorInventory) {
-	            if(stack != null && stack.getItem() instanceof IRelic) {
-	            	if(!ItemRelic.isRightPlayer(player, stack))
-	            		player.attackEntityFrom(damageSource(), 2);
-	            }
-	    }
+	@Override
+	public void onArmorTick(World world, EntityPlayer player, ItemStack stack){
+		if(stack != null && stack.getItem() instanceof IRelic) {
+        	if(!ItemRelic.isRightPlayer(player, stack))
+        		player.attackEntityFrom(damageSource(), 2);
+        }
     }
 
 	public static void updateRelic(ItemStack stack, EntityPlayer player) {

@@ -13,8 +13,8 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class ItemPill extends ItemFood{
 
-	public ItemPill(int p_i45339_1_, float p_i45339_2_, boolean p_i45339_3_, String name) {
-		super(p_i45339_1_, p_i45339_2_, p_i45339_3_);
+	public ItemPill(String name) {
+		super(0,0,false);
 		this.setUnlocalizedName(name)
 		.setTextureName(LibReference.MOD_ID + ":" + name);
 		GameRegistry.registerItem(this, name);
@@ -25,7 +25,6 @@ public class ItemPill extends ItemFood{
     {
 		if(!player.worldObj.isRemote)
 			player.addPotionEffect(new PotionEffect(ModPotions.cure.getId(), 200, 0));
-			player.addPotionEffect(new PotionEffect(ModPotions.durance.getId(), 200, 0));
         	player.setHealth(player.getMaxHealth());
     }
 	

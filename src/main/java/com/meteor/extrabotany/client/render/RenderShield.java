@@ -33,7 +33,7 @@ public class RenderShield{
 		Minecraft mc = Minecraft.getMinecraft();
 		Profiler profiler = mc.mcProfiler;
 
-		if(event.type == ElementType.HEALTH) {
+		if(event.type == ElementType.ALL) {
 			profiler.startSection("shieldBar");
 			profiler.endSection();
 		}
@@ -43,14 +43,13 @@ public class RenderShield{
 	public void onDrawScreenPost(RenderGameOverlayEvent.Post event) {
 		Minecraft mc = Minecraft.getMinecraft();
 		Profiler profiler = mc.mcProfiler;
-		if(event.type == ElementType.ALL) {
+		if(event.type == ElementType.HEALTH) {
 			profiler.startSection("shieldBar");
 			boolean creative = false;
 			renderShield(event.resolution, creative);
 			profiler.endSection();
 			GL11.glColor4f(1F, 1F, 1F, 1F);
 		}
-		GameSettings gs = Minecraft.getMinecraft().gameSettings;
 	}
 
 	private void renderShield(ScaledResolution res, boolean hasCreative) {

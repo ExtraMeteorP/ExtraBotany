@@ -1,7 +1,7 @@
 # KNOWLEDGE
 category.Botania:extra=额外植物学
 botania.knowledge.extra=&3额外&7的知识
-botania.knowledge.legendary=&e传说&7的知识
+botania.knowledge.legendary=&4传说&7的知识
 
 # MISC
 botaniamisc.knowledgeUnlock=白卡闪耀着异样的光芒,你手中的手册被注入了神秘的力量.
@@ -23,6 +23,8 @@ botaniamisc.theseussetMode1=你已将其设置为修复模式.
 botaniamisc.theseussetMode2=你已将其设置为治疗模式.
 botaniamisc.theseussetMode3=你已将其设置为激励模式.
 botaniamisc.manaDisplay=魔力值
+botaniamisc.usecount=&3你已使用超过%s%次
+botaniamisc.thousandUse=你已使用超过1000次,恭喜你!一瓣彼岸花的花瓣奖励给你.
 
 # VERSION
 extrabotany.versioning.updateMessage=["点击这里 [",{"text":"下载","color":"green","hoverEvent":{"action":"show_text","value":{"text":"点此下载最新版本","color":"green"}},"clickEvent":{"action":"open_url","value":"http://adf.ly/1beRz1"}},"]"]
@@ -33,6 +35,9 @@ extrabotany.versioning.message2=为什么会变成这样呢.....更新额外植�
 extrabotany.versioning.message3=额外植物学更新了,已经没什么好害怕的了.
 extrabotany.versioning.message4=你终于找到了额外植物学的更新,我们要发财啦.
 extrabotany.versioning.message5=世界那么大,我想去看看.出发前先让我们更新一下额外植物学.
+extrabotany.versioning.message6=Minecraft并不想理你,并向你扔了一个额外植物学的更新.
+extrabotany.versioning.message7=我已认真阅读并同意该用户协议,承诺立即更新额外植物学.
+extrabotany.versioning.message8=哔哩哔哩 - ( ゜- ゜)つロ 乾杯~
 
 #ITEMGROUP
 itemGroup.ExtraBotany=额外植物学
@@ -43,7 +48,6 @@ extrabotany.potion.slowparticlesorting=慢速粒子排序
 extrabotany.potion.residualpain=痛觉残留
 extrabotany.potion.durance=禁锢
 extrabotany.potion.cure=治愈
-
 
 #ENTITIES
 entity.ExtraBotany.bulletexploding.name=高爆弹
@@ -248,6 +252,35 @@ botania.page.scissorblade0=&1红太刀&0可以给敌人添加缓慢 状态,清�
 botania.page.scissorblade1=
 botania.page.scissorblade2=
 
+# --ENCHANTMENT
+botania.entry.enchantment=附魔
+botania.tagline.enchantment=无穷无尽的知识就是我的力量.
+botania.page.enchantment0=解开了白卡的秘密之后,你 会发现附魔多了几种.&1盖亚 祝福&0可以减少你所使用的魔 力以及来自盖亚的伤害.&1神 恩&0可以大幅提高遗物的能力 ,但同时也会增加使用的代 价.而&1神刻&0则能够降低使用 的代价.不幸的是,神恩与 神刻并不对所有遗物都有效 果.
+botania.page.enchantment1=盖亚祝福
+botania.page.enchantment2=神恩
+botania.page.enchantment3=神刻
+
+# --KEY
+botania.entry.key=钥匙
+botania.tagline.key=通往成功的关键.
+botania.page.key0=一把古老而神秘的&1钥匙&0,也 许可以打开某些特殊的容器 .在一些遗迹里也许能发现 ,某些怪物也可以会携带.
+
+# --MYSTERYBOX
+botania.entry.mysterybox=神秘箱子
+botania.tagline.mysterybox=有趣.
+botania.page.mysterybox0=一个神秘的箱子,里面藏着 一些植物魔法师所追求的关 键材料,稀有的彩虹碎片也藏 在里面.但开启它还需要一 把&1钥匙&0.
+
+# --DUNGEONBOX
+botania.entry.dungeonbox=地牢箱子
+botania.tagline.dungeonbox=古代的机械.
+botania.page.dungeonbox0=从地牢中探索得到的箱子, 开启需要一把&1钥匙&0,据说里 面储藏着几件来自地牢的宝 物.
+
+# --MANAREADER
+botania.entry.manareader=魔力读取器
+botania.tagline.manareader=魔力会计.
+botania.page.manareader0=对准一个&4魔力池&0使用&1魔力读 取器&0,它就会精确地告诉你 魔力池中有多少魔力,魔力 池最多能储存多少魔力.传 闻使用一千次同个&1魔力读取 器&0会有神奇的事发生,但目 前为止还没有如此耐心的人 去尝试.
+botania.page.manareader1=这不科学.
+
 # --BULLET
 botania.entry.bullet=多种弹药
 botania.tagline.bullet=
@@ -325,8 +358,8 @@ botania.page.pyschobloom1=没人可以通过这里.
 
 # --BELLFLOWER
 botania.entry.bellflower=风铃草
-botania.page.bellflower0=
-botania.page.bellflower1=
+botania.page.bellflower0=&1风铃草&0可以利用风的力量产 生魔力,因此你需要将它种 植在高空中,至少距离地面 40米高.同时你所种植的 地方最好是空旷的,这样风 力会更加强大.
+botania.page.bellflower1=进入新的世界,永不落后.
 
 # -FUNCTIONAL
 # --NECROFLEUR
@@ -551,8 +584,8 @@ tile.botania:flower.stonesia.reference=石头炼成
 botania.tagline.stonesia=这是石中剑吗?
 
 tile.botania:flower.bellflower.name=风铃草
-tile.botania:flower.bellflower.reference=
-botania.tagline.bellflower=
+tile.botania:flower.bellflower.reference=随风而逝
+botania.tagline.bellflower=风带来力量与魔力.
 
 # -FUNCTIONAL
 tile.botania:flower.numerondandelife.name=源命英

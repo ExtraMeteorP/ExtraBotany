@@ -55,7 +55,7 @@ public class ExtraBotany {
 		buildcraftLoaded = Loader.isModLoaded("BuildCraft|Energy");
 		thaumcraftLoaded = Loader.isModLoaded("Thaumcraft");
 		extraKnowledge = BotaniaAPI.registerKnowledgeType("extra", EnumChatFormatting.DARK_AQUA, false);
-		legendaryKnowledge = BotaniaAPI.registerKnowledgeType("legendary", EnumChatFormatting.GOLD, false);
+		legendaryKnowledge = BotaniaAPI.registerKnowledgeType("legendary", EnumChatFormatting.DARK_RED, false);
 		proxy.preInit(event);
 	}
 

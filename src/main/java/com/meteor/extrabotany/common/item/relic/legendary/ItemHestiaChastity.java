@@ -44,6 +44,7 @@ import vazkii.botania.common.entity.EntityManaBurst;
 import vazkii.botania.common.item.equipment.armor.terrasteel.ItemTerrasteelArmor;
 import vazkii.botania.common.item.relic.ItemRelic;
 
+import com.meteor.extrabotany.common.core.util.EnchHelper;
 import com.meteor.extrabotany.common.entity.gaia.EntityGaiaIII;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
@@ -152,7 +153,9 @@ public class ItemHestiaChastity extends ItemRelicArmorSet implements IManaDiscou
 				int mana = burst.getMana();
 				if(mana >= cost) {
 					burst.setMana(mana - cost);
-					float damage = 4F;
+					float dm = EnchHelper.getDMBuff(stack);
+			    	float df = EnchHelper.getDFBuff(stack);
+					float damage = 5F*df/dm;
 					if(!burst.isFake() && !entity.worldObj.isRemote) {
 						EntityPlayer player = living.worldObj.getPlayerEntityByName(attacker);
 						living.attackEntityFrom(player == null ? DamageSource.magic : DamageSource.causePlayerDamage(player), damage);

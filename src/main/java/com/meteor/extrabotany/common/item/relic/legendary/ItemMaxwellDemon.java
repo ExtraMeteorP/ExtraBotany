@@ -9,6 +9,7 @@ import vazkii.botania.api.mana.IManaUsingItem;
 import vazkii.botania.api.mana.ManaItemHandler;
 import vazkii.botania.common.lib.LibObfuscation;
 
+import com.meteor.extrabotany.common.core.util.EnchHelper;
 import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
 import com.meteor.extrabotany.common.lib.LibItemName;
 import com.meteor.extrabotany.common.potion.ModPotions;
@@ -37,14 +38,17 @@ public class ItemMaxwellDemon extends ItemRelicAdv implements IManaUsingItem{
 	@Override
 	public void onUsingTick(ItemStack stack, EntityPlayer player, int count) {
 		super.onUsingTick(stack, player, count);
+		
+		float dm = EnchHelper.getDMBuff(stack);
+    	float df = EnchHelper.getDFBuff(stack);
 
-		if(ManaItemHandler.requestManaExact(stack, player, 10, true)) {
+		if(ManaItemHandler.requestManaExact(stack, player, (int) (10*dm*df), true)) {
 			if(count % 5 == 0)
 			if(count == 5)
 				if(!player.worldObj.isRemote){
 					ReflectionHelper.setPrivateValue(EntityPlayer.class, player, 20, LibObfuscation.ITEM_IN_USE_COUNT);
-					player.addPotionEffect(new PotionEffect(ModPotions.slowparticlesorting.getId(), 1200, 0));
-					player.addPotionEffect(new PotionEffect(ModPotions.fastparticlesorting.getId(), 400, 0));
+					player.addPotionEffect(new PotionEffect(ModPotions.slowparticlesorting.getId(), (int) (1200*df), 0));
+					player.addPotionEffect(new PotionEffect(ModPotions.fastparticlesorting.getId(), (int) (400*df), 0));
 					if(player.getAbsorptionAmount() == 0F)
 					player.setAbsorptionAmount(10F);
 				}

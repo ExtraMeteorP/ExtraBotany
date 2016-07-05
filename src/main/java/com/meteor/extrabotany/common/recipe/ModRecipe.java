@@ -1,7 +1,10 @@
 package com.meteor.extrabotany.common.recipe;
 
+import net.minecraft.enchantment.EnchantmentData;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemEnchantedBook;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
@@ -14,6 +17,7 @@ import vazkii.botania.common.lib.LibOreDict;
 
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.core.handler.CraftingHandler;
+import com.meteor.extrabotany.common.enchantment.ModEnchantment;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
 import com.meteor.extrabotany.common.recipe.subtile.ModInfernoidisyRecipe;
@@ -48,6 +52,9 @@ public class ModRecipe {
 	public static IRecipe pylon3;
 	public static IRecipe gaiatablet;
 	public static IRecipe manareader;
+	public static IRecipe edivinefavor;
+	public static IRecipe edivinemark;
+	public static IRecipe egaiablessing;
 	
 	public static void initSubtile(){
 		ModStonesiaRecipe.init();
@@ -61,6 +68,29 @@ public class ModRecipe {
 		ModRuneRecipe.init();
 		initSubtile();
 		int recipeListSize = CraftingManager.getInstance().getRecipeList().size();
+		ItemStack gaiablessing = new ItemStack(Items.enchanted_book);
+		Items.enchanted_book.addEnchantment(gaiablessing, new EnchantmentData(ModEnchantment.gaiablessing, 1));
+		ItemStack divinefavor = new ItemStack(Items.enchanted_book);
+		Items.enchanted_book.addEnchantment(divinefavor, new EnchantmentData(ModEnchantment.divineFavor, 1));
+		ItemStack divinemark = new ItemStack(Items.enchanted_book);
+		Items.enchanted_book.addEnchantment(divinemark, new EnchantmentData(ModEnchantment.divineMark, 1));
+		//enchantment
+		GameRegistry.addShapelessRecipe(gaiablessing, new Object[] {
+			new ItemStack(Items.book), new ItemStack(ModItems.material, 1, 2)
+		});
+		egaiablessing = BotaniaAPI.getLatestAddedRecipe();
+	
+		GameRegistry.addShapelessRecipe(divinefavor, new Object[] {
+			new ItemStack(Items.book), new ItemStack(ModItems.material, 1, 7), 
+			new ItemStack(ModItems.material, 1, 8), new ItemStack(vazkii.botania.common.item.ModItems.rune, 1, 1)
+		});
+		edivinefavor = BotaniaAPI.getLatestAddedRecipe();
+		
+		GameRegistry.addShapelessRecipe(divinemark, new Object[] {
+			new ItemStack(Items.book), new ItemStack(ModItems.material, 1, 7), 
+			new ItemStack(ModItems.material, 1, 8), new ItemStack(vazkii.botania.common.item.ModItems.rune, 1, 0)
+		});
+		edivinemark = BotaniaAPI.getLatestAddedRecipe();
 		
 		//mana reader
 		addOreDictRecipe(new ItemStack(ModItems.reader),

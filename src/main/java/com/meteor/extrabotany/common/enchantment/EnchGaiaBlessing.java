@@ -7,6 +7,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import vazkii.botania.api.mana.IManaDiscountArmor;
 import vazkii.botania.common.entity.EntityDoppleganger;
@@ -20,7 +21,7 @@ public class EnchGaiaBlessing extends Enchantment implements IManaDiscountArmor{
     
 	public EnchGaiaBlessing(){
         super(ConfigHandler.enchGaiaBlessing, 2,
-                EnumEnchantmentType.armor);
+        		EnumHelper.addEnchantmentType("relic"));
         this.setName("gaiablessing");
         MinecraftForge.EVENT_BUS.register(this);
 		FMLCommonHandler.instance().bus().register(this);
@@ -38,7 +39,7 @@ public class EnchGaiaBlessing extends Enchantment implements IManaDiscountArmor{
 
     @Override
     public int getMaxLevel(){
-        return 5;
+        return 4;
     }
     
     ItemStack itemstack;
@@ -60,6 +61,6 @@ public class EnchGaiaBlessing extends Enchantment implements IManaDiscountArmor{
     
 	@Override
 	public float getDiscount(ItemStack stack, int slot, EntityPlayer player) {
-		return (float) (0.02 * EnchantmentHelper.getEnchantmentLevel(ModEnchantment.gaiablessing.effectId, itemstack));
+		return (float) (0.02F * EnchantmentHelper.getEnchantmentLevel(ModEnchantment.gaiablessing.effectId, itemstack));
 	}
 }

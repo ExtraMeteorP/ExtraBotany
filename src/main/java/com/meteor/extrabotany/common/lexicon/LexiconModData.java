@@ -1,5 +1,6 @@
 package com.meteor.extrabotany.common.lexicon;
 
+import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.StatCollector;
@@ -41,6 +42,7 @@ public class LexiconModData {
 	public static LexiconEntry ominiviolet;
 	public static LexiconEntry pyschobloom;
 	public static LexiconEntry stonesia;
+	public static LexiconEntry bellflower;
 	//Functional
 	public static LexiconEntry necrofleur;
 	public static LexiconEntry numerondandelife;
@@ -104,6 +106,14 @@ public class LexiconModData {
 	public static LexiconEntry coronaclaymore;
 	public static LexiconEntry scissorblade;
 	public static LexiconEntry angelwand;
+	//enchantment
+	public static LexiconEntry enchantment;
+	//util
+	public static LexiconEntry manareader;
+	//box
+	public static LexiconEntry key;
+	public static LexiconEntry mysterybox;
+	public static LexiconEntry dungeonbox;
 	//Category
 	public static LexiconCategory categoryExtra;
 	
@@ -112,6 +122,29 @@ public class LexiconModData {
 		categoryExtra.setIcon(LibReference.EXTRA);
 		categoryExtra.setPriority(0);
 		BotaniaAPI.addCategory(categoryExtra);	
+		//enchantment
+		enchantment = new ELexiconEntry(LibLexiconName.ENCHANTMENT, categoryExtra);
+		enchantment.setLexiconPages(new PageText("0"), 
+				new PageCraftingRecipe("1", ModRecipe.egaiablessing), 
+				new PageCraftingRecipe("2", ModRecipe.edivinefavor), 
+				new PageCraftingRecipe("3", ModRecipe.edivinemark));
+		enchantment.setIcon(new ItemStack(Items.enchanted_book));
+		//util
+		key = new BLexiconEntry(LibLexiconName.U_KEY, categoryExtra);
+		key.setLexiconPages(new PageText("0"));
+		key.setIcon(new ItemStack(ModItems.key));
+		
+		mysterybox = new BLexiconEntry(LibLexiconName.U_MYSTERYBOX, categoryExtra);
+		mysterybox.setLexiconPages(new PageText("0"));
+		mysterybox.setIcon(new ItemStack(ModItems.boxs));
+		
+		dungeonbox = new BLexiconEntry(LibLexiconName.U_DUNGEONBOX, categoryExtra);
+		dungeonbox.setLexiconPages(new PageText("0"));
+		dungeonbox.setIcon(new ItemStack(ModItems.dungeonbox));
+		
+		manareader = new BLexiconEntry(LibLexiconName.U_MANAREADER, categoryExtra);
+		manareader.setLexiconPages(new PageText("0"), new PageCraftingRecipe("1", ModRecipe.manareader));
+		manareader.setIcon(new ItemStack(ModItems.reader));
 		//Other
 		pickup = new ELexiconEntry(LibLexiconName.O_PICKUP, categoryExtra);
 		pickup.setLexiconPages(new PageText("0"));
@@ -238,6 +271,11 @@ public class LexiconModData {
 		pyschobloom.setLexiconPages(new PageText("0"),
 				new PagePetalRecipe("1", ModPetalRecipe.pyschobloomRecipe));
 		pyschobloom.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.PYSCHOBLOOM));
+		
+		bellflower = new ELexiconEntry(LibLexiconName.GFLOWER_BELLFLOWER, BotaniaAPI.categoryGenerationFlowers);
+		bellflower.setLexiconPages(new PageText("0"),
+				new PagePetalRecipe("1", ModPetalRecipe.bellflowerRecipe));
+		bellflower.setIcon(ItemBlockSpecialFlower.ofType(LibBlockName.BELLFLOWER));
 		//Functional
 		necrofleur = new ELexiconEntry(LibLexiconName.FFLOWER_NECROFLEUR, BotaniaAPI.categoryFunctionalFlowers);
 		necrofleur.setLexiconPages(new PageText("0"),

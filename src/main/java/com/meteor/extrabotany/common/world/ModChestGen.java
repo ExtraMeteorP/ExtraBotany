@@ -8,6 +8,8 @@ import com.meteor.extrabotany.common.item.ModItems;
 
 public class ModChestGen {
 	public static void init(){
+		WeightedRandomChestContent key = new WeightedRandomChestContent(new ItemStack(ModItems.key), 1, 4, 1);
+		ChestGenHooks.addItem(ChestGenHooks.STRONGHOLD_LIBRARY, key);
 		addAll(new ItemStack(ModItems.boxs), 1, 1, 1, false);
 		addAll(new ItemStack(ModItems.dungeonbox), 1, 2, 1, false);
 		addAll(new ItemStack(ModItems.material, 1, 12), 1, 2, 2, false);

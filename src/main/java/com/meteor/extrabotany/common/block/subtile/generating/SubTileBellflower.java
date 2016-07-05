@@ -2,6 +2,8 @@ package com.meteor.extrabotany.common.block.subtile.generating;
 
 import java.util.Random;
 
+import com.meteor.extrabotany.common.core.handler.ConfigHandler;
+
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockAir;
 import net.minecraft.util.ChunkCoordinates;
@@ -40,7 +42,7 @@ public class SubTileBellflower extends SubTileGenerating{
 			
 			float block = this.blockCount/5;
 			
-			int eff = (int) (windpower * buff * canSeeSky * 0.9F - block);
+			int eff = (int) (ConfigHandler.efficiencyBellflower + windpower * buff * canSeeSky * 0.9F - block);
 			
 			if(ticksExisted % DELAY == 0){
 				updateObscuratedBlockCount();

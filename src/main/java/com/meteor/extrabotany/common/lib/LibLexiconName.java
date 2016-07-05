@@ -7,6 +7,13 @@ public class LibLexiconName {
 	public static final String O_SHIELD = "shield";
 	//Mana
 	public static final String M_PYLON = "ancientpylon";
+	//enchantment
+	public static final String ENCHANTMENT = "enchantment";
+	//util
+	public static final String U_MYSTERYBOX = "mysterybox";
+	public static final String U_DUNGEONBOX = "dungeonbox";
+	public static final String U_KEY = "key";
+	public static final String U_MANAREADER = "manareader";
 	//Generating
 	public static final String GFLOWER_CANDYFLOWER = "candyflower";
 	public static final String GFLOWER_BLUEENCHANTRESS = "blueenchantress";
@@ -16,6 +23,7 @@ public class LibLexiconName {
 	public static final String GFLOWER_OMINIVIOLET = "ominiviolet";
 	public static final String GFLOWER_STONESIA = "stonesia";
 	public static final String GFLOWER_PYSCHOBLOOM = "pyschobloom";
+	public static final String GFLOWER_BELLFLOWER = "bellflower";
 	//Functional
 	public static final String FFLOWER_NECROFLEUR = "necrofleur";
 	public static final String FFLOWER_NUMERONDANDELIFE = "numerondandelife";

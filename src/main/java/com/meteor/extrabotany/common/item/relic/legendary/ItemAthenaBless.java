@@ -14,6 +14,7 @@ import baubles.common.container.InventoryBaubles;
 import baubles.common.lib.PlayerHandler;
 
 import com.meteor.extrabotany.common.core.handler.PropertyHandler;
+import com.meteor.extrabotany.common.core.util.EnchHelper;
 import com.meteor.extrabotany.common.entity.EntityItemUnbreakable;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibItemName;
@@ -51,11 +52,14 @@ public class ItemAthenaBless extends ItemRelicBauble{
 		if(event.source.getSourceOfDamage() instanceof EntityPlayer){
 			EntityPlayer player = (EntityPlayer) event.source.getSourceOfDamage();
 			if(getAthenaBless(player) != null)
-				if(ItemRelic.isRightPlayer(player, getAthenaBless(player)))
+				if(ItemRelic.isRightPlayer(player, getAthenaBless(player))){
+					float dm = EnchHelper.getDMBuff(getAthenaBless(player));
+	            	float df = EnchHelper.getDFBuff(getAthenaBless(player));
 					if(ItemHermesTravelClothing.hasHermesTravelClothing(player))
-						PropertyHandler.addShieldAmount(event.ammount/5, player);
-					else PropertyHandler.addShieldAmount(event.ammount/7, player);
+						PropertyHandler.addShieldAmount(event.ammount/5 * df/dm, player);
+					else PropertyHandler.addShieldAmount(event.ammount/7 * df/dm, player);
 				}
+			}
 	}
 
 	@Override

@@ -35,6 +35,7 @@ public class ModPetalRecipe {
 	public static RecipePetals ominivioletRecipe;
 	public static RecipePetals pyschobloomRecipe;
 	public static RecipePetals stonesiaRecipe;
+	public static RecipePetals bellflowerRecipe;
 	
 	public static RecipePetals necrofleurRecipe;
 	public static RecipePetals numerondandelifeRecipe;
@@ -60,6 +61,7 @@ public class ModPetalRecipe {
 		ominivioletRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.OMNIVIOLET), red, orange, yellow, blue, green, purple, runeEarth);
 		pyschobloomRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.PYSCHOBLOOM), orange, orange, orange, magenta, magenta, manaPowder);
 		stonesiaRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.STONESIA), lightGray, lightGray, gray, gray, black, manaPowder);
+		bellflowerRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.BELLFLOWER), orange, yellow, yellow, yellow, yellow, runeSpring, manaPowder);
 		
 		necrofleurRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.NECRO_FLUER), purple, purple, magenta, magenta, blankCard, quartzElementium, manaPowder, redstoneRoot);
 		numerondandelifeRecipe = BotaniaAPI.registerPetalRecipe(ItemBlockSpecialFlower.ofType(LibBlockName.NUMERON_DANDELIFE), petalGreen, petalGreen, petalRed, blankCard, shard, runeMana, redstoneRoot);

@@ -23,6 +23,8 @@ botaniamisc.theseussetMode1=You switched it to Repair Mode.
 botaniamisc.theseussetMode2=You switched it to Heal Mode.
 botaniamisc.theseussetMode3=You switched it to Assist Mode.
 botaniamisc.manaDisplay=Mana
+botaniamisc.usecount=&3You have use this over %s% times.
+botaniamisc.thousandUse=You have use this over 1000 times. Congratulations! You have been rewarded with a Petal of Lycorisradiata.
 
 # VERSION
 extrabotany.versioning.updateMessage=["Click this [",{"text":"Download","color":"green","hoverEvent":{"action":"show_text","value":{"text":"Click this to download the latest version","color":"green"}},"clickEvent":{"action":"open_url","value":"http://adf.ly/1beRz1"}},"]"]
@@ -33,6 +35,9 @@ extrabotany.versioning.message2=どうしてこうなるんだろう......Updati
 extrabotany.versioning.message3=ExtraBotany has updated, もう何も怖くない.
 extrabotany.versioning.message4=You finally discover a ExtraBotany Update, we're gonna be rich!
 extrabotany.versioning.message5=The earth is round, I want to wander around. Let's update ExtraBotany first before setting out.
+extrabotany.versioning.message6=Minecraft do not want to talk to you, and throw a ExtraBotany Update to you.
+extrabotany.versioning.message7=I agree with EULA, promise to update ExtraBotany immediately.
+extrabotany.versioning.message8=Bilibili - ( ゜- ゜)つロ 乾杯~
 
 #ITEMGROUP
 itemGroup.ExtraBotany=ExtraBotany
@@ -247,6 +252,36 @@ botania.page.scissorblade0
 botania.page.scissorblade1
 botania.page.scissorblade2
 
+
+# --ENCHANTMENT
+botania.entry.enchantment=Enchantments
+botania.tagline.enchantment=Knowledge is power and I know a lot.
+botania.page.enchantment0
+botania.page.enchantment1=Gaia Blessing
+botania.page.enchantment2=Divine Favor
+botania.page.enchantment3=Divine Mark
+
+# --KEY
+botania.entry.key=Key
+botania.tagline.key=The key to the success.
+botania.page.key0
+
+# --MYSTERYBOX
+botania.entry.mysterybox=Mystery Box
+botania.tagline.mysterybox=Interesting.
+botania.page.mysterybox0
+
+# --DUNGEONBOX
+botania.entry.dungeonbox=Dungeon Box
+botania.tagline.dungeonbox=Ancient Gear.
+botania.page.dungeonbox0
+
+# --MANAREADER
+botania.entry.manareader=Mana Reader
+botania.tagline.manareader=Mana Teller.
+botania.page.manareader0
+botania.page.manareader1=This isn't science.
+
 # --BULLET
 botania.entry.bullet=Various Bullets
 botania.tagline.bullet
@@ -324,8 +359,8 @@ botania.page.pyschobloom1=None shall pass.
 
 # --BELLFLOWER
 botania.entry.bellflower=Bellflower
-botania.page.bellflower0=
-botania.page.bellflower1=
+botania.page.bellflower0=&1Bellflower&0 generates mana with the power of the wind, so you should plant it high in the sky, at least 40 meters above the ground, and where you plant need to be open and clear so that the wind will be much stronger.
+botania.page.bellflower1=Break into the contents, never falling down.
 
 # -FUNCTIONAL
 # --NECROFLEUR
@@ -550,8 +585,8 @@ tile.botania:flower.stonesia.reference=Made by stone.
 botania.tagline.stonesia=Is this the sword in the stone?
 
 tile.botania:flower.bellflower.name=Bellflower
-tile.botania:flower.bellflower.reference=
-botania.tagline.bellflower=
+tile.botania:flower.bellflower.reference=Gone with the wind
+botania.tagline.bellflower=Wind brings power and mana.
 
 # -FUNCTIONAL
 tile.botania:flower.numerondandelife.name=Numeron Dandelife

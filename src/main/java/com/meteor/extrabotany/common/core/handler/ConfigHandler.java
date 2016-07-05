@@ -20,6 +20,7 @@ public class ConfigHandler {
 	public static int efficiencyOminiviolet;
 	public static int efficiencyPyschobloom;
 	public static int efficiencyStonesia;
+	public static int efficiencyBellflower;
 	
 	public static int pyschobloomMax;
 	
@@ -71,6 +72,7 @@ public class ConfigHandler {
 		efficiencyOminiviolet = config.get(LibReference.CATEGORY_COMMON, "efficiencyOminiviolet", 20, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyOminiviolet.desc")).getInt();
 		efficiencyStonesia = config.get(LibReference.CATEGORY_COMMON, "efficiencyStonesia", 8, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyStonesia.desc")).getInt();
 		efficiencyPyschobloom = config.get(LibReference.CATEGORY_COMMON, "efficiencyPyschobloom", 3, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyPyschobloom.desc")).getInt();
+		efficiencyBellflower = config.get(LibReference.CATEGORY_COMMON, "efficiencyBellflower", 6, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyBellflower.desc")).getInt();
 		
 		pyschobloomMax = config.get(LibReference.CATEGORY_COMMON, "pyschobloomMax", 9, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "pyschobloomMax.desc")).getInt();
 		

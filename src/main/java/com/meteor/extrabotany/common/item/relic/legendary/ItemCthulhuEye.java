@@ -32,6 +32,7 @@ import vazkii.botania.client.lib.LibResources;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 import vazkii.botania.common.item.relic.ItemRelic;
 
+import com.meteor.extrabotany.common.core.util.EnchHelper;
 import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
@@ -80,6 +81,8 @@ public class ItemCthulhuEye extends ItemRelicAdv implements IManaUsingItem{
 			double y = player.posY;
 			double z = player.posZ;
 			double buff = 1;
+			float dm = EnchHelper.getDMBuff(stack);
+        	float df = EnchHelper.getDFBuff(stack);
 			if(ItemHermesTravelClothing.hasHermesTravelClothing(player)){
 				buff = 0.25;
 			}else buff = 1;
@@ -87,14 +90,16 @@ public class ItemCthulhuEye extends ItemRelicAdv implements IManaUsingItem{
 			MultiversePosition pos = getWarpPoint(stack, segment);
 			if(pos.isValid()) {
 				if(pos.dim == world.provider.dimensionId && player instanceof EntityPlayerMP) {
-					if(!world.isRemote)
-					if(ManaItemHandler.requestManaExact(stack, player, (int) Math.sqrt((int)(Math.abs(x - pos.x) + 1) * (int) (Math.abs(z - pos.z)+1) * (int) (Math.abs(y - pos.y)+1) * (cooldown + 10 )/10 * buff), true)){
-						((EntityPlayerMP) player).playerNetServerHandler.setPlayerLocation(pos.x, pos.y, pos.z, player.rotationYaw, player.rotationPitch);
-						world.playSoundAtEntity(player, "mob.endermen.portal", 1F, 1F);
-						if(cooldown == 0) cooldown += 200;
-						else {
-							player.attackEntityFrom(ItemRelic.damageSource(), cooldown/8);
-							cooldown = 200;
+					if(!world.isRemote){
+						float range = vazkii.botania.common.core.helper.MathHelper.pointDistanceSpace(player.posX, player.posY, player.posZ, pos.x, pos.y, pos.z);
+						if(ManaItemHandler.requestManaExact(stack, player, (int) (range*range/48 * (cooldown+1)*dm*df), true)){
+							((EntityPlayerMP) player).playerNetServerHandler.setPlayerLocation(pos.x, pos.y, pos.z, player.rotationYaw, player.rotationPitch);
+							world.playSoundAtEntity(player, "mob.endermen.portal", 1F, 1F);
+							if(cooldown == 0) cooldown += (int) 200/df;
+							else {
+								player.attackEntityFrom(ItemRelic.damageSource(), cooldown/8);
+								cooldown = (int) (200/df);
+							}
 						}
 					}
 				}

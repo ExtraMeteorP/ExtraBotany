@@ -25,6 +25,7 @@ import vazkii.botania.api.mana.IManaTooltipDisplay;
 import vazkii.botania.common.core.helper.ItemNBTHelper;
 import vazkii.botania.common.item.ModItems;
 
+import com.meteor.extrabotany.common.core.util.EnchHelper;
 import com.meteor.extrabotany.common.item.relic.ItemRelicAdv;
 
 public class ItemEternalSlience extends ItemRelicAdv implements IManaItem, IManaTooltipDisplay{
@@ -73,12 +74,14 @@ public class ItemEternalSlience extends ItemRelicAdv implements IManaItem, IMana
 	@Override
 	public void onUpdate(ItemStack stack, World world, Entity entity, int i, boolean b) {
 		super.onUpdate(stack, world, entity, i, b);
+		float dm = EnchHelper.getDMBuff(stack);
+    	float df = EnchHelper.getDFBuff(stack);
 		if(!isMode(stack)){
-			addMana(stack, 50);
+			addMana(stack, (int) (50 * df/dm));
 		}else{
 			if(entity instanceof EntityPlayer){
 				EntityPlayer player = (EntityPlayer) entity;
-				int RANGE = 11;
+				int RANGE = (int) (11* df/dm);
 				
 				if(!player.isInWater()){
 						int l = MathHelper.floor_double(player.posX);

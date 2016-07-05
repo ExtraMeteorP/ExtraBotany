@@ -1,13 +1,14 @@
 package com.meteor.extrabotany.common.entity;
 
+import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
-import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class EntityLycorisradiata extends EntityMob{
+public class EntityLycorisradiata extends EntityCreature{
+	
 	public EntityLycorisradiata(World world) {
 		super(world);
 	    setSize(0.6F, 1.8F);

@@ -1,5 +1,7 @@
 package com.meteor.extrabotany.common.entity;
 
+import java.util.Random;
+
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
@@ -13,16 +15,13 @@ public class EntityLycorisradiataRed extends EntityLycorisradiata{
     
 	protected void dropFewItems(boolean wasRecentlyHit, int lootingModifier)
     {
-        if (wasRecentlyHit)
-        {
-            int j = this.rand.nextInt(2);
-
-            for (int k = 0; k < j; ++k)
-            {
-            	this.entityDropItem(new ItemStack(ModItems.material, 1, 4), this.rand.nextInt(3));
-                this.entityDropItem(new ItemStack(ModItems.material, 1, 5), this.rand.nextInt(2));
-                this.entityDropItem(new ItemStack(ModItems.material, 1, 6), this.rand.nextInt(2));
-            }
+        if (wasRecentlyHit){	
+        	Random r1 = new Random();
+        	Random r2 = new Random();
+        	Random r3 = new Random();
+        	this.entityDropItem(new ItemStack(ModItems.material, r1.nextInt(2)+1, 4), 1F);
+        	this.entityDropItem(new ItemStack(ModItems.material, r2.nextInt(2), 5), 1F);
+            this.entityDropItem(new ItemStack(ModItems.material, r3.nextInt(2), 6), 1F);
         }
     }
 }

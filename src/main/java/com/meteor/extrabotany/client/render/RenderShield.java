@@ -15,6 +15,7 @@ import org.lwjgl.opengl.GL11;
 
 import vazkii.botania.client.core.helper.ShaderHelper;
 
+import com.meteor.extrabotany.common.core.handler.ConfigHandler;
 import com.meteor.extrabotany.common.core.handler.PropertyHandler;
 import com.meteor.extrabotany.common.lib.LibReference;
 
@@ -33,7 +34,7 @@ public class RenderShield{
 		Minecraft mc = Minecraft.getMinecraft();
 		Profiler profiler = mc.mcProfiler;
 
-		if(event.type == ElementType.ALL) {
+		if(event.type == ElementType.HEALTH) {
 			profiler.startSection("shieldBar");
 			profiler.endSection();
 		}
@@ -43,7 +44,7 @@ public class RenderShield{
 	public void onDrawScreenPost(RenderGameOverlayEvent.Post event) {
 		Minecraft mc = Minecraft.getMinecraft();
 		Profiler profiler = mc.mcProfiler;
-		if(event.type == ElementType.HEALTH) {
+		if(event.type == ElementType.ALL) {
 			profiler.startSection("shieldBar");
 			boolean creative = false;
 			renderShield(event.resolution, creative);
@@ -57,8 +58,8 @@ public class RenderShield{
 		ScaledResolution scaledresolution = new ScaledResolution(mc, mc.displayWidth, mc.displayHeight);
         int scaledWidth = scaledresolution.getScaledWidth();
         int scaledHeight = scaledresolution.getScaledHeight();
-        int xBasePos = scaledWidth / 2 - 91;
-        int yBasePos = scaledHeight - 39;
+        int xBasePos = scaledWidth / 2 - 91 + ConfigHandler.shieldDisplayX;
+        int yBasePos = scaledHeight - 39 + ConfigHandler.shieldDisplayY;
         
         boolean highlight = mc.thePlayer.hurtResistantTime / 3 % 2 == 1;
 

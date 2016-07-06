@@ -6,9 +6,9 @@ public class LibReference {
 	public static final String MOD_ID = "ExtraBotany";
 	public static final String MOD_NAME = MOD_ID;
 	public static final String PREFIX_MOD = "extrabotany:";
-	public static final String BUILD = "16";
+	public static final String BUILD = "17";
 	public static final String VERSION = "r1.0-" + BUILD;
-	public static final int VER = 16;
+	public static final int VER = 17;
 	public static final String DEPENDENCIES = "required-after:Botania;after:Baubles";
 	
 	public static final String PROXY_COMMON = "com.meteor.extrabotany.common.CommonProxy";

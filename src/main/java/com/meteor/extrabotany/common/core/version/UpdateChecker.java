@@ -16,7 +16,7 @@ import cpw.mods.fml.common.gameevent.TickEvent.Phase;
 
 public class UpdateChecker {
 	
-	public static int MESSAGE = 9;
+	public static int MESSAGE = 12;
 
 	public static boolean doneChecking = false;
 	public static String onlineVersion = "";

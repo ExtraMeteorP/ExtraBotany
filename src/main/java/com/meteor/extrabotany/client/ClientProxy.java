@@ -94,8 +94,10 @@ public class ClientProxy extends CommonProxy{
 	}
 	
 	private void initRenderers() {
-		MinecraftForge.EVENT_BUS.register(new RenderShield());
-	    FMLCommonHandler.instance().bus().register(new RenderShield());	
+		if(ConfigHandler.disableShieldDisplay == false){
+			MinecraftForge.EVENT_BUS.register(new RenderShield());
+		    FMLCommonHandler.instance().bus().register(new RenderShield());	
+		}
 	    if(ConfigHandler.disableEasterEgg == false){
 	    	MinecraftForge.EVENT_BUS.register(new GuiDrop());
 	    	FMLCommonHandler.instance().bus().register(new GuiDrop());

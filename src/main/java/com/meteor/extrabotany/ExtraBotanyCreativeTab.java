@@ -23,7 +23,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 	
 	@Override
 	public ItemStack getIconItemStack() {
-		return new ItemStack(Item.getItemFromBlock(ModBlocks.pylon));
+		return new ItemStack(ModItems.dice20);
 	}
 
 	@Override

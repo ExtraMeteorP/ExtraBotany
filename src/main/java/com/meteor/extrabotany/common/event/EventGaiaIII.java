@@ -70,22 +70,5 @@ public class EventGaiaIII{
 	        if(event.source == ItemRelic.damageSource())
 	        	event.ammount = 0;
 	}
-	
-	@SubscribeEvent
-	 public void PlayerHurtEventDark(LivingHurtEvent event) { 
-	        if(!(event.entity instanceof EntityPlayer)) {
-	            return;
-	        }
-	        EntityPlayer player = (EntityPlayer)event.entity;
-	        if(event.source.getSourceOfDamage() instanceof EntityGaiaIIIDark){
-	        	EntityGaiaIIIDark gaia = (EntityGaiaIIIDark) event.source.getSourceOfDamage();
-	        		ItemStack stack = player.getHeldItem();
-	        		if(stack.getItem() instanceof IRelic){
-		        		if(player.worldObj.rand.nextInt(5) == 4){
-		        			player.dropOneItem(true);
-	        		}
-	        	}
-	        }	
-	}
 
 }

@@ -353,15 +353,7 @@ public class EntityGaiaIIIDark extends EntityCreature implements IBotaniaBossWit
 		}
 		EntityLivingBase entitylivingbase = func_94060_bK();
 		if(entitylivingbase instanceof EntityPlayer) {
-			((EntityPlayer) entitylivingbase).addStat(ModAchievement.Gaia_gaia3DarkKill, 1);
-			ItemStack stack = ((EntityPlayer) entitylivingbase).getHeldItem();
-			if(stack != null && stack.getItem() == vazkii.botania.common.item.ModItems.lexicon){
-  	 	        ILexicon l = (ILexicon) stack.getItem();
-        		if(!l.isKnowledgeUnlocked(stack, ExtraBotany.legendaryKnowledge)){
-        			l.unlockKnowledge(stack, ExtraBotany.legendaryKnowledge);   
-        			((EntityPlayer) entitylivingbase).addChatMessage(new ChatComponentTranslation("botaniamisc.knowledgeUnlock2").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
-        }
-			}
+			((EntityPlayer) entitylivingbase).addStat(ModAchievement.Gaia_gaia3DarkKill, 1);    
 			if(!anyWithArmor)
 				((EntityPlayer) entitylivingbase).addStat(ModAchievement.Gaia_gaia3DarkNoArmor, 1);
 		}

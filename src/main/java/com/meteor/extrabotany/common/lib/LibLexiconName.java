@@ -5,6 +5,7 @@ public class LibLexiconName {
 	public static final String O_PICKUP = "pickup";
 	public static final String O_COMMAND = "command";
 	public static final String O_SHIELD = "shield";
+	public static final String O_ADVANCEDMATERIAL = "advancedmaterial";
 	//Mana
 	public static final String M_PYLON = "ancientpylon";
 	//enchantment

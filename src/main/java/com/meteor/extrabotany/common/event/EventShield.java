@@ -76,7 +76,7 @@ public class EventShield{
 	public void onEntityConstructing(EntityConstructing event)
 	{
 		if (event.entity instanceof EntityPlayer && PropertyHandler.get((EntityPlayer) event.entity) == null)
-		if (event.entity instanceof EntityPlayer && event.entity.getExtendedProperties(PropertyHandler.EXT_PROP_NAME) == null)
-		event.entity.registerExtendedProperties(PropertyHandler.EXT_PROP_NAME, new PropertyHandler((EntityPlayer) event.entity));
+			if (event.entity instanceof EntityPlayer && event.entity.getExtendedProperties(PropertyHandler.EXT_PROP_NAME) == null)
+				event.entity.registerExtendedProperties(PropertyHandler.EXT_PROP_NAME, new PropertyHandler((EntityPlayer) event.entity));
 	}
 }

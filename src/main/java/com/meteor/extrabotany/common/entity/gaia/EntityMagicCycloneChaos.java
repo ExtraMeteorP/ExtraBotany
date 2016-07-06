@@ -16,7 +16,7 @@ import com.meteor.extrabotany.common.core.Sound;
 import com.meteor.extrabotany.common.core.handler.EntityHandler;
 import com.meteor.extrabotany.common.core.util.SoundHelper;
 
-public class EntityMagicCycloneChaos extends Entity{
+public class EntityMagicCycloneChaos extends Entity implements IMinion{
 	
 	private static float X = 1F;
 	private static float Z = 1F;
@@ -27,6 +27,11 @@ public class EntityMagicCycloneChaos extends Entity{
 	public EntityMagicCycloneChaos(World world) {
 		super(world);
 		setSize(0F, 0F);
+	}
+	
+	@Override
+	public boolean canDestroy() {
+		return true;
 	}
 	
 	public static boolean spawn(World world, double x, double y ,double z, float angelX, float angelZ){

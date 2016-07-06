@@ -18,16 +18,23 @@ public class EventKnowledgeTypeUnlock{
 	public void onItemPickedUp(ItemPickupEvent event) {
 			ItemStack stack = event.pickedUp.getEntityItem();
 			EntityPlayer player = (EntityPlayer) event.player;
-            if(stack != null && stack.isItemEqual(new ItemStack(ModItems.material, 1, 1))){
-            	ItemStack stack1 = event.player.getHeldItem();
-	            	if(stack1 != null && stack1.getItem() == vazkii.botania.common.item.ModItems.lexicon){
-	      	 	        ILexicon l = (ILexicon) stack1.getItem();
-	            		if(!l.isKnowledgeUnlocked(stack1, ExtraBotany.extraKnowledge)){
-	            			l.unlockKnowledge(stack1, ExtraBotany.extraKnowledge);   
+			ItemStack s = player.getHeldItem();
+			if(s != null && s.getItem() == vazkii.botania.common.item.ModItems.lexicon){
+				ILexicon l = (ILexicon) s.getItem();
+				if(stack != null){
+					if(stack.isItemEqual(new ItemStack(ModItems.material, 1, 1))){
+						if(!l.isKnowledgeUnlocked(s, ExtraBotany.extraKnowledge)){
+	            			l.unlockKnowledge(s, ExtraBotany.extraKnowledge);   
 	            			player.addChatMessage(new ChatComponentTranslation("botaniamisc.knowledgeUnlock").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
-	            }
-	          }
-	     }
+						}
+					}else if(stack.isItemEqual(new ItemStack(ModItems.dice20))){
+						if(!l.isKnowledgeUnlocked(s, ExtraBotany.legendaryKnowledge)){
+	            			l.unlockKnowledge(s, ExtraBotany.legendaryKnowledge);   
+	            			player.addChatMessage(new ChatComponentTranslation("botaniamisc.knowledgeUnlock2").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
+						}
+					}
+				}
+			}
     }
 	
 }

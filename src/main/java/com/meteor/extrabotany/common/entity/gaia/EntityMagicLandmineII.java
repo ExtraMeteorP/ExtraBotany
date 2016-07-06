@@ -12,13 +12,18 @@ import net.minecraft.util.DamageSource;
 import net.minecraft.world.World;
 import vazkii.botania.common.Botania;
 
-public class EntityMagicLandmineII extends Entity {
+public class EntityMagicLandmineII extends Entity implements IMinion{
 
 	public EntityGaiaIII summoner;
 
 	public EntityMagicLandmineII(World par1World) {
 		super(par1World);
 		setSize(0F, 0F);
+	}
+	
+	@Override
+	public boolean canDestroy() {
+		return true;
 	}
 
 	@Override

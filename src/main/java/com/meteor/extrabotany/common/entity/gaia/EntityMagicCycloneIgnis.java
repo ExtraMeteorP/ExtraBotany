@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.item.relic.ItemRelic;
 
-public class EntityMagicCycloneIgnis extends Entity{
+public class EntityMagicCycloneIgnis extends Entity implements IMinion{
 	
 	private static float X = 1F;
 	private static float Z = 1F;
@@ -83,6 +83,11 @@ public class EntityMagicCycloneIgnis extends Entity{
 	@Override
 	protected void entityInit() {
 		
+	}
+
+	@Override
+	public boolean canDestroy() {
+		return true;
 	}
 
 }

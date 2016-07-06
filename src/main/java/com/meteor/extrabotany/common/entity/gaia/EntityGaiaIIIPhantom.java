@@ -27,7 +27,7 @@ import vazkii.botania.common.item.relic.ItemRelic;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibItemName;
 
-public class EntityGaiaIIIPhantom extends EntityMob{
+public class EntityGaiaIIIPhantom extends EntityMob implements IMinion{
 	
 	EntityGaiaIII summoner;
 	public EntityGaiaIIIPhantom(World world) {
@@ -80,11 +80,11 @@ public class EntityGaiaIIIPhantom extends EntityMob{
 		e.setCurrentItemOrArmor(2, s3);
 		e.setCurrentItemOrArmor(3, s4);
 		e.setCurrentItemOrArmor(4, s5);
-		e.setEquipmentDropChance(0, 0);
-		e.setEquipmentDropChance(1, 0);
-		e.setEquipmentDropChance(2, 0);
-		e.setEquipmentDropChance(3, 0);
-		e.setEquipmentDropChance(4, 0);
+		e.setEquipmentDropChance(0, -1);
+		e.setEquipmentDropChance(1, -1);
+		e.setEquipmentDropChance(2, -1);
+		e.setEquipmentDropChance(3, -1);
+		e.setEquipmentDropChance(4, -1);
 		par3World.playSoundAtEntity(e, "mob.enderdragon.growl", 10F, 0.1F);
 		par3World.spawnEntityInWorld(e);
 		return true;
@@ -173,6 +173,11 @@ public class EntityGaiaIIIPhantom extends EntityMob{
 		boolean peaceful = worldObj.difficultySetting == EnumDifficulty.PEACEFUL;
 		if(!worldObj.isRemote && peaceful)
 			setDead();
+	}
+
+	@Override
+	public boolean canDestroy() {
+		return true;
 	}
 
 }

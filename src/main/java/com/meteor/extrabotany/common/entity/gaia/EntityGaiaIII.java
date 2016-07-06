@@ -121,7 +121,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 		tasks.addTask(0, new EntityAISwimming(this));
 		tasks.addTask(1, new EntityAIWatchClosest(this, EntityPlayer.class, Float.MAX_VALUE));
 		isImmuneToFire = true;
-		experienceValue = 1625;
+		experienceValue = 800;
 	}
 
 	public static MultiblockSet makeMultiblockSet() {
@@ -207,11 +207,11 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 			e.setCurrentItemOrArmor(2, s3);
 			e.setCurrentItemOrArmor(3, s4);
 			e.setCurrentItemOrArmor(4, s5);
-			e.setEquipmentDropChance(0, 0);
-			e.setEquipmentDropChance(1, 0);
-			e.setEquipmentDropChance(2, 0);
-			e.setEquipmentDropChance(3, 0);
-			e.setEquipmentDropChance(4, 0);
+			e.setEquipmentDropChance(0, -1);
+			e.setEquipmentDropChance(1, -1);
+			e.setEquipmentDropChance(2, -1);
+			e.setEquipmentDropChance(3, -1);
+			e.setEquipmentDropChance(4, -1);
 			e.setHardMode(hard);
 
 			List<EntityPlayer> players = e.getPlayersAround();
@@ -660,11 +660,11 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 									((EntityZombie) entity).setCurrentItemOrArmor(2, new ItemStack(ModItems.terrasteelChest));
 									((EntityZombie) entity).setCurrentItemOrArmor(3, new ItemStack(ModItems.terrasteelLegs));
 									((EntityZombie) entity).setCurrentItemOrArmor(4, new ItemStack(ModItems.terrasteelBoots));
-									((EntityZombie) entity).setEquipmentDropChance(0, 0);
-									((EntityZombie) entity).setEquipmentDropChance(1, 0);
-									((EntityZombie) entity).setEquipmentDropChance(2, 0);
-									((EntityZombie) entity).setEquipmentDropChance(3, 0);
-									((EntityZombie) entity).setEquipmentDropChance(4, 0);
+									((EntityZombie) entity).setEquipmentDropChance(0, -1);
+									((EntityZombie) entity).setEquipmentDropChance(1, -1);
+									((EntityZombie) entity).setEquipmentDropChance(2, -1);
+									((EntityZombie) entity).setEquipmentDropChance(3, -1);
+									((EntityZombie) entity).setEquipmentDropChance(4, -1);
 									if(worldObj.rand.nextInt(hard ? 3 : 12) == 0)
 										entity = new EntityWitch(worldObj);
 
@@ -678,11 +678,11 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 									((EntitySkeleton) entity).setCurrentItemOrArmor(2, new ItemStack(ModItems.elementiumChest));
 									((EntitySkeleton) entity).setCurrentItemOrArmor(3, new ItemStack(ModItems.elementiumLegs));
 									((EntitySkeleton) entity).setCurrentItemOrArmor(4, new ItemStack(ModItems.elementiumBoots));
-									((EntitySkeleton) entity).setEquipmentDropChance(0, 0);
-									((EntitySkeleton) entity).setEquipmentDropChance(1, 0);
-									((EntitySkeleton) entity).setEquipmentDropChance(2, 0);
-									((EntitySkeleton) entity).setEquipmentDropChance(3, 0);
-									((EntitySkeleton) entity).setEquipmentDropChance(4, 0);
+									((EntitySkeleton) entity).setEquipmentDropChance(0, -1);
+									((EntitySkeleton) entity).setEquipmentDropChance(1, -1);
+									((EntitySkeleton) entity).setEquipmentDropChance(2, -1);
+									((EntitySkeleton) entity).setEquipmentDropChance(3, -1);
+									((EntitySkeleton) entity).setEquipmentDropChance(4, -1);
 									if(worldObj.rand.nextInt(8) == 0) {
 										((EntitySkeleton) entity).setSkeletonType(1);
 										((EntitySkeleton) entity).setCurrentItemOrArmor(0, new ItemStack(hard ? ModItems.elementiumSword : Items.stone_sword));
@@ -766,17 +766,6 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 				if(!players.isEmpty())
 					damageEntity(DamageSource.causePlayerDamage(players.get(0)), 0);
 			}
-		}
-		
-		Collection<PotionEffect> potions = this.getActivePotionEffects();
-		boolean flag = false;
-		for (PotionEffect potion : potions) {
-			int id = potion.getPotionID();
-			if (ReflectionHelper.getPrivateValue(Potion.class, Potion.potionTypes[id], new String[]{"isBadEffect", "field_76418_K", "J"})) {
-				this.removePotionEffect(id);
-				flag = true;
-				}
-				break;
 		}
 	
 		Botania.proxy.sparkleFX(this.worldObj, this.posX, this.posY, this.posZ, 1.99F, 0.97F, 0.20F, 2F + this.hurtTime * 3F * (this.getHealth()/this.getMaxHealth()) * Math.max(0, this.worldObj.rand.nextInt(4)- 2), 6);

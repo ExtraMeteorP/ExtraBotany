@@ -5,7 +5,7 @@ botania.knowledge.legendary=&eLegendary&7 Knowledge
 
 # MISC
 botaniamisc.knowledgeUnlock=The Blank Card is unusually shining, the Lexicon which you are holding is injected with a mystery energy.
-botaniamisc.knowledgeUnlock2=Congratulations! You've beaten Gaia Guardian III and unlocked Legendary Knowledge.
+botaniamisc.knowledgeUnlock2=Congratulations! This D20 is the proof of the success of beating Gaia Guardian III. Now you unlock Legendary Knowledge!
 botaniamisc.bullet=Out of bullets.
 botaniamisc.reload=Reloading Successfully.
 botaniamisc.gunfalse=Normal Mode
@@ -22,6 +22,8 @@ botaniamisc.theseussetMode0=You switched it to Attack Mode.
 botaniamisc.theseussetMode1=You switched it to Repair Mode.
 botaniamisc.theseussetMode2=You switched it to Heal Mode.
 botaniamisc.theseussetMode3=You switched it to Assist Mode.
+botaniamisc.eternalsliencetrue=You switched it to Slience Mode.
+botaniamisc.eternalsliencefalse=You switched it to Eternal Mode.
 botaniamisc.manaDisplay=Mana
 botaniamisc.usecount=&3You have use this over %s% times.
 botaniamisc.thousandUse=You have use this over 1000 times. Congratulations! You have been rewarded with a Petal of Lycorisradiata.
@@ -38,6 +40,9 @@ extrabotany.versioning.message5=The earth is round, I want to wander around. Let
 extrabotany.versioning.message6=Minecraft do not want to talk to you, and throw a ExtraBotany Update to you.
 extrabotany.versioning.message7=I agree with EULA, promise to update ExtraBotany immediately.
 extrabotany.versioning.message8=Bilibili - ( ゜- ゜)つロ 乾杯~
+extrabotany.versioning.message9=:P When you see this, do you know what should you do next?
+extrabotany.versioning.message10=If you do not click the URL below, you will feel my WRATH sooner or later.
+extrabotany.versioning.message11=I put all my treasures in this Update, go to get them!
 
 #ITEMGROUP
 itemGroup.ExtraBotany=ExtraBotany
@@ -191,6 +196,13 @@ item.test.desc=ONLY FOR DEVELOPER
 
 # LEXICON ENTRIES
 # -BASIC
+# -ADVANCEDMATERIAL
+botania.entry.advancedmaterial=Advanced Material
+botania.tagline.advancedmaterial=Very powerful.
+botania.page.advancedmaterial0
+botania.page.advancedmaterial1
+botania.page.advancedmaterial2
+
 # --NIGHTMAREFUEL
 botania.entry.nightmarefuel=Nightmare Fuel
 botania.tagline.nightmarefuel=The fear in your mind.
@@ -773,7 +785,6 @@ commands.ExtraBotany.addShieldAmount.desc=/addShieldAmount [player] [amount]
 commands.ExtraBotany.addShieldAmount.success=Successful! Player %1$s now has shield %2$s .
 
 #CONFIG
-# -COMMON
 config.ExtraBotany.extraShieldAmount.desc=The Amount of Extra shield bar.
 config.ExtraBotany.ench.desc=ID of Enchantment.
 config.ExtraBotany.efficiencySunshinelily.desc=The efficiency of Sunshine Lily.
@@ -786,8 +797,14 @@ config.ExtraBotany.efficiencyPyschobloom.desc=The efficiency of Pysch-O-Bloom.
 config.ExtraBotany.efficiencyStonesia.desc=The efficiency of Stonesia.
 config.ExtraBotany.pyschobloomMax.desc=The maximum efficiency of Pysch-O-Bloom.
 config.ExtraBotany.disableShieldRender.desc=Whether to disable special effect of Shield Render. Set to true to disable.
-config.ExtraBotany.disableEasterEgg.desc=Whether to disable easter eggs. Set to true to disable.
+config.ExtraBotany.disableEasterEgg.desc=Whether to disable easter eggs, set to true to disable.
 config.ExtraBotany.potion.desc=ID of potion.
+config.ExtraBotany.disableShieldDisplay.desc=Whether to diable display of the shield, set to true to disable.
+config.ExtraBotany.shieldDisplayX.desc=Used to change the x-coordinate of the display of the shield if you need.
+config.ExtraBotany.shieldDisplayY.desc=Used to change the y-coordinate of the display of the shield if you need.
+config.ExtraBotany.efficiencyBellflower.desc=The efficiency of Bellflower.
+config.ExtraBotany.enableDiplopbamboo.desc=Whether to enable Diplop Bamboo, set to true to enable.
+config.ExtraBotany.enableGuns.desc=Whether to enable guns, set to true to enable.
 
 #NEI SUPPORT
 extrabotany.nei.infernoidisy=Infernoidisy

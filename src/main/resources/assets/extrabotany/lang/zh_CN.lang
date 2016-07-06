@@ -5,7 +5,7 @@ botania.knowledge.legendary=&4传说&7的知识
 
 # MISC
 botaniamisc.knowledgeUnlock=白卡闪耀着异样的光芒,你手中的手册被注入了神秘的力量.
-botaniamisc.knowledgeUnlock2=恭喜你!你成功地击败了盖亚守护者III并解锁了传说的知识.
+botaniamisc.knowledgeUnlock2=恭喜你!这个D20就是你成功地击败了盖亚守护者III的证明,你已解锁了传说的知识！
 botaniamisc.bullet=弹药已用尽.
 botaniamisc.reload=上弹完毕.
 botaniamisc.gunfalse=普通模式
@@ -22,6 +22,8 @@ botaniamisc.theseussetMode0=你已将其设置为攻击模式.
 botaniamisc.theseussetMode1=你已将其设置为修复模式.
 botaniamisc.theseussetMode2=你已将其设置为治疗模式.
 botaniamisc.theseussetMode3=你已将其设置为激励模式.
+botaniamisc.eternalsliencetrue=你已将其设置为静籁模式.
+botaniamisc.eternalsliencefalse=你已将其设置为永恒模式.
 botaniamisc.manaDisplay=魔力值
 botaniamisc.usecount=&3你已使用超过%s%次
 botaniamisc.thousandUse=你已使用超过1000次,恭喜你!一瓣彼岸花的花瓣奖励给你.
@@ -38,6 +40,9 @@ extrabotany.versioning.message5=世界那么大,我想去看看.出发前先让�
 extrabotany.versioning.message6=Minecraft并不想理你,并向你扔了一个额外植物学的更新.
 extrabotany.versioning.message7=我已认真阅读并同意该用户协议,承诺立即更新额外植物学.
 extrabotany.versioning.message8=哔哩哔哩 - ( ゜- ゜)つロ 乾杯~
+extrabotany.versioning.message9=:P 当你看到这条消息后,你知道接下来该做些什么吗?
+extrabotany.versioning.message10=如果你不点击下面的链接,迟早有一天你会感受到我的愤怒.
+extrabotany.versioning.message11=我把我所有的宝藏都藏在这次更新里,快去找到它们吧!
 
 #ITEMGROUP
 itemGroup.ExtraBotany=额外植物学
@@ -191,6 +196,13 @@ item.test.desc=仅作测试
 
 # LEXICON ENTRIES
 # -BASIC
+# -ADVANCEDMATERIAL
+botania.entry.advancedmaterial=高级材料
+botania.tagline.advancedmaterial=非常强大.
+botania.page.advancedmaterial0=解开额外的知识后,你将会 发现更多高级的材料. &1盖亚精华&0是击败盖亚守护者 III的象征,它蕴含着盖 亚守护者III的神力,但 没人知道为何&4神秘箱子&0中也 藏着这种材料.
+botania.page.advancedmaterial1=&1星光之力&0也是一种高级的材 料,要获得十分困难,&4D20&0的 某一面上便藏着它.同样地 ,&4神秘箱子&0里竟也有&1星光之 力&0.
+botania.page.advancedmaterial2=&1祈之共鸣&0是遗物分解后的结 晶体,充满着能量.利用这 种材料再配合上符文的力量 ,可以轻易地再构出你所想 要的遗物.如果你想得到&1祈 之共鸣&0,你需要&4古遗莲&0的力量.
+
 # --NIGHTMAREFUEL
 botania.entry.nightmarefuel=梦魇燃料
 botania.tagline.nightmarefuel=你内心深处的恐惧.
@@ -547,7 +559,7 @@ botania.entry.gaia3=盖亚守护者III
 botania.page.gaia30=通过全新的材料,将唤醒更为 强大的&1盖亚守护者III&0. 其战 斗力与机动性都比原来要增 强许多,并且由于凝聚着大 量魔力的神智的关系,&1盖亚 守护者III&0掌握着许多不同 种能力,因此要格外小心.
 botania.page.gaia31=作为一个全新的敌人,&1盖亚守 护者III&0的奖励也极为丰富. 如果你想召唤它,你需要用到 &4盖亚的神智&0来引导盖亚仪式 .
 botania.page.gaia33=盖亚仪式
-botania.page.gaia32=同时还值得注意的是,&1盖亚 守护者III&0的能力并不仅仅 如此,它似乎还隐藏着真实 力量.
+botania.page.gaia32=同时还值得注意的是,&1盖亚 守护者III&0的能力并不仅仅 如此,它似乎还隐藏着真实 力量. 传说拿着植物魔法手册时捡起D20能够解开遗物背后的秘密.
 
 #FLOWER NAMES
 # -GENERATING
@@ -771,7 +783,6 @@ commands.ExtraBotany.addShieldAmount.desc=/addShieldAmount [玩家] [数值]
 commands.ExtraBotany.addShieldAmount.success=添加成功! 玩家 %1$s 现在持有护盾值为 %2$s .
 
 #CONFIG
-# -COMMON
 config.ExtraBotany.extraShieldAmount.desc=额外的护盾上限.
 config.ExtraBotany.ench.desc=附魔ID.
 config.ExtraBotany.efficiencySunshinelily.desc=日耀百合的产能效率.
@@ -786,6 +797,12 @@ config.ExtraBotany.pyschobloomMax.desc=闹闹花的最大产能效率.
 config.ExtraBotany.disableShieldRender.desc=是否取消护盾特效渲染,设置为true来取消.
 config.ExtraBotany.disableEasterEgg.desc=是否取消彩蛋,设置为true来取消.
 config.ExtraBotany.potion.desc=药水ID.
+config.ExtraBotany.disableShieldDisplay.desc=是否取消护盾值显示,设置为true来取消.
+config.ExtraBotany.shieldDisplayX.desc=如果有需求,可以用来改变护盾值显示的X坐标.
+config.ExtraBotany.shieldDisplayY.desc=如果有需求,可以用来改变护盾值显示的Y坐标.
+config.ExtraBotany.efficiencyBellflower.desc=风铃草的产能效率.
+config.ExtraBotany.enableDiplopbamboo.desc=是否启用复视笋的合成表,设置为true来启用.
+config.ExtraBotany.enableGuns.desc=是否启用枪械,设置为true来启用.
 
 #NEI SUPPORT
 extrabotany.nei.infernoidisy=狱火菊

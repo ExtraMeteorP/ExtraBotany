@@ -33,6 +33,7 @@ public class LexiconModData {
 	//Other
 	public static LexiconEntry pickup;
 	public static LexiconEntry shield;
+	public static LexiconEntry advancedmaterial;
 	//Generating 
 	public static LexiconEntry candyflower;
 	public static LexiconEntry blueenchantress;
@@ -162,6 +163,10 @@ public class LexiconModData {
 		shard = new BLexiconEntry(LibLexiconName.BA_PRISMATICSHARD, categoryExtra);
 		shard.setLexiconPages(new PageText("0"));
 		shard.setIcon(new ItemStack(ModItems.material));
+		
+		advancedmaterial = new ELexiconEntry(LibLexiconName.O_ADVANCEDMATERIAL, categoryExtra);
+		advancedmaterial.setLexiconPages(new PageText("0"), new PageText("1"), new PageText("2"));
+		advancedmaterial.setIcon(new ItemStack(ModItems.material, 1, 11));
 		
 		nightmarefuel = new BLexiconEntry(LibLexiconName.BA_NIGHTMAREFUEL, categoryExtra);
 		nightmarefuel.setLexiconPages(new PageText("0"));

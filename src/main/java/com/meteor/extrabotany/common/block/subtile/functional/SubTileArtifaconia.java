@@ -39,6 +39,9 @@ public class SubTileArtifaconia extends SubTileFunctional{
  		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.maxwelldemon);
  		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.athenabless);
  		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.hestiachastity);
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.eternalslience);
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.excaliber);
+ 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.valkyriecombatuniform);
  	}
  	
 	@Override
@@ -49,7 +52,6 @@ public class SubTileArtifaconia extends SubTileFunctional{
 			List<EntityItem> items = supertile.getWorldObj().getEntitiesWithinAABB(EntityItem.class, AxisAlignedBB.getBoundingBox(supertile.xCoord - RANGE, supertile.yCoord - RANGE, supertile.zCoord - RANGE, supertile.xCoord + RANGE + 1, supertile.yCoord + RANGE + 1, supertile.zCoord + RANGE + 1));
 			for(EntityItem item : items) {
 				if(item.age >= (59 + slowdown) && !item.isDead && item.getEntityItem().getItem() instanceof IRelic) {
-
 					List<EntityPlayer> players = supertile.getWorldObj().getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(supertile.xCoord - RANGE, supertile.yCoord - RANGE, supertile.zCoord - RANGE, supertile.xCoord + RANGE + 1, supertile.yCoord + RANGE + 1, supertile.zCoord + RANGE + 1));
 					for(EntityPlayer player : players) {
 						IRelic r = (IRelic)item.getEntityItem().getItem();
@@ -60,8 +62,8 @@ public class SubTileArtifaconia extends SubTileFunctional{
 									supertile.getWorldObj().spawnEntityInWorld(f);
 								}
 								item.setDead();
-						}else if(redstoneSignal == 0 && r.getSoulbindUsername(item.getEntityItem()) != player.getDisplayName()){
-							if(((IRelic)item).getSoulbindUsername(item.getEntityItem()) != LibItemName.BINDING)
+						}else if(redstoneSignal == 0 && !(r.getSoulbindUsername(item.getEntityItem()).equals(player.getDisplayName()))){
+							if(!(r.getSoulbindUsername(item.getEntityItem()).equals(LibItemName.BINDING)))
 								r.bindToUsername(player.getDisplayName(), item.getEntityItem());
 								mana-=getMaxMana();
 						}

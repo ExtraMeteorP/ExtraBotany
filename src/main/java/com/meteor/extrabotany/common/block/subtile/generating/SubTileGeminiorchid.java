@@ -14,17 +14,18 @@ public class SubTileGeminiorchid extends SubTileGenerating{
 	@Override
 	public void onUpdate() {
 		super.onUpdate();
-				if(mana < getMaxMana() && ticksExisted % DELAY == 0) {
-					int temA, temB;
-					int bA, bB, bC, bD;
-					bA = LibData.getBlockTemperture(supertile.getWorldObj().getBlock(supertile.xCoord + 1, supertile.yCoord, supertile.zCoord + 1));
-					bB = LibData.getBlockTemperture(supertile.getWorldObj().getBlock(supertile.xCoord + 1, supertile.yCoord, supertile.zCoord - 1));
-					bC = LibData.getBlockTemperture(supertile.getWorldObj().getBlock(supertile.xCoord - 1, supertile.yCoord, supertile.zCoord + 1));
-					bD = LibData.getBlockTemperture(supertile.getWorldObj().getBlock(supertile.xCoord - 1, supertile.yCoord, supertile.zCoord - 1));
-					temA = Math.min(MathHandler.min(bA, bB, bC), bD);
-					temB = Math.max(MathHandler.max(bA, bB, bC), bD);
+			if(mana < getMaxMana() && ticksExisted % DELAY == 0) {
+				int temA, temB;
+				int bA, bB, bC, bD;
+				bA = LibData.getBlockTemperture(supertile.getWorldObj().getBlock(supertile.xCoord + 1, supertile.yCoord, supertile.zCoord + 1));
+				bB = LibData.getBlockTemperture(supertile.getWorldObj().getBlock(supertile.xCoord + 1, supertile.yCoord, supertile.zCoord - 1));
+				bC = LibData.getBlockTemperture(supertile.getWorldObj().getBlock(supertile.xCoord - 1, supertile.yCoord, supertile.zCoord + 1));
+				bD = LibData.getBlockTemperture(supertile.getWorldObj().getBlock(supertile.xCoord - 1, supertile.yCoord, supertile.zCoord - 1));
+				temA = Math.min(MathHandler.min(bA, bB, bC), bD);
+				temB = Math.max(MathHandler.max(bA, bB, bC), bD);
+				if((temB - temA) > 500)
 					mana +=	(int) ((temB - temA)/1000 * ConfigHandler.efficiencyGeminiorchid + supertile.getWorldObj().rand.nextInt(4));
-				}
+			}
 		}
 	
 	@Override

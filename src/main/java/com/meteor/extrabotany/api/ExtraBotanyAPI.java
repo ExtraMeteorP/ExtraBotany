@@ -157,8 +157,8 @@ public class ExtraBotanyAPI {
 		return recipe;
 	}
 	
-	public static RecipeStonesia registerStonesiaRecipe(Object input, int mana, int outputMeta) {
-		RecipeStonesia recipe = new RecipeStonesia(input, mana, outputMeta);
+	public static RecipeStonesia registerStonesiaRecipe(Object input, int mana) {
+		RecipeStonesia recipe = new RecipeStonesia(input, mana);
 		stonesiaRecipes.add(recipe);
 		return recipe;
 	}
@@ -169,8 +169,8 @@ public class ExtraBotanyAPI {
 		return recipe;
 	}
 	
-	public static RecipeStonesia removeStonesiaRecipe(Object input, int mana, int outputMeta) {
-		RecipeStonesia recipe = new RecipeStonesia(input, mana, outputMeta);
+	public static RecipeStonesia removeStonesiaRecipe(Object input, int mana) {
+		RecipeStonesia recipe = new RecipeStonesia(input, mana);
 		stonesiaRecipes.remove(recipe);
 		return recipe;
 	}

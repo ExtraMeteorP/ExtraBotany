@@ -8,8 +8,10 @@ import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.profiler.Profiler;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.EnumHelperClient;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
+import net.minecraftforge.common.util.EnumHelper;
 
 import org.lwjgl.opengl.GL11;
 
@@ -35,7 +37,7 @@ public class RenderShield{
 		Profiler profiler = mc.mcProfiler;
 
 		if(event.type == ElementType.HEALTH) {
-			profiler.startSection("shieldBar");
+			profiler.startSection("ExtraBotany-HUD");
 			profiler.endSection();
 		}
 	}
@@ -45,21 +47,45 @@ public class RenderShield{
 		Minecraft mc = Minecraft.getMinecraft();
 		Profiler profiler = mc.mcProfiler;
 		if(event.type == ElementType.ALL) {
-			profiler.startSection("shieldBar");
-			boolean creative = false;
-			renderShield(event.resolution, creative);
+			profiler.startSection("ExtraBotany-HUD");
+			if(PropertyHandler.getShieldAmount(mc.thePlayer) > 0){
+				profiler.startSection("shieldBar");
+				if(ConfigHandler.anotherShieldRender)
+					renderShieldB(event.resolution);
+				else renderShield(event.resolution);
+				profiler.endSection();
+			}
 			profiler.endSection();
 			GL11.glColor4f(1F, 1F, 1F, 1F);
 		}
 	}
-
-	private void renderShield(ScaledResolution res, boolean hasCreative) {
+	
+	int cx = ConfigHandler.shieldDisplayX;
+	int cy = ConfigHandler.shieldDisplayY;
+	
+	private void renderShieldB(ScaledResolution res) {
 		Minecraft mc = Minecraft.getMinecraft();
 		ScaledResolution scaledresolution = new ScaledResolution(mc, mc.displayWidth, mc.displayHeight);
         int scaledWidth = scaledresolution.getScaledWidth();
         int scaledHeight = scaledresolution.getScaledHeight();
-        int xBasePos = scaledWidth / 2 - 91 + ConfigHandler.shieldDisplayX;
-        int yBasePos = scaledHeight - 39 + ConfigHandler.shieldDisplayY;
+        
+        mc.getTextureManager().bindTexture(shieldBar);
+        
+        float s = PropertyHandler.getShieldAmount(mc.thePlayer)/2;
+        
+        drawTexturedModalRect(scaledWidth / 2 - 121 + cx, scaledHeight - 19 + cy, 0, 0, 9, 9);
+        mc.fontRenderer.drawStringWithShadow("x" + s, scaledWidth / 2 - 110 + cx, scaledHeight - 19 + cy, 0xFFFFFF);
+	}
+	
+	
+
+	private void renderShield(ScaledResolution res) {
+		Minecraft mc = Minecraft.getMinecraft();
+		ScaledResolution scaledresolution = new ScaledResolution(mc, mc.displayWidth, mc.displayHeight);
+        int scaledWidth = scaledresolution.getScaledWidth();
+        int scaledHeight = scaledresolution.getScaledHeight();
+        int xBasePos = scaledWidth / 2 - 91 + cx;
+        int yBasePos = scaledHeight - 39 + cy;
         
         boolean highlight = mc.thePlayer.hurtResistantTime / 3 % 2 == 1;
 

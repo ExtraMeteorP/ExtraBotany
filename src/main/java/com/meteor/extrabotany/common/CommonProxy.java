@@ -1,10 +1,5 @@
 package com.meteor.extrabotany.common;
 
-import java.util.HashMap;
-import java.util.Map;
-
-import net.minecraft.nbt.NBTTagCompound;
-
 import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.ModMultiBlocks;
@@ -15,6 +10,7 @@ import com.meteor.extrabotany.common.entity.FakePlayer;
 import com.meteor.extrabotany.common.entity.ModEntities;
 import com.meteor.extrabotany.common.event.ModEvents;
 import com.meteor.extrabotany.common.integration.Intergration;
+import com.meteor.extrabotany.common.integration.minetweaker.MinetweakerCompact;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 import com.meteor.extrabotany.common.potion.ModPotions;
@@ -46,6 +42,7 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent event) {
 		ModEvents.init();
 		new FakePlayer();
+		MinetweakerCompact.init();
 		Intergration.init(event);
 	}
 	
@@ -56,18 +53,6 @@ public class CommonProxy {
     public void serverStarting(FMLServerStartingEvent event)
     {
     	new ModCommands(event);
-    }
-    
-    private static final Map<String, NBTTagCompound> extendedEntityData = new HashMap<String, NBTTagCompound>();
-    
-    public static void storeEntityData(String name, NBTTagCompound compound)
-    {
-    	extendedEntityData.put(name, compound);
-    }
-
-    public static NBTTagCompound getEntityData(String name)
-    {
-    	return extendedEntityData.remove(name);
     }
     
 }

@@ -1,6 +1,9 @@
 package com.meteor.extrabotany.common.integration;
 
+import minetweaker.MineTweakerAPI;
+
 import com.meteor.extrabotany.common.integration.hugetools.ItemRender;
+import com.meteor.extrabotany.common.integration.minetweaker.MinetweakerCompact;
 
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;

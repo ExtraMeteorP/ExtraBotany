@@ -16,12 +16,10 @@ public class RecipeStonesia {
 
 	Object input;
 	int mana;
-	int outputMeta;
 
-	public RecipeStonesia(Object input, int mana, int outputMeta) {
+	public RecipeStonesia(Object input, int mana) {
 		this.input = input;
 		this.mana = mana;
-		this.outputMeta = outputMeta;
 
 		if(input != null && !(input instanceof String || input instanceof Block))
 			throw new IllegalArgumentException("input must be an oredict String or a Block.");
@@ -72,9 +70,5 @@ public class RecipeStonesia {
 
 	public int getMana() {
 		return mana;
-	}
-
-	public int getOutputMeta() {
-		return outputMeta;
 	}
 }

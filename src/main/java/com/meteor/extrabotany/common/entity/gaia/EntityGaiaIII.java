@@ -655,11 +655,21 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 								switch(worldObj.rand.nextInt(2)) {
 								case 0 : {
 									entity = new EntityZombie(worldObj);
-									((EntityZombie) entity).setCurrentItemOrArmor(0, new ItemStack(ModItems.terraSword));
-									((EntityZombie) entity).setCurrentItemOrArmor(1, new ItemStack(ModItems.terrasteelHelm));
-									((EntityZombie) entity).setCurrentItemOrArmor(2, new ItemStack(ModItems.terrasteelChest));
-									((EntityZombie) entity).setCurrentItemOrArmor(3, new ItemStack(ModItems.terrasteelLegs));
-									((EntityZombie) entity).setCurrentItemOrArmor(4, new ItemStack(ModItems.terrasteelBoots));
+									ItemStack ss1 = new ItemStack(ModItems.terraSword);
+									ss1.setItemDamage(20);
+									ItemStack ss2 = new ItemStack(ModItems.terrasteelHelm);
+									ss2.setItemDamage(20);
+									ItemStack ss3 = new ItemStack(ModItems.terrasteelChest);
+									ss3.setItemDamage(20);
+									ItemStack ss4 = new ItemStack(ModItems.terrasteelLegs);
+									ss4.setItemDamage(20);
+									ItemStack ss5 = new ItemStack(ModItems.terrasteelBoots);
+									ss5.setItemDamage(20);
+									((EntityZombie) entity).setCurrentItemOrArmor(0, ss1);
+									((EntityZombie) entity).setCurrentItemOrArmor(1, ss2);
+									((EntityZombie) entity).setCurrentItemOrArmor(2, ss3);
+									((EntityZombie) entity).setCurrentItemOrArmor(3, ss4);
+									((EntityZombie) entity).setCurrentItemOrArmor(4, ss5);
 									((EntityZombie) entity).setEquipmentDropChance(0, -1);
 									((EntityZombie) entity).setEquipmentDropChance(1, -1);
 									((EntityZombie) entity).setEquipmentDropChance(2, -1);
@@ -672,12 +682,21 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 								}
 								case 1 : {
 									entity = new EntitySkeleton(worldObj);
+									ItemStack ss1 = new ItemStack(ModItems.elementiumSword);
+									ItemStack ss2 = new ItemStack(ModItems.elementiumHelm);
+									ItemStack ss3 = new ItemStack(ModItems.elementiumChest);
+									ItemStack ss4 = new ItemStack(ModItems.elementiumLegs);
+									ItemStack ss5 = new ItemStack(ModItems.elementiumBoots);
+									ss1.setItemDamage(20);
+									ss2.setItemDamage(20);
+									ss3.setItemDamage(20);
+									ss4.setItemDamage(20);
+									ss5.setItemDamage(20);
 									((EntitySkeleton) entity).setCurrentItemOrArmor(0, new ItemStack(Items.bow));
-									((EntitySkeleton) entity).setCurrentItemOrArmor(0, new ItemStack(Items.bow));
-									((EntitySkeleton) entity).setCurrentItemOrArmor(1, new ItemStack(ModItems.elementiumHelm));
-									((EntitySkeleton) entity).setCurrentItemOrArmor(2, new ItemStack(ModItems.elementiumChest));
-									((EntitySkeleton) entity).setCurrentItemOrArmor(3, new ItemStack(ModItems.elementiumLegs));
-									((EntitySkeleton) entity).setCurrentItemOrArmor(4, new ItemStack(ModItems.elementiumBoots));
+									((EntitySkeleton) entity).setCurrentItemOrArmor(1, ss2);
+									((EntitySkeleton) entity).setCurrentItemOrArmor(2, ss3);
+									((EntitySkeleton) entity).setCurrentItemOrArmor(3, ss4);
+									((EntitySkeleton) entity).setCurrentItemOrArmor(4, ss5);
 									((EntitySkeleton) entity).setEquipmentDropChance(0, -1);
 									((EntitySkeleton) entity).setEquipmentDropChance(1, -1);
 									((EntitySkeleton) entity).setEquipmentDropChance(2, -1);
@@ -685,7 +704,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 									((EntitySkeleton) entity).setEquipmentDropChance(4, -1);
 									if(worldObj.rand.nextInt(8) == 0) {
 										((EntitySkeleton) entity).setSkeletonType(1);
-										((EntitySkeleton) entity).setCurrentItemOrArmor(0, new ItemStack(hard ? ModItems.elementiumSword : Items.stone_sword));
+										((EntitySkeleton) entity).setCurrentItemOrArmor(0, ss1);
 									}
 									break;
 								}
@@ -798,15 +817,15 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 			List<EntityMagicCycloneIgnis> ignis = this.worldObj.getEntitiesWithinAABB(EntityMagicCycloneIgnis.class, AxisAlignedBB.getBoundingBox(this.posX - RANGE - 24, this.posY - RANGE - 24, this.posZ - RANGE - 24, this.posX + RANGE + 25, this.posY + RANGE + 25, this.posZ + RANGE + 25));
 			List<EntityMagicCycloneAqua> aqua = this.worldObj.getEntitiesWithinAABB(EntityMagicCycloneAqua.class, AxisAlignedBB.getBoundingBox(this.posX - RANGE - 24, this.posY - RANGE - 24, this.posZ - RANGE - 24, this.posX + RANGE + 25, this.posY + RANGE + 25, this.posZ + RANGE + 25));
 			if((ignis.size() + aqua.size()) <= 9){
-				if(Math.random() >= 0.5)
+				if(worldObj.rand.nextInt(10) > 4){
 					EntityMagicCycloneIgnis.spawn(worldObj, this.posX, this.posY, this.posZ, (float) (1.0F + Math.random() * 1F), (float) (1.0F + Math.random() * 1F));
 					worldObj.playSoundEffect(this.posX, this.posY, this.posZ, "botania:summon", 1.0F, 1.0F);
-				}
-				else {
+				}else{
 					EntityMagicCycloneAqua.spawn(worldObj, this.posX + 2.0F - Math.random() * 4F, this.posY, this.posZ + 2.0F - Math.random() * 4F, (float) (1.0F + Math.random() * 1F), (float) (1.0F + Math.random() * 1F));
 					worldObj.playSoundEffect(this.posX, this.posY, this.posZ, "botania:summon", 1.0F, 1.0F);
 				}
 			}
+		}
 	}
 
 	public static boolean isCheatyBlock(World world, int x, int y, int z) {

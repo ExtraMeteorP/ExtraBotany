@@ -52,9 +52,9 @@ public class ModEntities {
 		EntityRegistry.registerModEntity(EntityMagicCycloneIgnis.class, LibEntityName.MAGICCYCLONEIGNIS, id++, ExtraBotany.instance, 256, 3, true);
 		EntityRegistry.registerModEntity(EntityMagicLandmineII.class, LibEntityName.MAGICLANDMINEII, id++, ExtraBotany.instance, 128, 40, false);
 		EntityRegistry.registerModEntity(EntityMagicMissileII.class, LibEntityName.MAGICMISSILEII, id++, ExtraBotany.instance, 128, 40, false);
-		EntityRegistry.addSpawn(EntityLycorisradiataRed.class, 10, 1, 2, EnumCreatureType.monster, BiomeGenBase.forest);
-		EntityRegistry.addSpawn(EntityLycorisradiataGreen.class, 10, 1, 2, EnumCreatureType.monster, BiomeGenBase.plains);
-		EntityRegistry.addSpawn(EntityLycorisradiataPurple.class, 10, 1, 2, EnumCreatureType.monster, BiomeGenBase.desert);
+		EntityRegistry.addSpawn(EntityLycorisradiataRed.class, 2, 1, 1, EnumCreatureType.monster, BiomeGenBase.forest);
+		EntityRegistry.addSpawn(EntityLycorisradiataGreen.class, 2, 1, 1, EnumCreatureType.monster, BiomeGenBase.plains);
+		EntityRegistry.addSpawn(EntityLycorisradiataPurple.class, 2, 1, 1, EnumCreatureType.monster, BiomeGenBase.desert);
 		
 		EntityRegistry.registerModEntity(EntityGaiaQuickened.class, "gaiaquickened", id++, ExtraBotany.instance, 256, 3, true);
 	}

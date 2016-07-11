@@ -43,17 +43,16 @@ public class ConfigHandler {
 	public static boolean disableEasterEgg;
 	public static boolean enableDiplopbamboo;
 	public static boolean enableGuns;	
+	public static boolean anotherShieldRender;
 
-	public ConfigHandler(FMLPreInitializationEvent event)
-	{
+	public ConfigHandler(FMLPreInitializationEvent event){
 		config = new Configuration(new File(new File(event.getModConfigurationDirectory(), "extrameteorp"), LibReference.MOD_NAME+".cfg"));
 	    config.load();
 	    registerConfig();
 	    config.save();
 	}
 
-	private static void registerConfig()
-	{		
+	private static void registerConfig(){		
 		idPotionFPS = config.get(LibReference.CATEGORY_ID, "potionFPS", 100, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "potion.desc")).getInt();
 		idPotionSPS = config.get(LibReference.CATEGORY_ID, "potionSPS", 101, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "potion.desc")).getInt();
 		idPotionRP = config.get(LibReference.CATEGORY_ID, "potionRP", 102, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "potion.desc")).getInt();
@@ -71,7 +70,7 @@ public class ConfigHandler {
 		efficiencyMoonlightlily = config.get(LibReference.CATEGORY_COMMON, "efficiencyMoonlightlily", 3, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyMoonlightlily.desc")).getInt();
 		efficiencyBlueenchantress = config.get(LibReference.CATEGORY_COMMON, "efficiencyBlueenchantress", 100, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyBlueenchantress.desc")).getInt();
 		efficiencyCandyflower = config.get(LibReference.CATEGORY_COMMON, "efficiencyCandyflower", 8, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyCandyflower.desc")).getInt();
-		efficiencyGeminiorchid = config.get(LibReference.CATEGORY_COMMON, "efficiencyGeminiorchid", 2, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyGeminiorchid.desc")).getInt();
+		efficiencyGeminiorchid = config.get(LibReference.CATEGORY_COMMON, "efficiencyGeminiorchid", 4, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyGeminiorchid.desc")).getInt();
 		efficiencyOminiviolet = config.get(LibReference.CATEGORY_COMMON, "efficiencyOminiviolet", 20, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyOminiviolet.desc")).getInt();
 		efficiencyStonesia = config.get(LibReference.CATEGORY_COMMON, "efficiencyStonesia", 8, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyStonesia.desc")).getInt();
 		efficiencyPyschobloom = config.get(LibReference.CATEGORY_COMMON, "efficiencyPyschobloom", 3, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "efficiencyPyschobloom.desc")).getInt();
@@ -87,5 +86,6 @@ public class ConfigHandler {
 		disableEasterEgg = config.get(LibReference.CATEGORY_CLIENT, "disableShieldRender", false, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "disableEasterEgg.desc")).getBoolean();
 		enableDiplopbamboo = config.get(LibReference.CATEGORY_COMMON, "enableDiplopbamboo", false, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "enableDiplopbamboo.desc")).getBoolean();
 		enableGuns = config.get(LibReference.CATEGORY_COMMON, "enableGuns", false, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "enableGuns.desc")).getBoolean();
+		anotherShieldRender = config.get(LibReference.CATEGORY_CLIENT, "anotherShieldRender", false, StatCollector.translateToLocal(LibReference.PREFIX_CONFIG + "anotherShieldRender.desc")).getBoolean();
 	}
 }

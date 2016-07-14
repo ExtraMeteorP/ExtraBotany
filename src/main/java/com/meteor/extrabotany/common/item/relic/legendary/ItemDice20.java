@@ -29,7 +29,7 @@ public class ItemDice20 extends ItemRelicAdv{
 			Random rand = new Random();
 			int moonPhase = world.provider.getMoonPhase(world.getWorldTime());
 			int side = SIDES_FOR_MOON_PHASES[moonPhase];
-			int r = (int) (rand.nextInt(10) + world.rand.nextInt(11) + side - Math.min(player.motionX + player.motionY + player.motionZ, 3) - (player.onGround ? 1:0) + (player.isBurning() ? 1:0));
+			int r = (int) (rand.nextInt(10) + world.rand.nextInt(11));
 			int relic = Math.min(Math.max(r, 0), 19);
 			
 					world.playSoundAtEntity(player, "random.bow", 0.5F, 0.4F / (world.rand.nextFloat() * 0.4F + 0.8F));

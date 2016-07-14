@@ -5,10 +5,12 @@ import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.EnumEnchantmentType;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
+import net.minecraft.item.ItemArmor;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
+import vazkii.botania.api.item.IRelic;
 import vazkii.botania.api.mana.IManaDiscountArmor;
 import vazkii.botania.common.entity.EntityDoppleganger;
 
@@ -40,6 +42,11 @@ public class EnchGaiaBlessing extends Enchantment implements IManaDiscountArmor{
     @Override
     public int getMaxLevel(){
         return 4;
+    }
+    
+	@Override
+	public boolean canApply(ItemStack stack){
+        return stack.getItem() instanceof ItemArmor;
     }
     
     ItemStack itemstack;

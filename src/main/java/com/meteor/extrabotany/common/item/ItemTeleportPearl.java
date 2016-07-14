@@ -17,7 +17,7 @@ public class ItemTeleportPearl extends ItemMods{
 		if (player.capabilities.isCreativeMode){
 			return stack;
 	    }else{
-	    	if(ItemHermesTravelClothing.hasHermesTravelClothing(player))
+	    	if(!ItemHermesTravelClothing.hasHermesTravelClothing(player))
 	    		--stack.stackSize;
 	        
             world.playSoundAtEntity(player, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));

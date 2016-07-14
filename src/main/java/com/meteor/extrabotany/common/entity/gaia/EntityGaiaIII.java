@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.regex.Pattern;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockLiquid;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.entity.RenderItem;
@@ -43,6 +44,7 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.EnumDifficulty;
 import net.minecraft.world.World;
 import net.minecraftforge.common.util.FakePlayer;
+import net.minecraftforge.fluids.IFluidBlock;
 
 import org.lwjgl.opengl.ARBShaderObjects;
 import org.lwjgl.opengl.GL11;
@@ -797,6 +799,25 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 			EntityGaiaQuickened g = new EntityGaiaQuickened(this, true, 9F);
 			g.setPosition(posX, posY, posZ);
 			worldObj.spawnEntityInWorld(g);
+		}
+		
+		cleanFluid();
+	}
+	
+	void cleanFluid(){
+		if(!worldObj.isRemote){
+			for(int x = (int) -RANGE;x < RANGE + 1; x++){
+				for(int y = (int) -RANGE;y < RANGE + 1;y++){
+					for(int z = (int) -RANGE;z < RANGE + 1;z++){
+						int cx = (int) (posX + x);
+						int cy = (int) (posY + y);
+						int cz = (int) (posZ + z);
+						Block b = worldObj.getBlock(cx, cy, cz);
+						if(b instanceof IFluidBlock || b instanceof BlockLiquid)
+							worldObj.setBlockToAir(cx, cy, cz);
+					}
+				}
+			}
 		}
 	}
 

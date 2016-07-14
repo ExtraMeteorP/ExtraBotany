@@ -1,5 +1,6 @@
 package com.meteor.extrabotany.common;
 
+import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.ModMultiBlocks;
@@ -42,7 +43,6 @@ public class CommonProxy {
 	public void init(FMLInitializationEvent event) {
 		ModEvents.init();
 		new FakePlayer();
-		MinetweakerCompact.init();
 		Intergration.init(event);
 	}
 	

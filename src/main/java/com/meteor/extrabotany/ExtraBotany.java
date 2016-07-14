@@ -3,6 +3,8 @@ package com.meteor.extrabotany;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
+import minetweaker.MineTweakerAPI;
+import minetweaker.mc1710.MineTweakerMod;
 import net.minecraft.util.EnumChatFormatting;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.api.lexicon.KnowledgeType;
@@ -35,6 +37,7 @@ public class ExtraBotany {
 	public static boolean pamLoaded = false;
 	public static boolean buildcraftLoaded = false;
 	public static boolean thaumcraftLoaded = false;
+	public static boolean minetweakerLoaded = false;
 	
 	public static KnowledgeType extraKnowledge;
 	public static KnowledgeType legendaryKnowledge;
@@ -47,8 +50,8 @@ public class ExtraBotany {
 	}
 
 	@EventHandler
-	public void preInit(FMLPreInitializationEvent event)
-	{
+	public void preInit(FMLPreInitializationEvent event){
+		minetweakerLoaded = Loader.isModLoaded(MineTweakerMod.MODID);
 		arsmagicaLoaded = Loader.isModLoaded("arsmagica2");
 		candycraftLoaded = Loader.isModLoaded("candycraftmod");
 		pamLoaded = Loader.isModLoaded("harvestcraft");

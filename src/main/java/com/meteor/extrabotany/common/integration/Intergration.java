@@ -2,6 +2,7 @@ package com.meteor.extrabotany.common.integration;
 
 import minetweaker.MineTweakerAPI;
 
+import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.integration.hugetools.ItemRender;
 import com.meteor.extrabotany.common.integration.minetweaker.MinetweakerCompact;
 
@@ -17,6 +18,8 @@ public class Intergration {
 	
 	public static void initClient(FMLInitializationEvent event) {
 		ItemRender.initHugeItemRender();
+		if(ExtraBotany.minetweakerLoaded)
+			MinetweakerCompact.init();
 	}
 	
 	public static void postInitClient(FMLPostInitializationEvent event) {

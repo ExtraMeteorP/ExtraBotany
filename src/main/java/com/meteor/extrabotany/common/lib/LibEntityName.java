@@ -19,6 +19,7 @@ public class LibEntityName {
 	public static final String BILIBILI = "22";
 	public static final String UNBREAKABLEITEM = "unbreakableitem";
 	public static final String SPEAR = "spear";
+	public static final String BLACKHOLE = "blackhole";
 	
 	
 	public static final String BULLETEXPLODING = "bulletexploding";

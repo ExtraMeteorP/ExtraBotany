@@ -1,8 +1,12 @@
 package com.meteor.extrabotany.common.entity;
 
+import java.util.List;
+
 import net.minecraft.entity.EntityCreature;
+import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.EnumCreatureAttribute;
 import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -15,32 +19,30 @@ public class EntityLycorisradiata extends EntityCreature{
 	    this.experienceValue = 0;
 	}
 	
-    protected void applyEntityAttributes()
-    {
+    protected void applyEntityAttributes(){
         super.applyEntityAttributes();
         this.getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(1);
     }
 	
-    protected boolean isAIEnabled()
-    {
+    protected boolean isAIEnabled(){
         return false;
     }
     
-    public void onLivingUpdate()
-    {
-        if (this.worldObj.isDaytime() && !this.worldObj.isRemote)
-        {
+    public void onLivingUpdate(){
+        if (this.worldObj.isDaytime() && !this.worldObj.isRemote){
             float f = this.getBrightness(1.0F);
 
-            if (f > 0.5F && this.rand.nextFloat() * 30.0F < (f - 0.4F) * 2.0F )
-            {
+            if (f > 0.5F && this.rand.nextFloat() * 30.0F < (f - 0.4F) * 2.0F ){
             	this.setFire(8);
             }
         }
+		List<EntityLycorisradiata> lycoris = worldObj.getEntitiesWithinAABB(EntityLycorisradiata.class, AxisAlignedBB.getBoundingBox(posX - 40, posY - 40, posZ - 40, posX + 40, posY + 40, posZ + 40));
+		if(lycoris.size() > 1){
+			this.setDead();
+		}
     }
     
-    public EnumCreatureAttribute getCreatureAttribute()
-    {
+    public EnumCreatureAttribute getCreatureAttribute(){
         return EnumCreatureAttribute.UNDEAD;
     }
     
@@ -49,13 +51,11 @@ public class EntityLycorisradiata extends EntityCreature{
     }
     
     @SideOnly(Side.CLIENT)
-    public int getBrightnessForRender(float p_70070_1_)
-    {
+    public int getBrightnessForRender(float p_70070_1_){
         return 15728880;
     }
     
-    public float getBrightness(float p_70013_1_)
-    {
+    public float getBrightness(float p_70013_1_){
         return 2.0F;
     }
     

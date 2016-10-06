@@ -78,7 +78,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 	private static com.meteor.extrabotany.common.item.ModItems instance = new com.meteor.extrabotany.common.item.ModItems();
 	public static final int SPAWN_TICKS = 160;
 	private static final float RANGE = 12F;
-	private static final float MAX_HP = 1000F;
+	private static final float MAX_HP = 700F;
 
 	public static final int MOB_SPAWN_START_TICKS = 20;
 	public static final int MOB_SPAWN_END_TICKS = 80;
@@ -773,7 +773,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 									worldObj.spawnEntityInWorld(pixie);
 								}
 
-						setTPDelay(hard ? (dying ? 45 : 55) : (dying ? 50 : 70));
+						setTPDelay(hard ? (dying ? 55 : 65) : (dying ? 60 : 80));
 						spawnLandmines = true;
 						spawnPixies = false;
 					}

@@ -177,120 +177,6 @@ public class EntityGaiaIIIDark extends EntityGaiaIII{
 			par3World.spawnEntityInWorld(e);
 			return true;
 	}
-	
-	@Override
-	protected boolean isAIEnabled() {
-		return true;
-	}
-
-	@Override
-	protected void entityInit() {
-		super.entityInit();
-		dataWatcher.addObject(20, 0); // Invul Time
-		dataWatcher.addObject(21, (byte) 0); // Aggro
-		dataWatcher.addObject(22, 0); // TP Delay
-		dataWatcher.addObject(23, 0); // Source X
-		dataWatcher.addObject(24, 0); // Source Y
-		dataWatcher.addObject(25, 0); // Source Z
-		dataWatcher.addObject(26, 0); // Ticks spawning mobs
-		dataWatcher.addObject(27, (byte) 0); // Hard Mode
-		dataWatcher.addObject(28, 0); // Player count
-	}
-
-	public int getInvulTime() {
-		return dataWatcher.getWatchableObjectInt(20);
-	}
-
-	public boolean isAggored() {
-		return dataWatcher.getWatchableObjectByte(21) == 1;
-	}
-
-	public int getTPDelay() {
-		return dataWatcher.getWatchableObjectInt(22);
-	}
-
-	public ChunkCoordinates getSource() {
-		int x = dataWatcher.getWatchableObjectInt(23);
-		int y = dataWatcher.getWatchableObjectInt(24);
-		int z = dataWatcher.getWatchableObjectInt(25);
-		return new ChunkCoordinates(x, y, z);
-	}
-
-	public int getMobSpawnTicks() {
-		return dataWatcher.getWatchableObjectInt(26);
-	}
-
-	public boolean isHardMode() {
-		return dataWatcher.getWatchableObjectByte(27) == 1;
-	}
-
-	public int getPlayerCount() {
-		return dataWatcher.getWatchableObjectInt(28);
-	}
-
-	public void setInvulTime(int time) {
-		dataWatcher.updateObject(20, time);
-	}
-
-	public void setAggroed(boolean aggored) {
-		dataWatcher.updateObject(21, (byte) (aggored ? 1 : 0));
-	}
-
-	public void setTPDelay(int delay) {
-		dataWatcher.updateObject(22, delay);
-	}
-
-	public void setSource(int x, int y, int z) {
-		dataWatcher.updateObject(23, x);
-		dataWatcher.updateObject(24, y);
-		dataWatcher.updateObject(25, z);
-	}
-
-	public void setMobSpawnTicks(int ticks) {
-		dataWatcher.updateObject(26, ticks);
-	}
-
-	public void setHardMode(boolean hardMode) {
-		dataWatcher.updateObject(27, (byte) (hardMode ? 1 : 0));
-	}
-
-	public void setPlayerCount(int count) {
-		dataWatcher.updateObject(28, count);
-	}
-
-	@Override
-	public void writeEntityToNBT(NBTTagCompound par1nbtTagCompound) {
-		super.writeEntityToNBT(par1nbtTagCompound);
-		par1nbtTagCompound.setInteger(TAG_INVUL_TIME, getInvulTime());
-		par1nbtTagCompound.setBoolean(TAG_AGGRO, isAggored());
-		par1nbtTagCompound.setInteger(TAG_MOB_SPAWN_TICKS, getMobSpawnTicks());
-
-		ChunkCoordinates source = getSource();
-		par1nbtTagCompound.setInteger(TAG_SOURCE_X, source.posX);
-		par1nbtTagCompound.setInteger(TAG_SOURCE_Y, source.posY);
-		par1nbtTagCompound.setInteger(TAG_SOURCE_Z, source.posZ);
-
-		par1nbtTagCompound.setBoolean(TAG_HARD_MODE, isHardMode());
-		par1nbtTagCompound.setInteger(TAG_PLAYER_COUNT, getPlayerCount());
-	}
-
-	@Override
-	public void readEntityFromNBT(NBTTagCompound par1nbtTagCompound) {
-		super.readEntityFromNBT(par1nbtTagCompound);
-		setInvulTime(par1nbtTagCompound.getInteger(TAG_INVUL_TIME));
-		setAggroed(par1nbtTagCompound.getBoolean(TAG_AGGRO));
-		setMobSpawnTicks(par1nbtTagCompound.getInteger(TAG_MOB_SPAWN_TICKS));
-
-		int x = par1nbtTagCompound.getInteger(TAG_SOURCE_X);
-		int y = par1nbtTagCompound.getInteger(TAG_SOURCE_Y);
-		int z = par1nbtTagCompound.getInteger(TAG_SOURCE_Z);
-		setSource(x, y, z);
-
-		setHardMode(par1nbtTagCompound.getBoolean(TAG_HARD_MODE));
-		if(par1nbtTagCompound.hasKey(TAG_PLAYER_COUNT))
-			setPlayerCount(par1nbtTagCompound.getInteger(TAG_PLAYER_COUNT));
-		else setPlayerCount(1);
-	}
 
 	@Override
 	public boolean attackEntityFrom(DamageSource par1DamageSource, float par2) {
@@ -372,26 +258,6 @@ public class EntityGaiaIIIDark extends EntityGaiaIII{
 		getEntityAttribute(SharedMonsterAttributes.movementSpeed).setBaseValue(0.4);
 		getEntityAttribute(SharedMonsterAttributes.maxHealth).setBaseValue(MAX_HP);
 		getEntityAttribute(SharedMonsterAttributes.knockbackResistance).setBaseValue(1.0);
-	}
-
-	@Override
-	protected boolean canDespawn() {
-		return false;
-	}
-
-	@Override
-	public void setDead() {
-		ChunkCoordinates source = getSource();
-		Botania.proxy.playRecordClientSided(worldObj, source.posX, source.posY, source.posZ, null);
-		isPlayingMusic = false;
-		super.setDead();
-	}
-
-	public List<EntityPlayer> getPlayersAround() {
-		ChunkCoordinates source = getSource();
-		float range = 15F;
-		List<EntityPlayer> players = worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(source.posX + 0.5 - range, source.posY + 0.5 - range, source.posZ + 0.5 - range, source.posX + 0.5 + range, source.posY + 0.5 + range, source.posZ + 0.5 + range));
-		return players;
 	}
 
 	@Override
@@ -659,7 +525,7 @@ public class EntityGaiaIIIDark extends EntityGaiaIII{
 									worldObj.spawnEntityInWorld(pixie);
 								}
 
-						setTPDelay(35);
+						setTPDelay(55);
 						spawnPixies = false;
 					}
 				}

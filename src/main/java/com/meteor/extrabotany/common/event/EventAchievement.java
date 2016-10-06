@@ -2,7 +2,9 @@ package com.meteor.extrabotany.common.event;
 
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.item.ItemFood;
 import net.minecraft.item.ItemStack;
+import net.minecraftforge.event.entity.player.PlayerUseItemEvent;
 import vazkii.botania.common.item.block.ItemBlockSpecialFlower;
 
 import com.meteor.extrabotany.common.achievement.ModAchievement;
@@ -71,4 +73,5 @@ public class EventAchievement{
 			}
 	    }
     }
+	
 }

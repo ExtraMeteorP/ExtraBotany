@@ -12,6 +12,7 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import org.apache.logging.log4j.Level;
 
+import pneumaticCraft.common.recipes.PneumaticRecipeRegistry;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.common.lib.LibOreDict;
 
@@ -74,6 +75,7 @@ public class ModRecipe {
 		Items.enchanted_book.addEnchantment(divinefavor, new EnchantmentData(ModEnchantment.divineFavor, 1));
 		ItemStack divinemark = new ItemStack(Items.enchanted_book);
 		Items.enchanted_book.addEnchantment(divinemark, new EnchantmentData(ModEnchantment.divineMark, 1));
+
 		//enchantment
 		GameRegistry.addShapelessRecipe(gaiablessing, new Object[] {
 			new ItemStack(Items.book), new ItemStack(ModItems.material, 1, 2)

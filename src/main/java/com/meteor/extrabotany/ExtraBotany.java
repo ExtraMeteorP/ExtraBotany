@@ -63,20 +63,17 @@ public class ExtraBotany {
 	}
 
 	@EventHandler
-	public void Init(FMLInitializationEvent event)
-	{
+	public void Init(FMLInitializationEvent event){
 		proxy.init(event);
 	}
 	
 	@EventHandler
-	public void postInit(FMLPostInitializationEvent event)
-	{
+	public void postInit(FMLPostInitializationEvent event){
 
 	}
 	
 	@EventHandler
-    public void serverStarting(FMLServerStartingEvent event)
-    {
+    public void serverStarting(FMLServerStartingEvent event){
     	proxy.serverStarting(event);
     }
 

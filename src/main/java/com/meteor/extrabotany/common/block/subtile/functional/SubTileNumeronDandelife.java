@@ -16,7 +16,7 @@ import vazkii.botania.api.subtile.SubTileFunctional;
 import com.meteor.extrabotany.common.core.handler.PropertyHandler;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 
-public class SubTileNumerondandelife extends SubTileFunctional{
+public class SubTileNumeronDandelife extends SubTileFunctional{
 	private static final int RANGE = 3;
 	private static int isEnable = 0;
 	private static final String TAG_ISENABLE = "enable";

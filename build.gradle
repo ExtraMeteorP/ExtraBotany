@@ -1,0 +1,102 @@
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+    }
+}
+repositories {
+    maven {
+        name = "chickenbones"
+        url = "http://chickenbones.net/maven/"
+    }
+}
+apply plugin: 'forge'
+
+ext.configFile = file "build.properties"
+
+configFile.withReader {
+    def prop = new Properties()
+    prop.load(it)
+    project.ext.config = new ConfigSlurper().parse prop
+}
+
+group= "com.meteor.extrabotany" 
+archivesBaseName = "${config.MODNAME}"
+
+sourceCompatibility = 1.7
+targetCompatibility = 1.7
+
+minecraft {
+    version = "1.7.10-10.13.4.1492-1.7.10"
+    runDir = "eclipse"
+}
+
+//task devJar(type: Jar, dependsOn: 'classes') {
+//    from(sourceSets.main.output) {
+//        include '**'
+//    }
+//    extension = 'jar'
+//    classifier = 'dev'
+//}
+artifacts {
+    //archives devJar
+}
+
+task buildInfo {
+
+    if (System.getenv().BUILD_NUMBER != null) {
+        ext.buildNum = "jenkins${System.getenv().BUILD_NUMBER}"
+    } else {
+        ext.buildNum = "DEV.233"
+    }
+}
+
+ext.artifact_version = 'NFG'
+if (System.getenv().ARTIFACT_VERSION == null) {
+    artifact_version = "${config.VERSION}.${project.buildInfo.buildNum}"
+}
+if (System.getenv().ARTIFACT_VERSION != null) {
+    artifact_version = "${system.getenv().ARTIFACT_VERSION}"
+}
+
+version = "${config.MINECRAFT}-${artifact_version}"
+
+dependencies {
+    compile files(
+        'Baubles.jar',
+        'Botania r1.8-249.jar',
+        'CandyCraft-1.3(1.7.10).jar',
+        'AnimationAPI-1.7.10-1.2.4.jar',
+        '1.7.10_AM2-1.4.0.008.jar',
+        'Thaumcraft-1.7.10-4.2.3.5.jar'
+    )
+    compile "codechicken:CodeChickenLib:1.7.10-1.1.3.138:dev"
+    compile "codechicken:CodeChickenCore:1.7.10-1.0.7.47:dev"
+    compile "codechicken:NotEnoughItems:1.7.10-1.0.5.120:dev"
+}
+
+processResources
+{
+    inputs.property "version", project.version
+    inputs.property "mcversion", project.minecraft.version
+
+    from(sourceSets.main.resources.srcDirs) {
+        include 'mcmod.info'
+                
+        expand 'version':project.version, 'mcversion':project.minecraft.version
+    }
+        
+    from(sourceSets.main.resources.srcDirs) {
+        exclude 'mcmod.info'
+    }
+}

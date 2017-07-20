@@ -29,9 +29,6 @@ public class ModAchievement {
 	
 	public static Achievement Relic_cronusphantom;
 	public static Achievement Relic_hermestravelclothing;
-	public static Achievement Relic_phoenixblaster;
-	public static Achievement Relic_snowballcannon;
-	public static Achievement Relic_tacticalshotgun;
 	public static Achievement Relic_olympusguard;
 	public static Achievement Relic_cthulhueye;
 	
@@ -123,9 +120,6 @@ public class ModAchievement {
 		Relic_vrangerboots = new AchievementMod(LibItemName.VRANGERBOOTS, -9, 15, ModItems.vrangerboots, Gaia_gaia3Kill);
 		Relic_cronusphantom = new AchievementMod(LibItemName.CRONUSPHANTOM, -7, 15, ModItems.cronusphantom, Gaia_gaia3Kill);
 		Relic_hermestravelclothing = new AchievementMod(LibItemName.HERMESTRAVELCLOTHING, -5, 15, ModItems.hermestravelclothing, Gaia_gaia3Kill);
-		Relic_phoenixblaster = new AchievementMod(LibItemName.PHOENIXBLASTER, -9, 16, ModItems.gunphoenixblaster, Gaia_gaia3Kill);
-		Relic_snowballcannon = new AchievementMod(LibItemName.SNOWBALLLAUNCHER, -7, 16, ModItems.snowballlauncher, Gaia_gaia3Kill);
-		Relic_tacticalshotgun = new AchievementMod(LibItemName.TACTICALSHOTGUN, -5, 16, ModItems.guntacticalshotgun, Gaia_gaia3Kill);
 		Relic_olympusguard = new AchievementMod(LibItemName.OLYMPUSGUARD, -5, 17, ModItems.olympusguard, Gaia_gaia3Kill);
 		Relic_cthulhueye = new AchievementMod(LibItemName.CTHULHUEYE, -7, 17, ModItems.cthulhueye, Gaia_gaia3Kill);	
 		Relic_hermes = new AchievementMod(LibItemName.HERMESWAND, -9, 17, ModItems.hermeswand, Gaia_gaia3Kill);		

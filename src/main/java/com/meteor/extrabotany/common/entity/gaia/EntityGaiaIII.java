@@ -57,6 +57,7 @@ import vazkii.botania.api.lexicon.multiblock.MultiblockSet;
 import vazkii.botania.api.lexicon.multiblock.component.MultiblockComponent;
 import vazkii.botania.client.core.helper.ShaderHelper;
 import vazkii.botania.common.Botania;
+import vazkii.botania.common.block.ModBlocks;
 import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.core.helper.Vector3;
 import vazkii.botania.common.entity.EntityPixie;
@@ -130,7 +131,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 		Multiblock mb = new Multiblock();
 
 		for(int[] p : PYLON_LOCATIONS)
-			mb.addComponent(p[0], p[1] + 1, p[2], com.meteor.extrabotany.common.block.ModBlocks.pylon, 2);
+			mb.addComponent(p[0], p[1] + 1, p[2], ModBlocks.pylon, 2);
 
 		for(int i = 0; i < 3; i++)
 			for(int j = 0; j < 3; j++)
@@ -157,7 +158,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 
 				Block blockat = par3World.getBlock(x, y, z);
 				int meta = par3World.getBlockMetadata(x, y, z);
-				if(blockat != com.meteor.extrabotany.common.block.ModBlocks.pylon || meta != 2) {
+				if(blockat != ModBlocks.pylon || meta != 2) {
 					if(!par3World.isRemote)
 						player.addChatMessage(new ChatComponentTranslation("botaniamisc.needsCatalysts").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
 					return false;

@@ -50,17 +50,8 @@ public class GunRenderer implements IItemRenderer {
             	GL11.glRotatef(35.0F, 0.0F, 0.0F, 1.0F);
             }
             
-            if(item.getItem() == ModItems.gunboomstick)
-            	GL11.glTranslatef(0.05F, -0.1F, 0);
-            else if(item.getItem() == ModItems.gunshotgun)
-            	GL11.glTranslatef(0.05F, -0.1F, 0);
-            else if(item.getItem() == ModItems.guntacticalshotgun)
-            	GL11.glTranslatef(0.05F, -0.15F, 0);
-            else if(item.getItem() == ModItems.gunflintlock)
-            	GL11.glTranslatef(0.03F, -0.1F, 0);
-            else if(item.getItem() == ModItems.snowballlauncher)
-            	GL11.glTranslatef(0.12F, -0.2F, 0);
-            else if(item.getItem() == ModItems.theseusship)
+          
+            if(item.getItem() == ModItems.theseusship)
             	GL11.glTranslatef(0.12F, -0.08F, 0);
 
             IIcon iicon = ((EntityLivingBase) data[1]).getItemIcon(item, 0);
@@ -75,17 +66,7 @@ public class GunRenderer implements IItemRenderer {
             	GL11.glRotatef(35.0F, 0.0F, 0.0F, 1.0F);
             } 
             
-            if(item.getItem() == ModItems.gunboomstick)
-            	GL11.glTranslatef(0.05F, -0.1F, 0);
-            else if(item.getItem() == ModItems.gunshotgun)
-            	GL11.glTranslatef(0.05F, -0.1F, 0);
-            else if(item.getItem() == ModItems.guntacticalshotgun)
-            	GL11.glTranslatef(0.05F, -0.15F, 0);
-            else if(item.getItem() == ModItems.gunflintlock)
-            	GL11.glTranslatef(0.03F, -0.1F, 0);
-            else if(item.getItem() == ModItems.snowballlauncher)
-            	GL11.glTranslatef(0.12F, -0.2F, 0);
-            else if(item.getItem() == ModItems.theseusship)
+            if(item.getItem() == ModItems.theseusship)
             	GL11.glTranslatef(0.12F, -0.38F, 0);
 
             IIcon iicon = ((EntityLivingBase) data[1]).getItemIcon(item, 0);

@@ -55,17 +55,8 @@ extrabotany.potion.durance=禁锢
 extrabotany.potion.cure=治愈
 
 #ENTITIES
-entity.ExtraBotany.bulletexploding.name=高爆弹
-entity.ExtraBotany.bulletgold.name=金弹
-entity.ExtraBotany.bullethighvelocity.name=高速弹
-entity.ExtraBotany.bulletmeteor.name=陨星弹
-entity.ExtraBotany.bulletmusket.name=枪弹
-entity.ExtraBotany.bulletsilver.name=银弹
-entity.ExtraBotany.bulletsnowball.name=雪球
 entity.ExtraBotany.spear.name=神圣长矛
 entity.ExtraBotany.unbreakableitem.name=直立不动的掉落物
-entity.ExtraBotany.22.name=22娘
-entity.ExtraBotany.tv.name=小电视
 entity.ExtraBotany.magiclandmine2.name=魔法地雷II
 entity.ExtraBotany.gaia3.name=盖亚守护者III
 entity.ExtraBotany.gaia3dark.name=黑暗盖亚守护者III
@@ -85,9 +76,6 @@ tile.botania:quartzStairsGaia.name=盖亚石英楼梯
 tile.botania:blockgaiaquartz0Slab.name=盖亚石英台阶
 
 # -TILE
-tile.botania:ancientpylon0.name=远古种族的魔力水晶
-tile.botania:ancientpylon1.name=远古种族的自然水晶
-tile.botania:ancientpylon2.name=远古种族的盖亚水晶
 tile.gaiachest.name=盖亚的宝箱
 
 #ITEMS
@@ -107,9 +95,6 @@ item.petalpurple.name=紫色彼岸花瓣
 item.goldstring.name=注魔金线
 item.resonancefragment.name=祈之共鸣
 item.key.name=钥匙
-item.heart.name=生命结晶
-item.mana.name=魔力结晶
-item.shield.name=护盾值
 
 # -RECORD
 item.botania:recordA.name=琪露诺的秘密唱片
@@ -130,8 +115,6 @@ item.ExtraBotany.SpawnCardLycorisdiataRandom.name=随机彼岸花之卡
 item.ExtraBotany.SpawnLycorisRandom.desc=随机生成一朵彼岸花
 
 # -ADVANCED
-item.darksword.name=暗影刀
-item.nightmarefuel.name=梦魇燃料
 item.coronaclaymore.name=日冕重剑
 item.angelwand.name=天使魔杖
 item.manapotato.name=魔力土豆
@@ -144,7 +127,6 @@ item.botania:dog3.name=波动狗
 item.botania:gaiawise.name=盖亚的神智
 item.box.name=神秘箱子
 item.dungeonbox.name=地牢箱子
-item.pill.name=SCP-500
 item.manareader.name=魔力读取器
 
 # -DICE

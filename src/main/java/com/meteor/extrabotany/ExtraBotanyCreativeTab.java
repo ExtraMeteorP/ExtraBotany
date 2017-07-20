@@ -47,7 +47,6 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.teleportpearl);
 		addItem(ModItems.angelwand);
 		addItem(ModItems.reader);
-		addBlock(ModBlocks.pylon);
 		//Relics
 		addItem(ModItems.dice20);
 		addItem(ModItems.hestiachastity);
@@ -75,8 +74,6 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.key);
 		addItem(ModItems.boxs);
 		addItem(ModItems.dungeonbox);
-		addItem(ModItems.pill);
-		addItem(ModItems.nightmarefuel);
 		//Spawn Card
 		addItem(ModItems.lycorisgreen);
 		addItem(ModItems.lycorispurple);
@@ -93,21 +90,9 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		//Baubles
 		addItem(ModItems.dog);
 		addItem(ModItems.gaiawise);
-		//Bullets
-		if(ConfigHandler.enableGuns){
-			addItem(ModItems.bullet);
-			//Weapons
-			addItem(ModItems.gunphoenixblaster);
-			addItem(ModItems.guntacticalshotgun);
-			addItem(ModItems.snowballlauncher);
-			addItem(ModItems.gunboomstick);
-			addItem(ModItems.gunflintlock);
-			addItem(ModItems.gunpistol);
-			addItem(ModItems.gunshotgun);
-		}
+
 		addItem(ModItems.scissorpurple);
 		addItem(ModItems.scissorred);
-		addItem(ModItems.darksword);
 		addItem(ModItems.heliacalclaymore);
 		//Others
 		addItem(ModItems.recordA);

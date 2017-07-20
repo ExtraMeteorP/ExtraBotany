@@ -15,7 +15,6 @@ import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.entity.RenderItem;
 import net.minecraft.client.renderer.texture.TextureMap;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityCreature;
 import net.minecraft.entity.EntityLiving;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
@@ -30,15 +29,11 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemRecord;
 import net.minecraft.item.ItemStack;
-import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.potion.Potion;
 import net.minecraft.potion.PotionEffect;
 import net.minecraft.util.AxisAlignedBB;
-import net.minecraft.util.ChatComponentTranslation;
-import net.minecraft.util.ChatStyle;
 import net.minecraft.util.ChunkCoordinates;
 import net.minecraft.util.DamageSource;
-import net.minecraft.util.EnumChatFormatting;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.EnumDifficulty;
@@ -50,9 +45,7 @@ import org.lwjgl.opengl.ARBShaderObjects;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.opengl.GL12;
 
-import vazkii.botania.api.boss.IBotaniaBossWithShader;
 import vazkii.botania.api.internal.ShaderCallback;
-import vazkii.botania.api.lexicon.ILexicon;
 import vazkii.botania.client.core.helper.ShaderHelper;
 import vazkii.botania.common.Botania;
 import vazkii.botania.common.core.handler.ConfigHandler;
@@ -62,7 +55,6 @@ import vazkii.botania.common.item.ModItems;
 import vazkii.botania.common.item.relic.ItemRelic;
 import vazkii.botania.common.lib.LibObfuscation;
 
-import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.tile.TileGaiaChest;
@@ -697,11 +689,7 @@ public class EntityGaiaIIIDark extends EntityGaiaIII{
 				ItemRelic.bindToUsernameS(playersWhoAttacked.get(p), dice);
 				addItemToChest(world, rand, cx, cy, cz, dice);
 		    }	
-		    
-		    addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(14) + 8, 12));
-		    addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(14) + 8, 13));
-		    addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(30) + 22, 14));
-
+		 
 		    addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.overgrowthSeed, rand.nextInt(3) + 1));
 			boolean voidLotus = Math.random() < 0.3F;
 			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.blackLotus, voidLotus ? 1 : rand.nextInt(3) + 1, voidLotus ? 1 : 0));
@@ -713,12 +701,11 @@ public class EntityGaiaIIIDark extends EntityGaiaIII{
 			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 4 + rand.nextInt(3), 8));
 			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 2 + rand.nextInt(3), 9));
 			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.boxs));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 3));
 			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 4));
 			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 5));
-			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 6));
 			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 4+rand.nextInt(10), 1));
 			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 1+rand.nextInt(3), 2));
-			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 9+rand.nextInt(6), 8));
 			addItemToChest(world, rand, cx, cy, cz, new ItemStack(vazkii.botania.common.block.ModBlocks.livingrock, 14+rand.nextInt(22), 0));
 			addItemToChest(world, rand, cx, cy, cz, new ItemStack(vazkii.botania.common.block.ModBlocks.livingwood, 14+rand.nextInt(22), 0));
 			if(Math.random() < 0.43){
@@ -728,8 +715,8 @@ public class EntityGaiaIIIDark extends EntityGaiaIII{
 			}
 			if(Math.random() < 0.26){
 				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 1, 0));
-				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 2+rand.nextInt(16), 7));
-				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 3+rand.nextInt(5), 9));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 2+rand.nextInt(10), 7));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 1, 9));
 			}
 			if(Math.random() < 0.88){
 				addItemToChest(world, rand, cx, cy, cz, new ItemStack(vazkii.botania.common.block.ModBlocks.dreamwood, 7+rand.nextInt(11), 0));
@@ -737,15 +724,13 @@ public class EntityGaiaIIIDark extends EntityGaiaIII{
 				addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 18+rand.nextInt(5), 23));
 			}
 		    if(Math.random() < 0.82){
-		    	addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 12));
-		    	addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 11));
+		    	addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 6));
 		    }
 			if(Math.random() < 0.72){
 				addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.pinkinator));
 				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.recordA));
 			}
 			if(Math.random() < 0.63){
-				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 1 + rand.nextInt(2), 3));
 				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.recordB));
 			}
 			if(Math.random() < 0.57) {

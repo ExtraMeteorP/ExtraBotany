@@ -36,11 +36,6 @@ public class ModRecipe {
 	public static IRecipe elvenQuartz;
 	public static IRecipe gaiaQuartz;
 	public static IRecipe goldString;
-	public static IRecipe bullet0;
-	public static IRecipe bullet1;
-	public static IRecipe bullet2;
-	public static IRecipe bullet3;
-	public static IRecipe bullet4;
 	public static IRecipe olympus;
 	public static IRecipe teleportpearl;
 	public static IRecipe gaiawise;
@@ -48,9 +43,6 @@ public class ModRecipe {
 	public static IRecipe bladepurple;
 	public static IRecipe angelwand;
 	public static IRecipe manapotato;
-	public static IRecipe pylon1;
-	public static IRecipe pylon2;
-	public static IRecipe pylon3;
 	public static IRecipe gaiatablet;
 	public static IRecipe manareader;
 	public static IRecipe edivinefavor;
@@ -108,36 +100,6 @@ public class ModRecipe {
 				'B', vazkii.botania.common.item.ModItems.manaTablet);
 		gaiatablet = BotaniaAPI.getLatestAddedRecipe();
 		
-		//pylon1
-		addOreDictRecipe(new ItemStack(ModBlocks.pylon),
-				"ABA", "ACA", "DED",
-				'A', LibOreDictName.STRING_GOLD,
-				'B', new ItemStack(ModItems.manapotato),
-				'C', new ItemStack(vazkii.botania.common.block.ModBlocks.pylon),
-				'D', LibOreDictName.BLANK_CARD,
-				'E', LibOreDictName.QUARTZ_ELEMENTIUM);
-		pylon1 = BotaniaAPI.getLatestAddedRecipe();
-		
-		//pylon2
-		addOreDictRecipe(new ItemStack(ModBlocks.pylon, 1, 1),
-				"ABA", "ACA", "DED",
-				'A', LibOreDictName.STRING_GOLD,
-				'B', new ItemStack(ModItems.manapotato),
-				'C', new ItemStack(vazkii.botania.common.block.ModBlocks.pylon, 1, 1),
-				'D', LibOreDictName.BLANK_CARD,
-				'E', LibOreDictName.QUARTZ_ELEMENTIUM);
-		pylon2 = BotaniaAPI.getLatestAddedRecipe();
-		
-		//pylon3
-		addOreDictRecipe(new ItemStack(ModBlocks.pylon, 1, 2),
-				"ABA", "ACA", "DED",
-				'A', LibOreDictName.STRING_GOLD,
-				'B', new ItemStack(ModItems.manapotato),
-				'C', new ItemStack(vazkii.botania.common.block.ModBlocks.pylon, 1, 2),
-				'D', LibOreDictName.BLANK_CARD,
-				'E', LibOreDictName.QUARTZ_ELEMENTIUM);
-		pylon3 = BotaniaAPI.getLatestAddedRecipe();
-		
 		//mana potato
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.manapotato), new Object[] {
 			new ItemStack(Items.potato),
@@ -190,37 +152,6 @@ public class ModRecipe {
 			new ItemStack(ModItems.cronusphantom), 
 			new ItemStack(ModItems.lokighostrick)});
 		olympus = BotaniaAPI.getLatestAddedRecipe(); 
-		//Bullet
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.bullet,8,4), new Object[] {
-			new ItemStack(vazkii.botania.common.item.ModItems.manaResource), 
-			new ItemStack(Items.gunpowder), 
-			new ItemStack(Items.paper)});
-		bullet0 = BotaniaAPI.getLatestAddedRecipe(); 
-		
-		addOreDictRecipe(new ItemStack(ModItems.bullet, 8, 2),
-				"AAA","ABA","AAA",
-				'A', new ItemStack(ModItems.bullet,1,4),
-				'B', new ItemStack(vazkii.botania.common.item.ModItems.manaResource,1,8));
-		bullet1 = BotaniaAPI.getLatestAddedRecipe(); 
-		
-		addOreDictRecipe(new ItemStack(ModItems.bullet, 8, 3),
-				"AAA","ABA","AAA",
-				'A', new ItemStack(ModItems.bullet,1,4),
-				'B', new ItemStack(vazkii.botania.common.item.ModItems.manaResource,1,4));
-		bullet2 = BotaniaAPI.getLatestAddedRecipe(); 
-		
-		addOreDictRecipe(new ItemStack(ModItems.bullet, 8, 5),
-				"AAA","ABA","AAA",
-				'A', new ItemStack(ModItems.bullet,1,4),
-				'B', new ItemStack(vazkii.botania.common.item.ModItems.manaResource,1,7));
-		bullet3 = BotaniaAPI.getLatestAddedRecipe(); 
-		
-		addOreDictRecipe(new ItemStack(ModItems.bullet, 8, 0),
-				"AAA","ABA","AAA",
-				'A', new ItemStack(ModItems.bullet,1,4),
-				'B', new ItemStack(Blocks.tnt));
-		bullet4 = BotaniaAPI.getLatestAddedRecipe(); 
-		
 		//For Basics
 		addOreDictRecipe(new ItemStack(ModItems.material, 8, 9),
 				"AAA","ABA","AAA",

@@ -95,15 +95,7 @@ public class LexiconModData {
 	public static LexiconEntry petal;
 	public static LexiconEntry astralforce;
 	public static LexiconEntry teleportpearl;
-	public static LexiconEntry nightmarefuel;
-	//Gun
-	public static LexiconEntry gunbase;
-	public static LexiconEntry gunphoenixblaster;
-	public static LexiconEntry gunsnowballcannon;
-	public static LexiconEntry guntacticalshotgun;
-	public static LexiconEntry gunbullet;
 	//Weapon
-	public static LexiconEntry darksword;
 	public static LexiconEntry coronaclaymore;
 	public static LexiconEntry scissorblade;
 	public static LexiconEntry angelwand;
@@ -168,10 +160,6 @@ public class LexiconModData {
 		advancedmaterial.setLexiconPages(new PageText("0"), new PageText("1"), new PageText("2"));
 		advancedmaterial.setIcon(new ItemStack(ModItems.material, 1, 11));
 		
-		nightmarefuel = new BLexiconEntry(LibLexiconName.BA_NIGHTMAREFUEL, categoryExtra);
-		nightmarefuel.setLexiconPages(new PageText("0"));
-		nightmarefuel.setIcon(new ItemStack(ModItems.nightmarefuel));
-		
 		petal = new BLexiconEntry(LibLexiconName.BA_PETAL, categoryExtra);
 		petal.setLexiconPages(new PageText("0"));
 		petal.setIcon(new ItemStack(ModItems.lycorisrandom));
@@ -185,12 +173,7 @@ public class LexiconModData {
 		angelwand.setLexiconPages(new PageText("0"),
 				new PageCraftingRecipe("1", ModRecipe.angelwand));
 		angelwand.setIcon(new ItemStack(ModItems.angelwand));
-	
-		darksword = new ELexiconEntry(LibLexiconName.W_SWORD, categoryExtra);
-		darksword.setLexiconPages(new PageText("0"),
-				new PageRuneRecipe("1", ModRuneRecipe.darksword));
-		darksword.setIcon(new ItemStack(ModItems.darksword));
-		
+
 		coronaclaymore = new ELexiconEntry(LibLexiconName.W_CLAYMORE, categoryExtra);
 		coronaclaymore.setLexiconPages(new PageText("0"));
 		coronaclaymore.setIcon(new ItemStack(ModItems.heliacalclaymore));
@@ -200,34 +183,6 @@ public class LexiconModData {
 				new PageCraftingRecipe("1", ModRecipe.bladered), new PageCraftingRecipe("2", ModRecipe.bladepurple));
 		scissorblade.setIcon(new ItemStack(ModItems.scissorred));
 		
-		//Gun
-		if(ConfigHandler.enableGuns){
-			gunbase = new BLexiconEntry(LibLexiconName.G_GUNBASE, categoryExtra);
-			gunbase.setLexiconPages(new PageText("0"),
-					new PageText("1"));
-			gunbase.setIcon(new ItemStack(ModItems.gunboomstick));
-			
-			gunphoenixblaster = new LLexiconEntry(LibLexiconName.G_GUNPHOENIXBLASTER, categoryExtra);
-			gunphoenixblaster.setLexiconPages(new PageText("0"));
-			gunphoenixblaster.setIcon(new ItemStack(ModItems.gunphoenixblaster));
-			
-			gunsnowballcannon = new LLexiconEntry(LibLexiconName.G_GUNSNOWBALLCANNON, categoryExtra);
-			gunsnowballcannon.setLexiconPages(new PageText("0"));
-			gunsnowballcannon.setIcon(new ItemStack(ModItems.snowballlauncher));
-			
-			guntacticalshotgun = new LLexiconEntry(LibLexiconName.G_GUNTACTICALSHOTGUN, categoryExtra);
-			guntacticalshotgun.setLexiconPages(new PageText("0"));
-			guntacticalshotgun.setIcon(new ItemStack(ModItems.guntacticalshotgun));
-			
-			gunbullet = new BLexiconEntry(LibLexiconName.G_GUNBULLET, categoryExtra);
-			gunbullet.setLexiconPages(new PageText("0"),
-					new PageCraftingRecipe("1", ModRecipe.bullet0),
-					new PageCraftingRecipe("2", ModRecipe.bullet1),
-					new PageCraftingRecipe("3", ModRecipe.bullet2),
-					new PageCraftingRecipe("4", ModRecipe.bullet3),
-					new PageCraftingRecipe("5", ModRecipe.bullet4));
-			gunbullet.setIcon(new ItemStack(ModItems.bullet,1,4));
-		}
 		//Bauble
 		cosmetic = new ELexiconEntry(LibLexiconName.B_COSMETIC, categoryExtra);
 		cosmetic.setLexiconPages(new PageText("0"), 
@@ -434,7 +389,7 @@ public class LexiconModData {
 		valkyriecombatsuit.setLexiconPages(new PageText("0"));
 		
 		gaia3 = new ELexiconEntry(LibLexiconName.R_GAIAIII, categoryExtra);
-		gaia3.setIcon(new ItemStack(Item.getItemFromBlock(ModBlocks.pylon), 1, 2));
+		gaia3.setIcon(new ItemStack(Item.getItemFromBlock(vazkii.botania.common.block.ModBlocks.pylon), 1, 2));
 		gaia3.setLexiconPages(new PageText("0"), new PageText("1"), new PageMultiblock("3", ModMultiBlocks.gaia), new PageText("2"));
 		gaia3.setPriority();
 	}

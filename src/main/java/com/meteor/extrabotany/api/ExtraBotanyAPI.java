@@ -1,17 +1,14 @@
 package com.meteor.extrabotany.api;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.LinkedHashSet;
 import java.util.List;
-import java.util.Map;
 import java.util.Set;
 
 import net.minecraft.block.Block;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.DamageSource;
 
 import com.meteor.extrabotany.ExtraBotany;
@@ -20,9 +17,6 @@ import com.meteor.extrabotany.api.extrabotany.recipe.RecipeStonesia;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.core.handler.PropertyHandler;
 import com.meteor.extrabotany.common.item.ModItems;
-import com.pam.harvestcraft.ItemPamSeedFood;
-import com.pam.harvestcraft.ItemRegistry;
-import com.pam.harvestcraft.harvestcraft;
 import com.valentin4311.candycraftmod.CandyCraft;
 
 public class ExtraBotanyAPI {

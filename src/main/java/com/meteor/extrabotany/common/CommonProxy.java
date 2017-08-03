@@ -1,17 +1,14 @@
 package com.meteor.extrabotany.common;
 
-import com.meteor.extrabotany.ExtraBotany;
 import com.meteor.extrabotany.common.achievement.ModAchievement;
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.block.ModMultiBlocks;
 import com.meteor.extrabotany.common.command.ModCommands;
 import com.meteor.extrabotany.common.core.handler.ConfigHandler;
-import com.meteor.extrabotany.common.enchantment.ModEnchantment;
 import com.meteor.extrabotany.common.entity.FakePlayer;
 import com.meteor.extrabotany.common.entity.ModEntities;
 import com.meteor.extrabotany.common.event.ModEvents;
 import com.meteor.extrabotany.common.integration.Intergration;
-import com.meteor.extrabotany.common.integration.minetweaker.MinetweakerCompact;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lexicon.LexiconModData;
 import com.meteor.extrabotany.common.potion.ModPotions;
@@ -30,7 +27,6 @@ public class CommonProxy {
 		ModPotions.init();
 		ModBlocks.init();
 		ModItems.init();
-		ModEnchantment.init();
 		ModEntities.init();
 		ModRecipe.init();
 		ModAchievement.init();

@@ -27,7 +27,7 @@ public class EventKnowledgeTypeUnlock{
 	            			l.unlockKnowledge(s, ExtraBotany.extraKnowledge);   
 	            			player.addChatMessage(new ChatComponentTranslation("botaniamisc.knowledgeUnlock").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));
 						}
-					}else if(stack.isItemEqual(new ItemStack(ModItems.dice20))){
+					}else if(stack.isItemEqual(new ItemStack(ModItems.material, 1, 9))){
 						if(!l.isKnowledgeUnlocked(s, ExtraBotany.legendaryKnowledge)){
 	            			l.unlockKnowledge(s, ExtraBotany.legendaryKnowledge);   
 	            			player.addChatMessage(new ChatComponentTranslation("botaniamisc.knowledgeUnlock2").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.DARK_GREEN)));

@@ -74,14 +74,12 @@ public class ItemEternalSlience extends ItemRelicAdv implements IManaItem, IMana
 	@Override
 	public void onUpdate(ItemStack stack, World world, Entity entity, int i, boolean b) {
 		super.onUpdate(stack, world, entity, i, b);
-		float dm = EnchHelper.getDMBuff(stack);
-    	float df = EnchHelper.getDFBuff(stack);
 		if(!isMode(stack)){
-			addMana(stack, (int) (50 * df/dm));
+			addMana(stack, (int) (50));
 		}else{
 			if(entity instanceof EntityPlayer){
 				EntityPlayer player = (EntityPlayer) entity;
-				int RANGE = (int) (11* df/dm);
+				int RANGE = (int) (11);
 				
 				if(!player.isInWater()){
 						int l = MathHelper.floor_double(player.posX);

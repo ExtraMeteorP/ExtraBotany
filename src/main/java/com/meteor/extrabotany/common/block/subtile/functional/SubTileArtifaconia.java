@@ -27,18 +27,8 @@ public class SubTileArtifaconia extends SubTileFunctional{
   	}
  	
  	static{
- 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.aphroditegrace);
- 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.cthulhueye);
- 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.lokighostrick);
- 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.hermestravelclothing);
  		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.hermeswand);
- 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.cronusphantom);
- 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.excaliberfake);
- 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.vrangerboots);
- 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.theseusship);
  		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.maxwelldemon);
- 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.athenabless);
- 		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.hestiachastity);
  		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.eternalslience);
  		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.excaliber);
  		ExtraBotanyAPI.whitelistItemFromArtifaconia(ModItems.valkyriecombatuniform);

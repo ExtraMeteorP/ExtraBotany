@@ -95,15 +95,7 @@ public class LexiconModData {
 	public static LexiconEntry petal;
 	public static LexiconEntry astralforce;
 	public static LexiconEntry teleportpearl;
-	public static LexiconEntry nightmarefuel;
-	//Gun
-	public static LexiconEntry gunbase;
-	public static LexiconEntry gunphoenixblaster;
-	public static LexiconEntry gunsnowballcannon;
-	public static LexiconEntry guntacticalshotgun;
-	public static LexiconEntry gunbullet;
 	//Weapon
-	public static LexiconEntry darksword;
 	public static LexiconEntry coronaclaymore;
 	public static LexiconEntry scissorblade;
 	public static LexiconEntry angelwand;
@@ -168,10 +160,6 @@ public class LexiconModData {
 		advancedmaterial.setLexiconPages(new PageText("0"), new PageText("1"), new PageText("2"));
 		advancedmaterial.setIcon(new ItemStack(ModItems.material, 1, 11));
 		
-		nightmarefuel = new BLexiconEntry(LibLexiconName.BA_NIGHTMAREFUEL, categoryExtra);
-		nightmarefuel.setLexiconPages(new PageText("0"));
-		nightmarefuel.setIcon(new ItemStack(ModItems.nightmarefuel));
-		
 		petal = new BLexiconEntry(LibLexiconName.BA_PETAL, categoryExtra);
 		petal.setLexiconPages(new PageText("0"));
 		petal.setIcon(new ItemStack(ModItems.lycorisrandom));
@@ -185,12 +173,7 @@ public class LexiconModData {
 		angelwand.setLexiconPages(new PageText("0"),
 				new PageCraftingRecipe("1", ModRecipe.angelwand));
 		angelwand.setIcon(new ItemStack(ModItems.angelwand));
-	
-		darksword = new ELexiconEntry(LibLexiconName.W_SWORD, categoryExtra);
-		darksword.setLexiconPages(new PageText("0"),
-				new PageRuneRecipe("1", ModRuneRecipe.darksword));
-		darksword.setIcon(new ItemStack(ModItems.darksword));
-		
+
 		coronaclaymore = new ELexiconEntry(LibLexiconName.W_CLAYMORE, categoryExtra);
 		coronaclaymore.setLexiconPages(new PageText("0"));
 		coronaclaymore.setIcon(new ItemStack(ModItems.heliacalclaymore));
@@ -200,34 +183,6 @@ public class LexiconModData {
 				new PageCraftingRecipe("1", ModRecipe.bladered), new PageCraftingRecipe("2", ModRecipe.bladepurple));
 		scissorblade.setIcon(new ItemStack(ModItems.scissorred));
 		
-		//Gun
-		if(ConfigHandler.enableGuns){
-			gunbase = new BLexiconEntry(LibLexiconName.G_GUNBASE, categoryExtra);
-			gunbase.setLexiconPages(new PageText("0"),
-					new PageText("1"));
-			gunbase.setIcon(new ItemStack(ModItems.gunboomstick));
-			
-			gunphoenixblaster = new LLexiconEntry(LibLexiconName.G_GUNPHOENIXBLASTER, categoryExtra);
-			gunphoenixblaster.setLexiconPages(new PageText("0"));
-			gunphoenixblaster.setIcon(new ItemStack(ModItems.gunphoenixblaster));
-			
-			gunsnowballcannon = new LLexiconEntry(LibLexiconName.G_GUNSNOWBALLCANNON, categoryExtra);
-			gunsnowballcannon.setLexiconPages(new PageText("0"));
-			gunsnowballcannon.setIcon(new ItemStack(ModItems.snowballlauncher));
-			
-			guntacticalshotgun = new LLexiconEntry(LibLexiconName.G_GUNTACTICALSHOTGUN, categoryExtra);
-			guntacticalshotgun.setLexiconPages(new PageText("0"));
-			guntacticalshotgun.setIcon(new ItemStack(ModItems.guntacticalshotgun));
-			
-			gunbullet = new BLexiconEntry(LibLexiconName.G_GUNBULLET, categoryExtra);
-			gunbullet.setLexiconPages(new PageText("0"),
-					new PageCraftingRecipe("1", ModRecipe.bullet0),
-					new PageCraftingRecipe("2", ModRecipe.bullet1),
-					new PageCraftingRecipe("3", ModRecipe.bullet2),
-					new PageCraftingRecipe("4", ModRecipe.bullet3),
-					new PageCraftingRecipe("5", ModRecipe.bullet4));
-			gunbullet.setIcon(new ItemStack(ModItems.bullet,1,4));
-		}
 		//Bauble
 		cosmetic = new ELexiconEntry(LibLexiconName.B_COSMETIC, categoryExtra);
 		cosmetic.setLexiconPages(new PageText("0"), 
@@ -357,57 +312,14 @@ public class LexiconModData {
 		infinitymana = new DLexiconEntry(LibLexiconName.D_INFINITYMANA, categoryExtra);
 		infinitymana.setIcon(new ItemStack(vazkii.botania.common.block.ModBlocks.pool));
 		//Relics
-		hestiachastity = new LLexiconEntry(LibLexiconName.R_HESTIACHASTITY, categoryExtra);
-		hestiachastity.setIcon(new ItemStack(ModItems.hestiachastity));
-		hestiachastity.setLexiconPages(new PageText("0"));
 		
 		maxwelldemon = new LLexiconEntry(LibLexiconName.R_MAXWELLDEMON, categoryExtra);
 		maxwelldemon.setIcon(new ItemStack(ModItems.maxwelldemon));
 		maxwelldemon.setLexiconPages(new PageText("0"));
-		
-		athenabless = new LLexiconEntry(LibLexiconName.R_ATHENABLESS, categoryExtra);
-		athenabless.setIcon(new ItemStack(ModItems.athenabless));
-		athenabless.setLexiconPages(new PageText("0"));
-		
-		aphroditegrace = new LLexiconEntry(LibLexiconName.R_APHRODITEGRACE, categoryExtra);
-		aphroditegrace.setIcon(new ItemStack(ModItems.aphroditegrace));
-		aphroditegrace.setLexiconPages(new PageText("0"));
-		
-		dice20 = new LLexiconEntry(LibLexiconName.R_DICE20, categoryExtra);
-		dice20.setIcon(new ItemStack(ModItems.dice20));
-		dice20.setLexiconPages(new PageText("0"));
-		
+	
 		excaliber = new LLexiconEntry(LibLexiconName.R_EXCALIBER, categoryExtra);
 		excaliber.setIcon(new ItemStack(ModItems.excaliber));
 		excaliber.setLexiconPages(new PageText("0"));
-		
-		excaliberfake = new LLexiconEntry(LibLexiconName.R_EXCALIBERFAKE, categoryExtra);
-		excaliberfake.setIcon(new ItemStack(ModItems.excaliberfake));
-		excaliberfake.setLexiconPages(new PageText("0"));
-		
-		vpowerbattleaxe = new ELexiconEntry(LibLexiconName.R_VPOWERBATTLEAXE, categoryExtra);
-		vpowerbattleaxe.setIcon(new ItemStack(ModItems.vpowerbattleaxe));
-		vpowerbattleaxe.setLexiconPages(new PageText("0"));
-		
-		vhandgun = new ELexiconEntry(LibLexiconName.R_VHANDGUN, categoryExtra);
-		vhandgun.setIcon(new ItemStack(ModItems.vhandgun));
-		vhandgun.setLexiconPages(new PageText("0"));
-		
-		vrangerboots = new LLexiconEntry(LibLexiconName.R_VRANGERBOOTS, categoryExtra);
-		vrangerboots.setIcon(new ItemStack(ModItems.vrangerboots));
-		vrangerboots.setLexiconPages(new PageText("0"));
-		
-		cronusphantom = new LLexiconEntry(LibLexiconName.R_CRONUSPHANTOM, categoryExtra);
-		cronusphantom.setIcon(new ItemStack(ModItems.cronusphantom));
-		cronusphantom.setLexiconPages(new PageText("0"));
-		
-		hermestravelclothing = new LLexiconEntry(LibLexiconName.R_HERMESTRAVELCLOTHING, categoryExtra);
-		hermestravelclothing.setIcon(new ItemStack(ModItems.hermestravelclothing));
-		hermestravelclothing.setLexiconPages(new PageText("0"));
-		
-		cthulhueye = new LLexiconEntry(LibLexiconName.R_CTHULHUEYE, categoryExtra);
-		cthulhueye.setIcon(new ItemStack(ModItems.cthulhueye));
-		cthulhueye.setLexiconPages(new PageText("0"));
 		
 		eternalslience = new LLexiconEntry(LibLexiconName.R_ETERNALSLIENCE, categoryExtra);
 		eternalslience.setIcon(new ItemStack(ModItems.eternalslience));
@@ -417,24 +329,12 @@ public class LexiconModData {
 		hermestravelwand.setIcon(new ItemStack(ModItems.hermeswand));
 		hermestravelwand.setLexiconPages(new PageText("0"));
 		
-		lokighostrick = new LLexiconEntry(LibLexiconName.R_LOKIGHOSTRICK, categoryExtra);
-		lokighostrick.setIcon(new ItemStack(ModItems.lokighostrick));
-		lokighostrick.setLexiconPages(new PageText("0"));
-		
-		olympusguard = new LLexiconEntry(LibLexiconName.R_OLYMPUSGUARD, categoryExtra);
-		olympusguard.setIcon(new ItemStack(ModItems.olympusguard));
-		olympusguard.setLexiconPages(new PageText("0"));
-		
-		theseusship = new LLexiconEntry(LibLexiconName.R_THESEUSSHIP, categoryExtra);
-		theseusship.setIcon(new ItemStack(ModItems.theseusship));
-		theseusship.setLexiconPages(new PageText("0"));
-		
 		valkyriecombatsuit = new LLexiconEntry(LibLexiconName.R_VALKYRIECOMBATSUIT, categoryExtra);
 		valkyriecombatsuit.setIcon(new ItemStack(ModItems.valkyriecombatuniform));
 		valkyriecombatsuit.setLexiconPages(new PageText("0"));
 		
 		gaia3 = new ELexiconEntry(LibLexiconName.R_GAIAIII, categoryExtra);
-		gaia3.setIcon(new ItemStack(Item.getItemFromBlock(ModBlocks.pylon), 1, 2));
+		gaia3.setIcon(new ItemStack(Item.getItemFromBlock(vazkii.botania.common.block.ModBlocks.pylon), 1, 2));
 		gaia3.setLexiconPages(new PageText("0"), new PageText("1"), new PageMultiblock("3", ModMultiBlocks.gaia), new PageText("2"));
 		gaia3.setPriority();
 	}

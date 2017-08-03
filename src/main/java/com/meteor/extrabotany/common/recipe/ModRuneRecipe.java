@@ -27,7 +27,6 @@ public class ModRuneRecipe {
 	public static RecipeRuneAltar r10Recipe;
 	public static RecipeRuneAltar r11Recipe;
 	public static RecipeRuneAltar r12Recipe;
-	public static RecipeRuneAltar darksword;
 	
 	public static void init() {
 		
@@ -43,24 +42,9 @@ public class ModRuneRecipe {
 		, LibOreDictName.PRISMATIC_SHARD, LibOreDictName.PRISMATIC_SHARD, new ItemStack(ModItems.manapotato), LibOreDictName.ASTRAL_FORCE, new ItemStack(ModItems.material, 1, 9), runeGluttony, runeSloth, runePride);
 		combatuniformRecipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.valkyriecombatuniform), costTier4, shard, shard, shard, shard, shard, shard, shard, shard
 		, LibOreDictName.GAIA_ESSENCE, LibOreDictName.GAIA_ESSENCE, LibOreDictName.ASTRAL_FORCE, LibOreDictName.LYCORIS_GREEN, LibOreDictName.LYCORIS_PURPLE, runeSpring, runeGreed, runeMana);
-		excaliberRecipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.excaliber), costTier3, shard, LibOreDictName.PRISMATIC_SHARD, LibOreDictName.PRISMATIC_SHARD, new ItemStack(ModItems.vhandgun), new ItemStack(ModItems.vpowerbattleaxe), new ItemStack(ModItems.excaliberfake)
-		, new ItemStack(ModItems.heliacalclaymore), LibOreDictName.GAIA_ESSENCE, LibOreDictName.GAIA_ESSENCE, LibOreDictName.GAIA_ESSENCE, LibOreDictName.GAIA_ESSENCE, new ItemStack(ModItems.gaiatablet));
-		vaxeRecipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.vpowerbattleaxe), costTier2, new ItemStack(ModItems.manapotato), LibOreDictName.BLANK_CARD, LibOreDict.ELEMENTIUM, LibOreDict.ELEMENTIUM, LibOreDict.ELEMENTIUM, LibOreDictName.QUARTZ_ELEMENTIUM);
-		vhandgunRecipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.vhandgun), costTier2, new ItemStack(ModItems.manapotato), LibOreDictName.BLANK_CARD, LibOreDict.ELEMENTIUM, LibOreDict.ELEMENTIUM, LibOreDict.ELEMENTIUM, LibOreDictName.STRING_GOLD);
-		r1Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.cthulhueye), costTier3, shard, shard, shard, shard, shard, shard, runeLust);
-		r2Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.lokighostrick), costTier3, shard, shard, shard, shard, shard, shard, runeSpring);
 		r3Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.hermeswand), costTier3, shard, shard, shard, shard, shard, shard, runeMana);
-		r4Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.cronusphantom), costTier3, shard, shard, shard, shard, shard, shard, runeSummer);
-		r5Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.excaliberfake), costTier3, shard, shard, shard, shard, shard, shard, runeWinter);
-		r6Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.theseusship), costTier3, shard, shard, shard, shard, shard, shard, runeGreed);
-		r7Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.vrangerboots), costTier3, shard, shard, shard, shard, shard, shard, runeSloth);
-		r8Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.hestiachastity), costTier3, shard, shard, shard, shard, shard, shard, runeWrath);
-		r9Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.hermestravelclothing), costTier3, shard, shard, shard, shard, shard, shard, runePride);
-		r10Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.aphroditegrace), costTier3, shard, shard, shard, shard, shard, shard, runeEnvy);
 		r11Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.maxwelldemon), costTier3, shard, shard, shard, shard, shard, shard, runeGluttony);
-		r12Recipe = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.athenabless), costTier3, shard, shard, shard, shard, shard, shard, runeAutumn);
-	
-		darksword = BotaniaAPI.registerRuneAltarRecipe(new ItemStack(ModItems.darksword), costTier1, new ItemStack(ModItems.nightmarefuel), new ItemStack(ModItems.nightmarefuel), new ItemStack(ModItems.nightmarefuel), new ItemStack(ModItems.nightmarefuel), new ItemStack(Items.bone), runePride);
+
 	}
 	
 }

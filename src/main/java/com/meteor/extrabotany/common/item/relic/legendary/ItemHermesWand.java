@@ -20,8 +20,7 @@ public class ItemHermesWand extends ItemRelicAdv implements IManaUsingItem{
 		if(!world.isRemote){
 			EntityTeleportPearl p = new EntityTeleportPearl(world, player);
 			world.spawnEntityInWorld(p);
-			if(!ItemHermesTravelClothing.hasHermesTravelClothing(player))
-				ManaItemHandler.requestManaExact(stack, player, 100, true);
+			ManaItemHandler.requestManaExact(stack, player, 100, true);
 		}
 		return stack;
 	}

@@ -4,21 +4,18 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
 import net.minecraft.client.renderer.OpenGlHelper;
 import net.minecraft.client.renderer.Tessellator;
-import net.minecraft.client.settings.GameSettings;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.profiler.Profiler;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.client.EnumHelperClient;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.client.event.RenderGameOverlayEvent.ElementType;
-import net.minecraftforge.common.util.EnumHelper;
 
 import org.lwjgl.opengl.GL11;
 
 import vazkii.botania.client.core.helper.ShaderHelper;
 
 import com.meteor.extrabotany.common.core.handler.ConfigHandler;
-import com.meteor.extrabotany.common.core.handler.PropertyHandler;
+import com.meteor.extrabotany.common.item.equipment.shield.ItemShieldGeneratorBase;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.common.eventhandler.EventPriority;
@@ -48,9 +45,9 @@ public class RenderShield{
 		Profiler profiler = mc.mcProfiler;
 		if(event.type == ElementType.ALL) {
 			profiler.startSection("ExtraBotany-HUD");
-			if(PropertyHandler.getShieldAmount(mc.thePlayer) > 0){
+			if(ItemShieldGeneratorBase.getShieldGenerator(mc.thePlayer) != null){
 				profiler.startSection("shieldBar");
-				if(ConfigHandler.anotherShieldRender)
+				if(!ConfigHandler.anotherShieldRender)
 					renderShieldB(event.resolution);
 				else renderShield(event.resolution);
 				profiler.endSection();
@@ -71,10 +68,12 @@ public class RenderShield{
         
         mc.getTextureManager().bindTexture(shieldBar);
         
-        float s = PropertyHandler.getShieldAmount(mc.thePlayer)/2;
+        float s = ItemShieldGeneratorBase.getShieldAmount(mc.thePlayer)/2;
         
-        drawTexturedModalRect(scaledWidth / 2 - 121 + cx, scaledHeight - 19 + cy, 0, 0, 9, 9);
-        mc.fontRenderer.drawStringWithShadow("x" + s, scaledWidth / 2 - 110 + cx, scaledHeight - 19 + cy, 0xFFFFFF);
+        boolean highlight = ItemShieldGeneratorBase.getShieldCD(mc.thePlayer) > 0;
+        
+        drawTexturedModalRect(scaledWidth / 2 - 121 + cx, scaledHeight - 19 + cy, 0, highlight ? 9 : 0, 9, 9);
+        mc.fontRenderer.drawStringWithShadow("x" + ((int)(s*2))/2, scaledWidth / 2 - 110 + cx, scaledHeight - 19 + cy, 0xFFFFFF);
 	}
 	
 	
@@ -87,16 +86,11 @@ public class RenderShield{
         int xBasePos = scaledWidth / 2 - 91 + cx;
         int yBasePos = scaledHeight - 39 + cy;
         
-        boolean highlight = mc.thePlayer.hurtResistantTime / 3 % 2 == 1;
-
-        if (mc.thePlayer.hurtResistantTime < 10)
-        {
-            highlight = false;
-        }
+        boolean highlight = ItemShieldGeneratorBase.getShieldCD(mc.thePlayer) > 0;
         
         mc.getTextureManager().bindTexture(shieldBar);
         
-        float s1 = PropertyHandler.getShieldAmount(mc.thePlayer);
+        float s1 = ItemShieldGeneratorBase.getShieldAmount(mc.thePlayer);
         float ss1 = s1/2;
         
         for(int r = 0; r < s1/20; r++){

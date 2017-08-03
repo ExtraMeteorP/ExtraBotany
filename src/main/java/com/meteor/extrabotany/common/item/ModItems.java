@@ -6,80 +6,43 @@ import net.minecraft.item.ItemStack;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.meteor.extrabotany.common.item.basic.ItemBox;
-import com.meteor.extrabotany.common.item.basic.ItemBullet;
 import com.meteor.extrabotany.common.item.basic.ItemMaterial;
-import com.meteor.extrabotany.common.item.basic.ItemNightmarefuel;
 import com.meteor.extrabotany.common.item.basic.ItemRecordA;
 import com.meteor.extrabotany.common.item.basic.ItemRecordB;
 import com.meteor.extrabotany.common.item.basic.ItemRecordC;
 import com.meteor.extrabotany.common.item.equipment.ItemBaubleDog;
 import com.meteor.extrabotany.common.item.equipment.ItemGaiaWise;
-import com.meteor.extrabotany.common.item.relic.ItemGunPhoenixBlaster;
-import com.meteor.extrabotany.common.item.relic.ItemGunSnowballCannon;
-import com.meteor.extrabotany.common.item.relic.ItemGunTacticalShotgun;
-import com.meteor.extrabotany.common.item.relic.ItemVHandgun;
-import com.meteor.extrabotany.common.item.relic.ItemVPowerBattleaxe;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemAphroditeGrace;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemAthenaBless;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemCronusPhantom;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemCthulhuEye;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemDice20;
+import com.meteor.extrabotany.common.item.equipment.shield.ItemSGBee;
+import com.meteor.extrabotany.common.item.equipment.shield.ItemSGEnhanced;
+import com.meteor.extrabotany.common.item.equipment.shield.ItemSGGaia;
+import com.meteor.extrabotany.common.item.equipment.shield.ItemSGMini;
+import com.meteor.extrabotany.common.item.equipment.shield.ItemSGQuick;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemEternalSlience;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemExcaliber;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemExcaliberFake;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemHermesTravelClothing;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemHermesWand;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemHestiaChastity;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemLokiGhostrick;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemMaxwellDemon;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemOlympusGuard;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemTheseusShip;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemVRangerBoots;
 import com.meteor.extrabotany.common.item.relic.legendary.ItemValkyrieCombatUniform;
-import com.meteor.extrabotany.common.item.weapon.ItemDarksword;
-import com.meteor.extrabotany.common.item.weapon.ItemGunBoomstick;
-import com.meteor.extrabotany.common.item.weapon.ItemGunFlintlock;
-import com.meteor.extrabotany.common.item.weapon.ItemGunPistol;
-import com.meteor.extrabotany.common.item.weapon.ItemGunShotgun;
 import com.meteor.extrabotany.common.item.weapon.ItemHeliacalClaymore;
+import com.meteor.extrabotany.common.item.weapon.ItemMermaidDagger;
 import com.meteor.extrabotany.common.item.weapon.ItemScissorBladePurple;
 import com.meteor.extrabotany.common.item.weapon.ItemScissorBladeRed;
 import com.meteor.extrabotany.common.lib.LibEntityName;
 import com.meteor.extrabotany.common.lib.LibItemName;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
 
-import cpw.mods.fml.common.IFuelHandler;
-import cpw.mods.fml.common.registry.GameRegistry;
-
 public class ModItems {
-	public static Item pill;
-	
 	public static Item manapotato;
 	public static Item gaiatablet;
-	public static Item dice20;
 	public static Item excaliber;
-	public static Item excaliberfake;
-	public static Item vpowerbattleaxe;
-	public static Item vhandgun;
-	public static Item vrangerboots;
 	public static Item lycorisgreen;
 	public static Item lycorispurple;
 	public static Item lycorisred;
 	public static Item lycorisrandom;
-	public static Item hestiachastity;
 	public static Item maxwelldemon;
-	public static Item athenabless;
-	public static Item lokighostrick;
-	public static Item aphroditegrace;
-	public static Item cronusphantom;
-	public static Item hermestravelclothing;
-	public static Item cthulhueye;
 	public static Item teleportpearl;
 	public static Item gaianecklacebroken;
-	public static Item olympusguard;
 	public static Item dog;
 	public static Item hermeswand;
-	public static Item theseusship;
 	public static Item eternalslience;
 	public static Item valkyriecombatuniform;
 	
@@ -89,84 +52,62 @@ public class ModItems {
 	
 	public static Item itemtest;
 	public static Item material;
-	public static Item bullet;
 	public static Item dungeonbox;
 	public static Item boxs;
 	
 	public static Item scissorred;
 	public static Item scissorpurple;
 	
-	public static Item gunphoenixblaster;
-	public static Item guntacticalshotgun;
-	public static Item snowballlauncher;
-	public static Item gunboomstick;
-	public static Item gunflintlock;
-	public static Item gunshotgun;
-	public static Item gunpistol;
 	public static Item recordB;
 	public static Item recordA;
 	public static Item recordC;
-	
-	public static Item nightmarefuel;
-	public static Item darksword;
 	
 	public static Item key;
 	
 	public static Item reader;
 	
+	public static Item SGBee;
+	public static Item SGGaia;
+	public static Item SGEnhanced;
+	public static Item SGMini;
+	public static Item SGQuick;
+	
+	public static Item dagger;
+	
 	public static void init() {
-		registerFuel();
+		
+		dagger = new ItemMermaidDagger(ToolMaterial.GOLD, "mermaiddagger");
+		
+		SGBee = new ItemSGBee();
+		SGGaia = new ItemSGGaia();
+		SGEnhanced = new ItemSGEnhanced();
+		SGMini = new ItemSGMini();
+		SGQuick = new ItemSGQuick();
 		
 		reader = new ItemManaReader(LibItemName.MANAREADER);
 		
 		recordA = new ItemRecordA("A", LibItemName.RECORD_A);
 		recordB = new ItemRecordB("B", LibItemName.RECORD_B);
 		recordC = new ItemRecordC("C", LibItemName.RECORD_C);
-		
-		nightmarefuel = new ItemNightmarefuel();
-		darksword = new ItemDarksword();
-		
+
 		itemtest = new ItemTest("test");
 		
 		dungeonbox = new ItemDungeonBox(LibItemName.DUNGEONBOX);
 		boxs = new ItemBox(LibItemName.BOX);
-		pill = new ItemPill(LibItemName.PILL);
 		
 		scissorred = new ItemScissorBladeRed(ToolMaterial.WOOD, LibItemName.SCISSORBLADERED);
 		scissorpurple = new ItemScissorBladePurple(ToolMaterial.WOOD, LibItemName.SCISSORBLADEPURPLE);
-		gunphoenixblaster = new ItemGunPhoenixBlaster(LibItemName.PHOENIXBLASTER);
-		guntacticalshotgun = new ItemGunTacticalShotgun(LibItemName.TACTICALSHOTGUN);
-		snowballlauncher = new ItemGunSnowballCannon(LibItemName.SNOWBALLLAUNCHER);
-		gunboomstick = new ItemGunBoomstick(LibItemName.BOOMSTICK);
-		gunflintlock = new ItemGunFlintlock(LibItemName.FLINTLOCK);
-		gunshotgun = new ItemGunShotgun(LibItemName.SHOTGUN);
-		gunpistol = new ItemGunPistol(LibItemName.PISTOL);
 
 		material = new ItemMaterial(LibItemName.MATERIAL);
-		bullet = new ItemBullet(LibItemName.BULLET);
 				
 		heliacalclaymore = new ItemHeliacalClaymore();
 		dog = new ItemBaubleDog();
 		gaiawise = new ItemGaiaWise(LibItemName.GAIAWISE);
 		angelwand = new ItemAngelWand(LibItemName.ANGELWAND);
 		
-		lokighostrick = new ItemLokiGhostrick(LibItemName.LOKIGHOSTRICK);
-		cthulhueye = new ItemCthulhuEye();
-		cronusphantom = new ItemCronusPhantom(LibItemName.CRONUSPHANTOM);
-		athenabless = new ItemAthenaBless();
 		maxwelldemon = new ItemMaxwellDemon();
-		excaliber = new ItemExcaliber();
-		excaliberfake = new ItemExcaliberFake();
-		vpowerbattleaxe = new ItemVPowerBattleaxe();
-		vhandgun = new ItemVHandgun();
-		vrangerboots = new ItemVRangerBoots(3, LibItemName.VRANGERBOOTS);
-		dice20 = new ItemDice20();
-		hestiachastity = new ItemHestiaChastity(0, LibItemName.HESTIACHASTITY);
-		aphroditegrace = new ItemAphroditeGrace(2, LibItemName.APHRODITEGRACE);
-		olympusguard = new ItemOlympusGuard(LibItemName.OLYMPUSGUARD);
-		hermestravelclothing = new ItemHermesTravelClothing(1, LibItemName.HERMESTRAVELCLOTHING);
-		hermeswand = new ItemHermesWand(LibItemName.HERMESWAND);
-		theseusship = new ItemTheseusShip(LibItemName.THESEUSSHIP);
+		excaliber = new ItemExcaliber();		
+		hermeswand = new ItemHermesWand(LibItemName.HERMESWAND);	
 		eternalslience = new ItemEternalSlience(LibItemName.ETERNALSLIENCE);
 		valkyriecombatuniform = new ItemValkyrieCombatUniform(LibItemName.VALKYRIECOMBATUNIFORM);
 		
@@ -197,18 +138,6 @@ public class ModItems {
 		OreDictionary.registerOre(LibOreDictName.QUARTZ_ELEMENTIUM, new ItemStack(material, 1, 8));
 		OreDictionary.registerOre(LibOreDictName.STRING_GOLD, new ItemStack(material, 1, 9));
 		OreDictionary.registerOre(LibOreDictName.DICE_EMPTY, new ItemStack(material, 1, 10));
-	}
-	
-	private static void registerFuel()
-	{
-	    GameRegistry.registerFuelHandler(new IFuelHandler()
-	    {
-	        @Override
-	        public int getBurnTime(ItemStack fuel)
-	        {
-	            return nightmarefuel != fuel.getItem() ? 0 : 40000;
-	        }
-	    });
 	}
 
 }

@@ -19,7 +19,6 @@ public class ModPotions {
 		
 			fastparticlesorting = new PotionFastParticleSorting();
 			slowparticlesorting = new PotionSlowParticleSorting();
-			residualpain = new PotionResidualPain();
 			cure = new PotionCure();
 			durance = new PotionDurance();
 	}

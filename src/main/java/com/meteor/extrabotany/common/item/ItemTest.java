@@ -12,8 +12,10 @@ import net.minecraft.util.IIcon;
 import net.minecraft.util.StatCollector;
 import net.minecraft.world.World;
 import vazkii.botania.client.core.helper.IconHelper;
+import vazkii.botania.common.Botania;
 
 import com.meteor.extrabotany.common.entity.EntityGaiaQuickened;
+import com.meteor.extrabotany.common.entity.EntitySakuraFall;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -59,11 +61,9 @@ public class ItemTest extends ItemMods{
 	
 	@Override
 	public ItemStack onItemRightClick(ItemStack stack, World world, EntityPlayer player) {
-		if(!world.isRemote){
-			EntityGaiaQuickened g = new EntityGaiaQuickened(player, true, 10F);
-			g.setPosition(player.posX, player.posY, player.posZ);
-			world.spawnEntityInWorld(g);
-		}
+		
+	      
+	      
 		return stack;	
 	}
 

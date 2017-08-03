@@ -29,6 +29,7 @@ public class LibBlockName {
 	public static final String MANALINKUIM = "manalinkuim";
 	
 	public static final String JUDASVOW = "judasvow";
+	public static final String JUDASVOW_SAKURA = "judasvowsakura";
 	public static final String INFERNOIDISY = "infernoidisy";
 	
 	public static final String RELICPLATE = "relicplate";

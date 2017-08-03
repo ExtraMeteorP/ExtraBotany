@@ -8,7 +8,6 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
 import com.meteor.extrabotany.common.block.ModBlocks;
-import com.meteor.extrabotany.common.core.handler.ConfigHandler;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibReference;
 
@@ -23,7 +22,7 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 	
 	@Override
 	public ItemStack getIconItemStack() {
-		return new ItemStack(ModItems.dice20);
+		return new ItemStack(ModItems.boxs);
 	}
 
 	@Override
@@ -39,6 +38,11 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 	@Override
 	public void displayAllReleventItems(List list) {
 		this.list = list;
+		addItem(ModItems.SGBee);
+		addItem(ModItems.SGGaia);
+		addItem(ModItems.SGEnhanced);
+		addItem(ModItems.SGMini);
+		addItem(ModItems.SGQuick);
 		//Flowers
 		addBlock(ModBlocks.specialFlower);
 		//Mana Using Item
@@ -47,25 +51,10 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.teleportpearl);
 		addItem(ModItems.angelwand);
 		addItem(ModItems.reader);
-		addBlock(ModBlocks.pylon);
 		//Relics
-		addItem(ModItems.dice20);
-		addItem(ModItems.hestiachastity);
-		addItem(ModItems.hermestravelclothing);
-		addItem(ModItems.aphroditegrace);
-		addItem(ModItems.vrangerboots);
 		addItem(ModItems.maxwelldemon);
 		addItem(ModItems.excaliber);
-		addItem(ModItems.excaliberfake);
-		addItem(ModItems.vhandgun);
-		addItem(ModItems.vpowerbattleaxe);
-		addItem(ModItems.athenabless);
-		addItem(ModItems.cronusphantom);
-		addItem(ModItems.lokighostrick);
-		addItem(ModItems.olympusguard);
-		addItem(ModItems.cthulhueye);
 		addItem(ModItems.hermeswand);
-		addItem(ModItems.theseusship);
 		addItem(ModItems.eternalslience);
 		addItem(ModItems.valkyriecombatuniform);
 		//Test
@@ -75,8 +64,6 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		addItem(ModItems.key);
 		addItem(ModItems.boxs);
 		addItem(ModItems.dungeonbox);
-		addItem(ModItems.pill);
-		addItem(ModItems.nightmarefuel);
 		//Spawn Card
 		addItem(ModItems.lycorisgreen);
 		addItem(ModItems.lycorispurple);
@@ -93,21 +80,9 @@ public class ExtraBotanyCreativeTab extends CreativeTabs{
 		//Baubles
 		addItem(ModItems.dog);
 		addItem(ModItems.gaiawise);
-		//Bullets
-		if(ConfigHandler.enableGuns){
-			addItem(ModItems.bullet);
-			//Weapons
-			addItem(ModItems.gunphoenixblaster);
-			addItem(ModItems.guntacticalshotgun);
-			addItem(ModItems.snowballlauncher);
-			addItem(ModItems.gunboomstick);
-			addItem(ModItems.gunflintlock);
-			addItem(ModItems.gunpistol);
-			addItem(ModItems.gunshotgun);
-		}
+
 		addItem(ModItems.scissorpurple);
 		addItem(ModItems.scissorred);
-		addItem(ModItems.darksword);
 		addItem(ModItems.heliacalclaymore);
 		//Others
 		addItem(ModItems.recordA);

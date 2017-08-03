@@ -6,12 +6,9 @@ public class LibItemName {
 	//Basic
 	public static final String LYCORISPLACER = "lycorisradiataplacer";
 	public static final String MATERIAL = "material";
-	public static final String BULLET = "bullet";
-	public static final String NIGHTMAREFUEL = "nightmarefuel";
 	
 	public static final String BOX = "box";
 	public static final String DUNGEONBOX = "dungeonbox";
-	public static final String PILL = "pill";
 	
 	//Dice
 	public static final String DICE4 = "dice4";
@@ -24,7 +21,11 @@ public class LibItemName {
 	
 	//Armor
 	public static final String BAUBLEDOG = "dog";
-	
+	public static final String BAUBLESGBEE = "SGBee";
+	public static final String BAUBLESGGAIA = "SGGaia";
+	public static final String BAUBLESGQUICK = "SGQuick";
+	public static final String BAUBLESGENHANCED = "SGEnhanced";	
+	public static final String BAUBLESGMINI = "SGMini";
 	//Advanced
 	public static final String ANGELWAND = "angelwand";
 	public static final String MANAPOTATO = "manapotato";
@@ -37,7 +38,6 @@ public class LibItemName {
 	public static final String SCISSORBLADERED = "scissorbladered";
 	public static final String SCISSORBLADEPURPLE = "scissorbladepurple";
 	public static final String HELIACALCLAYMORE = "coronaclaymore";
-	public static final String DARKSWORD = "darksword";
 	//Relic
 	public static final String EXCALIBER = "excaliber";
 	public static final String EXCALIBERFAKE = "excaliberfake";
@@ -78,26 +78,14 @@ public class LibItemName {
 		"prismaticshard",//0
 		"blankcard",//1
 		"gaiaessence",//2
-		"astralforce",//3
-		"petalred",//4
-		"petalgreen",//5
-		"petalpurple",//6
-		"gaiaquartz",//7
-		"elvenquartz",//8
-		"goldstring",//9
-		"emptydice",//10
-		"resonancefragment",//11
-		"heart",//12
-		"shield",//13
-		"mana",//14
+		"petalred",//3
+		"petalgreen",//4
+		"petalpurple",//5
+		"gaiaquartz",//6
+		"elvenquartz",//7
+		"goldstring",//8
+		"resonancefragment",//9
+		"rebelheart",//10
 	};
 	
-	public static final String[] BULLET_NAMES = new String[] {
-		"bulletexploding",
-		"bulletgold",
-		"bullethighvelocity",
-		"bulletmeteor",
-		"bulletmusket",
-		"bulletsilver",
-	};
 }

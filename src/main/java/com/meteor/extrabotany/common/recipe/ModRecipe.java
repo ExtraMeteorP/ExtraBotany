@@ -1,10 +1,6 @@
 package com.meteor.extrabotany.common.recipe;
 
-import net.minecraft.enchantment.EnchantmentData;
-import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemEnchantedBook;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
@@ -12,13 +8,11 @@ import net.minecraftforge.oredict.ShapedOreRecipe;
 
 import org.apache.logging.log4j.Level;
 
-import pneumaticCraft.common.recipes.PneumaticRecipeRegistry;
 import vazkii.botania.api.BotaniaAPI;
 import vazkii.botania.common.lib.LibOreDict;
 
 import com.meteor.extrabotany.common.block.ModBlocks;
 import com.meteor.extrabotany.common.core.handler.CraftingHandler;
-import com.meteor.extrabotany.common.enchantment.ModEnchantment;
 import com.meteor.extrabotany.common.item.ModItems;
 import com.meteor.extrabotany.common.lib.LibOreDictName;
 import com.meteor.extrabotany.common.recipe.subtile.ModInfernoidisyRecipe;
@@ -36,11 +30,6 @@ public class ModRecipe {
 	public static IRecipe elvenQuartz;
 	public static IRecipe gaiaQuartz;
 	public static IRecipe goldString;
-	public static IRecipe bullet0;
-	public static IRecipe bullet1;
-	public static IRecipe bullet2;
-	public static IRecipe bullet3;
-	public static IRecipe bullet4;
 	public static IRecipe olympus;
 	public static IRecipe teleportpearl;
 	public static IRecipe gaiawise;
@@ -48,9 +37,6 @@ public class ModRecipe {
 	public static IRecipe bladepurple;
 	public static IRecipe angelwand;
 	public static IRecipe manapotato;
-	public static IRecipe pylon1;
-	public static IRecipe pylon2;
-	public static IRecipe pylon3;
 	public static IRecipe gaiatablet;
 	public static IRecipe manareader;
 	public static IRecipe edivinefavor;
@@ -69,31 +55,7 @@ public class ModRecipe {
 		ModRuneRecipe.init();
 		initSubtile();
 		int recipeListSize = CraftingManager.getInstance().getRecipeList().size();
-		ItemStack gaiablessing = new ItemStack(Items.enchanted_book);
-		Items.enchanted_book.addEnchantment(gaiablessing, new EnchantmentData(ModEnchantment.gaiablessing, 1));
-		ItemStack divinefavor = new ItemStack(Items.enchanted_book);
-		Items.enchanted_book.addEnchantment(divinefavor, new EnchantmentData(ModEnchantment.divineFavor, 1));
-		ItemStack divinemark = new ItemStack(Items.enchanted_book);
-		Items.enchanted_book.addEnchantment(divinemark, new EnchantmentData(ModEnchantment.divineMark, 1));
-
-		//enchantment
-		GameRegistry.addShapelessRecipe(gaiablessing, new Object[] {
-			new ItemStack(Items.book), new ItemStack(ModItems.material, 1, 2)
-		});
-		egaiablessing = BotaniaAPI.getLatestAddedRecipe();
 	
-		GameRegistry.addShapelessRecipe(divinefavor, new Object[] {
-			new ItemStack(Items.book), new ItemStack(ModItems.material, 1, 7), 
-			new ItemStack(ModItems.material, 1, 8), new ItemStack(vazkii.botania.common.item.ModItems.rune, 1, 1)
-		});
-		edivinefavor = BotaniaAPI.getLatestAddedRecipe();
-		
-		GameRegistry.addShapelessRecipe(divinemark, new Object[] {
-			new ItemStack(Items.book), new ItemStack(ModItems.material, 1, 7), 
-			new ItemStack(ModItems.material, 1, 8), new ItemStack(vazkii.botania.common.item.ModItems.rune, 1, 0)
-		});
-		edivinemark = BotaniaAPI.getLatestAddedRecipe();
-		
 		//mana reader
 		addOreDictRecipe(new ItemStack(ModItems.reader),
 				" AB", " BA", "A  ",
@@ -107,36 +69,6 @@ public class ModRecipe {
 				'A', LibOreDictName.QUARTZ_GAIA,
 				'B', vazkii.botania.common.item.ModItems.manaTablet);
 		gaiatablet = BotaniaAPI.getLatestAddedRecipe();
-		
-		//pylon1
-		addOreDictRecipe(new ItemStack(ModBlocks.pylon),
-				"ABA", "ACA", "DED",
-				'A', LibOreDictName.STRING_GOLD,
-				'B', new ItemStack(ModItems.manapotato),
-				'C', new ItemStack(vazkii.botania.common.block.ModBlocks.pylon),
-				'D', LibOreDictName.BLANK_CARD,
-				'E', LibOreDictName.QUARTZ_ELEMENTIUM);
-		pylon1 = BotaniaAPI.getLatestAddedRecipe();
-		
-		//pylon2
-		addOreDictRecipe(new ItemStack(ModBlocks.pylon, 1, 1),
-				"ABA", "ACA", "DED",
-				'A', LibOreDictName.STRING_GOLD,
-				'B', new ItemStack(ModItems.manapotato),
-				'C', new ItemStack(vazkii.botania.common.block.ModBlocks.pylon, 1, 1),
-				'D', LibOreDictName.BLANK_CARD,
-				'E', LibOreDictName.QUARTZ_ELEMENTIUM);
-		pylon2 = BotaniaAPI.getLatestAddedRecipe();
-		
-		//pylon3
-		addOreDictRecipe(new ItemStack(ModBlocks.pylon, 1, 2),
-				"ABA", "ACA", "DED",
-				'A', LibOreDictName.STRING_GOLD,
-				'B', new ItemStack(ModItems.manapotato),
-				'C', new ItemStack(vazkii.botania.common.block.ModBlocks.pylon, 1, 2),
-				'D', LibOreDictName.BLANK_CARD,
-				'E', LibOreDictName.QUARTZ_ELEMENTIUM);
-		pylon3 = BotaniaAPI.getLatestAddedRecipe();
 		
 		//mana potato
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.manapotato), new Object[] {
@@ -178,48 +110,12 @@ public class ModRecipe {
 				"A A","BCB","BBB",
 				'A', LibOreDict.GAIA_INGOT,
 				'B', LibOreDict.TERRASTEEL_NUGGET,
-				'C', LibOreDict.ELEMENTIUM);
+				'C', new ItemStack(ModItems.material, 1, 10));
 		gaiawise = BotaniaAPI.getLatestAddedRecipe();
 		
 		GameRegistry.addShapedRecipe(new ItemStack(ModItems.teleportpearl, 16), 
 				new Object[] {"AAA","ABA","AAA", 'A', new ItemStack(vazkii.botania.common.item.ModItems.manaBottle), 'B', Items.ender_pearl});
 		teleportpearl = BotaniaAPI.getLatestAddedRecipe();
-		//Olympus
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.olympusguard), new Object[] {
-			new ItemStack(ModItems.athenabless), 
-			new ItemStack(ModItems.cronusphantom), 
-			new ItemStack(ModItems.lokighostrick)});
-		olympus = BotaniaAPI.getLatestAddedRecipe(); 
-		//Bullet
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.bullet,8,4), new Object[] {
-			new ItemStack(vazkii.botania.common.item.ModItems.manaResource), 
-			new ItemStack(Items.gunpowder), 
-			new ItemStack(Items.paper)});
-		bullet0 = BotaniaAPI.getLatestAddedRecipe(); 
-		
-		addOreDictRecipe(new ItemStack(ModItems.bullet, 8, 2),
-				"AAA","ABA","AAA",
-				'A', new ItemStack(ModItems.bullet,1,4),
-				'B', new ItemStack(vazkii.botania.common.item.ModItems.manaResource,1,8));
-		bullet1 = BotaniaAPI.getLatestAddedRecipe(); 
-		
-		addOreDictRecipe(new ItemStack(ModItems.bullet, 8, 3),
-				"AAA","ABA","AAA",
-				'A', new ItemStack(ModItems.bullet,1,4),
-				'B', new ItemStack(vazkii.botania.common.item.ModItems.manaResource,1,4));
-		bullet2 = BotaniaAPI.getLatestAddedRecipe(); 
-		
-		addOreDictRecipe(new ItemStack(ModItems.bullet, 8, 5),
-				"AAA","ABA","AAA",
-				'A', new ItemStack(ModItems.bullet,1,4),
-				'B', new ItemStack(vazkii.botania.common.item.ModItems.manaResource,1,7));
-		bullet3 = BotaniaAPI.getLatestAddedRecipe(); 
-		
-		addOreDictRecipe(new ItemStack(ModItems.bullet, 8, 0),
-				"AAA","ABA","AAA",
-				'A', new ItemStack(ModItems.bullet,1,4),
-				'B', new ItemStack(Blocks.tnt));
-		bullet4 = BotaniaAPI.getLatestAddedRecipe(); 
 		
 		//For Basics
 		addOreDictRecipe(new ItemStack(ModItems.material, 8, 9),

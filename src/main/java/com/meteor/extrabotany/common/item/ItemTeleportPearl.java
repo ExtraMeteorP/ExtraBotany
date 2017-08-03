@@ -5,7 +5,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
 import com.meteor.extrabotany.common.entity.EntityTeleportPearl;
-import com.meteor.extrabotany.common.item.relic.legendary.ItemHermesTravelClothing;
 
 public class ItemTeleportPearl extends ItemMods{
 
@@ -17,7 +16,6 @@ public class ItemTeleportPearl extends ItemMods{
 		if (player.capabilities.isCreativeMode){
 			return stack;
 	    }else{
-	    	if(!ItemHermesTravelClothing.hasHermesTravelClothing(player))
 	    		--stack.stackSize;
 	        
             world.playSoundAtEntity(player, "random.bow", 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));

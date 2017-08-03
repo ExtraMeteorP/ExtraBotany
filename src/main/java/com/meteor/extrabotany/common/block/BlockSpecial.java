@@ -40,6 +40,7 @@ public class BlockSpecial extends BlockSpecialFlower{
 			LibBlockName.LAUNCHISH,
 			LibBlockName.ANNOYOBLOOM,
 			LibBlockName.MANALINKUIM,
+			LibBlockName.JUDASVOW_SAKURA,
 		}));
 	}	
 		

@@ -4,8 +4,6 @@ import net.minecraft.enchantment.Enchantment;
 import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.item.ItemStack;
 
-import com.meteor.extrabotany.common.enchantment.ModEnchantment;
-
 public class EnchHelper {
 	
 	public static int getEnchLevel(Enchantment e, ItemStack stack){
@@ -15,13 +13,5 @@ public class EnchHelper {
 	public static void setEnch(Enchantment e, int l, ItemStack stack){
 		stack.addEnchantment(e, l);
 	}
-	
-	public static float getDFBuff(ItemStack stack){
-		return (1 + getEnchLevel(ModEnchantment.divineFavor, stack)*0.2F);
-	}
-	
-	public static float getDMBuff(ItemStack stack){
-		return (1 - getEnchLevel(ModEnchantment.divineMark, stack)*0.233F);
-	}
-	
+
 }

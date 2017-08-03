@@ -54,10 +54,10 @@ public class EntityMagicLandmineII extends Entity implements IMinion{
 			if(!worldObj.isRemote) {
 				List<EntityPlayer> players = worldObj.getEntitiesWithinAABB(EntityPlayer.class, AxisAlignedBB.getBoundingBox(posX - range, posY - range, posZ - range, posX + range, posY + range, posZ + range));
 				for(EntityPlayer player : players) {
-					player.attackEntityFrom(summoner == null ? DamageSource.generic : DamageSource.causeMobDamage(summoner), 6);
-					player.addPotionEffect(new PotionEffect(Potion.blindness.id, 20, 0));
-					player.addPotionEffect(new PotionEffect(Potion.weakness.id, 20, 0));
-					PotionEffect wither = new PotionEffect(Potion.wither.id, 50, 1);
+					player.attackEntityFrom(summoner == null ? DamageSource.generic : DamageSource.causeMobDamage(summoner), 8F);
+					player.addPotionEffect(new PotionEffect(Potion.blindness.id, 30, 1));
+					player.addPotionEffect(new PotionEffect(Potion.weakness.id, 30, 1));
+					PotionEffect wither = new PotionEffect(Potion.wither.id, 60, 2);
 					wither.getCurativeItems().clear();
 					player.addPotionEffect(wither);
 				}

@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
+import java.util.Random;
 import java.util.regex.Pattern;
 
 import net.minecraft.block.Block;
@@ -27,6 +28,7 @@ import net.minecraft.entity.monster.EntityZombie;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemRecord;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -57,16 +59,19 @@ import vazkii.botania.api.lexicon.multiblock.MultiblockSet;
 import vazkii.botania.api.lexicon.multiblock.component.MultiblockComponent;
 import vazkii.botania.client.core.helper.ShaderHelper;
 import vazkii.botania.common.Botania;
+import vazkii.botania.common.achievement.ModAchievements;
+import vazkii.botania.common.block.ModBlocks;
 import vazkii.botania.common.core.handler.ConfigHandler;
 import vazkii.botania.common.core.helper.Vector3;
+import vazkii.botania.common.entity.EntityMagicMissile;
 import vazkii.botania.common.entity.EntityPixie;
 import vazkii.botania.common.item.ModItems;
+import vazkii.botania.common.item.equipment.armor.manasteel.ItemManasteelArmor;
+import vazkii.botania.common.item.equipment.tool.terrasteel.ItemTerraSword;
 import vazkii.botania.common.item.relic.ItemRelic;
 import vazkii.botania.common.lib.LibObfuscation;
 
-import com.meteor.extrabotany.common.achievement.ModAchievement;
-import com.meteor.extrabotany.common.entity.EntityGaiaQuickened;
-import com.meteor.extrabotany.common.lib.LibItemName;
+import com.meteor.extrabotany.common.block.tile.TileGaiaChest;
 import com.meteor.extrabotany.common.lib.LibReference;
 
 import cpw.mods.fml.relauncher.ReflectionHelper;
@@ -74,11 +79,10 @@ import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
 public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithShader {
-	
-	private static com.meteor.extrabotany.common.item.ModItems instance = new com.meteor.extrabotany.common.item.ModItems();
+
 	public static final int SPAWN_TICKS = 160;
-	private static final float RANGE = 12F;
-	private static final float MAX_HP = 700F;
+	private static final float RANGE = 10F;
+	private static final float MAX_HP = 1000F;
 
 	public static final int MOB_SPAWN_START_TICKS = 20;
 	public static final int MOB_SPAWN_END_TICKS = 80;
@@ -123,14 +127,14 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 		tasks.addTask(0, new EntityAISwimming(this));
 		tasks.addTask(1, new EntityAIWatchClosest(this, EntityPlayer.class, Float.MAX_VALUE));
 		isImmuneToFire = true;
-		experienceValue = 800;
+		experienceValue = 1225;
 	}
 
 	public static MultiblockSet makeMultiblockSet() {
 		Multiblock mb = new Multiblock();
 
 		for(int[] p : PYLON_LOCATIONS)
-			mb.addComponent(p[0], p[1] + 1, p[2], com.meteor.extrabotany.common.block.ModBlocks.pylon, 2);
+			mb.addComponent(p[0], p[1] + 1, p[2], ModBlocks.pylon, 2);
 
 		for(int i = 0; i < 3; i++)
 			for(int j = 0; j < 3; j++)
@@ -157,7 +161,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 
 				Block blockat = par3World.getBlock(x, y, z);
 				int meta = par3World.getBlockMetadata(x, y, z);
-				if(blockat != com.meteor.extrabotany.common.block.ModBlocks.pylon || meta != 2) {
+				if(blockat != ModBlocks.pylon || meta != 2) {
 					if(!par3World.isRemote)
 						player.addChatMessage(new ChatComponentTranslation("botaniamisc.needsCatalysts").setChatStyle(new ChatStyle().setColor(EnumChatFormatting.RED)));
 					return false;
@@ -193,27 +197,6 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 			e.setHealth(1F);
 			e.setSource(par4, par5, par6);
 			e.setMobSpawnTicks(MOB_SPAWN_TICKS);
-			String b = LibItemName.BINDING;
-			ItemStack s1 = new ItemStack(instance.excaliber);
-			ItemRelic.bindToUsernameS(b, s1);
-			ItemStack s2 = new ItemStack(instance.hestiachastity);
-			ItemRelic.bindToUsernameS(b, s2);
-			ItemStack s3 = new ItemStack(instance.hermestravelclothing);
-			ItemRelic.bindToUsernameS(b, s3);
-			ItemStack s4 = new ItemStack(instance.aphroditegrace);
-			ItemRelic.bindToUsernameS(b, s4);
-			ItemStack s5 = new ItemStack(instance.vrangerboots);
-			ItemRelic.bindToUsernameS(b, s5);
-			e.setCurrentItemOrArmor(0, s1);
-			e.setCurrentItemOrArmor(1, s2);
-			e.setCurrentItemOrArmor(2, s3);
-			e.setCurrentItemOrArmor(3, s4);
-			e.setCurrentItemOrArmor(4, s5);
-			e.setEquipmentDropChance(0, -1);
-			e.setEquipmentDropChance(1, -1);
-			e.setEquipmentDropChance(2, -1);
-			e.setEquipmentDropChance(3, -1);
-			e.setEquipmentDropChance(4, -1);
 			e.setHardMode(hard);
 
 			List<EntityPlayer> players = e.getPlayersAround();
@@ -229,6 +212,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 			par3World.spawnEntityInWorld(e);
 			return true;
 		}
+
 		return false;
 	}
 
@@ -396,8 +380,8 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 				crit = p.fallDistance > 0.0F && !p.onGround && !p.isOnLadder() && !p.isInWater() && !p.isPotionActive(Potion.blindness) && p.ridingEntity == null;
 			}
 
-			int cap = (int) (this.getMaxHealth() * 0.12F);
-			return super.attackEntityFrom(par1DamageSource, Math.min(par2, cap));
+			int cap = crit ? 60 : 40;
+			return super.attackEntityFrom(par1DamageSource, Math.min(cap, dmg) * (isHardMode() ? 0.6F : 1F));
 		}
 		return false;
 	}
@@ -440,12 +424,10 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 		super.onDeath(p_70645_1_);
 		EntityLivingBase entitylivingbase = func_94060_bK();
 		if(entitylivingbase instanceof EntityPlayer) {
-			((EntityPlayer) entitylivingbase).addStat(ModAchievement.Gaia_gaia3Kill, 1);
+			((EntityPlayer) entitylivingbase).addStat(ModAchievements.gaiaGuardianKill, 1);
 			if(!anyWithArmor)
-				((EntityPlayer) entitylivingbase).addStat(ModAchievement.Gaia_gaia3NoArmor, 1);
+				((EntityPlayer) entitylivingbase).addStat(ModAchievements.gaiaGuardianNoArmor, 1);
 		}
-		
-		EntityGaiaIIIDark.spawn(this.worldObj, getSource().posX,getSource().posY,getSource().posZ, true, this);
 
 		worldObj.playSoundAtEntity(this, "random.explode", 20F, (1F + (worldObj.rand.nextFloat() - worldObj.rand.nextFloat()) * 0.2F) * 0.7F);
 		worldObj.spawnParticle("hugeexplosion", posX, posY, posZ, 1D, 0D, 0D);
@@ -463,10 +445,171 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 	protected boolean canDespawn() {
 		return false;
 	}
+	
+	private static com.meteor.extrabotany.common.item.ModItems instance = new com.meteor.extrabotany.common.item.ModItems();
+	
+	public boolean generate(World world, Random rand, int cx, int cy, int cz, int p){
+		return generate(world, rand, cx, cy, cz, com.meteor.extrabotany.common.block.ModBlocks.gaiachest, p);
+	}
+
+	public boolean generate(World world, Random rand, int cx, int cy, int cz, Block chestBlock, int p){
+
+		world.rand.setSeed(world.getSeed() * cx + cy ^ cz);
+
+	    world.setBlock(cx, cy, cz, chestBlock, 0, 2);
+	    
+	  
+	    	addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, p == 0 ? 16 : 8, 5));
+	    	
+		    addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.ancientWill, 1, rand.nextInt(6)));
+		    
+		    if(ConfigHandler.relicsEnabled) {
+				ItemStack dice = new ItemStack(ModItems.dice, 2);
+				ItemRelic.bindToUsernameS(playersWhoAttacked.get(p), dice);
+				addItemToChest(world, rand, cx, cy, cz, dice);
+		    }	
+		    
+		    addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(14) + 8, 12));
+		    addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(14) + 8, 13));
+		    addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(30) + 22, 14));
+
+		    addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.overgrowthSeed, rand.nextInt(3) + 1));
+			boolean voidLotus = Math.random() < 0.3F;
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.blackLotus, voidLotus ? 1 : rand.nextInt(3) + 1, voidLotus ? 1 : 0));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 24 + rand.nextInt(12)));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.recordC));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 14 + rand.nextInt(6), 1));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 8 + rand.nextInt(3), 2));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 8 + rand.nextInt(5), 7));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 4 + rand.nextInt(3), 8));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 2 + rand.nextInt(3), 9));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.boxs));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 4));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 5));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 6));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 4+rand.nextInt(10), 1));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 1+rand.nextInt(3), 2));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 9+rand.nextInt(6), 8));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(vazkii.botania.common.block.ModBlocks.livingrock, 14+rand.nextInt(22), 0));
+			addItemToChest(world, rand, cx, cy, cz, new ItemStack(vazkii.botania.common.block.ModBlocks.livingwood, 14+rand.nextInt(22), 0));
+			if(Math.random() < 0.43){
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(Items.emerald, 2+rand.nextInt(5), 0));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(Items.fish, 1+rand.nextInt(4), 3));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.gaiaHead));
+			}
+			if(Math.random() < 0.26){
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 1, 0));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 2+rand.nextInt(16), 7));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 3+rand.nextInt(5), 9));
+			}
+			if(Math.random() < 0.88){
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(vazkii.botania.common.block.ModBlocks.dreamwood, 7+rand.nextInt(11), 0));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaCookie, 4+rand.nextInt(8), 0));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.manaResource, 18+rand.nextInt(5), 23));
+			}
+		    if(Math.random() < 0.82){
+		    	addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 12));
+		    	addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, rand.nextInt(3), 11));
+		    }
+			if(Math.random() < 0.72){
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.pinkinator));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.recordA));
+			}
+			if(Math.random() < 0.63){
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.material, 1 + rand.nextInt(2), 3));
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.recordB));
+			}
+			if(Math.random() < 0.57) {
+				int i = Item.getIdFromItem(Items.record_13);
+				int j = Item.getIdFromItem(Items.record_wait);
+				int k = i + rand.nextInt(j - i + 1);
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(Item.getItemById(k)));
+			}
+			if(Math.random() < 0.41)
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(instance.heliacalclaymore));
+
+			int runes = rand.nextInt(6) + 1;
+			for(int i = 0; i < runes; i++)
+				addItemToChest(world, rand, cx, cy, cz, new ItemStack(ModItems.rune, 3 + rand.nextInt(3), rand.nextInt(16)));
+	    
+	    return true;
+	}
+	
+	protected boolean addItemToChest(World world, Random rand, int cx, int cy, int cz, ItemStack itemStack){
+		
+		TileGaiaChest chest = (TileGaiaChest)world.getTileEntity(cx, cy, cz);
+
+		if (chest != null) {
+			int slot = findRandomInventorySlot(chest, rand);
+
+			if (slot != -1) {
+				chest.setInventorySlotContents(slot, itemStack);
+				return true;
+			}
+	    }
+			return false;
+	}
+	
+	 protected int findRandomInventorySlot(TileGaiaChest chest, Random rand){
+		 for (int i = 0; i < 100; i++) {
+			 int slot = rand.nextInt(chest.getSizeInventory());
+			 if (chest.getStackInSlot(slot) == null) {
+				 return slot;
+			 }
+
+		}
+		 return -1;
+	 }
 
 	@Override
 	protected void dropFewItems(boolean par1, int par2) {
-		
+		if(par1) {
+			for(int pl = 0; pl < playersWhoAttacked.size(); pl++) {
+				boolean hard = isHardMode();
+				entityDropItem(new ItemStack(ModItems.manaResource, pl == 0 ? hard ? 16 : 8 : hard ? 10 : 6, 5), 1F);
+				boolean droppedRecord = false;
+
+				if(hard) {
+					entityDropItem(new ItemStack(ModItems.ancientWill, 1, rand.nextInt(6)), 1F);
+					if(ConfigHandler.relicsEnabled) {
+						ItemStack dice = new ItemStack(ModItems.dice);
+						ItemRelic.bindToUsernameS(playersWhoAttacked.get(pl), dice);
+						entityDropItem(dice, 1F);
+					}
+
+					if(Math.random() < 0.25)
+						entityDropItem(new ItemStack(ModItems.overgrowthSeed, rand.nextInt(3) + 1), 1F);
+					if(Math.random() < 0.5) {
+						boolean voidLotus = Math.random() < 0.3F;
+						entityDropItem(new ItemStack(ModItems.blackLotus, voidLotus ? 1 : rand.nextInt(3) + 1, voidLotus ? 1 : 0), 1F);
+					}
+					if(Math.random() < 0.9)
+						entityDropItem(new ItemStack(ModItems.manaResource, 16 + rand.nextInt(12)), 1F);
+					if(Math.random() < 0.7)
+						entityDropItem(new ItemStack(ModItems.manaResource, 8 + rand.nextInt(6), 1), 1F);
+					if(Math.random() < 0.5)
+						entityDropItem(new ItemStack(ModItems.manaResource, 4 + rand.nextInt(3), 2), 1F);
+
+					int runes = rand.nextInt(6) + 1;
+					for(int i = 0; i < runes; i++)
+						if(Math.random() < 0.3)
+							entityDropItem(new ItemStack(ModItems.rune, 2 + rand.nextInt(3), rand.nextInt(16)), 1F);
+
+					if(Math.random() < 0.2)
+						entityDropItem(new ItemStack(ModItems.pinkinator), 1F);
+					if(Math.random() < 0.3) {
+						int i = Item.getIdFromItem(Items.record_13);
+						int j = Item.getIdFromItem(Items.record_wait);
+						int k = i + rand.nextInt(j - i + 1);
+						entityDropItem(new ItemStack(Item.getItemById(k)), 1F);
+						droppedRecord = true;
+					}
+				}
+
+				if(!droppedRecord && Math.random() < 0.2)
+					entityDropItem(new ItemStack(hard ? ModItems.recordGaia2 : ModItems.recordGaia1), 1F);
+			}
+		}
 	}
 
 	@Override
@@ -487,17 +630,6 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 	@Override
 	public void onLivingUpdate() {
 		super.onLivingUpdate();
-		boolean rankII = false;
-		boolean rankIII = false;
-		
-		if(this.getHealth() <= this.getMaxHealth()*0.5)
-			rankII = true;
-		else rankII = false;
-		if(this.getHealth() <= this.getMaxHealth()*0.25)
-			rankIII = true;
-		else rankIII = false;
-		
-		int maxTries = rankIII ? 35 : rankII ? 55 : 90;
 
 		if(ridingEntity != null) {
 			if(ridingEntity.riddenByEntity != null)
@@ -538,9 +670,23 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 		float range = RANGE + 3F;
 		List<EntityPlayer> players = getPlayersAround();
 		int playerCount = getPlayerCount();
+		
+		if(players.size() > 0){
+			for(EntityPlayer p:players){
+				for(int i = 0; i <= 4; i++){
+					if(p.getEquipmentInSlot(i) != null && (!(p.getEquipmentInSlot(i).getItem() instanceof ItemManasteelArmor) || !(p.getHeldItem().getItem() instanceof ItemTerraSword))){
+						ItemStack a = p.getEquipmentInSlot(i);
+						EntityItem item = new EntityItem(worldObj, p.posX, p.posY, p.posZ, a);
+						if(!worldObj.isRemote)
+							worldObj.spawnEntityInWorld(item);
+						p.setCurrentItemOrArmor(i, null);
+					}
+				}
+			}
+		}
 
 		if(worldObj.isRemote && !isPlayingMusic && !isDead && !players.isEmpty()) {
-			Botania.proxy.playRecordClientSided(worldObj, source.posX, source.posY, source.posZ, (ItemRecord) com.meteor.extrabotany.common.item.ModItems.recordA);
+			Botania.proxy.playRecordClientSided(worldObj, source.posX, source.posY, source.posZ, (ItemRecord) (hard ? ModItems.recordGaia2 : ModItems.recordGaia1));
 			isPlayingMusic = true;
 		}
 
@@ -657,26 +803,6 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 								switch(worldObj.rand.nextInt(2)) {
 								case 0 : {
 									entity = new EntityZombie(worldObj);
-									ItemStack ss1 = new ItemStack(ModItems.terraSword);
-									ss1.setItemDamage(20);
-									ItemStack ss2 = new ItemStack(ModItems.terrasteelHelm);
-									ss2.setItemDamage(20);
-									ItemStack ss3 = new ItemStack(ModItems.terrasteelChest);
-									ss3.setItemDamage(20);
-									ItemStack ss4 = new ItemStack(ModItems.terrasteelLegs);
-									ss4.setItemDamage(20);
-									ItemStack ss5 = new ItemStack(ModItems.terrasteelBoots);
-									ss5.setItemDamage(20);
-									((EntityZombie) entity).setCurrentItemOrArmor(0, ss1);
-									((EntityZombie) entity).setCurrentItemOrArmor(1, ss2);
-									((EntityZombie) entity).setCurrentItemOrArmor(2, ss3);
-									((EntityZombie) entity).setCurrentItemOrArmor(3, ss4);
-									((EntityZombie) entity).setCurrentItemOrArmor(4, ss5);
-									((EntityZombie) entity).setEquipmentDropChance(0, -1);
-									((EntityZombie) entity).setEquipmentDropChance(1, -1);
-									((EntityZombie) entity).setEquipmentDropChance(2, -1);
-									((EntityZombie) entity).setEquipmentDropChance(3, -1);
-									((EntityZombie) entity).setEquipmentDropChance(4, -1);
 									if(worldObj.rand.nextInt(hard ? 3 : 12) == 0)
 										entity = new EntityWitch(worldObj);
 
@@ -684,29 +810,10 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 								}
 								case 1 : {
 									entity = new EntitySkeleton(worldObj);
-									ItemStack ss1 = new ItemStack(ModItems.elementiumSword);
-									ItemStack ss2 = new ItemStack(ModItems.elementiumHelm);
-									ItemStack ss3 = new ItemStack(ModItems.elementiumChest);
-									ItemStack ss4 = new ItemStack(ModItems.elementiumLegs);
-									ItemStack ss5 = new ItemStack(ModItems.elementiumBoots);
-									ss1.setItemDamage(20);
-									ss2.setItemDamage(20);
-									ss3.setItemDamage(20);
-									ss4.setItemDamage(20);
-									ss5.setItemDamage(20);
 									((EntitySkeleton) entity).setCurrentItemOrArmor(0, new ItemStack(Items.bow));
-									((EntitySkeleton) entity).setCurrentItemOrArmor(1, ss2);
-									((EntitySkeleton) entity).setCurrentItemOrArmor(2, ss3);
-									((EntitySkeleton) entity).setCurrentItemOrArmor(3, ss4);
-									((EntitySkeleton) entity).setCurrentItemOrArmor(4, ss5);
-									((EntitySkeleton) entity).setEquipmentDropChance(0, -1);
-									((EntitySkeleton) entity).setEquipmentDropChance(1, -1);
-									((EntitySkeleton) entity).setEquipmentDropChance(2, -1);
-									((EntitySkeleton) entity).setEquipmentDropChance(3, -1);
-									((EntitySkeleton) entity).setEquipmentDropChance(4, -1);
 									if(worldObj.rand.nextInt(8) == 0) {
 										((EntitySkeleton) entity).setSkeletonType(1);
-										((EntitySkeleton) entity).setCurrentItemOrArmor(0, ss1);
+										((EntitySkeleton) entity).setCurrentItemOrArmor(0, new ItemStack(hard ? ModItems.elementiumSword : Items.stone_sword));
 									}
 									break;
 								}
@@ -744,9 +851,9 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 					setTPDelay(getTPDelay() - 1);
 					if(getTPDelay() == 0 && getHealth() > 0) {
 						int tries = 0;
-						while(!teleportRandomly() && tries < maxTries)
+						while(!teleportRandomly() && tries < 50)
 							tries++;
-						if(tries >= maxTries)
+						if(tries >= 50)
 							teleportTo(source.posX + 0.5, source.posY + 1.6, source.posZ + 0.5);
 
 						if(spawnLandmines) {
@@ -773,7 +880,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 									worldObj.spawnEntityInWorld(pixie);
 								}
 
-						setTPDelay(hard ? (dying ? 55 : 65) : (dying ? 60 : 80));
+						setTPDelay(hard ? (dying ? 30 : 40) : (dying ? 35 : 55));
 						spawnLandmines = true;
 						spawnPixies = false;
 					}
@@ -788,23 +895,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 					damageEntity(DamageSource.causePlayerDamage(players.get(0)), 0);
 			}
 		}
-	
-		Botania.proxy.sparkleFX(this.worldObj, this.posX, this.posY, this.posZ, 1.99F, 0.97F, 0.20F, 2F + this.hurtTime * 3F * (this.getHealth()/this.getMaxHealth()) * Math.max(0, this.worldObj.rand.nextInt(4)- 2), 6);
 		
-		if(ticksExisted % 80 == 0 && rankII && onGround){
-			spawnCyclone();
-		}
-		
-		if(getTPDelay() > 0 && onGround && ticksExisted % 100 == 0 && rankIII && Math.random() > 0.55){
-			EntityGaiaQuickened g = new EntityGaiaQuickened(this, true, 9F);
-			g.setPosition(posX, posY, posZ);
-			worldObj.spawnEntityInWorld(g);
-		}
-		
-		cleanFluid();
-	}
-	
-	void cleanFluid(){
 		if(!worldObj.isRemote){
 			for(int x = (int) -RANGE;x < RANGE + 1; x++){
 				for(int y = (int) -RANGE;y < RANGE + 1;y++){
@@ -823,28 +914,11 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 
 	void spawnMissile() {
 		if(!worldObj.isRemote) {
-			EntityMagicMissileII missile = new EntityMagicMissileII(this, true);
+			EntityMagicMissile missile = new EntityMagicMissile(this, true);
 			missile.setPosition(posX + (Math.random() - 0.5 * 0.1), posY + 2.4 + (Math.random() - 0.5 * 0.1), posZ + (Math.random() - 0.5 * 0.1));
-			missile.setATK(4F);
 			if(missile.getTarget()) {
 				worldObj.playSoundAtEntity(this, "botania:missile", 0.6F, 0.8F + (float) Math.random() * 0.2F);
 				worldObj.spawnEntityInWorld(missile);
-			}
-		}
-	}
-	
-	void spawnCyclone() {
-		if(!worldObj.isRemote) {
-			List<EntityMagicCycloneIgnis> ignis = this.worldObj.getEntitiesWithinAABB(EntityMagicCycloneIgnis.class, AxisAlignedBB.getBoundingBox(this.posX - RANGE - 24, this.posY - RANGE - 24, this.posZ - RANGE - 24, this.posX + RANGE + 25, this.posY + RANGE + 25, this.posZ + RANGE + 25));
-			List<EntityMagicCycloneAqua> aqua = this.worldObj.getEntitiesWithinAABB(EntityMagicCycloneAqua.class, AxisAlignedBB.getBoundingBox(this.posX - RANGE - 24, this.posY - RANGE - 24, this.posZ - RANGE - 24, this.posX + RANGE + 25, this.posY + RANGE + 25, this.posZ + RANGE + 25));
-			if((ignis.size() + aqua.size()) <= 9){
-				if(worldObj.rand.nextInt(10) > 4){
-					EntityMagicCycloneIgnis.spawn(worldObj, this.posX, this.posY, this.posZ, (float) (1.0F + Math.random() * 1F), (float) (1.0F + Math.random() * 1F));
-					worldObj.playSoundEffect(this.posX, this.posY, this.posZ, "botania:summon", 1.0F, 1.0F);
-				}else{
-					EntityMagicCycloneAqua.spawn(worldObj, this.posX + 2.0F - Math.random() * 4F, this.posY, this.posZ + 2.0F - Math.random() * 4F, (float) (1.0F + Math.random() * 1F), (float) (1.0F + Math.random() * 1F));
-					worldObj.playSoundEffect(this.posX, this.posY, this.posZ, "botania:summon", 1.0F, 1.0F);
-				}
 			}
 		}
 	}
@@ -919,12 +993,7 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 				double d9 = d5 + (posZ - d5) * d6 + (rand.nextDouble() - 0.5D) * width * 2.0D;
 				worldObj.spawnParticle("portal", d7, d8, d9, f, f1, f2);
 			}
-			if(!this.worldObj.isRemote){
-				List<EntityGaiaIIIPhantom> livings = this.worldObj.getEntitiesWithinAABB(EntityGaiaIIIPhantom.class, AxisAlignedBB.getBoundingBox(this.posX - RANGE - 24, this.posY - RANGE - 24, this.posZ - RANGE - 24, this.posX + RANGE + 25, this.posY + RANGE + 25, this.posZ + RANGE + 25));
-				if(livings.size() <= 1 && this.getHealth() <= this.getMaxHealth() * 0.75)
-					EntityGaiaIIIPhantom.spawn(this.worldObj, this.posX, this.posY, this.posZ, this);
-					worldObj.playSoundEffect(d3, d4, d5, "botania:summon", 1.0F, 1.0F);
-			}
+
 			worldObj.playSoundEffect(d3, d4, d5, "mob.endermen.portal", 1.0F, 1.0F);
 			playSound("mob.endermen.portal", 1.0F, 1.0F);
 			return true;

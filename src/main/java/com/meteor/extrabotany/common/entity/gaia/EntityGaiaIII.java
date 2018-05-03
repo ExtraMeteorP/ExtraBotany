@@ -446,7 +446,8 @@ public class EntityGaiaIII extends EntityCreature implements IBotaniaBossWithSha
 				((EntityPlayer) entitylivingbase).addStat(ModAchievement.Gaia_gaia3NoArmor, 1);
 		}
 		
-		EntityGaiaIIIDark.spawn(this.worldObj, getSource().posX,getSource().posY,getSource().posZ, true, this);
+		if (!(this instanceof EntityGaiaIIIDark)) // Prevent infinite GaiaIIIDark respawn
+			EntityGaiaIIIDark.spawn(this.worldObj, getSource().posX,getSource().posY,getSource().posZ, true, this);
 
 		worldObj.playSoundAtEntity(this, "random.explode", 20F, (1F + (worldObj.rand.nextFloat() - worldObj.rand.nextFloat()) * 0.2F) * 0.7F);
 		worldObj.spawnParticle("hugeexplosion", posX, posY, posZ, 1D, 0D, 0D);

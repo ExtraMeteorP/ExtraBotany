@@ -1,12 +1,16 @@
 {
 	"homepage": "https://minecraft.curseforge.com/projects/extrabotany",
 	"1.12.2": {
+		"37": "",
+		"36": "",
+		"35": "",
+		"34": "",
 		"33": "",
 		"32": "",
       		"31": ""
 	},
 	"promos": {
-		"1.12.2-latest": "33",
-		"1.12.2-recommended": "31"
+		"1.12.2-latest": "37",
+		"1.12.2-recommended": "37"
 	}
 }
